@@ -108,8 +108,11 @@ form .form-control {
 #sidebar .list .list-unstyled {
     text-transform: none;
 }
+.widget-area ul li ul li {
+    margin-left: 0.8rem;
+}
 .widget-area ul li ul li:not(:last-child) {
-    margin: 0 0 0.7rem 0.8rem;
+    margin-bottom: 0.7rem;
 }
 .widget-area ul li ul li:first-child {
     margin-top: 8px;
