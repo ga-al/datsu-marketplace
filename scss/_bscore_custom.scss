@@ -54,6 +54,9 @@ a {
     color: var(--bs-dark);
     text-decoration: none;
 }
+a:hover {
+    opacity: .86;
+}
 .searchform {
     width: 100%;
 }
