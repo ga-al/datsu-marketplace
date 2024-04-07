@@ -189,6 +189,9 @@ form .form-control {
         justify-content: space-between;
         width: 100%;
     }
+    .mrk-social {
+        right: 20px;
+    }
 }
 .mrk-download {
     border: 1px solid #E9EEFF;
