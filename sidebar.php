@@ -35,7 +35,7 @@ if (!is_active_sidebar('sidebar-1')) {
         
         <h3 class="text-uppercase">Комплектующие</h3>
         <ul class="list ps-0">
-          <li class="mb-1">
+          <li class="mb-2">
             <button class="btn btn-toggle d-inline-flex align-items-center border-0 collapsed text-uppercase text-start fs-6" data-bs-toggle="collapse" data-bs-target="#home-collapse" aria-expanded="false">
               Труба нержавеющая
             </button>
@@ -47,7 +47,7 @@ if (!is_active_sidebar('sidebar-1')) {
               </ul>
             </div>
           </li>
-          <li class="mb-1">
+          <li class="mb-2">
             <button class="btn btn-toggle d-inline-flex align-items-center border-0 collapsed text-uppercase text-start fs-6" data-bs-toggle="collapse" data-bs-target="#dashboard-collapse" aria-expanded="false">
               Комплектующие для перил
             </button>
@@ -60,7 +60,7 @@ if (!is_active_sidebar('sidebar-1')) {
               </ul>
             </div>
           </li>
-          <li class="mb-1">
+          <li class="mb-2">
             <button class="btn btn-toggle d-inline-flex align-items-center border-0 collapsed text-uppercase text-start fs-6" data-bs-toggle="collapse" data-bs-target="#orders-collapse" aria-expanded="false">
               Зажимной профиль для стекла
             </button>
@@ -73,7 +73,7 @@ if (!is_active_sidebar('sidebar-1')) {
               </ul>
             </div>
           </li>
-          <li class="mb-1">
+          <li class="mb-2">
             <button class="btn btn-toggle d-inline-flex align-items-center border-0 collapsed text-uppercase text-start fs-6" data-bs-toggle="collapse" data-bs-target="#account-collapse" aria-expanded="false">
             Фурнитура для козырьков и навесов из стекла
             </button>
@@ -89,7 +89,7 @@ if (!is_active_sidebar('sidebar-1')) {
               </ul>
             </div>
           </li>
-          <li class="mb-1">
+          <li class="mb-2">
             <button class="btn btn-toggle d-inline-flex align-items-center border-0 collapsed text-uppercase text-start fs-6" data-bs-toggle="collapse" data-bs-target="#account-collapse2" aria-expanded="false">
             Комплектующие для стеклянных перегородок
             </button>
@@ -102,7 +102,7 @@ if (!is_active_sidebar('sidebar-1')) {
               </ul>
             </div>
           </li>
-          <li class="mb-1">
+          <li class="mb-2">
             <button class="btn btn-toggle d-inline-flex align-items-center border-0 collapsed text-uppercase text-start fs-6" data-bs-toggle="collapse" data-bs-target="#account-collapse3" aria-expanded="false">
             Комплектующие для душевых перегородок
             </button>
@@ -115,7 +115,7 @@ if (!is_active_sidebar('sidebar-1')) {
               </ul>
             </div>
           </li>
-          <li class="mb-1">
+          <li class="mb-2">
             <button class="btn btn-toggle d-inline-flex align-items-center border-0 collapsed text-uppercase text-start fs-6" data-bs-toggle="collapse" data-bs-target="#account-collapse4" aria-expanded="false">
             инструменты и расходники для монтажа
             </button>
@@ -128,7 +128,7 @@ if (!is_active_sidebar('sidebar-1')) {
               </ul>
             </div>
           </li>
-          <li class="mb-1">
+          <li class="mb-2">
             <button class="btn btn-toggle d-inline-flex align-items-center border-0 collapsed text-uppercase text-start fs-6" data-bs-toggle="collapse" data-bs-target="#account-collapse5" aria-expanded="false">
             Комплектующие для ограждений с подсветкой
             </button>
@@ -141,7 +141,7 @@ if (!is_active_sidebar('sidebar-1')) {
               </ul>
             </div>
           </li>
-          <li class="mb-1">
+          <li class="mb-2">
             <button class="btn btn-toggle d-inline-flex align-items-center border-0 collapsed text-uppercase text-start fs-6" data-bs-toggle="collapse" data-bs-target="#account-collapse6" aria-expanded="false">
             новинки
             </button>
@@ -154,7 +154,7 @@ if (!is_active_sidebar('sidebar-1')) {
               </ul>
             </div>
           </li>
-          <li class="mb-1">
+          <li class="mb-2">
             <button class="btn btn-toggle d-inline-flex align-items-center border-0 collapsed text-uppercase text-start fs-6" data-bs-toggle="collapse" data-bs-target="#account-collapse7" aria-expanded="false">
             уценка
             </button>
@@ -171,7 +171,7 @@ if (!is_active_sidebar('sidebar-1')) {
         <div class="border-top my-3"></div>
         <h3 class="text-uppercase">конструкции с монтажем</h3>
         <ul class="list ps-0">
-          <li class="mb-1">
+          <li class="mb-2">
             <button class="btn btn-toggle d-inline-flex align-items-center border-0 collapsed text-uppercase text-start fs-6" data-bs-toggle="collapse" data-bs-target="#home-collapse2" aria-expanded="false">
               Труба нержавеющая
             </button>
@@ -183,7 +183,7 @@ if (!is_active_sidebar('sidebar-1')) {
               </ul>
             </div>
           </li>
-          <li class="mb-1">
+          <li class="mb-2">
             <button class="btn btn-toggle d-inline-flex align-items-center border-0 collapsed text-uppercase text-start fs-6" data-bs-toggle="collapse" data-bs-target="#dashboard-collapse2" aria-expanded="false">
               Комплектующие для перил
             </button>
@@ -196,7 +196,7 @@ if (!is_active_sidebar('sidebar-1')) {
               </ul>
             </div>
           </li>
-          <li class="mb-1">
+          <li class="mb-2">
             <button class="btn btn-toggle d-inline-flex align-items-center border-0 collapsed text-uppercase text-start fs-6" data-bs-toggle="collapse" data-bs-target="#orders-collapse2" aria-expanded="false">
               Зажимной профиль для стекла
             </button>
@@ -209,7 +209,7 @@ if (!is_active_sidebar('sidebar-1')) {
               </ul>
             </div>
           </li>
-          <li class="mb-1">
+          <li class="mb-2">
             <button class="btn btn-toggle d-inline-flex align-items-center border-0 collapsed text-uppercase text-start fs-6" data-bs-toggle="collapse" data-bs-target="#account-collapse2" aria-expanded="false">
             Фурнитура для козырьков и навесов из стекла
             </button>
@@ -222,7 +222,7 @@ if (!is_active_sidebar('sidebar-1')) {
               </ul>
             </div>
           </li>
-          <li class="mb-1">
+          <li class="mb-2">
             <button class="btn btn-toggle d-inline-flex align-items-center border-0 collapsed text-uppercase text-start fs-6" data-bs-toggle="collapse" data-bs-target="#account-collapse11" aria-expanded="false">
             Комплектующие для стеклянных перегородок
             </button>
@@ -235,7 +235,7 @@ if (!is_active_sidebar('sidebar-1')) {
               </ul>
             </div>
           </li>
-          <li class="mb-1">
+          <li class="mb-2">
             <button class="btn btn-toggle d-inline-flex align-items-center border-0 collapsed text-uppercase text-start fs-6" data-bs-toggle="collapse" data-bs-target="#account-collapse12" aria-expanded="false">
             Комплектующие для душевых перегородок
             </button>
@@ -248,7 +248,7 @@ if (!is_active_sidebar('sidebar-1')) {
               </ul>
             </div>
           </li>
-          <li class="mb-1">
+          <li class="mb-2">
             <button class="btn btn-toggle d-inline-flex align-items-center border-0 collapsed text-uppercase text-start fs-6" data-bs-toggle="collapse" data-bs-target="#account-collapse13" aria-expanded="false">
             инструменты и расходники для монтажа
             </button>
@@ -261,17 +261,17 @@ if (!is_active_sidebar('sidebar-1')) {
               </ul>
             </div>
           </li>
-          <li class="mb-1">
+          <li class="mb-2">
             <button class="btn btn-toggle d-inline-flex align-items-center border-0 text-uppercase text-start fs-6">
             Комплектующие для ограждений с подсветкой
             </button>
           </li>
-          <li class="mb-1">
+          <li class="mb-2">
             <button class="btn btn-toggle d-inline-flex align-items-center border-0 text-uppercase text-start fs-6">
             новинки
             </button>
           </li>
-          <li class="mb-1">
+          <li class="mb-2">
             <button class="btn btn-toggle d-inline-flex align-items-center border-0 text-uppercase text-start fs-6">
             уценка
             </button>
