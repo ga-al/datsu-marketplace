@@ -1,0 +1,114 @@
+<?php
+
+/**
+ * The template for displaying the footer
+ *
+ * Contains the closing of the #content div and all content after.
+ *
+ * @link https://developer.wordpress.org/themes/basics/template-files/#template-partials
+ *
+ * @package Bootscore
+ *
+ * @version 5.3.0
+ */
+
+?>
+
+<footer class="mt-auto mb-md-0 pb-md-0 mb-5 pb-4">
+
+  <div class="bootscore-footer bg-dark text-light py-md-5 py-4">
+    <div class="<?= bootscore_container_class(); ?>">
+
+      <div class="row gap-md-0 gap-3">
+
+        <!-- Footer 1 Widget -->
+        <div class="col-lg-3 order-lg-0 order-1">
+          <?php if (is_active_sidebar('footer-1')) : ?>
+            <a class="footer-brand xs d-md-none ms-md-3 pe-md-2" href="<?= esc_url(home_url()); ?>"><img src="<?= esc_url(get_stylesheet_directory_uri()); ?>/img/logo/logo-footer-sm.svg" alt="logo" class="logo xs"></a>
+            <a class="footer-brand md d-none d-md-block pe-2" href="<?= esc_url(home_url()); ?>"><img src="<?= esc_url(get_stylesheet_directory_uri()); ?>/img/logo/logo-footer.svg" alt="logo" class="logo md"></a>
+            <div class="bootscore-info text-secondary py-2 mt-md-3">
+              <?php if (is_active_sidebar('footer-info')) : ?>
+                <?php dynamic_sidebar('footer-info'); ?>
+              <?php endif; ?>
+              <small class="bootscore-copyright"><span class="cr-symbol">&copy;</span>&nbsp;<?= date('Y'); ?> <?php bloginfo('name'); ?> — модный интернет-магазин одежды, обуви и аксессуаров. Все права защищены. Доставка по всей России.На Торговой площадке wildberries.ru применяются рекомендательные технологии. Адрес для направления юридически значимых сообщений: sales@wildberries.ru</small>
+            </div>
+          <?php endif; ?>
+        </div>
+
+        <!-- Footer 2 Widget -->
+        <div class="col-md-9 col-lg-7 d-flex justify-content-md-around justify-content-between flex-wrap order-0">
+          <?php if (is_active_sidebar('footer-2')) : ?>
+            <div>
+              <h5 class="fw-medium">О компании</h5>
+              <ul>
+                <li><a class="text-opacity-50 text-decoration-none" href="#">О компании</a></li>
+                <li><a class="text-opacity-50 text-decoration-none" href="#">Новости</a></li>
+                <li><a class="text-opacity-50 text-decoration-none" href="#">Вакансии</a></li>
+                <li><a class="text-opacity-50 text-decoration-none" href="#">Реквизиты</a></li>
+              </ul>
+            </div>
+            <div>
+              <h5 class="fw-medium">Покупателям</h5>
+              <ul>
+                <li><a class="text-opacity-50 text-decoration-none" href="#">Условия продажи</a></li>
+                <li><a class="text-opacity-50 text-decoration-none" href="#">Доставка</a></li>
+                <li><a class="text-opacity-50 text-decoration-none" href="#">Оплата</a></li>
+                <li><a class="text-opacity-50 text-decoration-none" href="#">Возврат</a></li>
+                <li><a class="text-opacity-50 text-decoration-none" href="#">Вопрос-ответ</a></li>
+              </ul>
+            </div>
+            <div>
+              <h5 class="fw-medium">Партнерам</h5>
+              <ul>
+                <li><a class="text-opacity-50 text-decoration-none" href="#">Сотрудничество</a></li>
+                <li><a class="text-opacity-50 text-decoration-none" href="#">Логистика</a></li>
+                <li><a class="text-opacity-50 text-decoration-none" href="#">Условия партнерства</a></li>
+              </ul>
+            </div>
+          <?php endif; ?>
+        </div>
+
+        <!-- Footer 3 Widget -->
+        <div class="col-md-2 order-0">
+          <?php if (is_active_sidebar('footer-3')) : ?>
+            <h5 class="text-white">Соц.сети</h5>
+            <ul class="d-md-block d-flex gap-4">
+              <li><a class="text-white text-decoration-underline" href="#">Телеграм</a></li>
+              <li><a class="text-white text-decoration-underline" href="#">WhatsApp</a></li>
+              <li><a class="text-white text-decoration-underline" href="#">Wechat</a></li>
+            </ul>
+          <?php endif; ?>
+        </div>
+
+      </div>
+
+      <!-- Bootstrap 5 Nav Walker Footer Menu -->
+      <?php
+      wp_nav_menu(array(
+        'theme_location' => 'footer-menu',
+        'container'      => false,
+        'menu_class'     => '',
+        'fallback_cb'    => '__return_false',
+        'items_wrap'     => '<ul id="footer-menu" class="nav %2$s">%3$s</ul>',
+        'depth'          => 1,
+        'walker'         => new bootstrap_5_wp_nav_menu_walker()
+      ));
+      ?>
+
+    </div>
+  </div>
+
+  
+
+</footer>
+
+<!-- To top button -->
+<a href="#" class="btn btn-primary shadow top-button position-fixed zi-1020"><i class="fa-solid fa-chevron-up"></i><span class="visually-hidden-focusable">To top</span></a>
+
+</div><!-- #page -->
+
+<?php wp_footer(); ?>
+
+</body>
+
+</html>

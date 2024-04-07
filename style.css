@@ -1,0 +1,275 @@
+/*
+ Theme Name:   bootScore Child
+ Description:  bootScore Child Theme
+ Author:       bootScore
+ Author URI:   https://bootscore.me
+ Template:     bootscore-main
+ Version:      5.3.0
+ Text Domain:  bootscore
+*/
+
+/* 
+All style editing is done via scss/_bscore_custom.scss
+*/
+:root {
+    --bs-breadcrumb-divider: url("../img/svg/arrow-right.svg");
+}
+h1 {
+    font-size: calc(1.60rem + 1.125vw);
+}
+h2 {
+    font-size: calc(1.24rem + 1.125vw);
+}
+input{
+    all: unset;
+}
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+.form-control {
+    box-sizing: border-box;
+    height: 44px;
+}
+form .form-control {
+    border-radius: 0 0 12px 0!important;
+}
+.search-field {
+    /* height: 44px; */
+    background-color: #F3F4FF;
+    border: 1px solid #DCE4FF;
+    border-radius: 0;
+}
+.mrk-logo {
+    display: flex;
+    align-items: center;
+    padding: 10px 5px;
+    max-width: 335px;
+    background-color: #F3F4FF;
+    border-radius: 16px 0 16px 0;
+}
+.mrk-logo .btn:hover, .mrk-logo a:hover {
+    opacity: 1;
+}
+.mrk-bg-blur {
+    padding: 40px 30px 30px;
+    background: rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(3px);
+}
+.form-blur {
+    background: rgba(255, 255, 255, .2);
+}
+.form-blur h1 {
+    font-size: 2rem;
+    letter-spacing: .4px;
+}
+@media (max-width: 768px) {
+    .mrk-logo .btn {
+        width: 100px;
+        height: 38px;
+    }
+    .mrk-logo {
+        max-width: 210px;
+    }
+}
+.navbar-toggler, .navbar-toggler:focus {
+    border: 0;
+    box-shadow: none;
+}
+.btn-toggle {
+    padding: .25rem .5rem;
+    background-color: transparent;
+}
+.btn-toggle:hover,
+.btn-toggle:focus {
+    color: rgba(var(--bs-emphasis-color-rgb), .85);
+    background-color: var(--bs-tertiary-bg);
+    text-decoration: underline;
+}
+.btn-toggle::before {
+    margin-right: 15px;
+    line-height: 0;
+    content: url("./img/svg/arrow-list.svg");
+    transition: transform .35s ease;
+    transform-origin: .5em 50%;
+}
+  
+[data-bs-theme="dark"] .btn-toggle::before {
+    content: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 16 16'%3e%3cpath fill='none' stroke='rgba%28255,255,255,.5%29' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M5 14l6-6-6-6'/%3e%3c/svg%3e");
+}
+.btn-toggle[aria-expanded="true"] {
+    color: rgba(var(--bs-emphasis-color-rgb), .85);
+}
+.btn-toggle[aria-expanded="true"]::before {
+    transform: rotate(90deg);
+}
+#sidebar h3 {
+    font-size: 1rem;
+    font-weight: 600;
+}
+#sidebar .list {
+    text-transform: uppercase;
+    color: var(--bs-dark);
+}
+#sideba .list li:hover {
+    text-decoration: underline;
+}
+.widget-area ul li ul li {
+    margin-left: 14px;
+}
+.header-actions > a {
+    color: var(--bs-dark);
+    text-decoration: none;
+}
+.header-actions > a:hover {
+    opacity: .7;
+}
+.bootscore-footer ul li a {
+    color: #e6e7f97c;
+}
+.bootscore-footer ul li {
+    padding: 5px 0;
+}
+.footer-brand:hover {
+    opacity: 1;
+}
+@media (max-width: 768px) {
+    .footer-brand img {
+        width: 90px;
+    }
+}
+.mrk-gallery-top, .mrk-image-top {
+    width: 1039px;
+    /* max-width: 100%; */
+    height: 594px;
+    max-height: 100%;
+    overflow: hidden;
+}
+.mrk-gallery-thumbs {
+    width: 1039px;
+    height: 100%;
+    margin-top: 8px;
+}
+.mrk-gallery-thumbs img {
+    width: 100%;
+    height: 100%;
+    border-radius: 0;
+    object-fit: cover;
+}
+.thumbnail {
+    max-width: 340.5px;
+}
+#page {
+    overflow-x: hidden;
+}
+.mrk-gallery .btn, .mrk-logo .btn, .mrk-cards-kits .btn, .mrk-image-full .btn {
+    padding: 11px 1.875rem;
+    letter-spacing: 1.2px;
+}
+@media (max-width: 1300px) {
+    .mrk-gallery-top, .mrk-gallery-thumbs, .mrk-image-top {
+        width: 100%;
+        height: 100%;
+    }
+    .mrk-gallery-image {
+        object-fit: cover;
+        min-height: 400px;
+    }
+    .mrk-form-image {
+        object-fit: cover;
+        min-height: 450px;
+    }
+    .mrk-gallery-blur {
+        padding: 20px 20px 20px;
+    }
+}
+@media (max-width: 620px) {
+    .header-actions {
+        justify-content: space-between;
+        width: 100%;
+    }
+}
+.mrk-download {
+    border: 1px solid #E9EEFF;
+}
+
+.mrk-download::before {
+    content: '';
+    display: inline-block;
+    margin-right: .4rem;
+    width: 1rem;
+    height: 1rem;
+    background-image: url('img/svg/download.svg');
+    vertical-align: middle;
+}
+.card-title {
+    color: #A0ADD7;
+} 
+.quantity .qty {
+    width: 4rem;
+    text-align: center;
+}
+.quantity .btn:hover {
+    background-color: transparent;
+    opacity: 1;
+}
+.mrk-cards-kits .btn {
+    opacity: 1; 
+}
+
+.mrk-cards-kits .card-kit-img {
+    margin: 1rem auto 0;
+    max-width: 156px;
+}
+.mrk-card-heart {
+    margin-left: 136px;
+    width: 20px;
+    height: 20px;
+    background-image: url("img/svg/heart-fill.svg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    cursor: pointer;
+}
+.mrk-card-heart.no-active {
+    background-image: url("img/svg/heart.svg");
+}
+.mrk-advantages {
+    display: flex;
+    flex-direction: column;
+    padding: 30px 14px;
+    height: 100%;
+    text-align: center;
+    background-color: #F6F6F8;
+    border-radius: 20px;
+}
+.mrk-advantages h4 {
+    max-width: 170px;
+    margin: 0 auto 0.8rem;
+    font-size: 1.1875rem;
+    line-height: 1.4;
+}
+.mrk-advantages p {
+    margin-top: auto;
+    margin-bottom: 0;
+    font-size: 1rem;
+    opacity: .8;
+}
+@media (max-width: 425px) {
+    .mrk-advantages {
+        max-width: 100%;
+    }
+}
+.mrk-social {
+    top: 2rem;
+    right: 10%;
+}
+.mrk-social-item {
+    width: 50px;
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+    background-color: #f3f4ff;
+    border-radius: 12px 0 12px 0;
+}

@@ -1,0 +1,71 @@
+/*!
+ * bootScore custom styles
+ */
+
+// Add your own code here!
+// Because this file is compiled after Bootstrap, you're also able to use Bootstrap mixins for better code.
+// Some examples can be found here: https://bootscore.me/documentation/bootstrap-css-sass
+
+/* Aneliza-400 - latin */
+@font-face {
+    font-family: 'Aneliza';
+    font-style: normal;
+    font-weight: 400;
+    src: local(''),
+         url('../fonts/aneliza-webfont/Aneliza-Regular.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+         url('../fonts/aneliza-webfont/Aneliza-Regular.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+  }
+  /* Aneliza-700 - latin */
+  @font-face {
+    font-family: 'Aneliza';
+    font-style: normal;
+    font-weight: 700;
+    src: local(''),
+         url('../fonts/aneliza-webfont/Aneliza-Bold.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+         url('../fonts/aneliza-webfont/Aneliza-Bold.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+  }
+  /* Aneliza-500 - latin */
+  @font-face {
+    font-family: 'Aneliza';
+    font-style: normal;
+    font-weight: 500;
+    src: local(''),
+         url('../fonts/aneliza-webfont/Aneliza-Medium.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+         url('../fonts/aneliza-webfont/Aneliza-Medium.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+  }
+
+
+html {
+    scroll-padding-top: 99px;
+}
+
+.btn {
+    border-radius: 12px 0 12px 0!important;
+}
+.input-group-text.btn {
+    width: 64px;
+    border-radius: 0 0 12px 0!important;
+}
+
+.nav-link {
+    color: var(--#{$prefix}secondary);
+}
+.searchform {
+    width: 100%;
+}
+.navbar-brand.xs {
+    min-width: 70px;
+}
+.card-header {
+    border: 0;
+    background-color: transparent;
+    font-weight: 600;
+    font-size: 1rem;
+    text-transform: uppercase;
+}
+.bootscore-info {
+    font-size: 12px;
+    line-height: 16px;
+}
+
+
