@@ -486,7 +486,7 @@ get_header();
                                   <label for="inputPhone" class="visually-hidden-focusable">Телефон</label>
                                   <input class="form-control" type="tel" id="inputPhone" name="phone" placeholder="+7" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}">
                                 </div>
-                                <div class="col-12 mt-4">
+                                <div class="col-12 mt-md-4 mt-3">
                                   <button class="btn btn-primary" href="#" type="button">
                                     Оставить заявку
                                   </button>
