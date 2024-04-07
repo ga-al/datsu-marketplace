@@ -50,6 +50,10 @@ html {
 .nav-link {
     color: var(--#{$prefix}secondary);
 }
+a {
+    color: var(--bs-dark);
+    text-decoration: none;
+}
 .searchform {
     width: 100%;
 }
