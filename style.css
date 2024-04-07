@@ -104,14 +104,11 @@ form .form-control {
     text-transform: uppercase;
     color: var(--bs-dark);
 }
+#sidebar .list button {
+    line-height: 1.4;
+}
 #sidebar .list .list-unstyled {
     text-transform: none;
-}
-/* #sidebar .list .list-unstyled li a:hover {
-    color: var(--bs-primary);
-} */
-#sideba .list li:hover {
-    text-decoration: underline;
 }
 .widget-area ul li ul li {
     margin-left: 14px;

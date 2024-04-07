@@ -75,7 +75,13 @@ a:hover {
     line-height: 16px;
 }
 .link-body-emphasis {
-    color: var(--bs-dark);
+    font-size: 14px;
+    line-height: 2;
+    color: var(--bs-dark)!important;
+}
+.btn-toggle[aria-expanded="true"] {
+    color: var(--bs-dark)!important;
+    font-weight: 600;
 }
 
 
