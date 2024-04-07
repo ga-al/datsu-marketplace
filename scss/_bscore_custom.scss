@@ -46,7 +46,10 @@ html {
     width: 64px;
     border-radius: 0 0 12px 0!important;
 }
-
+a {
+    color: var(--bs-dark);
+    text-decoration: none;
+}
 .nav-link {
     color: var(--#{$prefix}secondary);
 }
