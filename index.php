@@ -227,13 +227,7 @@ get_header();
                               <img class="mx-auto pe-1" src="<?= esc_url(get_stylesheet_directory_uri()); ?>/img/svg/cart4-white.svg" alt="корзина">
                               В корзину
                             </a>
-                            <!-- <div class="quantity">
-                              <div class="btn btn-outline-primary d-flex justify-content-center align-items-center">
-                                <button type="button" class="minus input-group-text border-0 text-primary py-0">-</button>	<label class="screen-reader-text" for="quantity_1">Количество товара</label>
-                                <input type="number" id="quantity_1" class="input-text qty text border-0 text-primary py-0" name="cart[111][qty]" value="16" aria-label="Количество товара" size="4" min="0" max="" step="1" placeholder="" inputmode="numeric" autocomplete="off">
-                                <button type="button" class="plus input-group-text border-0 text-primary py-0">+</button></div>
-                              </div>-->
-                            </div> 
+                          </div> 
                         </div>
                       </div>
                     </div>
@@ -256,13 +250,7 @@ get_header();
                               <img class="mx-auto pe-1" src="<?= esc_url(get_stylesheet_directory_uri()); ?>/img/svg/cart4-white.svg" alt="корзина">
                               В корзину
                             </a>
-                            <!-- <div class="quantity visually-hidden-focusable">
-                              <div class="btn btn-outline-primary d-flex justify-content-center align-items-center">
-                                <button type="button" class="minus input-group-text border-0 text-primary py-0">-</button>	<label class="screen-reader-text" for="quantity_2">Количество товара</label>
-                                <input type="number" id="quantity_2" class="input-text qty text border-0 text-primary py-0" name="cart[222][qty]" value="16" aria-label="Количество товара" size="4" min="0" max="" step="1" placeholder="" inputmode="numeric" autocomplete="off">
-                                <button type="button" class="plus input-group-text border-0 text-primary py-0">+</button></div>
-                              </div>-->
-                            </div>
+                          </div>
                         </div>
                       </div>
                     </div>
@@ -285,13 +273,7 @@ get_header();
                               <img class="mx-auto pe-1" src="<?= esc_url(get_stylesheet_directory_uri()); ?>/img/svg/cart4-white.svg" alt="корзина">
                               В корзину
                             </a>
-                            <!-- <div class="quantity visually-hidden-focusable">
-                              <div class="btn btn-outline-primary d-flex justify-content-center align-items-center">
-                                <button type="button" class="minus input-group-text border-0 text-primary py-0">-</button>	<label class="screen-reader-text" for="quantity_3">Количество товара</label>
-                                <input type="number" id="quantity_3" class="input-text qty text border-0 text-primary py-0" name="cart[333][qty]" value="16" aria-label="Количество товара" size="4" min="0" max="" step="1" placeholder="" inputmode="numeric" autocomplete="off">
-                                <button type="button" class="plus input-group-text border-0 text-primary py-0">+</button></div>
-                              </div>-->
-                            </div> 
+                          </div> 
                         </div>
                       </div>
                     </div>
@@ -324,13 +306,7 @@ get_header();
                               <img class="mx-auto pe-1" src="<?= esc_url(get_stylesheet_directory_uri()); ?>/img/svg/cart4-white.svg" alt="корзина">
                               В корзину
                             </a>
-                            <!-- <div class="quantity visually-hidden-focusable">
-                              <div class="btn btn-outline-primary d-flex justify-content-center align-items-center">
-                                <button type="button" class="minus input-group-text border-0 text-primary py-0">-</button>	<label class="screen-reader-text" for="quantity_4">Количество товара</label>
-                                <input type="number" id="quantity_4" class="input-text qty text border-0 text-primary py-0" name="cart[444][qty]" value="16" aria-label="Количество товара" size="4" min="0" max="" step="1" placeholder="" inputmode="numeric" autocomplete="off">
-                                <button type="button" class="plus input-group-text border-0 text-primary py-0">+</button></div>
-                              </div>-->
-                            </div>
+                          </div>
                         </div>
                       </div>
                     </div>
@@ -353,13 +329,7 @@ get_header();
                               <img class="mx-auto pe-1" src="<?= esc_url(get_stylesheet_directory_uri()); ?>/img/svg/cart4-white.svg" alt="корзина">
                               В корзину
                             </a>
-                            <!-- <div class="quantity visually-hidden-focusable">
-                              <div class="btn btn-outline-primary d-flex justify-content-center align-items-center">
-                                <button type="button" class="minus input-group-text border-0 text-primary py-0">-</button>	<label class="screen-reader-text" for="quantity_5">Количество товара</label>
-                                <input type="number" id="quantity_5" class="input-text qty text border-0 text-primary py-0" name="cart[555][qty]" value="16" aria-label="Количество товара" size="4" min="0" max="" step="1" placeholder="" inputmode="numeric" autocomplete="off">
-                                <button type="button" class="plus input-group-text border-0 text-primary py-0">+</button></div>
-                              </div>-->
-                            </div> 
+                          </div> 
                         </div>
                       </div>
                     </div>
@@ -382,13 +352,7 @@ get_header();
                               <img class="mx-auto pe-1" src="<?= esc_url(get_stylesheet_directory_uri()); ?>/img/svg/cart4-white.svg" alt="корзина">
                               В корзину
                             </a>
-                            <!-- <div class="quantity visually-hidden-focusable">
-                              <div class="btn btn-outline-primary d-flex justify-content-center align-items-center">
-                                <button type="button" class="minus input-group-text border-0 text-primary py-0">-</button>	<label class="screen-reader-text" for="quantity_6">Количество товара</label>
-                                <input type="number" id="quantity_6" class="input-text qty text border-0 text-primary py-0" name="cart[666][qty]" value="16" aria-label="Количество товара" size="4" min="0" max="" step="1" placeholder="" inputmode="numeric" autocomplete="off">
-                                <button type="button" class="plus input-group-text border-0 text-primary py-0">+</button></div>
-                              </div>-->
-                            </div>
+                          </div>
                         </div>
                       </div>
                     </div>
@@ -449,13 +413,7 @@ get_header();
                               <img class="mx-auto pe-1" src="<?= esc_url(get_stylesheet_directory_uri()); ?>/img/svg/cart4-white.svg" alt="корзина">
                               В корзину
                             </a>
-                            <!-- <div class="quantity visually-hidden-focusable">
-                              <div class="btn btn-outline-primary d-flex justify-content-center align-items-center">
-                                <button type="button" class="minus input-group-text border-0 text-primary py-0">-</button>	<label class="screen-reader-text" for="quantity_7">Количество товара</label>
-                                <input type="number" id="quantity_7" class="input-text qty text border-0 text-primary py-0" name="cart[777][qty]" value="16" aria-label="Количество товара" size="4" min="0" max="" step="1" placeholder="" inputmode="numeric" autocomplete="off">
-                                <button type="button" class="plus input-group-text border-0 text-primary py-0">+</button></div>
-                              </div>-->
-                            </div> 
+                          </div> 
                         </div>
                       </div>
                     </div>
@@ -478,13 +436,7 @@ get_header();
                               <img class="mx-auto pe-1" src="<?= esc_url(get_stylesheet_directory_uri()); ?>/img/svg/cart4-white.svg" alt="корзина">
                               В корзину
                             </a>
-                            <!-- <div class="quantity visually-hidden-focusable">
-                              <div class="btn btn-outline-primary d-flex justify-content-center align-items-center">
-                                <button type="button" class="minus input-group-text border-0 text-primary py-0">-</button>	<label class="screen-reader-text" for="quantity_8">Количество товара</label>
-                                <input type="number" id="quantity_8" class="input-text qty text border-0 text-primary py-0" name="cart[888][qty]" value="16" aria-label="Количество товара" size="4" min="0" max="" step="1" placeholder="" inputmode="numeric" autocomplete="off">
-                                <button type="button" class="plus input-group-text border-0 text-primary py-0">+</button></div>
-                              </div>-->
-                            </div>
+                          </div>
                         </div>
                       </div>
                     </div>
@@ -507,13 +459,7 @@ get_header();
                               <img class="mx-auto pe-1" src="<?= esc_url(get_stylesheet_directory_uri()); ?>/img/svg/cart4-white.svg" alt="корзина">
                               В корзину
                             </a>
-                            <!-- <div class="quantity visually-hidden-focusable">
-                              <div class="btn btn-outline-primary d-flex justify-content-center align-items-center">
-                                <button type="button" class="minus input-group-text border-0 text-primary py-0">-</button>	<label class="screen-reader-text" for="quantity_9">Количество товара</label>
-                                <input type="number" id="quantity_9" class="input-text qty text border-0 text-primary py-0" name="cart[999][qty]" value="16" aria-label="Количество товара" size="4" min="0" max="" step="1" placeholder="" inputmode="numeric" autocomplete="off">
-                                <button type="button" class="plus input-group-text border-0 text-primary py-0">+</button></div>
-                              </div>-->
-                            </div>
+                          </div>
                         </div>
                       </div>
                     </div>
@@ -531,7 +477,7 @@ get_header();
                           <div class="mrk-image-top mx-auto position-relative"><img class="mrk-form-image mx-auto h-100 w-100" src="<?= esc_url(get_stylesheet_directory_uri()); ?>/img/form-image.jpg" alt="vidio-image">
                             <div class="form-blur mrk-bg-blur position-absolute start-0 bottom-0">
                               <h1 class="d-inline-block text-uppercase text-dark fw-bold">оставьте заявку, мы вам перезвоним</h1>
-                              <form class="row row-gap-3 row-gap-md-0 mt-4">
+                              <form class="row row-gap-3 row-gap-md-0 mt-3">
                                 <div class="col-md-8">
                                   <label for="inputName" class="visually-hidden-focusable">Имя</label>
                                   <input class="form-control" type="text" id="inputName" placeholder="Имя">
