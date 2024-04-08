@@ -13,6 +13,7 @@ All style editing is done via scss/_bscore_custom.scss
 */
 :root {
     --bs-breadcrumb-divider: url("../img/svg/arrow-right.svg");
+    --bs-emphasis-color-rgb: 9, 56, 206;
 }
 h1 {
     font-size: calc(1.60rem + 1.125vw);
