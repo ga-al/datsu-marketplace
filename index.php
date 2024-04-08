@@ -27,57 +27,49 @@ get_header();
         <div class="row">
           <div class="<?= bootscore_main_col_class(); ?> px-0">
             <!-- Grid Layout -->
-            <?php if (have_posts()) : ?>
-              <?php while (have_posts()) : the_post(); ?>
-                <?php if (is_sticky()) continue; //ignore sticky posts
-                ?>
                 
-                <div class="card border-0 mb-4 position-md-absolute">
-                  <div class="row ms-lg-2 g-0">
+            <div class="card border-0 mb-4 position-md-absolute">
+              <div class="row ms-lg-2 g-0">
 
-                    <div class="col">
-                      <div class="card-body pt-0 px-0">
+                <div class="col">
+                  <div class="card-body pt-0 px-0">
 
-                        <div class="mrk-gallery"> 
-                          <div class="mrk-gallery-top mx-auto position-relative"><img class="mrk-gallery-image mx-auto h-100 w-100" src="<?= esc_url(get_stylesheet_directory_uri()); ?>/img/gallery/image-1.jpg" alt="vidio-image">
-                          <div class="mrk-gallery-blur mrk-bg-blur position-absolute start-0 bottom-0">
-                            <h1 class="d-inline-block text-uppercase text-white fw-bold">все для стеклянных козырьков</h1>
-                            <button class="btn btn-primary d-flex align-items-center justify-content-center gap-2 text-nowrap mt-2" href="#" type="button">
-                              Смотреть готовые решения
-                            </button>
-                          </div>
-                          <div class="mrk-social position-absolute">
-                            <div class="d-flex gap-4">
-                             <a class="mrk-social-item" href="#" role="button">
-                                <img src="<?= esc_url(get_stylesheet_directory_uri()); ?>/img/svg/skype-outline.svg" alt="">
-                             </a>
-                             <a class="mrk-social-item" href="#" role="button">
-                                <img src="<?= esc_url(get_stylesheet_directory_uri()); ?>/img/svg/whatsapp.svg" alt="">
-                             </a>
-                             <a class="mrk-social-item" href="#" role="button">
-                                <img src="<?= esc_url(get_stylesheet_directory_uri()); ?>/img/svg/discord.svg" alt="">
-                             </a>
-                             <a class="mrk-social-item" href="#" role="button">
-                                <img src="<?= esc_url(get_stylesheet_directory_uri()); ?>/img/svg/telegram.svg" alt="">
-                             </a>
-                            </div>
-                          </div>
+                    <div class="mrk-gallery"> 
+                      <div class="mrk-gallery-top mx-auto position-relative"><img class="mrk-gallery-image mx-auto h-100 w-100" src="<?= esc_url(get_stylesheet_directory_uri()); ?>/img/gallery/image-1.jpg" alt="vidio-image">
+                      <div class="mrk-gallery-blur mrk-bg-blur position-absolute start-0 bottom-0">
+                        <h1 class="d-inline-block text-uppercase text-white fw-bold">все для стеклянных козырьков</h1>
+                        <button class="btn btn-primary d-flex align-items-center justify-content-center gap-2 text-nowrap mt-2" href="#" type="button">
+                          Смотреть готовые решения
+                        </button>
+                      </div>
+                      <div class="mrk-social position-absolute">
+                        <div class="d-flex gap-4">
+                          <a class="mrk-social-item" href="#" role="button">
+                            <img src="<?= esc_url(get_stylesheet_directory_uri()); ?>/img/svg/skype-outline.svg" alt="">
+                          </a>
+                          <a class="mrk-social-item" href="#" role="button">
+                            <img src="<?= esc_url(get_stylesheet_directory_uri()); ?>/img/svg/whatsapp.svg" alt="">
+                          </a>
+                          <a class="mrk-social-item" href="#" role="button">
+                            <img src="<?= esc_url(get_stylesheet_directory_uri()); ?>/img/svg/discord.svg" alt="">
+                          </a>
+                          <a class="mrk-social-item" href="#" role="button">
+                            <img src="<?= esc_url(get_stylesheet_directory_uri()); ?>/img/svg/telegram.svg" alt="">
+                          </a>
                         </div>
-                          <div class="row thumbs mrk-gallery-thumbs mx-auto flex-nowrap gap-2"> 
-                            <div class="col-4 thumbnail p-0"><a class="active" href="#" data-path="<?= esc_url(get_stylesheet_directory_uri()); ?>/img/gallery/image-1.jpg"><img class="img-thumbnail border-0 p-0" src="<?= esc_url(get_stylesheet_directory_uri()); ?>/img/gallery/image-1.jpg" alt="vidio-thumb"></a></div>
-                            <div class="col-4 thumbnail p-0"><a href="#" data-path="<?= esc_url(get_stylesheet_directory_uri()); ?>/img/gallery/image-2.jpg"><img class="img-thumbnail border-0 p-0" src="<?= esc_url(get_stylesheet_directory_uri()); ?>/img/gallery/image-2.jpg" alt="vidio-thumb"></a></div>
-                            <div class="col-4 thumbnail p-0"><a href="#" data-path="<?= esc_url(get_stylesheet_directory_uri()); ?>/img/gallery/image-3.jpg"><img class="img-thumbnail border-0 p-0" src="<?= esc_url(get_stylesheet_directory_uri()); ?>/img/gallery/image-3.jpg" alt="vidio-thumb"></a></div>
-                          </div>
-                        </div>
-                        
                       </div>
                     </div>
+                      <div class="row thumbs mrk-gallery-thumbs mx-auto flex-nowrap gap-2"> 
+                        <div class="col-4 thumbnail p-0"><a class="active" href="#" data-path="<?= esc_url(get_stylesheet_directory_uri()); ?>/img/gallery/image-1.jpg"><img class="img-thumbnail border-0 p-0" src="<?= esc_url(get_stylesheet_directory_uri()); ?>/img/gallery/image-1.jpg" alt="vidio-thumb"></a></div>
+                        <div class="col-4 thumbnail p-0"><a href="#" data-path="<?= esc_url(get_stylesheet_directory_uri()); ?>/img/gallery/image-2.jpg"><img class="img-thumbnail border-0 p-0" src="<?= esc_url(get_stylesheet_directory_uri()); ?>/img/gallery/image-2.jpg" alt="vidio-thumb"></a></div>
+                        <div class="col-4 thumbnail p-0"><a href="#" data-path="<?= esc_url(get_stylesheet_directory_uri()); ?>/img/gallery/image-3.jpg"><img class="img-thumbnail border-0 p-0" src="<?= esc_url(get_stylesheet_directory_uri()); ?>/img/gallery/image-3.jpg" alt="vidio-thumb"></a></div>
+                      </div>
+                    </div>
+                    
                   </div>
-                </div> 
-               
-              <?php endwhile; ?>
-            <?php endif; ?>
-
+                </div>
+              </div>
+            </div> 
             <div class="<?= bootscore_container_class(); ?> px-2">
               <section>
                 <h2 class="text-primary text-uppercase fw-bold">Все для профессионалов</h2>

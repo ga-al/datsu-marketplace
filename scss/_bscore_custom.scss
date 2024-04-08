@@ -46,15 +46,16 @@ html {
     width: 64px;
     border-radius: 0 0 12px 0!important;
 }
+
+.nav-link {
+    color: var(--#{$prefix}secondary);
+}
 a {
     color: var(--bs-dark);
     text-decoration: none;
 }
 a:hover {
     color: var(--bs-primary);
-}
-.nav-link {
-    color: var(--#{$prefix}secondary);
 }
 .searchform {
     width: 100%;
@@ -72,6 +73,14 @@ a:hover {
 .bootscore-info {
     font-size: 12px;
     line-height: 16px;
+}
+.link-body-emphasis {
+    font-size: 13.5px;
+    color: var(--bs-dark)!important;
+}
+.btn-toggle[aria-expanded="true"] {
+    color: var(--bs-dark)!important;
+    font-weight: 600;
 }
 
 
