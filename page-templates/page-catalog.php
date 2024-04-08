@@ -25,7 +25,7 @@ get_header();
           <div class="<?= bootscore_main_col_class(); ?> px-0">
             <!-- Grid Layout -->
                 
-            <h2 class="display-5 fw-bold text-primary">Комплектующие</h2>
+            <h2 class="display-5 fw-bold text-primary mb-4">Комплектующие</h2>
             <div class="row">
               <div class="col-6 col-md-4">
                 <h3 class="fs-6 text-uppercase">Труба нержавеющая</h3>
