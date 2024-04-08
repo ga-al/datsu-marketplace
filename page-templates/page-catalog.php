@@ -227,7 +227,7 @@ get_header();
                   <li><a href="#" class="link-body-emphasis d-inline-flex text-decoration-none rounded">Отводы, повороты, соединители поручней и труб</a></li>
                   <li><a href="#" class="link-body-emphasis d-inline-flex text-decoration-none rounded">Стеклодержатели</a></li>
                   <li>
-                    <div class="collapse" id="more-collapse">
+                    <div class="collapse" id="more-collapse6">
                       <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
                         <li><a href="#" class="link-body-emphasis d-inline-flex text-decoration-none rounded">Рутели (стеклодержатели)</a></li>
                         <li><a href="#" class="link-body-emphasis d-inline-flex text-decoration-none rounded">Комплектующие для козырьков на ваннах</a></li>
@@ -238,7 +238,7 @@ get_header();
                         <li><a href="#" class="link-body-emphasis d-inline-flex text-decoration-none rounded">Расчет стоимости стеклянных козырьков</a></li>
                       </ul>
                     </div>
-                    <button class="btn btn-toggle d-inline-flex align-items-center border-0 collapsed text-end text-primary fs-6" data-bs-toggle="collapse" data-bs-target="#more-collapse" aria-expanded="false">
+                    <button class="btn btn-toggle d-inline-flex align-items-center border-0 collapsed text-end text-primary fs-6" data-bs-toggle="collapse" data-bs-target="#more-collapse6" aria-expanded="false">
                     Ещё
                     </button>
                   </li>
@@ -261,7 +261,7 @@ get_header();
                   <li><a href="#" class="link-body-emphasis d-inline-flex text-decoration-none rounded">Отводы, повороты, соединители поручней и труб</a></li>
                   <li><a href="#" class="link-body-emphasis d-inline-flex text-decoration-none rounded">Стеклодержатели</a></li>
                   <li>
-                    <div class="collapse" id="more-collapse2">
+                    <div class="collapse" id="more-collapse7">
                       <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
                         <li><a href="#" class="link-body-emphasis d-inline-flex text-decoration-none rounded">Рутели (стеклодержатели)</a></li>
                         <li><a href="#" class="link-body-emphasis d-inline-flex text-decoration-none rounded">Комплектующие для козырьков на ваннах</a></li>
@@ -272,7 +272,7 @@ get_header();
                         <li><a href="#" class="link-body-emphasis d-inline-flex text-decoration-none rounded">Расчет стоимости стеклянных козырьков</a></li>
                       </ul>
                     </div>
-                    <button class="btn btn-toggle d-inline-flex align-items-center border-0 collapsed text-end text-primary fs-6" data-bs-toggle="collapse" data-bs-target="#more-collapse2" aria-expanded="false">
+                    <button class="btn btn-toggle d-inline-flex align-items-center border-0 collapsed text-end text-primary fs-6" data-bs-toggle="collapse" data-bs-target="#more-collapse7" aria-expanded="false">
                     Ещё
                     </button>
                   </li>
@@ -295,7 +295,7 @@ get_header();
                   <li><a href="#" class="link-body-emphasis d-inline-flex text-decoration-none rounded">Профильные трубы</a></li>
                   <li><a href="#" class="link-body-emphasis d-inline-flex text-decoration-none rounded">Перфорированные трубы</a></li>
                   <li>
-                    <div class="collapse" id="more-collapse3">
+                    <div class="collapse" id="more-collapse8">
                       <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
                         <li><a href="#" class="link-body-emphasis d-inline-flex text-decoration-none rounded">Рутели (стеклодержатели)</a></li>
                         <li><a href="#" class="link-body-emphasis d-inline-flex text-decoration-none rounded">Комплектующие для козырьков на ваннах</a></li>
@@ -306,7 +306,7 @@ get_header();
                         <li><a href="#" class="link-body-emphasis d-inline-flex text-decoration-none rounded">Расчет стоимости стеклянных козырьков</a></li>
                       </ul>
                     </div>
-                    <button class="btn btn-toggle d-inline-flex align-items-center border-0 collapsed text-end text-primary fs-6" data-bs-toggle="collapse" data-bs-target="#more-collapse3" aria-expanded="false">
+                    <button class="btn btn-toggle d-inline-flex align-items-center border-0 collapsed text-end text-primary fs-6" data-bs-toggle="collapse" data-bs-target="#more-collapse8" aria-expanded="false">
                     Ещё
                     </button>
                   </li>
@@ -329,7 +329,7 @@ get_header();
                   <li><a href="#" class="link-body-emphasis d-inline-flex text-decoration-none rounded">Отводы, повороты, соединители поручней и труб</a></li>
                   <li><a href="#" class="link-body-emphasis d-inline-flex text-decoration-none rounded">Стеклодержатели</a></li>
                   <li>
-                    <div class="collapse" id="more-collapse4">
+                    <div class="collapse" id="more-collapse9">
                       <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
                         <li><a href="#" class="link-body-emphasis d-inline-flex text-decoration-none rounded">Рутели (стеклодержатели)</a></li>
                         <li><a href="#" class="link-body-emphasis d-inline-flex text-decoration-none rounded">Комплектующие для козырьков на ваннах</a></li>
@@ -340,7 +340,7 @@ get_header();
                         <li><a href="#" class="link-body-emphasis d-inline-flex text-decoration-none rounded">Расчет стоимости стеклянных козырьков</a></li>
                       </ul>
                     </div>
-                    <button class="btn btn-toggle d-inline-flex align-items-center border-0 collapsed text-end text-primary fs-6" data-bs-toggle="collapse" data-bs-target="#more-collapse4" aria-expanded="false">
+                    <button class="btn btn-toggle d-inline-flex align-items-center border-0 collapsed text-end text-primary fs-6" data-bs-toggle="collapse" data-bs-target="#more-collapse9" aria-expanded="false">
                     Ещё
                     </button>
                   </li>
@@ -355,7 +355,7 @@ get_header();
                   <li><a href="#" class="link-body-emphasis d-inline-flex text-decoration-none rounded">Профильные трубы</a></li>
                   <li><a href="#" class="link-body-emphasis d-inline-flex text-decoration-none rounded">Перфорированные трубы</a></li>
                   <li>
-                    <div class="collapse" id="more-collapse5">
+                    <div class="collapse" id="more-collapse10">
                       <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
                         <li><a href="#" class="link-body-emphasis d-inline-flex text-decoration-none rounded">Рутели (стеклодержатели)</a></li>
                         <li><a href="#" class="link-body-emphasis d-inline-flex text-decoration-none rounded">Комплектующие для козырьков на ваннах</a></li>
@@ -366,7 +366,7 @@ get_header();
                         <li><a href="#" class="link-body-emphasis d-inline-flex text-decoration-none rounded">Расчет стоимости стеклянных козырьков</a></li>
                       </ul>
                     </div>
-                    <button class="btn btn-toggle d-inline-flex align-items-center border-0 collapsed text-end text-primary fs-6" data-bs-toggle="collapse" data-bs-target="#more-collapse5" aria-expanded="false">
+                    <button class="btn btn-toggle d-inline-flex align-items-center border-0 collapsed text-end text-primary fs-6" data-bs-toggle="collapse" data-bs-target="#more-collapse10" aria-expanded="false">
                     Ещё
                     </button>
                   </li>
