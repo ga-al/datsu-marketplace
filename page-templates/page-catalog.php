@@ -38,14 +38,14 @@ get_header();
                 </ul>
               </div>
               <div class="col-6 col-md-4">
-                <h3>Труба нержавеющая</h3>
+                <h3 class="fs-6 text-uppercase">Труба нержавеющая</h3>
                 <ul class="mrk-list-catalog">
-                  <li class="mb-2"><a href="#" class="link-body-emphasis d-inline-flex text-decoration-none rounded">Круглые трубы</a></li>
-                  <li class="mb-2"><a href="#" class="link-body-emphasis d-inline-flex text-decoration-none rounded">Уплотнители для поручня с пазом</a></li>
-                  <li class="mb-2"><a href="#" class="link-body-emphasis d-inline-flex text-decoration-none rounded">Поручень с пазом под стекло</a></li>
-                  <li class="mb-2"><a href="#" class="link-body-emphasis d-inline-flex text-decoration-none rounded">Профильные трубы</a></li>
-                  <li class="mb-2"><a href="#" class="link-body-emphasis d-inline-flex text-decoration-none rounded">Перфорированные трубы</a></li>
-                  <li class="mb-2">
+                  <li><a href="#" class="link-body-emphasis d-inline-flex text-decoration-none rounded">Круглые трубы</a></li>
+                  <li><a href="#" class="link-body-emphasis d-inline-flex text-decoration-none rounded">Уплотнители для поручня с пазом</a></li>
+                  <li><a href="#" class="link-body-emphasis d-inline-flex text-decoration-none rounded">Поручень с пазом под стекло</a></li>
+                  <li><a href="#" class="link-body-emphasis d-inline-flex text-decoration-none rounded">Профильные трубы</a></li>
+                  <li><a href="#" class="link-body-emphasis d-inline-flex text-decoration-none rounded">Перфорированные трубы</a></li>
+                  <li>
                     <div class="collapse" id="more-collapse">
                       <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
                         <li><a href="#" class="link-body-emphasis d-inline-flex text-decoration-none rounded">Рутели (стеклодержатели)</a></li>
