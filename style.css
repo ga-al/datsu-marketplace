@@ -102,8 +102,11 @@ form .form-control {
     text-transform: uppercase;
     color: var(--bs-dark);
 }
-#sideba .list li:hover {
-    text-decoration: underline;
+#sidebar .list button {
+    line-height: 1.3;
+}
+#sidebar .list .list-unstyled {
+    text-transform: none;
 }
 .widget-area ul li ul li {
     margin-left: 0.8rem;
@@ -156,29 +159,6 @@ form .form-control {
 .mrk-gallery .btn, .mrk-logo .btn, .mrk-cards-kits .btn, .mrk-image-full .btn {
     padding: 11px 1.875rem;
     letter-spacing: 1.2px;
-}
-@media (max-width: 1300px) {
-    .mrk-gallery-top, .mrk-gallery-thumbs, .mrk-image-top {
-        width: 100%;
-        height: 100%;
-    }
-    .mrk-gallery-image {
-        object-fit: cover;
-        min-height: 400px;
-    }
-    .mrk-form-image {
-        object-fit: cover;
-        min-height: 450px;
-    }
-    .mrk-gallery-blur {
-        padding: 20px 20px 20px;
-    }
-}
-@media (max-width: 620px) {
-    .header-actions {
-        justify-content: space-between;
-        width: 100%;
-    }
 }
 .mrk-download {
     border: 1px solid #E9EEFF;
