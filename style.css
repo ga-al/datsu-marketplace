@@ -13,6 +13,7 @@ All style editing is done via scss/_bscore_custom.scss
 */
 :root {
     --bs-breadcrumb-divider: url("../img/svg/arrow-right.svg");
+    --bs-emphasis-color-rgb: var(--bs-primary);
 }
 h1 {
     font-size: calc(1.60rem + 1.125vw);
@@ -112,9 +113,7 @@ form .form-control {
     text-transform: uppercase;
     color: var(--bs-dark);
 }
-#sideba .list li:hover {
-    text-decoration: underline;
-}
+
 .widget-area ul li ul li {
     margin-left: 14px;
 }
@@ -178,7 +177,7 @@ form .form-control {
     }
     .mrk-form-image {
         object-fit: cover;
-        min-height: 450px;
+        min-height: 490px;
     }
     .mrk-gallery-blur {
         padding: 20px 20px 20px;
@@ -188,6 +187,9 @@ form .form-control {
     .header-actions {
         justify-content: space-between;
         width: 100%;
+    }
+    .mrk-social {
+        right: 20px;
     }
 }
 .mrk-download {

@@ -1,8 +1,16 @@
 <?php
-
-// style and scripts
-add_action('wp_enqueue_scripts', 'bootscore_child_enqueue_styles');
-function bootscore_child_enqueue_styles() {
+  function true_change_admin_footer () {
+    $footer_text = array(
+      'Спасибо вам за творчество с <a href="http://wordpress.org">WordPress</a>',
+      'Разработала <a href="https://misha.agency" target="_blank">Галина Рахматуллина</a>'
+    );
+    return implode( ' • ', $footer_text);
+  }
+  
+  add_filter('admin_footer_text', 'true_change_admin_footer');
+  // style and scripts
+  add_action('wp_enqueue_scripts', 'bootscore_child_enqueue_styles');
+  function bootscore_child_enqueue_styles() {
 
   // style.css
   wp_enqueue_style('parent-style', get_template_directory_uri() . '/style.css');

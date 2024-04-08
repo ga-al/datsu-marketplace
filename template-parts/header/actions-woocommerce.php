@@ -38,19 +38,19 @@ defined( 'ABSPATH' ) || exit;
 if ( is_account_page() ) {
  // Do nothing
 } else { ?>
-  <a href="" class="ms-1 ms-md-2 border-0" role="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvas-user" aria-controls="offcanvas-user">
+  <a href="" class="ms-md-2 border-0" role="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvas-user" aria-controls="offcanvas-user">
     <img class="d-block mx-auto mb-1" src="<?= esc_url(get_stylesheet_directory_uri()); ?>/img/svg/person-circle.svg" alt="">
     <span class="visually-focusable fw-medium text-nowrap">Войти</span>
   </a>
 <?php } ?>
 
 
-<a href="" class="ms-1 ms-md-2 border-0" role="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvas-user" aria-controls="offcanvas-user">
+<a href="" class="ms-md-2 border-0" role="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvas-user" aria-controls="offcanvas-user">
   <img class="d-block mx-auto mb-1" src="<?= esc_url(get_stylesheet_directory_uri()); ?>/img/svg/heart.svg" alt="">
   <span class="visually-focusable fw-medium text-nowrap">Избранное</span>
 </a>
 
-<a href="" class="ms-1 ms-md-2 border-0" role="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvas-user" aria-controls="offcanvas-user">
+<a href="" class="ms-md-2 border-0" role="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvas-user" aria-controls="offcanvas-user">
   <img class="d-block mx-auto mb-1" src="<?= esc_url(get_stylesheet_directory_uri()); ?>/img/svg/handbag.svg" alt="">
   <span class="visually-focusable fw-medium text-nowrap">Заказы</span>
 </a>
@@ -67,7 +67,7 @@ if ( is_cart() ) {
   <?php 
 } else { ?>
   <!-- Add mini-cart toggler -->
-  <a href="" class="bms-1 ms-md-2 position-relative" role="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvas-cart" aria-controls="offcanvas-cart">
+  <a href="" class="ms-md-2 position-relative" role="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvas-cart" aria-controls="offcanvas-cart">
   <img class="d-block mx-auto mb-1" src="<?= esc_url(get_stylesheet_directory_uri()); ?>/img/svg/cart4.svg" alt="корзина"><span class="visually-focusable fw-medium text-nowrap">Корзина</span>
     <?php if (in_array('woocommerce/woocommerce.php', apply_filters('active_plugins', get_option('active_plugins')))) {
       $count = WC()->cart->cart_contents_count;

@@ -50,6 +50,9 @@ a {
     color: var(--bs-dark);
     text-decoration: none;
 }
+a:hover {
+    color: var(--bs-primary);
+}
 .nav-link {
     color: var(--#{$prefix}secondary);
 }
