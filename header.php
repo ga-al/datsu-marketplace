@@ -41,7 +41,7 @@
   
     <div class="fixed-top bg-white">
       <nav class="navbar navbar-expand-lg d-lg-flex d-none py-2 py-lg-0">
-        <div class="<?= bootscore_container_class(); ?> pe-md-2">
+        <div class="<?= bootscore_container_class(); ?> ps-xl-1 pe-md-2">
           <a class="fs-6 " href="#">
             <svg class="mb-1 me-2" width="16" height="16" viewBox="0 0 16 17" fill="none" xmlns="http://www.w3.org/2000/svg">
               <g clip-path="url(#clip0_1674_1112)">
