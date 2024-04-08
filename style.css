@@ -106,7 +106,7 @@ input[type="number"]::-webkit-outer-spin-button {
     color: var(--bs-gray-400)!important;
 }
 .mrk-list-catalog .link-body-emphasis:hover {
-    color: var(--bs-dark);
+    color: var(--bs-dark)!important;
 }
 .mrk-list-catalog li {
     padding-bottom: 0.5rem;
@@ -265,6 +265,11 @@ input[type="number"]::-webkit-outer-spin-button {
     text-align: center;
     background-color: #f3f4ff;
     border-radius: 12px 0 12px 0;
+}
+.mrk-number-products {
+    font-size: 1.5rem;
+    font-weight: 500;
+    color: var(--bs-gray-300);
 }
 @media (min-width: 992px) {
     .site-main {
