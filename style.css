@@ -98,6 +98,12 @@ input[type="number"]::-webkit-outer-spin-button {
 .btn-toggle[aria-expanded="true"]::before {
     transform: rotate(90deg);
 }
+.mrk-list-catalog {
+    list-style: none;
+}
+.mrk-list-catalog .link-body-emphasis {
+    color: var(--bs-gray-400);
+}
 .mrk-list-catalog .btn-toggle {
     text-decoration: underline;
 }

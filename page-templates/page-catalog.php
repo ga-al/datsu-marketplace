@@ -25,26 +25,26 @@ get_header();
           <div class="<?= bootscore_main_col_class(); ?> px-0">
             <!-- Grid Layout -->
                 
-            <h2 class="text-primary">Комплектующие</h2>
+            <h2 class="display-5 fw-bold text-primary">Комплектующие</h2>
             <div class="row">
               <div class="col-6 col-md-4">
-                <h3>Труба нержавеющая</h3>
+                <h3 class="fs-6 text-uppercase">Труба нержавеющая</h3>
                 <ul class="mrk-list-catalog">
-                  <li>Круглые трубы</li>
-                  <li>Уплотнители для поручня с пазом</li>
-                  <li>Поручень с пазом под стекло</li>
-                  <li>Профильные трубы</li>
-                  <li>Перфорированные трубы</li>
+                  <li><a href="#" class="link-body-emphasis d-inline-flex text-decoration-none rounded">Круглые трубы</a></li>
+                  <li><a href="#" class="link-body-emphasis d-inline-flex text-decoration-none rounded">Уплотнители для поручня с пазом</a></li>
+                  <li><a href="#" class="link-body-emphasis d-inline-flex text-decoration-none rounded">Поручень с пазом под стекло</a></li>
+                  <li><a href="#" class="link-body-emphasis d-inline-flex text-decoration-none rounded">Профильные трубы</a></li>
+                  <li><a href="#" class="link-body-emphasis d-inline-flex text-decoration-none rounded">Перфорированные трубы</a></li>
                 </ul>
               </div>
               <div class="col-6 col-md-4">
                 <h3>Труба нержавеющая</h3>
                 <ul class="mrk-list-catalog">
-                  <li class="mb-2">Круглые трубы</li>
-                  <li class="mb-2">Уплотнители для поручня с пазом</li>
-                  <li class="mb-2">Поручень с пазом под стекло</li>
-                  <li class="mb-2">Профильные трубы</li>
-                  <li class="mb-2">Перфорированные трубы</li>
+                  <li class="mb-2"><a href="#" class="link-body-emphasis d-inline-flex text-decoration-none rounded">Круглые трубы</a></li>
+                  <li class="mb-2"><a href="#" class="link-body-emphasis d-inline-flex text-decoration-none rounded">Уплотнители для поручня с пазом</a></li>
+                  <li class="mb-2"><a href="#" class="link-body-emphasis d-inline-flex text-decoration-none rounded">Поручень с пазом под стекло</a></li>
+                  <li class="mb-2"><a href="#" class="link-body-emphasis d-inline-flex text-decoration-none rounded">Профильные трубы</a></li>
+                  <li class="mb-2"><a href="#" class="link-body-emphasis d-inline-flex text-decoration-none rounded">Перфорированные трубы</a></li>
                   <li class="mb-2">
                     <div class="collapse" id="more-collapse">
                       <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
@@ -64,13 +64,13 @@ get_header();
                 </ul>
               </div>
               <div class="col-6 col-md-4">
-                <h3>Труба нержавеющая</h3>
+                <h3 class="fs-6 text-uppercase">Труба нержавеющая</h3>
                 <ul class="mrk-list-catalog">
-                  <li>Круглые трубы</li>
-                  <li>Уплотнители для поручня с пазом</li>
-                  <li>Поручень с пазом под стекло</li>
-                  <li>Профильные трубы</li>
-                  <li>Перфорированные трубы</li>
+                  <li><a href="#" class="link-body-emphasis d-inline-flex text-decoration-none rounded">Круглые трубы</a></li>
+                  <li><a href="#" class="link-body-emphasis d-inline-flex text-decoration-none rounded">Уплотнители для поручня с пазом</a></li>
+                  <li><a href="#" class="link-body-emphasis d-inline-flex text-decoration-none rounded">Поручень с пазом под стекло</a></li>
+                  <li><a href="#" class="link-body-emphasis d-inline-flex text-decoration-none rounded">Профильные трубы</a></li>
+                  <li><a href="#" class="link-body-emphasis d-inline-flex text-decoration-none rounded">Перфорированные трубы</a></li>
                 </ul>
               </div>
             </div>
