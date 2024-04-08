@@ -41,7 +41,7 @@
   
     <div class="fixed-top bg-white">
       <nav class="navbar navbar-expand-lg d-lg-flex d-none py-2 py-lg-0">
-        <div class="<?= bootscore_container_class(); ?>">
+        <div class="<?= bootscore_container_class(); ?> pe-md-2">
           <a class="fs-6 " href="#">
             <svg class="mb-1 me-2" width="16" height="16" viewBox="0 0 16 17" fill="none" xmlns="http://www.w3.org/2000/svg">
               <g clip-path="url(#clip0_1674_1112)">
@@ -77,8 +77,8 @@
             <div class="col-11 col-md-4 col-xl-3">
               <!-- Navbar Brand -->
               <div class="mrk-logo my-lg-0 my-2">
-                <a class="navbar-brand xs d-md-none ms-md-3 ms-2 pe-md-2" href="<?= esc_url(home_url()); ?>"><img src="<?= esc_url(get_stylesheet_directory_uri()); ?>/img/logo/logo-sm.svg" alt="logo" class="logo xs"></a>
-                <a class="navbar-brand md d-none d-md-block ms-3 pe-1" href="<?= esc_url(home_url()); ?>"><img src="<?= esc_url(get_stylesheet_directory_uri()); ?>/img/logo/logo.svg" alt="logo" class="logo md"></a>
+                <a class="navbar-brand xs d-md-none ms-md-3" href="<?= esc_url(home_url()); ?>"><img src="<?= esc_url(get_stylesheet_directory_uri()); ?>/img/logo/logo-sm.svg" alt="logo" class="logo xs"></a>
+                <a class="navbar-brand md d-none d-md-block" href="<?= esc_url(home_url()); ?>"><img src="<?= esc_url(get_stylesheet_directory_uri()); ?>/img/logo/logo.svg" alt="logo" class="logo md"></a>
                 <a class="btn btn-primary d-flex align-items-center justify-content-center gap-2 text-nowrap" href="#" role="button">
                   <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-grid-fill" viewBox="0 0 16 16">
                     <path d="M1 2.5A1.5 1.5 0 0 1 2.5 1h3A1.5 1.5 0 0 1 7 2.5v3A1.5 1.5 0 0 1 5.5 7h-3A1.5 1.5 0 0 1 1 5.5v-3zm8 0A1.5 1.5 0 0 1 10.5 1h3A1.5 1.5 0 0 1 15 2.5v3A1.5 1.5 0 0 1 13.5 7h-3A1.5 1.5 0 0 1 9 5.5v-3zm-8 8A1.5 1.5 0 0 1 2.5 9h3A1.5 1.5 0 0 1 7 10.5v3A1.5 1.5 0 0 1 5.5 15h-3A1.5 1.5 0 0 1 1 13.5v-3zm8 0A1.5 1.5 0 0 1 10.5 9h3a1.5 1.5 0 0 1 1.5 1.5v3a1.5 1.5 0 0 1-1.5 1.5h-3A1.5 1.5 0 0 1 9 13.5v-3z"></path>
@@ -130,7 +130,7 @@
                   </div>
                 </div>
               
-                <div class="header-actions d-md-flex d-none align-items-center gap-4">
+                <div class="header-actions d-md-flex d-none align-items-center gap-4 " style="margin-right: -7px;">
 
                   <!-- Top Nav Widget -->
                   <?php if (is_active_sidebar('top-nav')) : ?>

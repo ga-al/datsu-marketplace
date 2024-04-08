@@ -199,7 +199,7 @@ get_header();
               </div>
             </div>
 
-            <div class="d-flex justify-content-between align-items-center mb-4">
+            <div class="d-flex justify-content-between align-items-center mt-3 mb-4">
               <h2 class="display-5 fw-bold text-primary">Конструкции с монтажем</h2>
               <div class="mrk-number-products">
                 <span>349 893</span>
