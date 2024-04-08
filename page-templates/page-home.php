@@ -127,7 +127,7 @@ get_header();
                 </form>
                 <div class="mrk-cards-info">
                   <div class="row">
-                    <div class="col-md-6 col-lg-6 col-xxl-4 mb-4">
+                    <div class="col-6 col-md-4 mb-4">
                       <div class="card border-0 pt-4">
                         <div class="card-header border-0 bg-white px-0">
                           <h5 class="card-title text-center mb-0">3D модель</р>
@@ -137,7 +137,7 @@ get_header();
                         </div>
                       </div>
                     </div>
-                    <div class="col-md-6 col-lg-6 col-xxl-4 mb-4">
+                    <div class="col-6 col-md-4 mb-4">
                       <div class="card border-0 pt-4">
                         <div class="card-header border-0 bg-white px-0">
                           <h5 class="card-title text-center mb-0">Инструкция</р>
@@ -147,7 +147,7 @@ get_header();
                         </div>
                       </div>
                     </div>
-                    <div class="col-md-6 col-lg-6 col-xxl-4 mb-4">
+                    <div class="col-6 col-md-4 mb-4">
                       <div class="card border-0 pt-4">
                         <div class="card-header border-0 bg-white px-0">
                           <h5 class="card-title text-center mb-0">PDF чертежи</р>
@@ -157,7 +157,7 @@ get_header();
                         </div>
                       </div>
                     </div>
-                    <div class="col-md-6 col-lg-6 col-xxl-4 mb-4">
+                    <div class="col-6 col-md-4 mb-4">
                       <div class="card border-0 pt-4">
                         <div class="card-header border-0 bg-white px-0">
                           <h5 class="card-title text-center mb-0">Протокол испытаний</р>
@@ -167,7 +167,7 @@ get_header();
                         </div>
                       </div>
                     </div>
-                    <div class="col-md-6 col-lg-6 col-xxl-4 mb-4">
+                    <div class="col-6 col-md-4 mb-4">
                       <div class="card border-0 pt-4">
                         <div class="card-header border-0 bg-white px-0">
                           <h5 class="card-title text-center mb-0">Сертификаты</р>
@@ -177,7 +177,7 @@ get_header();
                         </div>
                       </div>
                     </div>
-                    <div class="col-md-6 col-lg-6 col-xxl-4 mb-4">
+                    <div class="col-6 col-md-4 mb-4">
                       <div class="card border-0 pt-4">
                         <div class="card-header border-0 bg-white px-0">
                           <h5 class="card-title text-center mb-0">Полный каталог</р>
