@@ -29,14 +29,24 @@ get_header();
             <div class="row">
               <div class="col-6 col-md-4">
                 <h3>Труба нержавеющая</h3>
-                <ul>
+                <ul class="mrk-list-catalog">
+                  <li>Круглые трубы</li>
+                  <li>Уплотнители для поручня с пазом</li>
+                  <li>Поручень с пазом под стекло</li>
+                  <li>Профильные трубы</li>
+                  <li>Перфорированные трубы</li>
+                </ul>
+              </div>
+              <div class="col-6 col-md-4">
+                <h3>Труба нержавеющая</h3>
+                <ul class="mrk-list-catalog">
                   <li class="mb-2">Круглые трубы</li>
                   <li class="mb-2">Уплотнители для поручня с пазом</li>
                   <li class="mb-2">Поручень с пазом под стекло</li>
                   <li class="mb-2">Профильные трубы</li>
                   <li class="mb-2">Перфорированные трубы</li>
                   <li class="mb-2">
-                    <div class="collapse" id="account-collapse">
+                    <div class="collapse" id="more-collapse">
                       <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
                         <li><a href="#" class="link-body-emphasis d-inline-flex text-decoration-none rounded">Рутели (стеклодержатели)</a></li>
                         <li><a href="#" class="link-body-emphasis d-inline-flex text-decoration-none rounded">Комплектующие для козырьков на ваннах</a></li>
@@ -47,7 +57,7 @@ get_header();
                         <li><a href="#" class="link-body-emphasis d-inline-flex text-decoration-none rounded">Расчет стоимости стеклянных козырьков</a></li>
                       </ul>
                     </div>
-                    <button class="btn btn-toggle d-inline-flex align-items-center border-0 collapsed text-uppercase text-start fs-6" data-bs-toggle="collapse" data-bs-target="#account-collapse" aria-expanded="false">
+                    <button class="btn btn-toggle d-inline-flex align-items-center border-0 collapsed text-end text-primary fs-6" data-bs-toggle="collapse" data-bs-target="#more-collapse" aria-expanded="false">
                     Ещё
                     </button>
                   </li>
@@ -55,7 +65,7 @@ get_header();
               </div>
               <div class="col-6 col-md-4">
                 <h3>Труба нержавеющая</h3>
-                <ul>
+                <ul class="mrk-list-catalog">
                   <li>Круглые трубы</li>
                   <li>Уплотнители для поручня с пазом</li>
                   <li>Поручень с пазом под стекло</li>
