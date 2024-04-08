@@ -26,10 +26,10 @@ get_header();
             <!-- Grid Layout -->
             <div class="d-flex justify-content-between align-items-center">
               <h2 class="display-5 fw-bold text-primary mb-4">Комплектующие</h2>
-              <div class="mrk-number-products">
+              <span class="mrk-number-products">
                 <span>349 893</span>
                 товаров
-              </div>
+              </span>
             <div>
             
             <div class="row">
