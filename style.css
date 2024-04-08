@@ -44,7 +44,7 @@ input[type="number"]::-webkit-outer-spin-button {
 }
 .site-main {
     position: relative;
-    margin-top: 48px;
+    margin-top: 10px;
 }
 .mrk-logo {
     display: flex;
@@ -245,6 +245,7 @@ input[type="number"]::-webkit-outer-spin-button {
 @media (min-width: 992px) {
     .site-main {
         padding-top: 1rem !important;
+        margin-top: 48px;
     }
 }
 @media (max-width: 1300px) {
