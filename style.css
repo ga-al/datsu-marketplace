@@ -99,10 +99,14 @@ input[type="number"]::-webkit-outer-spin-button {
     transform: rotate(90deg);
 }
 .mrk-list-catalog {
+    padding-left: 0;
     list-style: none;
 }
 .mrk-list-catalog .link-body-emphasis {
-    color: var(--bs-gray-400);
+    color: var(--bs-gray-400)!important;
+}
+.mrk-list-catalog li {
+    padding-bottom: 0.5rem;
 }
 .mrk-list-catalog .btn-toggle {
     text-decoration: underline;
