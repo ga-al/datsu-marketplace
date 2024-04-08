@@ -66,7 +66,7 @@ get_header();
                 </div>
               </div>
             </div> 
-            <div class="<?= bootscore_container_class(); ?> px-2">
+            <div class="<?= bootscore_container_class(); ?> pe-xxl-2 pe-md-3 px-2">
               <section>
                 <h2 class="text-primary text-uppercase fw-bold">Все для профессионалов</h2>
                 <form class="row g-3 mt-3">
@@ -196,7 +196,7 @@ get_header();
                 </div>
                 <div class="mrk-cards-kits mt-3">
                   <div class="row">
-                    <div class="col-md-6 col-lg-6 col-xxl-4 mb-4">
+                    <div class="col-6 col-md-4 mb-4">
                       <div class="card border-0 h-100"> 
                         <div class="card-kit-img">
                           <div class="mrk-card-heart no-active"></div>
@@ -219,7 +219,7 @@ get_header();
                         </div>
                       </div>
                     </div>
-                    <div class="col-md-6 col-lg-6 col-xxl-4 mb-4">
+                    <div class="col-6 col-md-4 mb-4">
                       <div class="card border-0 h-100"> 
                         <div class="card-kit-img">
                           <div class="mrk-card-heart no-active"></div>
@@ -242,7 +242,7 @@ get_header();
                         </div>
                       </div>
                     </div>
-                    <div class="col-md-6 col-lg-6 col-xxl-4 mb-4">
+                    <div class="col-6 col-md-4 mb-4">
                       <div class="card border-0 h-100"> 
                         <div class="card-kit-img">
                           <div class="mrk-card-heart no-active"></div>
@@ -275,7 +275,7 @@ get_header();
                 </div>
                 <div class="mrk-cards-kits mt-3">
                   <div class="row">
-                    <div class="col-md-6 col-lg-6 col-xxl-4 mb-4">
+                    <div class="col-6 col-md-4 mb-4">
                       <div class="card border-0 h-100"> 
                         <div class="card-kit-img">
                           <div class="mrk-card-heart no-active"></div>
@@ -298,7 +298,7 @@ get_header();
                         </div>
                       </div>
                     </div>
-                    <div class="col-md-6 col-lg-6 col-xxl-4 mb-4">
+                    <div class="col-6 col-md-4 mb-4">
                       <div class="card border-0 h-100"> 
                         <div class="card-kit-img">
                           <div class="mrk-card-heart no-active"></div>
@@ -321,7 +321,7 @@ get_header();
                         </div>
                       </div>
                     </div>
-                    <div class="col-md-6 col-lg-6 col-xxl-4 mb-4">
+                    <div class="col-6 col-md-4 mb-4">
                       <div class="card border-0 h-100"> 
                         <div class="card-kit-img">
                           <div class="mrk-card-heart no-active"></div>
@@ -382,7 +382,7 @@ get_header();
                 </div>
                 <div class="mrk-cards-kits mt-3">
                   <div class="row">
-                    <div class="col-md-6 col-lg-6 col-xxl-4 mb-4">
+                    <div class="col-6 col-md-4 mb-4">
                       <div class="card border-0 h-100"> 
                         <div class="card-kit-img">
                           <div class="mrk-card-heart no-active"></div>
@@ -405,7 +405,7 @@ get_header();
                         </div>
                       </div>
                     </div>
-                    <div class="col-md-6 col-lg-6 col-xxl-4 mb-4">
+                    <div class="col-6 col-md-4 mb-4">
                       <div class="card border-0 h-100"> 
                         <div class="card-kit-img">
                           <div class="mrk-card-heart no-active"></div>
@@ -428,7 +428,7 @@ get_header();
                         </div>
                       </div>
                     </div>
-                    <div class="col-md-6 col-lg-6 col-xxl-4 mb-4">
+                    <div class="col-6 col-md-4 mb-4">
                       <div class="card border-0 h-100"> 
                         <div class="card-kit-img">
                           <div class="mrk-card-heart no-active"></div>

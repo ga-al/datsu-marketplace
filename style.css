@@ -33,7 +33,7 @@ input[type="number"]::-webkit-outer-spin-button {
     box-sizing: border-box;
     height: 44px;
 }
-form .form-control {
+.form-blur .form-control {
     border-radius: 0 0 12px 0!important;
 }
 .search-field {
@@ -47,7 +47,7 @@ form .form-control {
     align-items: center;
     padding: 10px 5px;
     max-width: 335px;
-    background-color: #F3F4FF;
+    /* background-color: #F3F4FF; */
     border-radius: 16px 0 16px 0;
 }
 .mrk-logo .btn:hover, .mrk-logo a:hover {
@@ -135,8 +135,8 @@ form .form-control {
 }
 .mrk-gallery-top, .mrk-image-top {
     width: 1039px;
-    height: 594px;
-    max-height: 100%;
+    height: calc(100vh - 134px);
+    max-height: 594px;
     overflow: hidden;
 }
 .mrk-gallery-thumbs {
