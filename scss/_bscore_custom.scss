@@ -78,6 +78,9 @@ a:hover {
     font-size: 13.5px;
     color: var(--bs-dark)!important;
 }
+.link-body-emphasis:hover, .link-body-emphasis:focus, .link-body-emphasis.active {
+    color: rgba(var(--bs-emphasis-color-rgb), var(--bs-link-opacity, 0.95)) !important;
+}
 .btn-toggle[aria-expanded="true"] {
     color: var(--bs-dark)!important;
     font-weight: 600;

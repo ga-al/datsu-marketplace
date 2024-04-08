@@ -80,7 +80,7 @@ if (!is_active_sidebar('sidebar-1')) {
             <div class="collapse" id="account-collapse">
               <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
                 <li><a href="#" class="link-body-emphasis d-inline-flex text-decoration-none rounded">Рутели (стеклодержатели)</a></li>
-                <li><a href="#" class="link-body-emphasis d-inline-flex text-decoration-none rounded">Комплектующие для козырьков на ваннах</a></li>
+                <li><a href="#" class="link-body-emphasis d-inline-flex text-decoration-none rounded active">Комплектующие для козырьков на ваннах</a></li>
                 <li><a href="#" class="link-body-emphasis d-inline-flex text-decoration-none rounded">Тяга для козырьков</a></li>
                 <li><a href="#" class="link-body-emphasis d-inline-flex text-decoration-none rounded">Стекло для навеса</a></li>
                 <li><a href="#" class="link-body-emphasis d-inline-flex text-decoration-none rounded">Комплекты готовых козырьков</a></li>
