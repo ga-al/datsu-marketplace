@@ -17,7 +17,7 @@ get_header();
       <!-- Hook to add something nice -->
       <?php bs_after_primary(); ?>
 
-      <main id="main" class="site-main position-relative mt-lg-5 mt-4 pt-lg-3">
+      <main id="main" class="site-main">
 
         <!-- Post List -->
         <div class="row">

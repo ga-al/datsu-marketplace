@@ -42,6 +42,10 @@ input[type="number"]::-webkit-outer-spin-button {
     border: 1px solid #DCE4FF;
     border-radius: 0;
 }
+.site-main {
+    position: relative;
+    margin-top: 48px;
+}
 .mrk-logo {
     display: flex;
     align-items: center;
@@ -237,6 +241,11 @@ input[type="number"]::-webkit-outer-spin-button {
     text-align: center;
     background-color: #f3f4ff;
     border-radius: 12px 0 12px 0;
+}
+@media (min-width: 992px) {
+    .site-main {
+        padding-top: 1rem !important;
+    }
 }
 @media (max-width: 1300px) {
     .mrk-gallery-top, .mrk-gallery-thumbs, .mrk-image-top {
