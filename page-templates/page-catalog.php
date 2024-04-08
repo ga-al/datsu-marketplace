@@ -24,13 +24,13 @@ get_header();
         <div class="row">
           <div class="<?= bootscore_main_col_class(); ?>">
             <!-- Grid Layout -->
-            
-            <h2 class="display-5 fw-bold text-primary mb-4">Комплектующие</h2>
-            <div class="mrk-number-products">
-              <span>349 893</span>
-              товаров
+            <div class="row">
+              <h2 class="display-5 fw-bold text-primary mb-4">Комплектующие</h2>
+              <div class="mrk-number-products">
+                <span>349 893</span>
+                товаров
+              </div>
             </div>
-           
             
             <div class="row">
               <div class="col-6 col-md-4">
