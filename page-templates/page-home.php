@@ -196,7 +196,7 @@ get_header();
                 </div>
                 <div class="mrk-cards-kits mt-3">
                   <div class="row">
-                    <div class="col-6 col-md-4 mb-4">
+                    <div class="col-6 col-lg-4 mb-4">
                       <div class="card border-0 h-100"> 
                         <div class="card-kit-img">
                           <div class="mrk-card-heart no-active"></div>
@@ -219,7 +219,7 @@ get_header();
                         </div>
                       </div>
                     </div>
-                    <div class="col-6 col-md-4 mb-4">
+                    <div class="col-6 col-lg-4 mb-4">
                       <div class="card border-0 h-100"> 
                         <div class="card-kit-img">
                           <div class="mrk-card-heart no-active"></div>
@@ -242,7 +242,7 @@ get_header();
                         </div>
                       </div>
                     </div>
-                    <div class="col-6 col-md-4 mb-4">
+                    <div class="col-6 col-lg-4 mb-4">
                       <div class="card border-0 h-100"> 
                         <div class="card-kit-img">
                           <div class="mrk-card-heart no-active"></div>
@@ -275,7 +275,7 @@ get_header();
                 </div>
                 <div class="mrk-cards-kits mt-3">
                   <div class="row">
-                    <div class="col-6 col-md-4 mb-4">
+                    <div class="col-6 col-lg-4 mb-4">
                       <div class="card border-0 h-100"> 
                         <div class="card-kit-img">
                           <div class="mrk-card-heart no-active"></div>
@@ -298,7 +298,7 @@ get_header();
                         </div>
                       </div>
                     </div>
-                    <div class="col-6 col-md-4 mb-4">
+                    <div class="col-6 col-lg-4 mb-4">
                       <div class="card border-0 h-100"> 
                         <div class="card-kit-img">
                           <div class="mrk-card-heart no-active"></div>
@@ -321,7 +321,7 @@ get_header();
                         </div>
                       </div>
                     </div>
-                    <div class="col-6 col-md-4 mb-4">
+                    <div class="col-6 col-lg-4 mb-4">
                       <div class="card border-0 h-100"> 
                         <div class="card-kit-img">
                           <div class="mrk-card-heart no-active"></div>
@@ -382,7 +382,7 @@ get_header();
                 </div>
                 <div class="mrk-cards-kits mt-3">
                   <div class="row">
-                    <div class="col-6 col-md-4 mb-4">
+                    <div class="col-6 col-lg-4 mb-4">
                       <div class="card border-0 h-100"> 
                         <div class="card-kit-img">
                           <div class="mrk-card-heart no-active"></div>
@@ -405,7 +405,7 @@ get_header();
                         </div>
                       </div>
                     </div>
-                    <div class="col-6 col-md-4 mb-4">
+                    <div class="col-6 col-lg-4 mb-4">
                       <div class="card border-0 h-100"> 
                         <div class="card-kit-img">
                           <div class="mrk-card-heart no-active"></div>
@@ -428,7 +428,7 @@ get_header();
                         </div>
                       </div>
                     </div>
-                    <div class="col-6 col-md-4 mb-4">
+                    <div class="col-6 col-lg-4 mb-4">
                       <div class="card border-0 h-100"> 
                         <div class="card-kit-img">
                           <div class="mrk-card-heart no-active"></div>
