@@ -19,7 +19,7 @@ get_header();
       <?php bs_after_primary(); ?>
 
       <main id="main" class="site-main">
-
+        <?php woocommerce_breadcrumb(['home'=>' '])?> 
         <!-- Post List -->
         <div class="row">
           <div class="<?= bootscore_main_col_class(); ?>">
