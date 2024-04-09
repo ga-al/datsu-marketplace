@@ -19,9 +19,9 @@ if (!function_exists('the_breadcrumb')) :
   function the_breadcrumb() {
 
     if (!is_home()) {
-      echo '<nav aria-label="breadcrumb" class="breadcrumb-scroller mb-4 mt-2 py-2 px-3 bg-body-tertiary rounded">';
+      echo '<nav aria-label="breadcrumb" class="breadcrumb-scroller mb-4 mt-2 py-2 px-3">';
       echo '<ol class="breadcrumb mb-0">';
-      echo '<li class="breadcrumb-item"><a href="' . home_url() . '">' . $cat->name . '</a></li>';
+      echo '<li class="breadcrumb-item"><a href="' . home_url() . '">' . get_the_title() . '</a></li>';
       // display parent category names with links
       if (is_category() || is_single()) {
         $cat_IDs = wp_get_post_categories(get_the_ID());
