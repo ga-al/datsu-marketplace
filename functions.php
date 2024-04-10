@@ -175,15 +175,15 @@ if (!function_exists('bs_woocommerce_breadcrumbs')) :
   function bs_woocommerce_breadcrumbs() {
     return array(
       'delimiter'   => '',
-      'wrap_before' => "<nav aria-label='breadcrumb' class='wc-breadcrumb breadcrumb-scroller pb-2 rounded'>
+      'wrap_before' => "<nav aria-label='breadcrumb' class='wc-breadcrumb breadcrumb-scroller pb-2 px-xxl-1'>
       <ol class='breadcrumb mb-0'>",
       'wrap_after'  => '</ol>
       </nav>',
       'before'      => '<li class="breadcrumb-item">',
       'after'       => '</li>',
       // Remove "Home" and add Fontawesome house icon (_wc_breadcrumb.scss)
-      //'home'        => _x('Home', 'breadcrumb', 'woocommerce'),
-      'home'        => ' ',
+      'home'        => _x('Home', 'breadcrumb', 'woocommerce'),
+      // 'home'        => ' ',
     );
   }
 endif;
