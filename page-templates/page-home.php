@@ -190,7 +190,7 @@ get_header();
                 </div>
               </section>
               <section class="mt-4">
-                <div class="d-flex justify-content-between align-items-center">
+                <div class="d-flex justify-content-between align-items-center flex-wrap">
                   <h2 class="text-primary text-uppercase fw-bold">готовые комплекты</h2>
                   <a class="fs-3 fw-medium" href="#">Смотреть все</a>
                 </div>
@@ -269,7 +269,7 @@ get_header();
                 </div>
               </section>
               <section class="mt-4">
-                <div class="d-flex justify-content-between align-items-center">
+                <div class="d-flex justify-content-between align-items-center flex-wrap">
                   <h2 class="text-primary text-uppercase fw-bold">рутели и крепления</h2>
                   <a class="fs-3 fw-medium" href="#">Смотреть все</a>
                 </div>
@@ -376,7 +376,7 @@ get_header();
                 </div>
               </section>
               <section class="mt-4">
-                <div class="d-flex justify-content-between align-items-center">
+                <div class="d-flex justify-content-between align-items-center flex-wrap">
                   <h2 class="text-primary text-uppercase fw-bold">ванты и крепления</h2>
                   <a class="fs-3 fw-medium" href="#">Смотреть все</a>
                 </div>
