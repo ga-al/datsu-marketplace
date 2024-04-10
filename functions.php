@@ -201,3 +201,11 @@ function custom_search_query( $search ) {
     $search = 'custom search query';
     return $search;
 }
+
+// Выводим текст для главной страницы в хлебных крошках
+add_filter('woocommerce_breadcrumb_defaults', 'wcc_change_breadcrumb_home_text');
+function wcc_change_breadcrumb_home_text($defaults) {
+  $defaults['home'] = _x('Home', 'breadcrumb', 'woocommerce');
+
+  return $defaults;
+}

@@ -85,5 +85,16 @@ a:hover {
     color: var(--bs-dark)!important;
     font-weight: 600;
 }
+.wc-breadcrumb .breadcrumb-item:first-child a::before {
+    display: none;
+}
+.breadcrumb-item + .breadcrumb-item::before {
+    height: 20px;
+    line-height: 24px;
+}
+.breadcrumb a {
+    color: #6C757D!important;
+}
+
 
 
