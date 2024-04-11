@@ -21,9 +21,7 @@ get_header();
 
           <main id="main" class="site-main">
 
-            
-
-            <div class="entry-content">
+            <div class="entry-content">11111
               <?php the_content(); ?>
             </div>
 
