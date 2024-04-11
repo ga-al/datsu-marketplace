@@ -202,5 +202,3 @@ function wcc_change_breadcrumb_home_text($defaults) {
 
   return $defaults;
 }
-
-remove_all_actions('woocommerce_single_product_summary');
