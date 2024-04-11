@@ -203,5 +203,4 @@ function wcc_change_breadcrumb_home_text($defaults) {
   return $defaults;
 }
 
-add_action( 'woocommerce_single_product_summary', 'woocommerce_template_single_title', 30 );
-remove_action( 'woocommerce_single_product_summary', 'woocommerce_template_single_meta', 10);
+add_action( 'woocommerce_before_single_product_summary', 'woocommerce_show_product_images', 10 );
