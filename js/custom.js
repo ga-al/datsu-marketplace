@@ -30,8 +30,7 @@ jQuery(function ($) {
     <div class="quantity btn btn-outline-primary d-flex justify-content-center align-items-center">
     <button type="button" class="minus input-group-text border-0 text-primary py-0">-</button>	<label class="screen-reader-text" >Количество товара</label>
     <input type="number" class="input-text qty text border-0 text-primary py-0" name="cart[111][qty]" value="1" aria-label="Количество товара" size="4" min="0" max="" step="1" placeholder="" inputmode="numeric" autocomplete="off">
-    <button type="button" class="plus input-group-text border-0 text-primary py-0">+</button></div>
-    `;
+    <button type="button" class="plus input-group-text border-0 text-primary py-0">+</button></div>`;
    
     blocks.forEach((block) => {
         block.addEventListener("click", (event) => {

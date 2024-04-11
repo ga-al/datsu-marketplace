@@ -53,7 +53,7 @@ get_header();
               <div class="tab-content pt-4" id="nav-tabContent">
                 <div class="tab-pane fade active show" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">
                   <div class="d-flex mb-5">
-                    <div class="flex-shrink-0"><img class="object-fit-contain me-4" src="<?= get_stylesheet_directory_uri(); ?>/img/catalogs/cards-image/1.png" alt=""></div>
+                    <div class="flex-shrink-0"><img class="object-fit-contain me-4" src="<?= get_stylesheet_directory_uri(); ?>/img/catalogs/cards-image/1.png" alt="" style="width: 70px;"></div>
                     <div class="flex-grow-1 py-0">
                       <div class="row g-3"> 
                         <div class="col-xl-9 col-lg-7">
@@ -78,7 +78,7 @@ get_header();
                     </div>
                   </div>
                   <div class="d-flex mb-5">
-                    <div class="flex-shrink-0"><img class="object-fit-contain me-4" src="<?= get_stylesheet_directory_uri(); ?>/img/catalogs/cards-image/2.png" alt=""></div>
+                    <div class="flex-shrink-0"><img class="object-fit-contain me-4" src="<?= get_stylesheet_directory_uri(); ?>/img/catalogs/cards-image/2.png" alt="" style="width: 70px;"></div>
                     <div class="flex-grow-1 py-0">
                       <div class="row g-3"> 
                         <div class="col-xl-9 col-lg-7">
@@ -103,7 +103,7 @@ get_header();
                     </div>
                   </div>
                   <div class="d-flex mb-5">
-                    <div class="flex-shrink-0"><img class="object-fit-contain me-4" src="<?= get_stylesheet_directory_uri(); ?>/img/catalogs/cards-image/3.png" alt=""></div>
+                    <div class="flex-shrink-0"><img class="object-fit-contain me-4" src="<?= get_stylesheet_directory_uri(); ?>/img/catalogs/cards-image/3.png" alt="" style="width: 70px;"></div>
                     <div class="flex-grow-1 py-0">
                       <div class="row g-3"> 
                         <div class="col-xl-9 col-lg-7">
@@ -130,7 +130,7 @@ get_header();
                 </div>
                 <div class="tab-pane fade" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab">
                   <div class="d-flex mb-5">
-                    <div class="flex-shrink-0"><img class="object-fit-contain me-4" src="<?= get_stylesheet_directory_uri(); ?>/img/catalogs/cards-image/2.png" alt=""></div>
+                    <div class="flex-shrink-0"><img class="object-fit-contain me-4" src="<?= get_stylesheet_directory_uri(); ?>/img/catalogs/cards-image/2.png" alt="" style="width: 70px;"></div>
                     <div class="flex-grow-1 py-0">
                       <div class="row g-3"> 
                         <div class="col-xl-9 col-lg-7">
@@ -155,7 +155,7 @@ get_header();
                     </div>
                   </div>
                   <div class="d-flex mb-5">
-                    <div class="flex-shrink-0"><img class="object-fit-contain me-4" src="<?= get_stylesheet_directory_uri(); ?>/img/catalogs/cards-image/3.png" alt=""></div>
+                    <div class="flex-shrink-0"><img class="object-fit-contain me-4" src="<?= get_stylesheet_directory_uri(); ?>/img/catalogs/cards-image/3.png" alt="" style="width: 70px;"></div>
                     <div class="flex-grow-1 py-0">
                       <div class="row g-3"> 
                         <div class="col-xl-9 col-lg-7">
@@ -180,7 +180,7 @@ get_header();
                     </div>
                   </div>
                   <div class="d-flex mb-5">
-                    <div class="flex-shrink-0"><img class="object-fit-contain me-4" src="<?= get_stylesheet_directory_uri(); ?>/img/catalogs/cards-image/2.png" alt=""></div>
+                    <div class="flex-shrink-0"><img class="object-fit-contain me-4" src="<?= get_stylesheet_directory_uri(); ?>/img/catalogs/cards-image/2.png" alt="" style="width: 70px;"></div>
                     <div class="flex-grow-1 py-0">
                       <div class="row g-3"> 
                         <div class="col-xl-9 col-lg-7">
@@ -207,7 +207,7 @@ get_header();
                 </div>
                 <div class="tab-pane fade " id="nav-contact" role="tabpanel" aria-labelledby="nav-contact-tab">
                   <div class="d-flex mb-5">
-                    <div class="flex-shrink-0"><img class="object-fit-contain me-4" src="<?= get_stylesheet_directory_uri(); ?>/img/catalogs/cards-image/1.png" alt=""></div>
+                    <div class="flex-shrink-0"><img class="object-fit-contain me-4" src="<?= get_stylesheet_directory_uri(); ?>/img/catalogs/cards-image/1.png" alt="" style="width: 70px;"></div>
                     <div class="flex-grow-1 py-0">
                       <div class="row g-3"> 
                         <div class="col-xl-9 col-lg-7">
@@ -232,7 +232,7 @@ get_header();
                     </div>
                   </div>
                   <div class="d-flex mb-5">
-                    <div class="flex-shrink-0"><img class="object-fit-contain me-4" src="<?= get_stylesheet_directory_uri(); ?>/img/catalogs/cards-image/2.png" alt=""></div>
+                    <div class="flex-shrink-0"><img class="object-fit-contain me-4" src="<?= get_stylesheet_directory_uri(); ?>/img/catalogs/cards-image/2.png" alt="" style="width: 70px;"></div>
                     <div class="flex-grow-1 py-0">
                       <div class="row g-3"> 
                         <div class="col-xl-9 col-lg-7">
@@ -257,7 +257,7 @@ get_header();
                     </div>
                   </div>
                   <div class="d-flex mb-5">
-                    <div class="flex-shrink-0"><img class="object-fit-contain me-4" src="<?= get_stylesheet_directory_uri(); ?>/img/catalogs/cards-image/3.png" alt=""></div>
+                    <div class="flex-shrink-0"><img class="object-fit-contain me-4" src="<?= get_stylesheet_directory_uri(); ?>/img/catalogs/cards-image/3.png" alt="" style="width: 70px;"></div>
                     <div class="flex-grow-1 py-0">
                       <div class="row g-3"> 
                         <div class="col-xl-9 col-lg-7">

@@ -271,7 +271,9 @@ input[type="number"]::-webkit-outer-spin-button {
     font-weight: 500;
     color: var(--bs-gray-300);
 }
-
+.woocommerce .quantity {
+    width: 100%;
+}
 @media (min-width: 992px) {
     .site-main {
         padding-top: 1rem !important;
