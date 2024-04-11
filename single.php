@@ -22,6 +22,7 @@ get_header();
           <main id="main" class="site-main">
 
             <div class="entry-content">
+              проверка
               <?php the_content(); ?>
             </div>
 
