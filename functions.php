@@ -203,4 +203,4 @@ function wcc_change_breadcrumb_home_text($defaults) {
   return $defaults;
 }
 
-add_action( 'woocommerce_before_single_product_summary', 'woocommerce_show_product_images', 10 );
+remove_all_actions('woocommerce_single_product_summary');
