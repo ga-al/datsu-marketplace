@@ -22,6 +22,12 @@ if (!function_exists('bootscore_sidebar_col_class')) {
   }
 }
 
+if (!function_exists('bootscore_sidebar_offcanvas_class')) {
+  function bootscore_sidebar_offcanvas_class() {
+    return "offcanvas-lg offcanvas-end";
+  }
+}
+
 if (!function_exists('bootscore_sidebar_toggler_class')) {
   function bootscore_sidebar_toggler_class() {
     return "d-md-none btn btn-outline-primary w-100 mb-md-4 mb-2 d-flex justify-content-between align-items-center";
@@ -201,4 +207,28 @@ function wcc_change_breadcrumb_home_text($defaults) {
   $defaults['home'] = _x('Home', 'breadcrumb', 'woocommerce');
 
   return $defaults;
+}
+
+add_action( 'woocommerce_product_options_advanced', 'rudr_product_field' );
+function rudr_product_field(){
+
+	echo '<div class="options_group">';
+	woocommerce_wp_text_input(
+		array(
+			'id'      => 'product_link_video',
+			'value'   => get_post_meta( get_the_ID(), 'product_link_video', true ),
+			'label'   => 'Сылка видео',
+			'desc_tip' => true,
+			'description' => 'Вставьте сылку на видео',
+		)
+	);
+	echo '</div>';
+
+}
+add_action( 'woocommerce_process_product_meta', 'rudr_save_field' );
+function rudr_save_field( $id ){
+
+	$super = isset( $_POST[ 'product_link_video' ] ) ? $_POST[ 'product_link_video' ] : "";
+	update_post_meta( $id, 'product_link_video', $super );
+
 }
