@@ -211,10 +211,12 @@ get_header();
                             <span class="text-decoration-line-through fs-5 ps-2">51 721 ₽</span>
                           </div> 
                           <div class="mrk-cart">
+                            <div class="mrk-cart-quantity">
                             <a href="#" class="btn btn-primary btn-order w-100">
                               <img class="mx-auto pe-1" src="<?= esc_url(get_stylesheet_directory_uri()); ?>/img/svg/cart4-white.svg" alt="корзина">
                               В корзину
                             </a>
+                            </div>
                           </div> 
                         </div>
                       </div>
@@ -234,11 +236,13 @@ get_header();
                             <span class="text-decoration-line-through fs-5 ps-2">671 721 ₽</span>
                           </div> 
                           <div class="mrk-cart">
+                            <div class="mrk-cart-quantity">
                             <a href="#" class="btn btn-primary btn-order w-100">
                               <img class="mx-auto pe-1" src="<?= esc_url(get_stylesheet_directory_uri()); ?>/img/svg/cart4-white.svg" alt="корзина">
                               В корзину
                             </a>
-                          </div>
+                            </div>
+                          </div> 
                         </div>
                       </div>
                     </div>
@@ -257,10 +261,12 @@ get_header();
                             <span class="text-decoration-line-through fs-5 ps-2">111 721 ₽</span>
                           </div> 
                           <div class="mrk-cart">
+                            <div class="mrk-cart-quantity">
                             <a href="#" class="btn btn-primary btn-order w-100">
                               <img class="mx-auto pe-1" src="<?= esc_url(get_stylesheet_directory_uri()); ?>/img/svg/cart4-white.svg" alt="корзина">
                               В корзину
                             </a>
+                            </div>
                           </div> 
                         </div>
                       </div>
@@ -290,11 +296,13 @@ get_header();
                             <span class="text-decoration-line-through fs-5 ps-2">1 721 ₽</span>
                           </div> 
                           <div class="mrk-cart">
+                            <div class="mrk-cart-quantity">
                             <a href="#" class="btn btn-primary btn-order w-100">
                               <img class="mx-auto pe-1" src="<?= esc_url(get_stylesheet_directory_uri()); ?>/img/svg/cart4-white.svg" alt="корзина">
                               В корзину
                             </a>
-                          </div>
+                            </div>
+                          </div> 
                         </div>
                       </div>
                     </div>
@@ -313,10 +321,12 @@ get_header();
                             <span class="text-decoration-line-through fs-5 ps-2">1 721 ₽</span>
                           </div> 
                           <div class="mrk-cart">
+                            <div class="mrk-cart-quantity">
                             <a href="#" class="btn btn-primary btn-order w-100">
                               <img class="mx-auto pe-1" src="<?= esc_url(get_stylesheet_directory_uri()); ?>/img/svg/cart4-white.svg" alt="корзина">
                               В корзину
                             </a>
+                            </div>
                           </div> 
                         </div>
                       </div>
@@ -336,11 +346,13 @@ get_header();
                             <span class="text-decoration-line-through fs-5 ps-2">1 721 ₽</span>
                           </div> 
                           <div class="mrk-cart">
+                            <div class="mrk-cart-quantity">
                             <a href="#" class="btn btn-primary btn-order w-100">
                               <img class="mx-auto pe-1" src="<?= esc_url(get_stylesheet_directory_uri()); ?>/img/svg/cart4-white.svg" alt="корзина">
                               В корзину
                             </a>
-                          </div>
+                            </div>
+                          </div> 
                         </div>
                       </div>
                     </div>
@@ -397,10 +409,12 @@ get_header();
                             <span class="text-decoration-line-through fs-5 ps-2">1 721 ₽</span>
                           </div> 
                           <div class="mrk-cart">
+                            <div class="mrk-cart-quantity">
                             <a href="#" class="btn btn-primary btn-order w-100">
                               <img class="mx-auto pe-1" src="<?= esc_url(get_stylesheet_directory_uri()); ?>/img/svg/cart4-white.svg" alt="корзина">
                               В корзину
                             </a>
+                            </div>
                           </div> 
                         </div>
                       </div>
@@ -420,11 +434,13 @@ get_header();
                             <span class="text-decoration-line-through fs-5 ps-2">1 721 ₽</span>
                           </div> 
                           <div class="mrk-cart">
+                            <div class="mrk-cart-quantity">
                             <a href="#" class="btn btn-primary btn-order w-100">
                               <img class="mx-auto pe-1" src="<?= esc_url(get_stylesheet_directory_uri()); ?>/img/svg/cart4-white.svg" alt="корзина">
                               В корзину
                             </a>
-                          </div>
+                            </div>
+                          </div> 
                         </div>
                       </div>
                     </div>
@@ -443,11 +459,13 @@ get_header();
                             <span class="text-decoration-line-through fs-5 ps-2">1 721 ₽</span>
                           </div> 
                           <div class="mrk-cart">
+                            <div class="mrk-cart-quantity">
                             <a href="#" class="btn btn-primary btn-order w-100">
                               <img class="mx-auto pe-1" src="<?= esc_url(get_stylesheet_directory_uri()); ?>/img/svg/cart4-white.svg" alt="корзина">
                               В корзину
                             </a>
-                          </div>
+                            </div>
+                          </div> 
                         </div>
                       </div>
                     </div>
