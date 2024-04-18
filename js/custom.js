@@ -70,7 +70,8 @@ jQuery(function ($) {
         });
     });
 
-    // Slider
+
+// Slider
 if (document.querySelectorAll('.slider')) {
   
     const sliderItem = document.querySelector('.slider')
@@ -117,19 +118,21 @@ if (document.querySelectorAll('.slider')) {
                     
                     let swSlImg = sliderImages.wrapperEl.querySelectorAll('img')
                     for (let i=0; i < swSlImg.length; i++) {
-                        if (sliderImages.slides[i].classList.contains('swiper-slide-prev') || this.clickedSlide.classList.contains('ratio-16x9')) {
-                            let width = swSlImg[i].offsetWidth;
-                            let height = swSlImg[i].offsetHeight;
-                            
+                        if (sliderImages.slides[i].classList.contains('swiper-slide-active') || this.clickedSlide.classList.contains('ratio-16x9')) {
+                            let width = swSlImg[i].offsetWidth
+                            let height = swSlImg[i].offsetHeight
                             if (width > height ) {
                                 clicked = false
                                 sliderThumbs.changeDirection(getDirection())
                                 sliderItem.classList.remove('slider-vertical')
                                 sliderThumbs.wrapperEl.classList.remove('slider-grid')
+                                
                                 if (youtubes.length > 0) {
                                     youtubes.forEach(el => el.classList.remove('ratio-16x9'))
                                 }
-                            } else if (width < height) {
+                            } 
+                            else if (width < height) {
+                                sliderThumbs.changeDirection(getDirection())
                                 sliderItem.classList.add('slider-vertical')
                                 sliderThumbs.wrapperEl.classList.add('slider-grid')
                                 if (youtubes.length > 0) {
@@ -196,16 +199,30 @@ if (document.querySelectorAll('.slider')) {
                         
                         let swSlImg = sliderImages.wrapperEl.querySelectorAll('img')
                         for (let i=0; i < swSlImg.length; i++) {
-                            if (sliderImages.slides[i].classList.contains('swiper-slide-active') || sliderImages.activeIndex === 0) {
+                            if (sliderImages.slides[i].classList.contains('swiper-slide-prev')) {
                                 let width = swSlImg[i].offsetWidth;
                                 let height = swSlImg[i].offsetHeight;
+                               
                                 if (width > height ) {
                                     clicked = false
                                     sliderThumbs.changeDirection(getDirection())
                                     sliderItem.classList.remove('slider-vertical')
                                     sliderThumbs.wrapperEl.classList.remove('slider-grid')
-                                    youtubes.forEach(el => el.classList.remove('ratio-16x9'))
-                                } 
+                                    
+                                    if (youtubes.length > 0) {
+                                        youtubes.forEach(el => el.classList.remove('ratio-16x9'))
+                                    }
+                                } else if (width < height) {
+                                    sliderThumbs.changeDirection(getDirection())
+                                    sliderItem.classList.add('slider-vertical')
+                                    sliderThumbs.wrapperEl.classList.add('slider-grid')
+                                    if (youtubes.length > 0) {
+                                        youtubes.forEach(el => {
+                                            el.classList.add('ratio-16x9')
+                                        })
+                                    }
+                                }
+                               
                             }
                         }
                         let swiperSliders = sliderImages.wrapperEl.querySelectorAll('.swiper-slide')
@@ -285,6 +302,7 @@ if (document.querySelectorAll('.slider')) {
         })
     }
         
+    // вывод модального окна
     modalItem.forEach(modal => {
         modal.addEventListener('show.bs.modal', function (e) {
             if (this.querySelector('.iframe')) {
@@ -294,25 +312,26 @@ if (document.querySelectorAll('.slider')) {
             videoIframe.setAttribute('src', srcUrl)
             }
             let invoker = e.relatedTarget
-            console.log(invoker)
+            
             sliderImagesModals.forEach(el => {
             sliderModals(el)
             carousel.to(invoker.getAttribute('data-slider')) 
-            console.log(carousel)
+            this.querySelector('.carousel-item').classList.add('active')
                 el.addEventListener('slid.bs.carousel', function(e) {
+                   
+                let currentSlide = this.querySelector('.carousel-item.active')
                     
-                    let currentSlide = this.querySelector('.carousel-item.active')
-                    if (currentSlide && videoIframe) {
-                        let videoURLa = videoIframe.getAttribute('src');
-                        if (videoURL === videoIframe.setAttribute('src', srcUrl)) {
-                            videoIframe.setAttribute('src', videoURLa)
-                        } 
-                        if (videoIframe && videoIframe.setAttribute('src', videoURL)) {
-                            videoIframe.setAttribute('src', srcUrl)
-                        }
-                    
+                if (currentSlide && videoIframe) {
+                    let videoURLa = videoIframe.getAttribute('src');
+                    if (videoURL === videoIframe.setAttribute('src', srcUrl)) {
+                        videoIframe.setAttribute('src', videoURLa)
+                    } 
+                    if (videoIframe && videoIframe.setAttribute('src', videoURL)) {
+                        videoIframe.setAttribute('src', srcUrl)
                     }
-                })
+                
+                }
+            })
             })
             hideIframe()
         })
@@ -358,3 +377,45 @@ if (document.querySelectorAll('.slider')) {
     }
     }
 }
+
+// Slider-cards
+let swiper = new Swiper(".swiper-general", {
+    slidesPerView: 4,
+    spaceBetween: 15,
+    navigation: {
+        nextEl: ".uploaded-in-next",
+        prevEl: ".uploaded-in-prev",
+    },
+    breakpoints: {
+        // when window width is >= 320px
+        320: {
+            slidesPerView: 1,
+        },
+        // when window width is >= 480px
+        480: {
+            slidesPerView: 2,
+        },
+        // when window width is >= 800px
+        800: {
+            slidesPerView: 4,
+        }
+        // when window width is >= 920px
+        // 920: {
+        //     slidesPerView: 4,
+        // }
+    }
+})
+
+var mainSecondSwiper = new Swiper('.swiper-children', {
+    slidesPerView: 1,
+    spaceBetween: 0,
+    centeredSlides: false,
+    navigation: {
+        nextEl: ".next-btn",
+        prevEl: ".prev-btn",
+      },
+    pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+    },
+})
