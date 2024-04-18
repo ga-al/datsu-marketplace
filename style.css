@@ -161,11 +161,21 @@ input[type="number"]::-webkit-outer-spin-button {
 .footer-brand:hover {
     opacity: 1;
 }
+.mrk-chat-gallery {
+  width: 700px;
+  position: relative;
+  left: -60px;
+}
 .mrk-gallery-top, .mrk-image-top {
     width: 1039px;
     height: calc(100vh - 134px);
     max-height: 594px;
     overflow: hidden;
+}
+.mrk-chat-image {
+  width: 1039px;
+  height: 100%;
+  overflow: hidden;
 }
 .mrk-gallery-thumbs {
     width: 1039px;
@@ -180,9 +190,6 @@ input[type="number"]::-webkit-outer-spin-button {
 }
 .thumbnail {
     max-width: 340.5px;
-}
-#page {
-    overflow-x: hidden;
 }
 .mrk-gallery .btn, .mrk-logo .btn, .mrk-cards-kits .btn, .mrk-image-full .btn {
     padding: 11px 1.875rem;
@@ -204,6 +211,13 @@ input[type="number"]::-webkit-outer-spin-button {
 .card-title {
     color: #A0ADD7;
 } 
+.quantity {
+  height: 44px;
+}
+.quantity button, .quantity .input-text {
+  font-weight: 500;
+  font-size: 1rem;
+}
 .quantity .qty {
     width: 4rem;
     text-align: center;
@@ -212,10 +226,16 @@ input[type="number"]::-webkit-outer-spin-button {
     background-color: transparent;
     opacity: 1;
 }
-.mrk-cards-kits .btn {
-    opacity: 1; 
+.quantity.quantity-product-card .plus, .quantity.quantity-product-card .minus {
+  background-color: #E9EEFF;
 }
-
+.quantity.plus, .quantity .minus {
+  background-color: transparent;
+}
+.mrk-cards-kits .btn {
+  height: 44px;
+  opacity: 1; 
+}
 .mrk-cards-kits .card-kit-img {
     margin: 1rem auto 0;
     max-width: 156px;
@@ -273,6 +293,119 @@ input[type="number"]::-webkit-outer-spin-button {
 }
 .woocommerce .quantity {
     width: 100%;
+}
+.mrk-box-bonus {
+  min-height: 125px;
+  background-color: #DCE4FF;
+}
+.mrk-box-bonus a:hover {
+  color: var(--bs-primary);
+}
+.mrk-services div {
+  padding: 0.2rem 1rem;
+  border: 1px solid #DCE4FF;
+}
+.mrk-services div a, .mrk-services a {
+  display: block;
+  padding-left: 40px;
+  padding-top: .5rem;
+  padding-bottom: .5rem;
+  /* margin-bottom: 1rem; */
+  font-size: 1rem;
+  font-weight: bold;
+  transition: .25s;
+}
+.mrk-services div:nth-child(1) a, .mrk-services a:nth-child(1) {
+  background: url('img/svg/servise-1.svg') no-repeat left center;
+}
+.mrk-services div:nth-child(2) a, .mrk-services a:nth-child(2) {
+  background: url('img/svg/servise-2.svg') no-repeat left center;
+}
+.mrk-services div:nth-child(3) a, .mrk-services a:nth-child(3) {
+  background: url('img/svg/servise-3.svg') no-repeat left center;
+}
+.mrk-services div a:hover, .mrk-services a:hover {
+  color: #A0ADD7;
+}
+.input-current input {
+  width: 28px;
+}
+.input-current button, .dropdown button {
+  all: unset;
+}
+.dropdown button::after {
+  display: none;
+}
+.dropdown button:hover, .dropdown button:focus, .dropdown .btn:first-child:active, .dropdown .btn.show, .mrk-chat-menu button:hover, .mrk-chat-menu button:focus, .mrk-chat-menu .btn:first-child:active, .mrk-chat-menu .btn.show{
+  background-color: transparent;
+  opacity: .9;
+}
+.mrk-chat-title {
+  padding-left: 30px;
+  background: url('img/svg/reply-fill.svg') no-repeat left center;
+}
+.mrk-chat-descr ul {
+  padding-left: 0;
+  list-style: none;
+}
+.mrk-chat-descr li {
+  margin-bottom: 10px;
+}
+.mrk-chat-descr li a {
+  font-weight: 600;
+  text-decoration: underline;
+  color: #01579A;
+  transition: .25s;
+}
+.mrk-chat-descr li a:hover {
+  text-decoration: none;
+}
+.mrk-chat-descr li span {
+  font-size: 12px;
+  font-style: italic;
+}
+.mrk-cart-quantity, .mrk-card-quantity-kits, .mrk-card-quantity-kit {
+  min-width: 170px;
+}
+.mrk-cards-kits .card {
+  margin: 0 auto;
+  max-width: 250px;
+}
+.mrk-chat-image {
+  position: relative;
+}
+.mrk-project-chat {
+  position: absolute;
+  top: 20px;
+  max-width: 310px;
+}
+.mrk-chat-menu {
+  max-width: 280px;
+}
+.mrk-chat-menu .collapse .card {
+  max-width: 280px;
+  z-index: 1000;
+}
+.mrk-chat-menu ul {
+  padding-left: 0;
+  list-style: none;
+}
+.mrk-chat-menu ul li {
+  padding: .5rem 1rem;
+}
+.mrk-chat-menu ul:not(.list) li:hover {
+  background-color: #F3F4FF;
+}
+.mrk-description .mrk-list-group-item {
+  line-height: 1;
+  border: 0;
+}
+.mrk-description .mrk-list-group-item .mrk-line {
+width: 100%;
+border-bottom: 1px dashed var(--bs-secondary);
+}
+.mrk-block-title {
+  font-size: 2rem;
 }
 
 
@@ -1038,51 +1171,66 @@ display: none;
 
 
 @media (min-width: 992px) {
-    .site-main {
-        padding-top: 1rem !important;
-        margin-top: 48px;
-    }
+  .site-main {
+      padding-top: 1rem !important;
+      margin-top: 48px;
+  }
+  
 }
 @media (max-width: 1300px) {
-    .mrk-gallery-top, .mrk-gallery-thumbs, .mrk-image-top {
-        width: 100%;
-        height: 100%;
-    }
-    .mrk-gallery-image {
-        object-fit: cover;
-        min-height: 400px;
-    }
-    .mrk-form-image {
-        object-fit: cover;
-        min-height: 490px;
-    }
-    .mrk-gallery-blur {
-        padding: 20px 20px 20px;
-    }
+  .mrk-gallery-top, .mrk-gallery-thumbs, .mrk-image-top, .mrk-chat-image, .mrk-chat-gallery {
+      width: 100%;
+      height: 100%;
+  }
+  .mrk-chat-gallery {
+      left: 0;
+  }
+  .mrk-gallery-image {
+      object-fit: cover;
+      min-height: 400px;
+  }
+  .mrk-form-image {
+      object-fit: cover;
+      min-height: 490px;
+  }
+  .mrk-gallery-blur {
+      padding: 20px 20px 20px;
+  }
+}
+@media (max-width: 992px) {
+  .mrk-project-chat {
+      position: static;
+      max-width: 100%;
+      min-width: 300px;
+      padding: 0 20px;
+  }
+  .mrk-chat-menu ul li {
+      padding: .5rem .4rem;
+  }
 }
 @media (max-width: 768px) {
-    .mrk-logo .btn {
-        width: 100px;
-        height: 38px;
-    }
-    .mrk-logo {
-        max-width: 210px;
-    }
-    .footer-brand img {
-        width: 90px;
-    }
+  .mrk-logo .btn {
+      width: 100px;
+      height: 38px;
+  }
+  .mrk-logo {
+      max-width: 210px;
+  }
+  .footer-brand img {
+      width: 90px;
+  }
 }
 @media (max-width: 620px) {
-    .header-actions {
-        justify-content: space-between;
-        width: 100%;
-    }
-    .mrk-social {
-        right: 20px;
-    }
+  .header-actions {
+      justify-content: space-between;
+      width: 100%;
+  }
+  .mrk-social {
+      right: 20px;
+  }
 }
 @media (max-width: 425px) {
-    .mrk-advantages {
-        max-width: 100%;
-    }
+  .mrk-advantages {
+      max-width: 100%;
+  }
 }
