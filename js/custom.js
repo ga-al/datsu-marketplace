@@ -71,9 +71,12 @@ jQuery(function ($) {
     });
 
 
+
 // Slider
+
 if (document.querySelectorAll('.slider')) {
-  
+    
+
     const sliderItem = document.querySelector('.slider')
     const youtubes = document.querySelectorAll('.swiper-slide.youtube')
     const ImageYoutubes = document.querySelectorAll('.swiper-slide .youtube')
@@ -98,8 +101,17 @@ if (document.querySelectorAll('.slider')) {
         
     if (document.querySelector('.slider-vertical')) {
         document.querySelector('.slider-thumb__images .swiper-wrapper').classList.add('slider-grid')
+        addYoutubes(youtubes)
         masonrySlider()
     }
+
+    if (window.matchMedia('(max-width: 769px)').matches) {
+        document.querySelector('.slider.slider-vertical').classList.remove('slider-vertical')
+        document.querySelector('.slider-thumb__images .swiper-wrapper').classList.remove('slider-grid')
+        removeYoutubes(youtubes)
+        masonrySliderDelete()
+    }
+
     function sliderThumbActive(images, thumbs) {
         if (images && thumbs) {
         
@@ -115,41 +127,14 @@ if (document.querySelectorAll('.slider')) {
                 clicked = true
                 if (mediaQuery.matches) {
                     sliderThumbs.changeDirection(getDirection())
+                    addYoutubes(youtubes)
                     
-                    let swSlImg = sliderImages.wrapperEl.querySelectorAll('img')
-                    for (let i=0; i < swSlImg.length; i++) {
-                        if (sliderImages.slides[i].classList.contains('swiper-slide-active') || this.clickedSlide.classList.contains('ratio-16x9')) {
-                            let width = swSlImg[i].offsetWidth
-                            let height = swSlImg[i].offsetHeight
-                            if (width > height ) {
-                                clicked = false
-                                sliderThumbs.changeDirection(getDirection())
-                                sliderItem.classList.remove('slider-vertical')
-                                sliderThumbs.wrapperEl.classList.remove('slider-grid')
-                                
-                                if (youtubes.length > 0) {
-                                    youtubes.forEach(el => el.classList.remove('ratio-16x9'))
-                                }
-                            } 
-                            else if (width < height) {
-                                sliderThumbs.changeDirection(getDirection())
-                                sliderItem.classList.add('slider-vertical')
-                                sliderThumbs.wrapperEl.classList.add('slider-grid')
-                                if (youtubes.length > 0) {
-                                    youtubes.forEach(el => {
-                                        el.classList.add('ratio-16x9')
-                                    })
-                                }
-                            }
-                        }
-                    }
-    
                     if (this.clickedSlide.classList.contains('ratio-16x9')) {
                         clicked = false
                         sliderThumbs.changeDirection(getDirection())
                         sliderItem.classList.remove('slider-vertical')
                         sliderThumbs.wrapperEl.classList.remove('slider-grid')
-                        youtubes.forEach(el => el.classList.remove('ratio-16x9'))
+                        removeYoutubes(youtubes)
                     }
 
                     if (document.querySelector('.slider-grid')) {
@@ -183,6 +168,8 @@ if (document.querySelectorAll('.slider')) {
             spaceBetween: 24,
             speed: 600,
             autoHeight: false,
+            mousewheel: false,
+            allowTouchMove:false,
             navigation: {
             nextEl: '.swiper-button-next',
             prevEl: '.swiper-button-prev',
@@ -196,38 +183,20 @@ if (document.querySelectorAll('.slider')) {
                         sliderThumbs.changeDirection(getDirection())
         
                         sliderThumbs.wrapperEl.classList.add('slider-grid')
+                        addYoutubes(youtubes)
                         
-                        let swSlImg = sliderImages.wrapperEl.querySelectorAll('img')
-                        for (let i=0; i < swSlImg.length; i++) {
-                            if (sliderImages.slides[i].classList.contains('swiper-slide-prev')) {
-                                let width = swSlImg[i].offsetWidth;
-                                let height = swSlImg[i].offsetHeight;
-                               
-                                if (width > height ) {
-                                    clicked = false
-                                    sliderThumbs.changeDirection(getDirection())
-                                    sliderItem.classList.remove('slider-vertical')
-                                    sliderThumbs.wrapperEl.classList.remove('slider-grid')
-                                    
-                                    if (youtubes.length > 0) {
-                                        youtubes.forEach(el => el.classList.remove('ratio-16x9'))
-                                    }
-                                } else if (width < height) {
-                                    sliderThumbs.changeDirection(getDirection())
-                                    sliderItem.classList.add('slider-vertical')
-                                    sliderThumbs.wrapperEl.classList.add('slider-grid')
-                                    if (youtubes.length > 0) {
-                                        youtubes.forEach(el => {
-                                            el.classList.add('ratio-16x9')
-                                        })
-                                    }
-                                }
-                               
-                            }
+                        if (sliderImages.activeIndex === 0 && youtubes.length) {
+                            clicked = false
+                            sliderThumbs.changeDirection(getDirection())
+                            sliderItem.classList.remove('slider-vertical')
+                            sliderThumbs.wrapperEl.classList.remove('slider-grid')
+                            removeYoutubes(youtubes)
                         }
+                    
                         let swiperSliders = sliderImages.wrapperEl.querySelectorAll('.swiper-slide')
                         let fullSliders = sliderImages.wrapperEl.querySelectorAll('.fullscrin')
-
+                        console.log(fullSliders)
+                        
                         getSliderView(fullSliders)
                         getSliderView(swiperSliders)
                         
@@ -248,10 +217,14 @@ if (document.querySelectorAll('.slider')) {
             0: {
                 direction: 'horizontal',
                 autoHeight: true,
-                // mousewheel: true,
+                mousewheel: true,
                 keyboard: true,
                 allowSlidePrev: true,
-                allowSlideNext: true
+                allowSlideNext: true,
+                allowTouchMove:true,
+            },
+            800: {
+                allowTouchMove: false,
             }
             },
         })
@@ -264,6 +237,7 @@ if (document.querySelectorAll('.slider')) {
         for(i=0; i < slider.length; i++) {
             if (i != 0) {
                 slider[i].setAttribute('data-slider', i)
+                
             } else {
                 slider[i].setAttribute('data-slider', '0')
             }
@@ -306,22 +280,32 @@ if (document.querySelectorAll('.slider')) {
     modalItem.forEach(modal => {
         modal.addEventListener('show.bs.modal', function (e) {
             if (this.querySelector('.iframe')) {
-            videoIframe = this.querySelector('.iframe')
-            videoURL = videoIframe.getAttribute('src')
-            srcUrl = videoURL+srcModal
-            videoIframe.setAttribute('src', srcUrl)
-            }
+                videoIframe = this.querySelector('.iframe')
+                videoURL = videoIframe.getAttribute('src')
+                srcUrl = videoURL+srcModal
+                let currentSlide = this.querySelector('.carousel-item.active')
+                    
+            if (currentSlide.querySelector('.iframe')) {
+                videoIframe.setAttribute('src', srcUrl)
+            }}
             let invoker = e.relatedTarget
             
             sliderImagesModals.forEach(el => {
             sliderModals(el)
             carousel.to(invoker.getAttribute('data-slider')) 
-            this.querySelector('.carousel-item').classList.add('active')
-                el.addEventListener('slid.bs.carousel', function(e) {
-                   
+            
+            if (!this.querySelector('.iframe')) {
+                if(!this.querySelector('.carousel-item').classList.contains('active')) {
+                    this.querySelector('.carousel-item').classList.add('active')
+                }
+            }
+    
+            el.addEventListener('slid.bs.carousel', function(e) {
+                
                 let currentSlide = this.querySelector('.carousel-item.active')
                     
                 if (currentSlide && videoIframe) {
+
                     let videoURLa = videoIframe.getAttribute('src');
                     if (videoURL === videoIframe.setAttribute('src', srcUrl)) {
                         videoIframe.setAttribute('src', videoURLa)
@@ -337,9 +321,10 @@ if (document.querySelectorAll('.slider')) {
         })
         modal.addEventListener('hidden.bs.modal', function(e) {
             if (this.querySelector('.iframe')) {
-            iframeUrl = this.querySelector('.iframe')
-            iframeUrl.setAttribute('src', videoURL)
+                iframeUrl = this.querySelector('.iframe')
+                iframeUrl.setAttribute('src', videoURL)
             }
+            
         });
     }) 
         
@@ -352,24 +337,40 @@ if (document.querySelectorAll('.slider')) {
         })
     }
 
+    function addYoutubes(youtube) {
+        if (youtube.length > 0) {
+            youtube.forEach(el => {
+                el.classList.add('ratio-16x9')
+            })
+        }
+    }
+
+    function removeYoutubes(youtube) {
+        if (youtube.length > 0) {
+            youtube.forEach(el => {
+                el.classList.remove('ratio-16x9')
+            })
+        }
+    }
+
     if (youtubes.length > 0) {
         youtubes.forEach (thumb => {
-          iframeThumb = thumb.querySelector('.iframe')
-          urlThumb = iframeThumb.getAttribute('src')
-          let urlId = YouTubeGetID(urlThumb)
-          let srcLoop = `?rel=0&autoplay=1&loop=1&mute=1&start=10&end=40&controls=0&cc_load_policy=3&iv_load_policy=3&playlist=${urlId}`
-          let urlPlay = urlThumb + srcLoop
-          console.log(urlThumb)
-          console.log(urlPlay)
-          
-          if (urlThumb !== null) {
+            iframeThumb = thumb.querySelector('.iframe')
+            urlThumb = iframeThumb.getAttribute('src')
+            let urlId = YouTubeGetID(urlThumb)
+            let srcLoop = `?rel=0&autoplay=1&loop=1&mute=1&start=10&end=40&controls=0&cc_load_policy=3&iv_load_policy=3&playlist=${urlId}`
+            let urlPlay = urlThumb + srcLoop
+            console.log(urlThumb)
+            console.log(urlPlay)
+            
+            if (urlThumb !== null) {
             iframeThumb.setAttribute('src', urlPlay)
             console.log(iframeThumb)
-          }
+            }
             
         })
     }
-      
+        
     function YouTubeGetID(url){
     if (url) {
         url = url.split(/(vi\/|v=|\/v\/|youtu\.be\/|\/embed\/)/);
@@ -377,6 +378,7 @@ if (document.querySelectorAll('.slider')) {
     }
     }
 }
+    
 
 // Slider-cards
 let swiper = new Swiper(".swiper-general", {

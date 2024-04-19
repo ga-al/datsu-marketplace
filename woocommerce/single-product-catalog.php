@@ -50,7 +50,7 @@ $total_count = count( $gallery_attachment_ids );
 			<?php woocommerce_breadcrumb()?> 
 			<!-- Post List -->
 			<div class="row px-2">
-				<div class="<?= bootscore_main_col_class(); ?> px-xl-0">
+				<div class="<?= bootscore_main_col_class(); ?> px-0">
 					<!-- Grid Layout -->
 					
 					<div class="entry-content">
@@ -1586,54 +1586,69 @@ $total_count = count( $gallery_attachment_ids );
 										</div>
 										</div>
 									</div>
-									<div class="d-flex mb-5">
-										<div class="flex-shrink-0"><img class="object-fit-contain me-4" src="<?= get_stylesheet_directory_uri(); ?>/img/catalogs/cards-image/3.png" alt="" style="width: 70px;"></div>
+									<div class="d-flex mb-5 me-4">
+										<div class="flex-shrink-0"><img class="mrk-card-img-descript object-fit-contain me-3" src="<?= get_stylesheet_directory_uri(); ?>/img/catalogs/cards-image/4.png" alt="" style="width: 197px;"></div>
 										<div class="flex-grow-1 py-0">
-										<div class="row g-3"> 
-											<div class="col-xl-8 col-lg-7">
-											<a class="d-block fw-semibold fs-4" href="">Рутель под стекло 10-26 мм, шпилька М14, регулируемый, разборный</a>
-											</div>
-											<div class="col-xl-4 col-lg-5">
-											<div class="mt-auto text-lg-center">
-												<h3 class="text-primary fw-bold text-nowrap d-inline-block">1 777 ₽</h3>
-												<span class="text-decoration-line-through fs-5 ps-2">1 721 ₽</span>
-											</div> 
-											<div class="mrk-cart d-flex align-items-center justify-content-lg-end">
-												<div class="mrk-cart-quantity w-75">
-												<a href="#" class="btn btn-primary btn-order w-100">
-													<img class="mx-auto pe-1" src="<?= esc_url(get_stylesheet_directory_uri()); ?>/img/svg/cart4-white.svg" alt="корзина">
-													В корзину
-												</a>
+											<div class="row g-3"> 
+												<div class="col-xl-8 col-lg-7">
+													<a class="d-block fw-semibold fs-4 mb-3" href="">Крепление стеклодержателя (рутеля) к ванте (серьга)</a>
+													<div class="mb-3">
+														<p class="mkr-label">Тип: </p>
+														<p>Вантовые крепления для козырьков</p>
+													</div>
+													<div class="mb-3">
+														<p class="mkr-label">Материал: </p>
+														<p>AISI 304 (08Х18Н10)</p>
+													</div>
+													<div class="mb-3">
+														<p class="mkr-label">Описание:</p>
+														<p>Крепление рутеля к тяге (серьга). Состоит из костяка с резьбой M14 и техническим отверстием 16,5 мм.</p>
+													</div>
+													<div class="mb-3">
+														<p class="mkr-label">Назначение:</p>
+														<p>Применяется при монтаже козырьков из стекла, козырьков из поликарбоната, навесов над входом в магазин, козырьков над входом в подвал или над местом курения</p>
+													</div>
 												</div>
-												<div class="mrk-card-heart no-active ms-2"></div>
-											</div> 
+												<div class="col-xl-4 col-lg-5 ps-xl-4">
+												<div class="mt-auto">
+													<h3 class="text-primary fw-bold text-nowrap d-inline-block">1 777 ₽</h3>
+												</div> 
+												<div class="mrk-cart d-flex flex-column">
+													<div class="mrk-cart-quantity mb-3">
+													<a href="#" class="btn btn-primary btn-order w-100">
+														<img class="mx-auto pe-1" src="<?= esc_url(get_stylesheet_directory_uri()); ?>/img/svg/cart4-white.svg" alt="корзина">
+														В корзину
+													</a>
+													</div>
+													<div class="mrk-card-heart no-active ms-2"></div>
+												</div> 
+												</div>
 											</div>
-										</div>
 										</div>
 									</div>
 									<div class="d-flex mb-5">
 										<div class="flex-shrink-0"><img class="object-fit-contain me-4" src="<?= get_stylesheet_directory_uri(); ?>/img/catalogs/cards-image/2.png" alt="" style="width: 70px;"></div>
 										<div class="flex-grow-1 py-0">
-										<div class="row g-3"> 
-											<div class="col-xl-8 col-lg-7">
-											<a class="d-block fw-semibold fs-4" href="">Рутель под стекло 10-26 мм, шпилька М14, регулируемый, разборный</a>
-											</div>
-											<div class="col-xl-4 col-lg-5">
-											<div class="mt-auto text-lg-center">
-												<h3 class="text-primary fw-bold text-nowrap d-inline-block">1 777 ₽</h3>
-												<span class="text-decoration-line-through fs-5 ps-2">1 721 ₽</span>
-											</div> 
-											<div class="mrk-cart d-flex align-items-center justify-content-lg-end">
-												<div class="mrk-cart-quantity w-75">
-												<a href="#" class="btn btn-primary btn-order w-100">
-													<img class="mx-auto pe-1" src="<?= esc_url(get_stylesheet_directory_uri()); ?>/img/svg/cart4-white.svg" alt="корзина">
-													В корзину
-												</a>
+											<div class="row g-3"> 
+												<div class="col-xl-8 col-lg-7">
+												<a class="d-block fw-semibold fs-4" href="">Рутель под стекло 10-26 мм, шпилька М14, регулируемый, разборный</a>
 												</div>
-												<div class="mrk-card-heart no-active ms-2"></div>
-											</div> 
+												<div class="col-xl-4 col-lg-5">
+												<div class="mt-auto text-lg-center">
+													<h3 class="text-primary fw-bold text-nowrap d-inline-block">1 777 ₽</h3>
+													<span class="text-decoration-line-through fs-5 ps-2">1 721 ₽</span>
+												</div> 
+												<div class="mrk-cart d-flex align-items-center justify-content-lg-end">
+													<div class="mrk-cart-quantity w-75">
+													<a href="#" class="btn btn-primary btn-order w-100">
+														<img class="mx-auto pe-1" src="<?= esc_url(get_stylesheet_directory_uri()); ?>/img/svg/cart4-white.svg" alt="корзина">
+														В корзину
+													</a>
+													</div>
+													<div class="mrk-card-heart no-active ms-2"></div>
+												</div> 
+												</div>
 											</div>
-										</div>
 										</div>
 									</div>
 								</div>
@@ -1733,7 +1748,7 @@ $total_count = count( $gallery_attachment_ids );
 					<div class="modal-body p-0">
 						<div class="carousel slide slider__images--modal carousel-fade h-100" id="carouselButtons-1">
 						<div class="carousel-inner">
-							<?php
+						<?php
 							if ( $product_video) {
 							?>
 							<div class="carousel-item bg-white active">
@@ -1742,22 +1757,15 @@ $total_count = count( $gallery_attachment_ids );
 								</div>
 							</div>
 							<?php }
-								if ( $gallery_attachment_ids ) {
-									foreach ($gallery_attachment_ids as $gallery_attachment_id) {
-									?>
-										<div class="carousel-item d-flex justify-content-center align-items-center bg-white">
-										<div class="image-4x3"><img class="img-fluid py-md-3" src="<?= wp_get_attachment_url( $gallery_attachment_id, 'full' ); ?>" alt="..."></div>
-										</div>
-									<?php }
-								}
-								if (!$product_video && $gallery_attachment_ids) {
-									foreach ($gallery_attachment_ids as $gallery_attachment_id) {
-									?>
-										<div class="carousel-item d-flex justify-content-center align-items-center bg-white active">
-										<div class="image-4x3"><img class="img-fluid py-md-3" src="<?= wp_get_attachment_url( $gallery_attachment_id, 'full' ); ?>" alt="..."></div>
-										</div>
-									<?php }
-								}
+							if ( $gallery_attachment_ids ) {
+								foreach ($gallery_attachment_ids as $gallery_attachment_id) {
+								?>
+								<div class="carousel-item d-flex justify-content-center align-items-center bg-white">
+								<div class="image-4x3"><img class="img-fluid py-md-3" src="<?= wp_get_attachment_url( $gallery_attachment_id, 'full' ); ?>" alt="..."></div>
+								</div>
+							<?php }
+							}
+								
 							?>
 
 						</div>
@@ -1819,14 +1827,6 @@ $total_count = count( $gallery_attachment_ids );
 							<div class="image-4x3"><img class="img-fluid py-md-3" src="<?= wp_get_attachment_url( $gallery_attachment_id, 'full' ); ?>" alt="..."></div>
 							</div>
 						<?php }
-						}
-								if (!$product_video && $gallery_attachment_ids) {
-							foreach ($gallery_attachment_ids as $gallery_attachment_id) {
-							?>
-							<div class="carousel-item d-flex justify-content-center align-items-center bg-white active">
-							<div class="image-4x3"><img class="img-fluid py-md-3" src="<?= wp_get_attachment_url( $gallery_attachment_id,'full' ); ?>" alt="..."></div>
-							</div> 
-							<?php }
 						}
 
 						?>

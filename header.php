@@ -77,6 +77,9 @@
             <div class="col-11 col-md-4 col-xl-3">
               <!-- Navbar Brand -->
               <div class="mrk-logo my-lg-0 my-2">
+                <!-- <div class="header-bg header-bg-exxy"></div> -->
+                <!-- <div class="header-bg header-bg-newyear"></div> -->
+                <!-- <div class="header-bg header-bg-procent"></div> -->
                 <a class="navbar-brand xs d-md-none ms-md-3" href="<?= esc_url(home_url()); ?>"><img src="<?= esc_url(get_stylesheet_directory_uri()); ?>/img/logo/logo-sm.svg" alt="logo" class="logo xs"></a>
                 <a class="navbar-brand md d-none d-md-block" href="<?= esc_url(home_url()); ?>"><img src="<?= esc_url(get_stylesheet_directory_uri()); ?>/img/logo/logo.svg" alt="logo" class="logo md"></a>
                 <a class="btn btn-primary d-flex align-items-center justify-content-center gap-2 text-nowrap" href="/каталог/" role="button">

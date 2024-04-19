@@ -63,7 +63,7 @@ $total_count = count( $gallery_attachment_ids );
 							<?php if ( $product_video) { ?> 
 							<div class="slider">
 							<? } else { ?> 
-								<div class="slider slider-vertical px-xxl-0">
+								<div class="slider slider-vertical slider-card px-xxl-0">
 								<? } ?>
 									<div class="swiper slider__images order-2 slider__images--main slider__images-cotalog">
 										<div class="swiper-wrapper">
@@ -236,7 +236,7 @@ $total_count = count( $gallery_attachment_ids );
 											</div>
 										</div>
 										<div class="col px-0">
-											<div class="mrk-card-quantity-kits">
+											<div class="mrk-card-quantity-kit">
 												<a href="#" class="btn btn-primary btn-order-kits w-100">
 													<img class="mx-auto pe-1" src="<?= esc_url(get_stylesheet_directory_uri()); ?>/img/svg/cart4-white.svg" alt="корзина">
 													В корзину
@@ -1613,14 +1613,6 @@ $total_count = count( $gallery_attachment_ids );
 										</div>
 									<?php }
 								}
-								if (!$product_video && $gallery_attachment_ids) {
-									foreach ($gallery_attachment_ids as $gallery_attachment_id) {
-									?>
-										<div class="carousel-item d-flex justify-content-center align-items-center bg-white">
-											<div class="image-4x3"><img class="img-fluid py-md-3" src="<?= wp_get_attachment_url( $gallery_attachment_id, 'full' ); ?>" alt="..."></div>
-										</div>
-									<?php }
-								}
 							?>
 
 						</div>
@@ -1683,16 +1675,7 @@ $total_count = count( $gallery_attachment_ids );
 							</div>
 						<?php }
 						}
-							if (!$product_video && $gallery_attachment_ids) {
-							foreach ($gallery_attachment_ids as $gallery_attachment_id) {
-							?>
-							 
-							<div class="carousel-item d-flex justify-content-center align-items-center bg-white">
-							<div class="image-4x3"><img class="img-fluid py-md-3" src="<?= wp_get_attachment_url( $gallery_attachment_id,'full' ); ?>" alt="..."></div>
-							</div> 
-							<?php }
-						}
-
+							
 						?>
 					</div>
 					<button class="carousel-control-prev d-none" type="button" data-bs-target="#carouselButtons-1" data-bs-slide="prev"><span class="carousel-control-prev-icon text-bg-dark rounded" aria-hidden="true"></span><span class="visually-hidden">Предыдущий</span></button>
