@@ -251,7 +251,7 @@ $total_count = count( $gallery_attachment_ids );
 						<div class="row">
 							<div class="col-12">
 								<div class="d-flex pt-3">
-									<div class="mrk-services d-flex justify-content-between w-100">
+									<div class="mrk-services d-flex justify-content-between d-flex flex-wrap w-100">
 										<div><a href="#" role="button">Условия оплаты</a></div>
 										<div><a href="#" role="button">Доставка</a></div>
 										<div><a href="#" role="button">Возврат</a></div>
@@ -376,11 +376,11 @@ $total_count = count( $gallery_attachment_ids );
 
 				<!-- Swiper -->
 				<div class="swiper swiper-general">
-					<div class="d-flex justify-content-between align-items-center">
-						<h2 class="display-4 fw-bold mb-4">Покупают вместе</h2>
-						<div>
-							<div class="swiper-button-prev uploaded-in-prev text-white rounded"></div>
-							<div class="swiper-button-next uploaded-in-next text-white rounded"></div>
+                    <div class="d-flex justify-content-between align-items-center flex-wrap gap-3 py-3">
+						<h2 class="display-4 fw-bold mb-0">Покупают вместе</h2>
+						<div class="position-relative" style="height:1rem;width:74px;">
+							<div class="swiper-button-prev uploaded-in-prev text-white rounded position-absolute top-0 bottom-0 start-0"></div>
+							<div class="swiper-button-next uploaded-in-next text-white rounded position-absolute top-0 bottom-0 end-0"></div>
 						</div>
 					</div>
 					<div class="swiper-wrapper">
@@ -981,11 +981,11 @@ $total_count = count( $gallery_attachment_ids );
 					</div>
 				</div>
 				<div class="swiper swiper-general my-5">
-					<div class="d-flex justify-content-between align-items-center">
-						<h2 class="display-4 fw-bold my-5 mb-4">Похожие товары</h2>
-						<div>
-							<div class="swiper-button-prev uploaded-in-prev text-white rounded"></div>
-							<div class="swiper-button-next uploaded-in-next text-white rounded"></div>
+                    <div class="d-flex justify-content-between align-items-center flex-wrap gap-3 py-3">
+						<h2 class="display-4 fw-bold mb-0">Похожие товары</h2>
+						<div class="position-relative" style="height:1rem;width:74px;">
+							<div class="swiper-button-prev uploaded-in-prev text-white rounded position-absolute top-0 bottom-0 start-0"></div>
+							<div class="swiper-button-next uploaded-in-next text-white rounded position-absolute top-0 bottom-0 end-0"></div>
 						</div>
 					</div>
 					<div class="swiper-wrapper">
