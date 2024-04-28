@@ -18,19 +18,48 @@
 defined( 'ABSPATH' ) || exit;
 
 
-// $_product = wc_get_product( get_the_ID() );
 
 get_header( 'shop' );
 do_action( 'woocommerce_before_main_content' );
 
+
 $term = get_queried_object();
-$term_thumbnail_id = get_term_meta($term->term_id, 'thumbnail_id', true);
+if ( ! isset( $term->term_id ) ) {
+	return;
+}
+
+$term_id = $term->term_id;
+$term_slug = $term->slug;
+$term_name = $term->name;
+
+$term_thumbnail_id = get_term_meta($term->term_id, 'header_image', true);
 $term_thumbnail_url = wp_get_attachment_url( $term_thumbnail_id );
+
+// $_product = wc_get_product( get_the_ID() );
+
+// $_product_url = get_permalink( $_product->get_id() );
+$product_video = $gallery_attachment_ids = $cat_image_url = false;
+
+
+
+
+// $gallery_attachment_ids = $_product->get_gallery_image_ids();
+// $gallery_attachment_ids = [];
+// $product_video = get_post_meta( $_product->get_id(), 'product_link_video', true );
+// $total_count = count( $gallery_attachment_ids );
+
+// $current_category = get_queried_object();
+// $cat_id = $current_category->term_id;
+// $cat_tax = $current_category->taxonomy;
+// $cat_slug = $current_category->slug;
+// $cat_name = $current_category->name;
+// $cat_tax = $current_category->taxonomy;
+// $cat_image_id = get_term_meta($cat_id, 'thumbnail_id', true );
+// $cat_image_url =  wp_get_attachment_image_url( $cat_image_id, 'large' );
 
 
 
 ?>
-
 <div id="content" class="site-content <?= bootscore_container_class(); ?> py-5 mt-4">
     <div id="primary" class="content-area">
 
@@ -75,7 +104,6 @@ $term_thumbnail_url = wp_get_attachment_url( $term_thumbnail_id );
 
 						<!-- Loop Products Category -->
 									<?php
-
 										if ( woocommerce_product_loop() ) {
 											do_action( 'woocommerce_before_shop_loop' );
 											woocommerce_product_loop_start();
@@ -207,9 +235,6 @@ $term_thumbnail_url = wp_get_attachment_url( $term_thumbnail_id );
 </div>
 
 <?php
-
-// }
-
 
 do_action( 'woocommerce_after_main_content' );
 do_action( 'woocommerce_sidebar' );

@@ -47,12 +47,12 @@ $total_count = count( $gallery_attachment_ids );
 		<!-- Hook to add something nice -->
 		<?php bs_after_primary(); ?>
 		<main id="main" class="site-main">
-			<?php woocommerce_breadcrumb()?> 
+			<?php woocommerce_breadcrumb()?>
 			<!-- Post List -->
 			<div class="row px-2">
 				<div class="<?= bootscore_main_col_class(); ?> px-0">
 					<!-- Grid Layout -->
-					
+
 					<div class="entry-content">
 						<h1 class="display-5 text-primary fw-bold mt-md-0 my-4"><?php echo $_product->get_name() ?></h1>
 
@@ -62,11 +62,11 @@ $total_count = count( $gallery_attachment_ids );
 						?>
 
 							<nav class="d-flex justify-content-between align-items-center my-3">
-								<div class="nav nav-tabs orderby custom-select d-flex gap-md-5" id="nav-tab" role="tablist" > 
+								<div class="nav nav-tabs orderby custom-select d-flex gap-md-5" id="nav-tab" role="tablist" >
 									<button class="nav-link active" id="nav-home-tab" data-bs-toggle="tab" data-bs-target="#nav-home" type="button" role="tab" aria-controls="nav-home" aria-selected="false" tabindex="-1">по популярности
 									</button>
 									<button class="nav-link" id="nav-profile-tab" data-bs-toggle="tab" data-bs-target="#nav-profile" type="button" role="tab" aria-controls="nav-profile" aria-selected="false" tabindex="-1">по цене
-									</button> 
+									</button>
 									<button class="nav-link" id="nav-contact-tab" data-bs-toggle="tab" data-bs-target="#nav-contact" type="button" role="tab" aria-controls="nav-contact" aria-selected="true">по названию
 									</button>
 								</div>
@@ -87,9 +87,9 @@ $total_count = count( $gallery_attachment_ids );
 								<!-- слайдер с табами изображениями - НАЧАЛО -->
 								<div class="col-xl-8">
 									<div class="row justify-content-center">
-									<?php if ( $product_video) { ?> 
+									<?php if ( $product_video) { ?>
 									<div class="slider">
-									<? } else { ?> 
+									<? } else { ?>
 										<div class="slider slider-vertical">
 										<? } ?>
 											<div class="swiper slider__images order-2 slider__images--main slider__images-cotalog">
@@ -188,10 +188,10 @@ $total_count = count( $gallery_attachment_ids );
 																<div class="swiper-slide swiper-item"><img src="<?= wp_get_attachment_url( $gallery_attachment_id, 'thumb' ); ?>" alt="thumb"></div>
 
 															<?php
-															} else {  
+															} else {
 															?>
 																<div class="swiper-slide swiper-item"></div>
-																
+
 															<?php
 															}}
 														}
@@ -255,7 +255,7 @@ $total_count = count( $gallery_attachment_ids );
 									<div class="mrk-cards-kits mt-3">
 										<div class="row">
 											<div class="col-md-6 col-lg-4 col-xl-3 mb-4">
-												<div class="card border-0 h-100"> 
+												<div class="card border-0 h-100">
 													<div class="card-kit-img">
 														<div class="mrk-card-heart no-active"></div>
 														<img class="card-img-top" src="<?= esc_url(get_stylesheet_directory_uri()); ?>/img/catalogs/cards-slider/1.png" alt="">
@@ -267,7 +267,7 @@ $total_count = count( $gallery_attachment_ids );
 														<div class="d-flex flex-wrap mt-auto">
 															<h3 class="text-primary fw-bold text-nowrap d-inline-block">1 721 ₽</h3>
 															<span class="text-decoration-line-through fs-5 ps-2">51 721 ₽</span>
-														</div> 
+														</div>
 														<div class="mrk-cart-quantity">
 															<a href="#" class="btn btn-primary btn-order w-100">
 																<img class="mx-auto pe-1" src="<?= esc_url(get_stylesheet_directory_uri()); ?>/img/svg/cart4-white.svg" alt="корзина">
@@ -278,7 +278,7 @@ $total_count = count( $gallery_attachment_ids );
 												</div>
 											</div>
 											<div class="col-md-6 col-lg-4 col-xl-3 mb-4">
-												<div class="card border-0 h-100"> 
+												<div class="card border-0 h-100">
 													<div class="card-kit-img">
 														<div class="mrk-card-heart no-active"></div>
 														<img class="card-img-top" src="<?= esc_url(get_stylesheet_directory_uri()); ?>/img/catalogs/cards-slider/2.png" alt="">
@@ -290,7 +290,7 @@ $total_count = count( $gallery_attachment_ids );
 														<div class="d-flex flex-wrap mt-auto">
 															<h3 class="text-primary fw-bold text-nowrap d-inline-block">1 721 ₽</h3>
 															<span class="text-decoration-line-through fs-5 ps-2">671 721 ₽</span>
-														</div> 
+														</div>
 														<div class="mrk-cart-quantity">
 															<a href="#" class="btn btn-primary btn-order w-100">
 																<img class="mx-auto pe-1" src="<?= esc_url(get_stylesheet_directory_uri()); ?>/img/svg/cart4-white.svg" alt="корзина">
@@ -301,7 +301,7 @@ $total_count = count( $gallery_attachment_ids );
 												</div>
 											</div>
 											<div class="col-md-6 col-lg-4 col-xl-3 mb-4">
-												<div class="card border-0 h-100"> 
+												<div class="card border-0 h-100">
 													<div class="card-kit-img">
 														<div class="mrk-card-heart no-active"></div>
 														<img class="card-img-top" src="<?= esc_url(get_stylesheet_directory_uri()); ?>/img/catalogs/cards-slider/3.png" alt="">
@@ -319,12 +319,12 @@ $total_count = count( $gallery_attachment_ids );
 																<img class="mx-auto pe-1" src="<?= esc_url(get_stylesheet_directory_uri()); ?>/img/svg/cart4-white.svg" alt="корзина">
 																В корзину
 															</a>
-														</div> 
+														</div>
 													</div>
 												</div>
 											</div>
 											<div class="col-md-6 col-lg-4 col-xl-3 mb-4">
-												<div class="card border-0 h-100"> 
+												<div class="card border-0 h-100">
 													<div class="card-kit-img">
 														<div class="mrk-card-heart no-active"></div>
 														<img class="card-img-top" src="<?= esc_url(get_stylesheet_directory_uri()); ?>/img/catalogs/cards-slider/4.png" alt="">
@@ -342,12 +342,12 @@ $total_count = count( $gallery_attachment_ids );
 																<img class="mx-auto pe-1" src="<?= esc_url(get_stylesheet_directory_uri()); ?>/img/svg/cart4-white.svg" alt="корзина">
 																В корзину
 															</a>
-														</div> 
+														</div>
 													</div>
 												</div>
 											</div>
 											<div class="col-md-6 col-lg-4 col-xl-3 mb-4">
-												<div class="card border-0 h-100"> 
+												<div class="card border-0 h-100">
 													<div class="card-kit-img">
 														<div class="mrk-card-heart no-active"></div>
 														<img class="card-img-top" src="<?= esc_url(get_stylesheet_directory_uri()); ?>/img/catalogs/cards-slider/5.png" alt="">
@@ -359,7 +359,7 @@ $total_count = count( $gallery_attachment_ids );
 														<div class="d-flex flex-wrap mt-auto">
 															<h3 class="text-primary fw-bold text-nowrap d-inline-block">7 300 ₽</h3>
 															<span class="text-decoration-line-through fs-5 ps-2">671 721 ₽</span>
-														</div> 
+														</div>
 														<div class="mrk-cart-quantity">
 															<a href="#" class="btn btn-primary btn-order w-100">
 																<img class="mx-auto pe-1" src="<?= esc_url(get_stylesheet_directory_uri()); ?>/img/svg/cart4-white.svg" alt="корзина">
@@ -370,7 +370,7 @@ $total_count = count( $gallery_attachment_ids );
 												</div>
 											</div>
 											<div class="col-md-6 col-lg-4 col-xl-3 mb-4">
-												<div class="card border-0 h-100"> 
+												<div class="card border-0 h-100">
 													<div class="card-kit-img">
 														<div class="mrk-card-heart no-active"></div>
 														<img class="card-img-top" src="<?= esc_url(get_stylesheet_directory_uri()); ?>/img/catalogs/cards-slider/6.png" alt="">
@@ -382,7 +382,7 @@ $total_count = count( $gallery_attachment_ids );
 														<div class="d-flex flex-wrap mt-auto">
 															<h3 class="text-primary fw-bold text-nowrap d-inline-block">46 059 ₽</h3>
 															<span class="text-decoration-line-through fs-5 ps-2">111 721 ₽</span>
-														</div> 
+														</div>
 														<div class="mrk-cart-quantity">
 															<a href="#" class="btn btn-primary btn-order w-100">
 																<img class="mx-auto pe-1" src="<?= esc_url(get_stylesheet_directory_uri()); ?>/img/svg/cart4-white.svg" alt="корзина">
@@ -393,7 +393,7 @@ $total_count = count( $gallery_attachment_ids );
 												</div>
 											</div>
 											<div class="col-md-6 col-lg-4 col-xl-3 mb-4">
-												<div class="card border-0 h-100"> 
+												<div class="card border-0 h-100">
 													<div class="card-kit-img">
 														<div class="mrk-card-heart no-active"></div>
 														<img class="card-img-top" src="<?= esc_url(get_stylesheet_directory_uri()); ?>/img/catalogs/cards-slider/7.png" alt="">
@@ -405,7 +405,7 @@ $total_count = count( $gallery_attachment_ids );
 														<div class="d-flex flex-wrap mt-auto">
 															<h3 class="text-primary fw-bold text-nowrap d-inline-block">16 059 ₽</h3>
 															<span class="text-decoration-line-through fs-5 ps-2">111 721 ₽</span>
-														</div> 
+														</div>
 														<div class="mrk-cart-quantity">
 															<a href="#" class="btn btn-primary btn-order w-100">
 																<img class="mx-auto pe-1" src="<?= esc_url(get_stylesheet_directory_uri()); ?>/img/svg/cart4-white.svg" alt="корзина">
@@ -416,7 +416,7 @@ $total_count = count( $gallery_attachment_ids );
 												</div>
 											</div>
 											<div class="col-md-6 col-lg-4 col-xl-3 mb-4">
-												<div class="card border-0 h-100"> 
+												<div class="card border-0 h-100">
 													<div class="card-kit-img">
 														<div class="mrk-card-heart no-active"></div>
 														<img class="card-img-top" src="<?= esc_url(get_stylesheet_directory_uri()); ?>/img/catalogs/cards-slider/8.png" alt="">
@@ -428,7 +428,7 @@ $total_count = count( $gallery_attachment_ids );
 														<div class="d-flex flex-wrap mt-auto">
 															<h3 class="text-primary fw-bold text-nowrap d-inline-block">6 059 ₽</h3>
 															<span class="text-decoration-line-through fs-5 ps-2">111 721 ₽</span>
-														</div> 
+														</div>
 														<div class="mrk-cart-quantity">
 															<a href="#" class="btn btn-primary btn-order w-100">
 																<img class="mx-auto pe-1" src="<?= esc_url(get_stylesheet_directory_uri()); ?>/img/svg/cart4-white.svg" alt="корзина">
@@ -439,11 +439,11 @@ $total_count = count( $gallery_attachment_ids );
 												</div>
 											</div>
 										</div>
-										
+
 										<img src="<?= get_stylesheet_directory_uri(); ?>/img/catalogs/dlya-vann.jpg" class="img-fluid" alt="...">
 										<div class="row mb-4">
 											<div class="col-md-6 col-lg-4 col-xl-3 mb-4">
-												<div class="card border-0 h-100"> 
+												<div class="card border-0 h-100">
 													<div class="card-kit-img">
 														<div class="mrk-card-heart no-active"></div>
 														<img class="card-img-top" src="<?= esc_url(get_stylesheet_directory_uri()); ?>/img/catalogs/cards-slider/1.png" alt="">
@@ -455,7 +455,7 @@ $total_count = count( $gallery_attachment_ids );
 														<div class="d-flex flex-wrap mt-auto">
 															<h3 class="text-primary fw-bold text-nowrap d-inline-block">1 721 ₽</h3>
 															<span class="text-decoration-line-through fs-5 ps-2">51 721 ₽</span>
-														</div> 
+														</div>
 														<div class="mrk-cart-quantity">
 															<a href="#" class="btn btn-primary btn-order w-100">
 																<img class="mx-auto pe-1" src="<?= esc_url(get_stylesheet_directory_uri()); ?>/img/svg/cart4-white.svg" alt="корзина">
@@ -466,7 +466,7 @@ $total_count = count( $gallery_attachment_ids );
 												</div>
 											</div>
 											<div class="col-md-6 col-lg-4 col-xl-3 mb-4">
-												<div class="card border-0 h-100"> 
+												<div class="card border-0 h-100">
 													<div class="card-kit-img">
 														<div class="mrk-card-heart no-active"></div>
 														<img class="card-img-top" src="<?= esc_url(get_stylesheet_directory_uri()); ?>/img/catalogs/cards-slider/2.png" alt="">
@@ -478,7 +478,7 @@ $total_count = count( $gallery_attachment_ids );
 														<div class="d-flex flex-wrap mt-auto">
 															<h3 class="text-primary fw-bold text-nowrap d-inline-block">1 721 ₽</h3>
 															<span class="text-decoration-line-through fs-5 ps-2">671 721 ₽</span>
-														</div> 
+														</div>
 														<div class="mrk-cart-quantity">
 															<a href="#" class="btn btn-primary btn-order w-100">
 																<img class="mx-auto pe-1" src="<?= esc_url(get_stylesheet_directory_uri()); ?>/img/svg/cart4-white.svg" alt="корзина">
@@ -489,7 +489,7 @@ $total_count = count( $gallery_attachment_ids );
 												</div>
 											</div>
 											<div class="col-md-6 col-lg-4 col-xl-3 mb-4">
-												<div class="card border-0 h-100"> 
+												<div class="card border-0 h-100">
 													<div class="card-kit-img">
 														<div class="mrk-card-heart no-active"></div>
 														<img class="card-img-top" src="<?= esc_url(get_stylesheet_directory_uri()); ?>/img/catalogs/cards-slider/3.png" alt="">
@@ -507,12 +507,12 @@ $total_count = count( $gallery_attachment_ids );
 																<img class="mx-auto pe-1" src="<?= esc_url(get_stylesheet_directory_uri()); ?>/img/svg/cart4-white.svg" alt="корзина">
 																В корзину
 															</a>
-														</div> 
+														</div>
 													</div>
 												</div>
 											</div>
 											<div class="col-md-6 col-lg-4 col-xl-3 mb-4">
-												<div class="card border-0 h-100"> 
+												<div class="card border-0 h-100">
 													<div class="card-kit-img">
 														<div class="mrk-card-heart no-active"></div>
 														<img class="card-img-top" src="<?= esc_url(get_stylesheet_directory_uri()); ?>/img/catalogs/cards-slider/4.png" alt="">
@@ -530,12 +530,12 @@ $total_count = count( $gallery_attachment_ids );
 																<img class="mx-auto pe-1" src="<?= esc_url(get_stylesheet_directory_uri()); ?>/img/svg/cart4-white.svg" alt="корзина">
 																В корзину
 															</a>
-														</div> 
+														</div>
 													</div>
 												</div>
 											</div>
 											<div class="col-md-6 col-lg-4 col-xl-3 mb-4">
-												<div class="card border-0 h-100"> 
+												<div class="card border-0 h-100">
 													<div class="card-kit-img">
 														<div class="mrk-card-heart no-active"></div>
 														<img class="card-img-top" src="<?= esc_url(get_stylesheet_directory_uri()); ?>/img/catalogs/cards-slider/5.png" alt="">
@@ -547,7 +547,7 @@ $total_count = count( $gallery_attachment_ids );
 														<div class="d-flex flex-wrap mt-auto">
 															<h3 class="text-primary fw-bold text-nowrap d-inline-block">7 300 ₽</h3>
 															<span class="text-decoration-line-through fs-5 ps-2">671 721 ₽</span>
-														</div> 
+														</div>
 														<div class="mrk-cart-quantity">
 															<a href="#" class="btn btn-primary btn-order w-100">
 																<img class="mx-auto pe-1" src="<?= esc_url(get_stylesheet_directory_uri()); ?>/img/svg/cart4-white.svg" alt="корзина">
@@ -558,7 +558,7 @@ $total_count = count( $gallery_attachment_ids );
 												</div>
 											</div>
 											<div class="col-md-6 col-lg-4 col-xl-3 mb-4">
-												<div class="card border-0 h-100"> 
+												<div class="card border-0 h-100">
 													<div class="card-kit-img">
 														<div class="mrk-card-heart no-active"></div>
 														<img class="card-img-top" src="<?= esc_url(get_stylesheet_directory_uri()); ?>/img/catalogs/cards-slider/6.png" alt="">
@@ -570,7 +570,7 @@ $total_count = count( $gallery_attachment_ids );
 														<div class="d-flex flex-wrap mt-auto">
 															<h3 class="text-primary fw-bold text-nowrap d-inline-block">46 059 ₽</h3>
 															<span class="text-decoration-line-through fs-5 ps-2">111 721 ₽</span>
-														</div> 
+														</div>
 														<div class="mrk-cart-quantity">
 															<a href="#" class="btn btn-primary btn-order w-100">
 																<img class="mx-auto pe-1" src="<?= esc_url(get_stylesheet_directory_uri()); ?>/img/svg/cart4-white.svg" alt="корзина">
@@ -581,7 +581,7 @@ $total_count = count( $gallery_attachment_ids );
 												</div>
 											</div>
 											<div class="col-md-6 col-lg-4 col-xl-3 mb-4">
-												<div class="card border-0 h-100"> 
+												<div class="card border-0 h-100">
 													<div class="card-kit-img">
 														<div class="mrk-card-heart no-active"></div>
 														<img class="card-img-top" src="<?= esc_url(get_stylesheet_directory_uri()); ?>/img/catalogs/cards-slider/7.png" alt="">
@@ -593,7 +593,7 @@ $total_count = count( $gallery_attachment_ids );
 														<div class="d-flex flex-wrap mt-auto">
 															<h3 class="text-primary fw-bold text-nowrap d-inline-block">16 059 ₽</h3>
 															<span class="text-decoration-line-through fs-5 ps-2">111 721 ₽</span>
-														</div> 
+														</div>
 														<div class="mrk-cart-quantity">
 															<a href="#" class="btn btn-primary btn-order w-100">
 																<img class="mx-auto pe-1" src="<?= esc_url(get_stylesheet_directory_uri()); ?>/img/svg/cart4-white.svg" alt="корзина">
@@ -604,7 +604,7 @@ $total_count = count( $gallery_attachment_ids );
 												</div>
 											</div>
 											<div class="col-md-6 col-lg-4 col-xl-3 mb-4">
-												<div class="card border-0 h-100"> 
+												<div class="card border-0 h-100">
 													<div class="card-kit-img">
 														<div class="mrk-card-heart no-active"></div>
 														<img class="card-img-top" src="<?= esc_url(get_stylesheet_directory_uri()); ?>/img/catalogs/cards-slider/8.png" alt="">
@@ -616,7 +616,7 @@ $total_count = count( $gallery_attachment_ids );
 														<div class="d-flex flex-wrap mt-auto">
 															<h3 class="text-primary fw-bold text-nowrap d-inline-block">6 059 ₽</h3>
 															<span class="text-decoration-line-through fs-5 ps-2">111 721 ₽</span>
-														</div> 
+														</div>
 														<div class="mrk-cart-quantity">
 															<a href="#" class="btn btn-primary btn-order w-100">
 																<img class="mx-auto pe-1" src="<?= esc_url(get_stylesheet_directory_uri()); ?>/img/svg/cart4-white.svg" alt="корзина">
@@ -628,7 +628,7 @@ $total_count = count( $gallery_attachment_ids );
 											</div>
 										</div>
 										<div class="mb-5">
-											<span class="me-4">Показать: 
+											<span class="me-4">Показать:
 											<span class="input-current px-3">
 												<input class="ps-1" type="number" value="10">
 												<button role="button"><svg class="mb-1" width="10" height="5" viewBox="0 0 10 5" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -642,7 +642,7 @@ $total_count = count( $gallery_attachment_ids );
 												<svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg" style="margin-bottom: 3px; margin-right: 15px;">
 													<path d="M11.8467 2.5135L10.6667 1.3335L4 8.00016L10.6667 14.6668L11.8467 13.4868L6.36 8.00016L11.8467 2.5135Z" fill="#70708A"/>
 												</svg>
-											
+
 												<svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg" style="margin-bottom: 3px;">
 													<path d="M4.15234 13.4868L5.33234 14.6668L11.999 8.00016L5.33234 1.3335L4.15234 2.5135L9.63901 8.00016L4.15234 13.4868Z" fill="#70708A"/>
 												</svg>
@@ -650,7 +650,7 @@ $total_count = count( $gallery_attachment_ids );
 											<div class="collapse" id="account-collapse-card-kits">
 												<div class="row mt-4">
 													<div class="col-md-6 col-lg-4 col-xl-3 mb-4">
-														<div class="card border-0 h-100"> 
+														<div class="card border-0 h-100">
 															<div class="card-kit-img">
 																<div class="mrk-card-heart no-active"></div>
 																<img class="card-img-top" src="<?= esc_url(get_stylesheet_directory_uri()); ?>/img/catalogs/cards-slider/1.png" alt="">
@@ -662,7 +662,7 @@ $total_count = count( $gallery_attachment_ids );
 																<div class="d-flex flex-wrap mt-auto">
 																	<h3 class="text-primary fw-bold text-nowrap d-inline-block">1 721 ₽</h3>
 																	<span class="text-decoration-line-through fs-5 ps-2">51 721 ₽</span>
-																</div> 
+																</div>
 																<div class="mrk-cart-quantity">
 																	<a href="#" class="btn btn-primary btn-order w-100">
 																		<img class="mx-auto pe-1" src="<?= esc_url(get_stylesheet_directory_uri()); ?>/img/svg/cart4-white.svg" alt="корзина">
@@ -673,7 +673,7 @@ $total_count = count( $gallery_attachment_ids );
 														</div>
 													</div>
 													<div class="col-md-6 col-lg-4 col-xl-3 mb-4">
-														<div class="card border-0 h-100"> 
+														<div class="card border-0 h-100">
 															<div class="card-kit-img">
 																<div class="mrk-card-heart no-active"></div>
 																<img class="card-img-top" src="<?= esc_url(get_stylesheet_directory_uri()); ?>/img/catalogs/cards-slider/2.png" alt="">
@@ -685,7 +685,7 @@ $total_count = count( $gallery_attachment_ids );
 																<div class="d-flex flex-wrap mt-auto">
 																	<h3 class="text-primary fw-bold text-nowrap d-inline-block">1 721 ₽</h3>
 																	<span class="text-decoration-line-through fs-5 ps-2">671 721 ₽</span>
-																</div> 
+																</div>
 																<div class="mrk-cart-quantity">
 																	<a href="#" class="btn btn-primary btn-order w-100">
 																		<img class="mx-auto pe-1" src="<?= esc_url(get_stylesheet_directory_uri()); ?>/img/svg/cart4-white.svg" alt="корзина">
@@ -696,7 +696,7 @@ $total_count = count( $gallery_attachment_ids );
 														</div>
 													</div>
 													<div class="col-md-6 col-lg-4 col-xl-3 mb-4">
-														<div class="card border-0 h-100"> 
+														<div class="card border-0 h-100">
 															<div class="card-kit-img">
 																<div class="mrk-card-heart no-active"></div>
 																<img class="card-img-top" src="<?= esc_url(get_stylesheet_directory_uri()); ?>/img/catalogs/cards-slider/3.png" alt="">
@@ -714,12 +714,12 @@ $total_count = count( $gallery_attachment_ids );
 																		<img class="mx-auto pe-1" src="<?= esc_url(get_stylesheet_directory_uri()); ?>/img/svg/cart4-white.svg" alt="корзина">
 																		В корзину
 																	</a>
-																</div> 
+																</div>
 															</div>
 														</div>
 													</div>
 													<div class="col-md-6 col-lg-4 col-xl-3 mb-4">
-														<div class="card border-0 h-100"> 
+														<div class="card border-0 h-100">
 															<div class="card-kit-img">
 																<div class="mrk-card-heart no-active"></div>
 																<img class="card-img-top" src="<?= esc_url(get_stylesheet_directory_uri()); ?>/img/catalogs/cards-slider/4.png" alt="">
@@ -737,12 +737,12 @@ $total_count = count( $gallery_attachment_ids );
 																		<img class="mx-auto pe-1" src="<?= esc_url(get_stylesheet_directory_uri()); ?>/img/svg/cart4-white.svg" alt="корзина">
 																		В корзину
 																	</a>
-																</div> 
+																</div>
 															</div>
 														</div>
 													</div>
 													<div class="col-md-6 col-lg-4 col-xl-3 mb-4">
-														<div class="card border-0 h-100"> 
+														<div class="card border-0 h-100">
 															<div class="card-kit-img">
 																<div class="mrk-card-heart no-active"></div>
 																<img class="card-img-top" src="<?= esc_url(get_stylesheet_directory_uri()); ?>/img/catalogs/cards-slider/5.png" alt="">
@@ -754,7 +754,7 @@ $total_count = count( $gallery_attachment_ids );
 																<div class="d-flex flex-wrap mt-auto">
 																	<h3 class="text-primary fw-bold text-nowrap d-inline-block">7 300 ₽</h3>
 																	<span class="text-decoration-line-through fs-5 ps-2">671 721 ₽</span>
-																</div> 
+																</div>
 																<div class="mrk-cart-quantity">
 																	<a href="#" class="btn btn-primary btn-order w-100">
 																		<img class="mx-auto pe-1" src="<?= esc_url(get_stylesheet_directory_uri()); ?>/img/svg/cart4-white.svg" alt="корзина">
@@ -765,7 +765,7 @@ $total_count = count( $gallery_attachment_ids );
 														</div>
 													</div>
 													<div class="col-md-6 col-lg-4 col-xl-3 mb-4">
-														<div class="card border-0 h-100"> 
+														<div class="card border-0 h-100">
 															<div class="card-kit-img">
 																<div class="mrk-card-heart no-active"></div>
 																<img class="card-img-top" src="<?= esc_url(get_stylesheet_directory_uri()); ?>/img/catalogs/cards-slider/6.png" alt="">
@@ -777,7 +777,7 @@ $total_count = count( $gallery_attachment_ids );
 																<div class="d-flex flex-wrap mt-auto">
 																	<h3 class="text-primary fw-bold text-nowrap d-inline-block">46 059 ₽</h3>
 																	<span class="text-decoration-line-through fs-5 ps-2">111 721 ₽</span>
-																</div> 
+																</div>
 																<div class="mrk-cart-quantity">
 																	<a href="#" class="btn btn-primary btn-order w-100">
 																		<img class="mx-auto pe-1" src="<?= esc_url(get_stylesheet_directory_uri()); ?>/img/svg/cart4-white.svg" alt="корзина">
@@ -788,7 +788,7 @@ $total_count = count( $gallery_attachment_ids );
 														</div>
 													</div>
 													<div class="col-md-6 col-lg-4 col-xl-3 mb-4">
-														<div class="card border-0 h-100"> 
+														<div class="card border-0 h-100">
 															<div class="card-kit-img">
 																<div class="mrk-card-heart no-active"></div>
 																<img class="card-img-top" src="<?= esc_url(get_stylesheet_directory_uri()); ?>/img/catalogs/cards-slider/7.png" alt="">
@@ -800,7 +800,7 @@ $total_count = count( $gallery_attachment_ids );
 																<div class="d-flex flex-wrap mt-auto">
 																	<h3 class="text-primary fw-bold text-nowrap d-inline-block">16 059 ₽</h3>
 																	<span class="text-decoration-line-through fs-5 ps-2">111 721 ₽</span>
-																</div> 
+																</div>
 																<div class="mrk-cart-quantity">
 																	<a href="#" class="btn btn-primary btn-order w-100">
 																		<img class="mx-auto pe-1" src="<?= esc_url(get_stylesheet_directory_uri()); ?>/img/svg/cart4-white.svg" alt="корзина">
@@ -811,7 +811,7 @@ $total_count = count( $gallery_attachment_ids );
 														</div>
 													</div>
 													<div class="col-md-6 col-lg-4 col-xl-3 mb-4">
-														<div class="card border-0 h-100"> 
+														<div class="card border-0 h-100">
 															<div class="card-kit-img">
 																<div class="mrk-card-heart no-active"></div>
 																<img class="card-img-top" src="<?= esc_url(get_stylesheet_directory_uri()); ?>/img/catalogs/cards-slider/8.png" alt="">
@@ -823,7 +823,7 @@ $total_count = count( $gallery_attachment_ids );
 																<div class="d-flex flex-wrap mt-auto">
 																	<h3 class="text-primary fw-bold text-nowrap d-inline-block">6 059 ₽</h3>
 																	<span class="text-decoration-line-through fs-5 ps-2">111 721 ₽</span>
-																</div> 
+																</div>
 																<div class="mrk-cart-quantity">
 																	<a href="#" class="btn btn-primary btn-order w-100">
 																		<img class="mx-auto pe-1" src="<?= esc_url(get_stylesheet_directory_uri()); ?>/img/svg/cart4-white.svg" alt="корзина">
@@ -842,7 +842,7 @@ $total_count = count( $gallery_attachment_ids );
 									<div class="mrk-cards-kits mt-3">
 										<div class="row">
 											<div class="col-md-6 col-lg-4 col-xl-3 mb-4">
-												<div class="card border-0 h-100"> 
+												<div class="card border-0 h-100">
 													<div class="card-kit-img">
 														<div class="mrk-card-heart no-active"></div>
 														<img class="card-img-top" src="<?= esc_url(get_stylesheet_directory_uri()); ?>/img/catalogs/cards-slider/1.png" alt="">
@@ -854,7 +854,7 @@ $total_count = count( $gallery_attachment_ids );
 														<div class="d-flex flex-wrap mt-auto">
 															<h3 class="text-primary fw-bold text-nowrap d-inline-block">48 000 ₽</h3>
 															<span class="text-decoration-line-through fs-5 ps-2">51 721 ₽</span>
-														</div> 
+														</div>
 														<div class="mrk-cart-quantity">
 															<a href="#" class="btn btn-primary btn-order w-100">
 																<img class="mx-auto pe-1" src="<?= esc_url(get_stylesheet_directory_uri()); ?>/img/svg/cart4-white.svg" alt="корзина">
@@ -865,7 +865,7 @@ $total_count = count( $gallery_attachment_ids );
 												</div>
 											</div>
 											<div class="col-md-6 col-lg-4 col-xl-3 mb-4">
-												<div class="card border-0 h-100"> 
+												<div class="card border-0 h-100">
 													<div class="card-kit-img">
 														<div class="mrk-card-heart no-active"></div>
 														<img class="card-img-top" src="<?= esc_url(get_stylesheet_directory_uri()); ?>/img/catalogs/cards-slider/2.png" alt="">
@@ -877,7 +877,7 @@ $total_count = count( $gallery_attachment_ids );
 														<div class="d-flex flex-wrap mt-auto">
 															<h3 class="text-primary fw-bold text-nowrap d-inline-block">91 300 ₽</h3>
 															<span class="text-decoration-line-through fs-5 ps-2">671 721 ₽</span>
-														</div> 
+														</div>
 														<div class="mrk-cart-quantity">
 															<a href="#" class="btn btn-primary btn-order w-100">
 																<img class="mx-auto pe-1" src="<?= esc_url(get_stylesheet_directory_uri()); ?>/img/svg/cart4-white.svg" alt="корзина">
@@ -888,7 +888,7 @@ $total_count = count( $gallery_attachment_ids );
 												</div>
 											</div>
 											<div class="col-md-6 col-lg-4 col-xl-3 mb-4">
-												<div class="card border-0 h-100"> 
+												<div class="card border-0 h-100">
 													<div class="card-kit-img">
 														<div class="mrk-card-heart no-active"></div>
 														<img class="card-img-top" src="<?= esc_url(get_stylesheet_directory_uri()); ?>/img/catalogs/cards-slider/3.png" alt="">
@@ -906,12 +906,12 @@ $total_count = count( $gallery_attachment_ids );
 																<img class="mx-auto pe-1" src="<?= esc_url(get_stylesheet_directory_uri()); ?>/img/svg/cart4-white.svg" alt="корзина">
 																В корзину
 															</a>
-														</div> 
+														</div>
 													</div>
 												</div>
 											</div>
 											<div class="col-md-6 col-lg-4 col-xl-3 mb-4">
-												<div class="card border-0 h-100"> 
+												<div class="card border-0 h-100">
 													<div class="card-kit-img">
 														<div class="mrk-card-heart no-active"></div>
 														<img class="card-img-top" src="<?= esc_url(get_stylesheet_directory_uri()); ?>/img/catalogs/cards-slider/4.png" alt="">
@@ -929,12 +929,12 @@ $total_count = count( $gallery_attachment_ids );
 																<img class="mx-auto pe-1" src="<?= esc_url(get_stylesheet_directory_uri()); ?>/img/svg/cart4-white.svg" alt="корзина">
 																В корзину
 															</a>
-														</div> 
+														</div>
 													</div>
 												</div>
 											</div>
 											<div class="col-md-6 col-lg-4 col-xl-3 mb-4">
-												<div class="card border-0 h-100"> 
+												<div class="card border-0 h-100">
 													<div class="card-kit-img">
 														<div class="mrk-card-heart no-active"></div>
 														<img class="card-img-top" src="<?= esc_url(get_stylesheet_directory_uri()); ?>/img/catalogs/cards-slider/5.png" alt="">
@@ -946,7 +946,7 @@ $total_count = count( $gallery_attachment_ids );
 														<div class="d-flex flex-wrap mt-auto">
 															<h3 class="text-primary fw-bold text-nowrap d-inline-block">91 300 ₽</h3>
 															<span class="text-decoration-line-through fs-5 ps-2">671 721 ₽</span>
-														</div> 
+														</div>
 														<div class="mrk-cart-quantity">
 															<a href="#" class="btn btn-primary btn-order w-100">
 																<img class="mx-auto pe-1" src="<?= esc_url(get_stylesheet_directory_uri()); ?>/img/svg/cart4-white.svg" alt="корзина">
@@ -957,7 +957,7 @@ $total_count = count( $gallery_attachment_ids );
 												</div>
 											</div>
 											<div class="col-md-6 col-lg-4 col-xl-3 mb-4">
-												<div class="card border-0 h-100"> 
+												<div class="card border-0 h-100">
 													<div class="card-kit-img">
 														<div class="mrk-card-heart no-active"></div>
 														<img class="card-img-top" src="<?= esc_url(get_stylesheet_directory_uri()); ?>/img/catalogs/cards-slider/6.png" alt="">
@@ -969,7 +969,7 @@ $total_count = count( $gallery_attachment_ids );
 														<div class="d-flex flex-wrap mt-auto">
 															<h3 class="text-primary fw-bold text-nowrap d-inline-block">46 059 ₽</h3>
 															<span class="text-decoration-line-through fs-5 ps-2">111 721 ₽</span>
-														</div> 
+														</div>
 														<div class="mrk-cart-quantity">
 															<a href="#" class="btn btn-primary btn-order w-100">
 																<img class="mx-auto pe-1" src="<?= esc_url(get_stylesheet_directory_uri()); ?>/img/svg/cart4-white.svg" alt="корзина">
@@ -980,7 +980,7 @@ $total_count = count( $gallery_attachment_ids );
 												</div>
 											</div>
 											<div class="col-md-6 col-lg-4 col-xl-3 mb-4">
-												<div class="card border-0 h-100"> 
+												<div class="card border-0 h-100">
 													<div class="card-kit-img">
 														<div class="mrk-card-heart no-active"></div>
 														<img class="card-img-top" src="<?= esc_url(get_stylesheet_directory_uri()); ?>/img/catalogs/cards-slider/7.png" alt="">
@@ -992,7 +992,7 @@ $total_count = count( $gallery_attachment_ids );
 														<div class="d-flex flex-wrap mt-auto">
 															<h3 class="text-primary fw-bold text-nowrap d-inline-block">46 059 ₽</h3>
 															<span class="text-decoration-line-through fs-5 ps-2">111 721 ₽</span>
-														</div> 
+														</div>
 														<div class="mrk-cart-quantity">
 															<a href="#" class="btn btn-primary btn-order w-100">
 																<img class="mx-auto pe-1" src="<?= esc_url(get_stylesheet_directory_uri()); ?>/img/svg/cart4-white.svg" alt="корзина">
@@ -1003,7 +1003,7 @@ $total_count = count( $gallery_attachment_ids );
 												</div>
 											</div>
 											<div class="col-md-6 col-lg-4 col-xl-3 mb-4">
-												<div class="card border-0 h-100"> 
+												<div class="card border-0 h-100">
 													<div class="card-kit-img">
 														<div class="mrk-card-heart no-active"></div>
 														<img class="card-img-top" src="<?= esc_url(get_stylesheet_directory_uri()); ?>/img/catalogs/cards-slider/8.png" alt="">
@@ -1015,7 +1015,7 @@ $total_count = count( $gallery_attachment_ids );
 														<div class="d-flex flex-wrap mt-auto">
 															<h3 class="text-primary fw-bold text-nowrap d-inline-block">46 059 ₽</h3>
 															<span class="text-decoration-line-through fs-5 ps-2">111 721 ₽</span>
-														</div> 
+														</div>
 														<div class="mrk-cart-quantity">
 															<a href="#" class="btn btn-primary btn-order w-100">
 																<img class="mx-auto pe-1" src="<?= esc_url(get_stylesheet_directory_uri()); ?>/img/svg/cart4-white.svg" alt="корзина">
@@ -1032,7 +1032,7 @@ $total_count = count( $gallery_attachment_ids );
 									<div class="mrk-cards-kits mt-3">
 										<div class="row">
 											<div class="col-md-6 col-lg-4 col-xl-3 mb-4">
-												<div class="card border-0 h-100"> 
+												<div class="card border-0 h-100">
 													<div class="card-kit-img">
 														<div class="mrk-card-heart no-active"></div>
 														<img class="card-img-top" src="<?= esc_url(get_stylesheet_directory_uri()); ?>/img/catalogs/cards-slider/1.png" alt="">
@@ -1044,7 +1044,7 @@ $total_count = count( $gallery_attachment_ids );
 														<div class="d-flex flex-wrap mt-auto">
 															<h3 class="text-primary fw-bold text-nowrap d-inline-block">1 721 ₽</h3>
 															<span class="text-decoration-line-through fs-5 ps-2">51 721 ₽</span>
-														</div> 
+														</div>
 														<div class="mrk-cart-quantity">
 															<a href="#" class="btn btn-primary btn-order w-100">
 																<img class="mx-auto pe-1" src="<?= esc_url(get_stylesheet_directory_uri()); ?>/img/svg/cart4-white.svg" alt="корзина">
@@ -1055,7 +1055,7 @@ $total_count = count( $gallery_attachment_ids );
 												</div>
 											</div>
 											<div class="col-md-6 col-lg-4 col-xl-3 mb-4">
-												<div class="card border-0 h-100"> 
+												<div class="card border-0 h-100">
 													<div class="card-kit-img">
 														<div class="mrk-card-heart no-active"></div>
 														<img class="card-img-top" src="<?= esc_url(get_stylesheet_directory_uri()); ?>/img/catalogs/cards-slider/2.png" alt="">
@@ -1067,7 +1067,7 @@ $total_count = count( $gallery_attachment_ids );
 														<div class="d-flex flex-wrap mt-auto">
 															<h3 class="text-primary fw-bold text-nowrap d-inline-block">1 721 ₽</h3>
 															<span class="text-decoration-line-through fs-5 ps-2">671 721 ₽</span>
-														</div> 
+														</div>
 														<div class="mrk-cart-quantity">
 															<a href="#" class="btn btn-primary btn-order w-100">
 																<img class="mx-auto pe-1" src="<?= esc_url(get_stylesheet_directory_uri()); ?>/img/svg/cart4-white.svg" alt="корзина">
@@ -1078,7 +1078,7 @@ $total_count = count( $gallery_attachment_ids );
 												</div>
 											</div>
 											<div class="col-md-6 col-lg-4 col-xl-3 mb-4">
-												<div class="card border-0 h-100"> 
+												<div class="card border-0 h-100">
 													<div class="card-kit-img">
 														<div class="mrk-card-heart no-active"></div>
 														<img class="card-img-top" src="<?= esc_url(get_stylesheet_directory_uri()); ?>/img/catalogs/cards-slider/3.png" alt="">
@@ -1096,12 +1096,12 @@ $total_count = count( $gallery_attachment_ids );
 																<img class="mx-auto pe-1" src="<?= esc_url(get_stylesheet_directory_uri()); ?>/img/svg/cart4-white.svg" alt="корзина">
 																В корзину
 															</a>
-														</div> 
+														</div>
 													</div>
 												</div>
 											</div>
 											<div class="col-md-6 col-lg-4 col-xl-3 mb-4">
-												<div class="card border-0 h-100"> 
+												<div class="card border-0 h-100">
 													<div class="card-kit-img">
 														<div class="mrk-card-heart no-active"></div>
 														<img class="card-img-top" src="<?= esc_url(get_stylesheet_directory_uri()); ?>/img/catalogs/cards-slider/4.png" alt="">
@@ -1119,12 +1119,12 @@ $total_count = count( $gallery_attachment_ids );
 																<img class="mx-auto pe-1" src="<?= esc_url(get_stylesheet_directory_uri()); ?>/img/svg/cart4-white.svg" alt="корзина">
 																В корзину
 															</a>
-														</div> 
+														</div>
 													</div>
 												</div>
 											</div>
 											<div class="col-md-6 col-lg-4 col-xl-3 mb-4">
-												<div class="card border-0 h-100"> 
+												<div class="card border-0 h-100">
 													<div class="card-kit-img">
 														<div class="mrk-card-heart no-active"></div>
 														<img class="card-img-top" src="<?= esc_url(get_stylesheet_directory_uri()); ?>/img/catalogs/cards-slider/5.png" alt="">
@@ -1136,7 +1136,7 @@ $total_count = count( $gallery_attachment_ids );
 														<div class="d-flex flex-wrap mt-auto">
 															<h3 class="text-primary fw-bold text-nowrap d-inline-block">7 300 ₽</h3>
 															<span class="text-decoration-line-through fs-5 ps-2">671 721 ₽</span>
-														</div> 
+														</div>
 														<div class="mrk-cart-quantity">
 															<a href="#" class="btn btn-primary btn-order w-100">
 																<img class="mx-auto pe-1" src="<?= esc_url(get_stylesheet_directory_uri()); ?>/img/svg/cart4-white.svg" alt="корзина">
@@ -1147,7 +1147,7 @@ $total_count = count( $gallery_attachment_ids );
 												</div>
 											</div>
 											<div class="col-md-6 col-lg-4 col-xl-3 mb-4">
-												<div class="card border-0 h-100"> 
+												<div class="card border-0 h-100">
 													<div class="card-kit-img">
 														<div class="mrk-card-heart no-active"></div>
 														<img class="card-img-top" src="<?= esc_url(get_stylesheet_directory_uri()); ?>/img/catalogs/cards-slider/6.png" alt="">
@@ -1159,7 +1159,7 @@ $total_count = count( $gallery_attachment_ids );
 														<div class="d-flex flex-wrap mt-auto">
 															<h3 class="text-primary fw-bold text-nowrap d-inline-block">46 059 ₽</h3>
 															<span class="text-decoration-line-through fs-5 ps-2">111 721 ₽</span>
-														</div> 
+														</div>
 														<div class="mrk-cart-quantity">
 															<a href="#" class="btn btn-primary btn-order w-100">
 																<img class="mx-auto pe-1" src="<?= esc_url(get_stylesheet_directory_uri()); ?>/img/svg/cart4-white.svg" alt="корзина">
@@ -1170,7 +1170,7 @@ $total_count = count( $gallery_attachment_ids );
 												</div>
 											</div>
 											<div class="col-md-6 col-lg-4 col-xl-3 mb-4">
-												<div class="card border-0 h-100"> 
+												<div class="card border-0 h-100">
 													<div class="card-kit-img">
 														<div class="mrk-card-heart no-active"></div>
 														<img class="card-img-top" src="<?= esc_url(get_stylesheet_directory_uri()); ?>/img/catalogs/cards-slider/7.png" alt="">
@@ -1182,7 +1182,7 @@ $total_count = count( $gallery_attachment_ids );
 														<div class="d-flex flex-wrap mt-auto">
 															<h3 class="text-primary fw-bold text-nowrap d-inline-block">16 059 ₽</h3>
 															<span class="text-decoration-line-through fs-5 ps-2">111 721 ₽</span>
-														</div> 
+														</div>
 														<div class="mrk-cart-quantity">
 															<a href="#" class="btn btn-primary btn-order w-100">
 																<img class="mx-auto pe-1" src="<?= esc_url(get_stylesheet_directory_uri()); ?>/img/svg/cart4-white.svg" alt="корзина">
@@ -1193,7 +1193,7 @@ $total_count = count( $gallery_attachment_ids );
 												</div>
 											</div>
 											<div class="col-md-6 col-lg-4 col-xl-3 mb-4">
-												<div class="card border-0 h-100"> 
+												<div class="card border-0 h-100">
 													<div class="card-kit-img">
 														<div class="mrk-card-heart no-active"></div>
 														<img class="card-img-top" src="<?= esc_url(get_stylesheet_directory_uri()); ?>/img/catalogs/cards-slider/8.png" alt="">
@@ -1205,7 +1205,7 @@ $total_count = count( $gallery_attachment_ids );
 														<div class="d-flex flex-wrap mt-auto">
 															<h3 class="text-primary fw-bold text-nowrap d-inline-block">6 059 ₽</h3>
 															<span class="text-decoration-line-through fs-5 ps-2">111 721 ₽</span>
-														</div> 
+														</div>
 														<div class="mrk-cart-quantity">
 															<a href="#" class="btn btn-primary btn-order w-100">
 																<img class="mx-auto pe-1" src="<?= esc_url(get_stylesheet_directory_uri()); ?>/img/svg/cart4-white.svg" alt="корзина">
@@ -1219,7 +1219,7 @@ $total_count = count( $gallery_attachment_ids );
 									</div>
 								</div>
 							</div>
-							<!--Блок Готовые решения --> 
+							<!--Блок Готовые решения -->
 							<div class="ready-made-solutions mt-4">
 								<h2 class="display-5 text-primary fw-bold mt-md-0 my-4">Готовые решения</h2>
 								<nav aria-label="breadcrumb" class="wc-breadcrumb breadcrumb-scroller pb-2">
@@ -1228,10 +1228,10 @@ $total_count = count( $gallery_attachment_ids );
 
 								<div class="d-flex justify-content-between align-items-start mb-2" style=
 								"height: 44px;">
-									<span class="text-secondary">Открытый канал</span> 
+									<span class="text-secondary">Открытый канал</span>
 									<div class="d-flex align-items-start gap-3">
-										
-										
+
+
 										<div class="mrk-chat-menu">
 											<div class="text-end">
 												<a href="" role="button" class="ms-1 ms-md-2" type="button" data-bs-toggle="collapse" data-bs-target="#collapse-search" aria-expanded="false" aria-controls="collapse-search">
@@ -1247,7 +1247,7 @@ $total_count = count( $gallery_attachment_ids );
 													</svg>
 													<span class="visually-hidden-focusable">Search</span>
 												</a>
-												
+
 												<a class="collapsed ps-1" data-bs-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">
 													<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
 														<path fill-rule="evenodd" clip-rule="evenodd" d="M3.125 15C3.125 14.8342 3.19085 14.6753 3.30806 14.5581C3.42527 14.4408 3.58424 14.375 3.75 14.375H16.25C16.4158 14.375 16.5747 14.4408 16.6919 14.5581C16.8092 14.6753 16.875 14.8342 16.875 15C16.875 15.1658 16.8092 15.3247 16.6919 15.4419C16.5747 15.5592 16.4158 15.625 16.25 15.625H3.75C3.58424 15.625 3.42527 15.5592 3.30806 15.4419C3.19085 15.3247 3.125 15.1658 3.125 15ZM3.125 10C3.125 9.83424 3.19085 9.67527 3.30806 9.55806C3.42527 9.44085 3.58424 9.375 3.75 9.375H16.25C16.4158 9.375 16.5747 9.44085 16.6919 9.55806C16.8092 9.67527 16.875 9.83424 16.875 10C16.875 10.1658 16.8092 10.3247 16.6919 10.4419C16.5747 10.5592 16.4158 10.625 16.25 10.625H3.75C3.58424 10.625 3.42527 10.5592 3.30806 10.4419C3.19085 10.3247 3.125 10.1658 3.125 10ZM3.125 5C3.125 4.83424 3.19085 4.67527 3.30806 4.55806C3.42527 4.44085 3.58424 4.375 3.75 4.375H16.25C16.4158 4.375 16.5747 4.44085 16.6919 4.55806C16.8092 4.67527 16.875 4.83424 16.875 5C16.875 5.16576 16.8092 5.32473 16.6919 5.44194C16.5747 5.55915 16.4158 5.625 16.25 5.625H3.75C3.58424 5.625 3.42527 5.55915 3.30806 5.44194C3.19085 5.32473 3.125 5.16576 3.125 5Z" fill="#262626"/>
@@ -1308,9 +1308,9 @@ $total_count = count( $gallery_attachment_ids );
 											<div>
 												<p class="text-secondary mb-2">@Константин Комков</p>
 												<p class="text-secondary mb-0">03.07.2022</p>
-											</div>				
-											<div class="dropdown"> 
-												<button class="btn btn-secondary dropdown-toggle me-1 mb-1" type="button" id="dropdownRightMenuButtonDots" data-bs-toggle="dropdown" aria-expanded="false"> 
+											</div>
+											<div class="dropdown">
+												<button class="btn btn-secondary dropdown-toggle me-1 mb-1" type="button" id="dropdownRightMenuButtonDots" data-bs-toggle="dropdown" aria-expanded="false">
 													<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
 														<path d="M5 10C5.53043 10 6.03914 10.2107 6.41421 10.5858C6.78929 10.9609 7 11.4696 7 12C7 12.5304 6.78929 13.0391 6.41421 13.4142C6.03914 13.7893 5.53043 14 5 14C4.46957 14 3.96086 13.7893 3.58579 13.4142C3.21071 13.0391 3 12.5304 3 12C3 11.4696 3.21071 10.9609 3.58579 10.5858C3.96086 10.2107 4.46957 10 5 10ZM12 10C12.5304 10 13.0391 10.2107 13.4142 10.5858C13.7893 10.9609 14 11.4696 14 12C14 12.5304 13.7893 13.0391 13.4142 13.4142C13.0391 13.7893 12.5304 14 12 14C11.4696 14 10.9609 13.7893 10.5858 13.4142C10.2107 13.0391 10 12.5304 10 12C10 11.4696 10.2107 10.9609 10.5858 10.5858C10.9609 10.2107 11.4696 10 12 10ZM19 10C19.5304 10 20.0391 10.2107 20.4142 10.5858C20.7893 10.9609 21 11.4696 21 12C21 12.5304 20.7893 13.0391 20.4142 13.4142C20.0391 13.7893 19.5304 14 19 14C18.4696 14 17.9609 13.7893 17.5858 13.4142C17.2107 13.0391 17 12.5304 17 12C17 11.4696 17.2107 10.9609 17.5858 10.5858C17.9609 10.2107 18.4696 10 19 10Z" fill="black"/>
 													</svg>
@@ -1358,9 +1358,9 @@ $total_count = count( $gallery_attachment_ids );
 											<div>
 												<p class="text-secondary mb-2">@Константин Комков</p>
 												<p class="text-secondary mb-0">03.07.2022</p>
-											</div>				
-											<div class="dropdown"> 
-												<button class="btn btn-secondary dropdown-toggle me-1 mb-1" type="button" id="dropdownRightMenuButtonDots" data-bs-toggle="dropdown" aria-expanded="false"> 
+											</div>
+											<div class="dropdown">
+												<button class="btn btn-secondary dropdown-toggle me-1 mb-1" type="button" id="dropdownRightMenuButtonDots" data-bs-toggle="dropdown" aria-expanded="false">
 													<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
 														<path d="M5 10C5.53043 10 6.03914 10.2107 6.41421 10.5858C6.78929 10.9609 7 11.4696 7 12C7 12.5304 6.78929 13.0391 6.41421 13.4142C6.03914 13.7893 5.53043 14 5 14C4.46957 14 3.96086 13.7893 3.58579 13.4142C3.21071 13.0391 3 12.5304 3 12C3 11.4696 3.21071 10.9609 3.58579 10.5858C3.96086 10.2107 4.46957 10 5 10ZM12 10C12.5304 10 13.0391 10.2107 13.4142 10.5858C13.7893 10.9609 14 11.4696 14 12C14 12.5304 13.7893 13.0391 13.4142 13.4142C13.0391 13.7893 12.5304 14 12 14C11.4696 14 10.9609 13.7893 10.5858 13.4142C10.2107 13.0391 10 12.5304 10 12C10 11.4696 10.2107 10.9609 10.5858 10.5858C10.9609 10.2107 11.4696 10 12 10ZM19 10C19.5304 10 20.0391 10.2107 20.4142 10.5858C20.7893 10.9609 21 11.4696 21 12C21 12.5304 20.7893 13.0391 20.4142 13.4142C20.0391 13.7893 19.5304 14 19 14C18.4696 14 17.9609 13.7893 17.5858 13.4142C17.2107 13.0391 17 12.5304 17 12C17 11.4696 17.2107 10.9609 17.5858 10.5858C17.9609 10.2107 18.4696 10 19 10Z" fill="black"/>
 													</svg>
@@ -1394,14 +1394,14 @@ $total_count = count( $gallery_attachment_ids );
 												<li>
 													<a class="mrk-chat-item" href="#">Хочу заработать</a>
 													<span class="mrk-chat-group">открытая группа</span>
-												</li>   
+												</li>
 											</ul>
 										</div>
 										<div class="mt-5">
 											<div class="d-flex flex-md-nowrap flex-wrap gap-md-0 gap-4 mb-5">
 												<div class="flex-shrink-0"><img class="object-fit-contain me-4" src="<?= get_stylesheet_directory_uri(); ?>/img/gallery-chat/card-img1.jpg" alt="" style="width: 122px;"></div>
 												<div class="flex-grow-1 py-0">
-													<div class="row g-3"> 
+													<div class="row g-3">
 														<div class="col-xl-8 col-lg-7">
 															<a class="d-block fw-semibold fs-6 mb-3" href="">Купить билет на главное вечернее шоу фестиваля</a>
 															<p>Скидка 50% за 3 месяца до начала праздника и VIP обслуживание  ...</p>
@@ -1410,7 +1410,7 @@ $total_count = count( $gallery_attachment_ids );
 															<div class="mt-auto text-lg-center">
 																<h3 class="text-primary fw-bold text-nowrap d-inline-block">1 777 ₽</h3>
 																<span class="text-decoration-line-through fs-5 ps-2">1 721 ₽</span>
-															</div> 
+															</div>
 															<div class="mrk-cart d-flex align-items-center justify-content-lg-end">
 																<div class="mrk-cart-quantity">
 																	<a href="#" class="btn btn-primary btn-order w-100">
@@ -1419,7 +1419,7 @@ $total_count = count( $gallery_attachment_ids );
 																	</a>
 																</div>
 																<div class="mrk-card-heart no-active ms-xl-3 ms-2"></div>
-															</div> 
+															</div>
 														</div>
 													</div>
 												</div>
@@ -1427,7 +1427,7 @@ $total_count = count( $gallery_attachment_ids );
 											<div class="d-flex flex-md-nowrap flex-wrap gap-md-0 gap-4 mb-5">
 												<div class="flex-shrink-0"><img class="object-fit-contain me-4" src="<?= get_stylesheet_directory_uri(); ?>/img/gallery-chat/card-img2.jpg" alt="" style="width: 122px;"></div>
 												<div class="flex-grow-1 py-0">
-													<div class="row g-3"> 
+													<div class="row g-3">
 														<div class="col-xl-8 col-lg-7">
 															<a class="d-block fw-semibold fs-6 mb-3" href="">Купить билет на главное вечернее шоу фестиваля</a>
 															<p>Скидка 50% за 3 месяца до начала праздника и VIP обслуживание  ...</p>
@@ -1436,7 +1436,7 @@ $total_count = count( $gallery_attachment_ids );
 															<div class="mt-auto text-lg-center">
 																<h3 class="text-primary fw-bold text-nowrap d-inline-block">1 777 ₽</h3>
 																<span class="text-decoration-line-through fs-5 ps-2">1 721 ₽</span>
-															</div> 
+															</div>
 															<div class="mrk-cart d-flex align-items-center justify-content-lg-end">
 																<div class="mrk-cart-quantity">
 																	<a href="#" class="btn btn-primary btn-order w-100">
@@ -1445,7 +1445,7 @@ $total_count = count( $gallery_attachment_ids );
 																	</a>
 																</div>
 																<div class="mrk-card-heart no-active ms-xl-3 ms-2"></div>
-															</div> 
+															</div>
 														</div>
 													</div>
 												</div>
@@ -1455,17 +1455,17 @@ $total_count = count( $gallery_attachment_ids );
 								</div>
 							</div>
 
-						<?php } 
+						<?php }
 							else  {
-						?> 
+						?>
 						<!-- если одно изображение -->
 							<img src="<?= get_stylesheet_directory_uri(); ?>/img/catalogs/dlya-vann.jpg" class="img-fluid" alt="...">
 							<nav class="d-flex justify-content-between align-items-center my-3">
-								<div class="nav nav-tabs orderby custom-select d-flex gap-md-5" id="nav-tab" role="tablist" > 
+								<div class="nav nav-tabs orderby custom-select d-flex gap-md-5" id="nav-tab" role="tablist" >
 								<button class="nav-link active" id="nav-home-tab" data-bs-toggle="tab" data-bs-target="#nav-home" type="button" role="tab" aria-controls="nav-home" aria-selected="false" tabindex="-1">по популярности
 								</button>
 								<button class="nav-link" id="nav-profile-tab" data-bs-toggle="tab" data-bs-target="#nav-profile" type="button" role="tab" aria-controls="nav-profile" aria-selected="false" tabindex="-1">по цене
-								</button> 
+								</button>
 								<button class="nav-link" id="nav-contact-tab" data-bs-toggle="tab" data-bs-target="#nav-contact" type="button" role="tab" aria-controls="nav-contact" aria-selected="true">по названию
 								</button>
 								</div>
@@ -1487,7 +1487,7 @@ $total_count = count( $gallery_attachment_ids );
 									<div class="d-flex mb-5">
 										<div class="flex-shrink-0"><img class="object-fit-contain me-4" src="<?= get_stylesheet_directory_uri(); ?>/img/catalogs/cards-image/1.png" alt="" style="width: 70px;"></div>
 										<div class="flex-grow-1 py-0">
-										<div class="row g-3"> 
+										<div class="row g-3">
 											<div class="col-xl-8 col-lg-7">
 											<a class="d-block fw-semibold fs-4" href="">Крепление стеклодержателя (рутеля) к ванте (серьга)</a>
 											</div>
@@ -1495,7 +1495,7 @@ $total_count = count( $gallery_attachment_ids );
 											<div class="mt-auto text-lg-center">
 												<h3 class="text-primary fw-bold text-nowrap d-inline-block">1 777 ₽</h3>
 												<span class="text-decoration-line-through fs-5 ps-2">1 721 ₽</span>
-											</div> 
+											</div>
 											<div class="mrk-cart d-flex align-items-center justify-content-lg-end">
 												<div class="mrk-cart-quantity w-75">
 												<a href="#" class="btn btn-primary btn-order w-100">
@@ -1504,7 +1504,7 @@ $total_count = count( $gallery_attachment_ids );
 												</a>
 												</div>
 												<div class="mrk-card-heart no-active ms-2"></div>
-											</div> 
+											</div>
 											</div>
 										</div>
 										</div>
@@ -1512,7 +1512,7 @@ $total_count = count( $gallery_attachment_ids );
 									<div class="d-flex mb-5">
 										<div class="flex-shrink-0"><img class="object-fit-contain me-4" src="<?= get_stylesheet_directory_uri(); ?>/img/catalogs/cards-image/2.png" alt="" style="width: 70px;"></div>
 										<div class="flex-grow-1 py-0">
-										<div class="row g-3"> 
+										<div class="row g-3">
 											<div class="col-xl-8 col-lg-7">
 											<a class="d-block fw-semibold fs-4" href="">Рутель под стекло 10-26 мм, шпилька М14, регулируемый, разборный</a>
 											</div>
@@ -1520,7 +1520,7 @@ $total_count = count( $gallery_attachment_ids );
 											<div class="mt-auto text-lg-center">
 												<h3 class="text-primary fw-bold text-nowrap d-inline-block">1 777 ₽</h3>
 												<span class="text-decoration-line-through fs-5 ps-2">1 721 ₽</span>
-											</div> 
+											</div>
 											<div class="mrk-cart d-flex align-items-center justify-content-lg-end">
 												<div class="mrk-cart-quantity w-75">
 												<a href="#" class="btn btn-primary btn-order w-100">
@@ -1529,7 +1529,7 @@ $total_count = count( $gallery_attachment_ids );
 												</a>
 												</div>
 												<div class="mrk-card-heart no-active ms-2"></div>
-											</div> 
+											</div>
 											</div>
 										</div>
 										</div>
@@ -1537,7 +1537,7 @@ $total_count = count( $gallery_attachment_ids );
 									<div class="d-flex mb-5">
 										<div class="flex-shrink-0"><img class="object-fit-contain me-4" src="<?= get_stylesheet_directory_uri(); ?>/img/catalogs/cards-image/3.png" alt="" style="width: 70px;"></div>
 										<div class="flex-grow-1 py-0">
-										<div class="row g-3"> 
+										<div class="row g-3">
 											<div class="col-xl-8 col-lg-7">
 											<a class="d-block fw-semibold fs-4" href="">Рутель под стекло 10-26 мм, шпилька М14, регулируемый, разборный</a>
 											</div>
@@ -1545,7 +1545,7 @@ $total_count = count( $gallery_attachment_ids );
 											<div class="mt-auto text-lg-center">
 												<h3 class="text-primary fw-bold text-nowrap d-inline-block">1 777 ₽</h3>
 												<span class="text-decoration-line-through fs-5 ps-2">1 721 ₽</span>
-											</div> 
+											</div>
 											<div class="mrk-cart d-flex align-items-center justify-content-lg-end">
 												<div class="mrk-cart-quantity w-75">
 												<a href="#" class="btn btn-primary btn-order w-100">
@@ -1554,7 +1554,7 @@ $total_count = count( $gallery_attachment_ids );
 												</a>
 												</div>
 												<div class="mrk-card-heart no-active ms-2"></div>
-											</div> 
+											</div>
 											</div>
 										</div>
 										</div>
@@ -1564,7 +1564,7 @@ $total_count = count( $gallery_attachment_ids );
 									<div class="d-flex mb-5">
 										<div class="flex-shrink-0"><img class="object-fit-contain me-4" src="<?= get_stylesheet_directory_uri(); ?>/img/catalogs/cards-image/2.png" alt="" style="width: 70px;"></div>
 										<div class="flex-grow-1 py-0">
-										<div class="row g-3"> 
+										<div class="row g-3">
 											<div class="col-xl-8 col-lg-7">
 											<a class="d-block fw-semibold fs-4" href="">Рутель под стекло 10-26 мм, шпилька М14, регулируемый, разборный</a>
 											</div>
@@ -1572,7 +1572,7 @@ $total_count = count( $gallery_attachment_ids );
 											<div class="mt-auto text-lg-center">
 												<h3 class="text-primary fw-bold text-nowrap d-inline-block">1 777 ₽</h3>
 												<span class="text-decoration-line-through fs-5 ps-2">1 721 ₽</span>
-											</div> 
+											</div>
 											<div class="mrk-cart d-flex align-items-center justify-content-lg-end">
 												<div class="mrk-cart-quantity w-75">
 												<a href="#" class="btn btn-primary btn-order w-100">
@@ -1581,7 +1581,7 @@ $total_count = count( $gallery_attachment_ids );
 												</a>
 												</div>
 												<div class="mrk-card-heart no-active ms-2"></div>
-											</div> 
+											</div>
 											</div>
 										</div>
 										</div>
@@ -1589,7 +1589,7 @@ $total_count = count( $gallery_attachment_ids );
 									<div class="d-flex mb-5 me-4">
 										<div class="flex-shrink-0"><img class="mrk-card-img-descript object-fit-contain me-3" src="<?= get_stylesheet_directory_uri(); ?>/img/catalogs/cards-image/4.png" alt="" style="width: 197px;"></div>
 										<div class="flex-grow-1 py-0">
-											<div class="row g-3"> 
+											<div class="row g-3">
 												<div class="col-xl-8 col-lg-7">
 													<a class="d-block fw-semibold fs-4 mb-3" href="">Крепление стеклодержателя (рутеля) к ванте (серьга)</a>
 													<div class="mb-3">
@@ -1612,7 +1612,7 @@ $total_count = count( $gallery_attachment_ids );
 												<div class="col-xl-4 col-lg-5 ps-xl-4">
 												<div class="mt-auto">
 													<h3 class="text-primary fw-bold text-nowrap d-inline-block">1 777 ₽</h3>
-												</div> 
+												</div>
 												<div class="mrk-cart d-flex flex-column">
 													<div class="mrk-cart-quantity mb-3">
 													<a href="#" class="btn btn-primary btn-order w-100">
@@ -1621,7 +1621,7 @@ $total_count = count( $gallery_attachment_ids );
 													</a>
 													</div>
 													<div class="mrk-card-heart no-active ms-2"></div>
-												</div> 
+												</div>
 												</div>
 											</div>
 										</div>
@@ -1629,7 +1629,7 @@ $total_count = count( $gallery_attachment_ids );
 									<div class="d-flex mb-5">
 										<div class="flex-shrink-0"><img class="object-fit-contain me-4" src="<?= get_stylesheet_directory_uri(); ?>/img/catalogs/cards-image/2.png" alt="" style="width: 70px;"></div>
 										<div class="flex-grow-1 py-0">
-											<div class="row g-3"> 
+											<div class="row g-3">
 												<div class="col-xl-8 col-lg-7">
 												<a class="d-block fw-semibold fs-4" href="">Рутель под стекло 10-26 мм, шпилька М14, регулируемый, разборный</a>
 												</div>
@@ -1637,7 +1637,7 @@ $total_count = count( $gallery_attachment_ids );
 												<div class="mt-auto text-lg-center">
 													<h3 class="text-primary fw-bold text-nowrap d-inline-block">1 777 ₽</h3>
 													<span class="text-decoration-line-through fs-5 ps-2">1 721 ₽</span>
-												</div> 
+												</div>
 												<div class="mrk-cart d-flex align-items-center justify-content-lg-end">
 													<div class="mrk-cart-quantity w-75">
 													<a href="#" class="btn btn-primary btn-order w-100">
@@ -1646,7 +1646,7 @@ $total_count = count( $gallery_attachment_ids );
 													</a>
 													</div>
 													<div class="mrk-card-heart no-active ms-2"></div>
-												</div> 
+												</div>
 												</div>
 											</div>
 										</div>
@@ -1656,7 +1656,7 @@ $total_count = count( $gallery_attachment_ids );
 									<div class="d-flex mb-5">
 										<div class="flex-shrink-0"><img class="object-fit-contain me-4" src="<?= get_stylesheet_directory_uri(); ?>/img/catalogs/cards-image/1.png" alt="" style="width: 70px;"></div>
 										<div class="flex-grow-1 py-0">
-										<div class="row g-3"> 
+										<div class="row g-3">
 											<div class="col-xl-8 col-lg-7">
 											<a class="d-block fw-semibold fs-4" href="">Крепление стеклодержателя (рутеля) к ванте (серьга)</a>
 											</div>
@@ -1664,7 +1664,7 @@ $total_count = count( $gallery_attachment_ids );
 											<div class="mt-auto text-lg-center">
 												<h3 class="text-primary fw-bold text-nowrap d-inline-block">1 777 ₽</h3>
 												<span class="text-decoration-line-through fs-5 ps-2">1 721 ₽</span>
-											</div> 
+											</div>
 											<div class="mrk-cart d-flex align-items-center justify-content-lg-end">
 												<div class="mrk-cart-quantity w-75">
 												<a href="#" class="btn btn-primary btn-order w-100">
@@ -1673,7 +1673,7 @@ $total_count = count( $gallery_attachment_ids );
 												</a>
 												</div>
 												<div class="mrk-card-heart no-active ms-2"></div>
-											</div> 
+											</div>
 											</div>
 										</div>
 										</div>
@@ -1681,7 +1681,7 @@ $total_count = count( $gallery_attachment_ids );
 									<div class="d-flex mb-5">
 										<div class="flex-shrink-0"><img class="object-fit-contain me-4" width="70" src="<?= get_stylesheet_directory_uri(); ?>/img/catalogs/cards-image/2.png" alt="" style="width: 70px;"></div>
 										<div class="flex-grow-1 py-0">
-										<div class="row g-3"> 
+										<div class="row g-3">
 											<div class="col-xl-8 col-lg-7">
 											<a class="d-block fw-semibold fs-4" href="">Рутель под стекло 10-26 мм, шпилька М14, регулируемый, разборный</a>
 											</div>
@@ -1689,7 +1689,7 @@ $total_count = count( $gallery_attachment_ids );
 											<div class="mt-auto text-lg-center">
 												<h3 class="text-primary fw-bold text-nowrap d-inline-block">1 777 ₽</h3>
 												<span class="text-decoration-line-through fs-5 ps-2">1 721 ₽</span>
-											</div> 
+											</div>
 											<div class="mrk-cart d-flex align-items-center justify-content-lg-end">
 												<div class="mrk-cart-quantity w-75">
 													<a href="#" class="btn btn-primary btn-order w-100">
@@ -1698,7 +1698,7 @@ $total_count = count( $gallery_attachment_ids );
 													</a>
 												</div>
 												<div class="mrk-card-heart no-active ms-2"></div>
-											</div> 
+											</div>
 											</div>
 										</div>
 										</div>
@@ -1706,7 +1706,7 @@ $total_count = count( $gallery_attachment_ids );
 									<div class="d-flex mb-5">
 										<div class="flex-shrink-0"><img class="object-fit-contain me-4" src="<?= get_stylesheet_directory_uri(); ?>/img/catalogs/cards-image/3.png" alt="" style="width: 70px;"></div>
 										<div class="flex-grow-1 py-0">
-										<div class="row g-3"> 
+										<div class="row g-3">
 											<div class="col-xl-8 col-lg-7">
 											<a class="d-block fw-semibold fs-4" href="">Рутель под стекло 10-26 мм, шпилька М14, регулируемый, разборный</a>
 											</div>
@@ -1714,7 +1714,7 @@ $total_count = count( $gallery_attachment_ids );
 											<div class="mt-auto text-lg-center">
 												<h3 class="text-primary fw-bold text-nowrap d-inline-block">1 777 ₽</h3>
 												<span class="text-decoration-line-through fs-5 ps-2">1 721 ₽</span>
-											</div> 
+											</div>
 											<div class="mrk-cart d-flex align-items-center justify-content-lg-end">
 												<div class="mrk-cart-quantity w-75">
 												<a href="#" class="btn btn-primary btn-order w-100">
@@ -1723,7 +1723,7 @@ $total_count = count( $gallery_attachment_ids );
 												</a>
 												</div>
 												<div class="mrk-card-heart no-active ms-2"></div>
-											</div> 
+											</div>
 											</div>
 										</div>
 										</div>
@@ -1733,7 +1733,7 @@ $total_count = count( $gallery_attachment_ids );
 						<?php } ?>
 					</div>
 				</div>
-				
+
 				<!-- col -->
 				<?php get_sidebar(); ?>
 			</div>
@@ -1765,7 +1765,7 @@ $total_count = count( $gallery_attachment_ids );
 								</div>
 							<?php }
 							}
-								
+
 							?>
 
 						</div>
