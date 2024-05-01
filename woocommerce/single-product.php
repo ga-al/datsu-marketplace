@@ -47,6 +47,12 @@ foreach ($terms as $key => $term) {
 
 }
 
+$product_vendor = yith_get_vendor(false, 'product');
+$product_vendor_id = $product_vendor ? $product_vendor->id : '-';
+
+// var_dump( $_product );
+
+
 ?>
 
 
@@ -73,7 +79,9 @@ $total_count = count( $gallery_attachment_ids );
 				<h1 class="fs-1 fw-normal mt-md-0 mt-4"><?php echo $product_name; ?> </h1>
 				<p class="mb-3 ps-lg-1">
 					<span class="text-secondary me-3" style="font-size: 12px;">Артикул: <?php echo $product_sku; ?></span>
-					<span class="text-secondary" style="font-size: 12px;">Код покупателя: 12345678</span>
+					<span class="text-secondary" style="font-size: 12px;">Код покупателя: 12345678-?? </span>
+
+					<span class="text-secondary" style="font-size: 12px;">Код продавца: <?php echo $product_vendor_id ?></span>
 				</p>
 
 				<div class="row">
@@ -235,17 +243,23 @@ $total_count = count( $gallery_attachment_ids );
 							<div class="row g-3 px-4">
 								<div class="col-12">
 									<div class="d-flex justify-content-xl-start justify-content-md-center justify-content-start align-items-center mb-3">
+
 										<h2 class="text-danger text-nowrap m-0 display-5" style="font-weight: 800;">
 											<?php
-											if ( $product_price ) {
-												echo $product_price . ' ' . get_woocommerce_currency_symbol();
+											if ( $product_sale_price ) {
+												echo $product_sale_price . ' ' . get_woocommerce_currency_symbol();
+											} else {
+												echo $product_regular_price . ' ' . get_woocommerce_currency_symbol();
 											}
 											?>
 										</h2>
 										<br>
-										<?php if ( $_product->get_regular_price() ) { ?>
+
+
+										<?php if ( $product_sale_price ) { ?>
 											<span class="text-decoration-line-through text-secondary fs-4 ps-2"><?php echo $product_regular_price . ' ' . get_woocommerce_currency_symbol() ?></span>
 										<?php }?>
+
 										<div class="mrk-card-heart no-active ms-auto"></div>
 									</div>
 								</div>
@@ -518,7 +532,9 @@ $total_count = count( $gallery_attachment_ids );
 
 
 												</div>
-												<p class="card-title fw-medium text-dark text-start fs-6 mb-3"><?php echo $together_product_name; ?></p>
+												<p class="card-title fw-medium text-dark text-start fs-6 mb-3">
+													<a href="<?php echo get_permalink($together_product_id); ?>"><?php echo $together_product_name; ?></a>
+												</p>
 												<div class="mrk-bonus text-start">
 													<span class="text-primary py-1 px-2 me-2">+75 баллов</span>
 													<p class="d-inline-block mb-0">4.5
@@ -665,7 +681,12 @@ $total_count = count( $gallery_attachment_ids );
 
 
 													</div>
-													<p class="card-title fw-medium text-dark text-start fs-6 mb-3"><?php echo $similar_product_name; ?></p>
+													<p class="card-title fw-medium text-dark text-start fs-6 mb-3">
+														<a href="<?php echo get_permalink($similar_product_id); ?>"><?php echo $similar_product_name; ?></a>
+													</p>
+
+
+
 													<div class="mrk-bonus text-start">
 														<span class="text-primary py-1 px-2 me-2">+75 баллов</span>
 														<p class="d-inline-block mb-0">4.5

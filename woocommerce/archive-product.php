@@ -48,8 +48,6 @@ if ( !$term_thumbnail_url ) {
 
 					<div class="entry-content">
 						<h1 class="display-5 text-primary fw-bold mt-md-0 my-4"><?php woocommerce_page_title(); ?></h1>
-
-						<!-- если одно изображение -->
 							<img src="<?= $term_thumbnail_url ?>" class="img-fluid" alt="...">
 							<nav class="d-flex justify-content-between align-items-center my-3">
 								<div class="nav nav-tabs orderby custom-select d-flex gap-md-5" id="nav-tab" role="tablist" >
