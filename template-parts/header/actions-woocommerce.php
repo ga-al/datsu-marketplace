@@ -63,7 +63,7 @@ if ( is_account_page() ) {
   <span class="visually-focusable fw-medium text-nowrap">Избранное</span>
 </a>
 
-<a href="" class="ms-md-2 border-0" role="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvas-user" aria-controls="offcanvas-user">
+<a href="/my-account/orders/" class="ms-md-2 border-0" role="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvas-user" aria-controls="offcanvas-user">
   <img class="d-block mx-auto mb-1" src="<?= esc_url(get_stylesheet_directory_uri()); ?>/img/svg/handbag.svg" alt="">
   <span class="visually-focusable fw-medium text-nowrap">Заказы</span>
 </a>
