@@ -14,6 +14,7 @@
 
     // custom.js
     wp_enqueue_script('custom-js', get_stylesheet_directory_uri() . '/js/custom.js', false, '', true);
+    wp_enqueue_script('me_product-sort', get_stylesheet_directory_uri() . '/js/me_product-sort.js', false, '', true);
   }
 
 
@@ -235,8 +236,12 @@ function rudr_save_field( $id ){
 }
 
 
+// ME FUNCTIONS
 // Walker Categoris Sidebar
 require_once('inc/walker-categories-sidebar.php');
+
+require_once('inc/me-function.php');
+
 
 // Custom Create Vendor
 function me_create_vendor() {

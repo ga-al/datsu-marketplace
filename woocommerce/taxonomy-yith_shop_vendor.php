@@ -34,7 +34,9 @@ $term_name = $term->name;
 
 $term_thumbnail_id = get_term_meta($term->term_id, 'header_image', true);
 $term_thumbnail_url = wp_get_attachment_url( $term_thumbnail_id );
-
+if ( !$term_thumbnail_url ) {
+	$term_thumbnail_url = get_stylesheet_directory_uri() . '/img/placeholder.png';
+}
 // $_product = wc_get_product( get_the_ID() );
 
 // $_product_url = get_permalink( $_product->get_id() );

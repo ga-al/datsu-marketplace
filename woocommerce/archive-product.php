@@ -27,6 +27,9 @@ $term = get_queried_object();
 $term_thumbnail_id = get_term_meta($term->term_id, 'thumbnail_id', true);
 $term_thumbnail_url = wp_get_attachment_url( $term_thumbnail_id );
 
+if ( !$term_thumbnail_url ) {
+	$term_thumbnail_url = get_stylesheet_directory_uri() . '/img/placeholder.png';
+}
 
 
 ?>
@@ -50,12 +53,14 @@ $term_thumbnail_url = wp_get_attachment_url( $term_thumbnail_id );
 							<img src="<?= $term_thumbnail_url ?>" class="img-fluid" alt="...">
 							<nav class="d-flex justify-content-between align-items-center my-3">
 								<div class="nav nav-tabs orderby custom-select d-flex gap-md-5" id="nav-tab" role="tablist" >
-								<button class="nav-link active" id="nav-home-tab" data-bs-toggle="tab" data-bs-target="#nav-home" type="button" role="tab" aria-controls="nav-home" aria-selected="false" tabindex="-1">по популярности
-								</button>
-								<button class="nav-link" id="nav-profile-tab" data-bs-toggle="tab" data-bs-target="#nav-profile" type="button" role="tab" aria-controls="nav-profile" aria-selected="false" tabindex="-1" disabled>по цене
-								</button>
-								<button class="nav-link" id="nav-contact-tab" data-bs-toggle="tab" data-bs-target="#nav-contact" type="button" role="tab" aria-controls="nav-contact" aria-selected="true" disabled>по названию
-								</button>
+									<!-- СОРТИРОВКА ТОВАРОВ .me_btn_sort_producrs & data-sort & data-term_id !!! -->
+									<button data-sort="me_by_popularity" data-term_id="<?php echo $term->term_id ?>" class="nav-link active me_btn_sort_producrs" id="nav-home-tab"  data-bs-toggle="tab" data-bs-target="#nav-home" type="button" role="tab" aria-controls="nav-home" aria-selected="false" tabindex="-1">по популярности
+									</button>
+									<button data-sort="me_by_price" data-term_id="<?php echo $term->term_id ?>" class="nav-link me_btn_sort_producrs" id="nav-profile-tab"  data-bs-toggle="tab" data-bs-target="#nav-profile" type="button" role="tab" aria-controls="nav-profile" aria-selected="false" tabindex="-1" >по цене
+									</button>
+									<button data-sort="me_by_name" data-term_id="<?php echo $term->term_id ?>" class="nav-link me_btn_sort_producrs" id="nav-contact-tab"  data-bs-toggle="tab" data-bs-target="#nav-contact" type="button" role="tab" aria-controls="nav-contact" aria-selected="true" >по названию
+									</button>
+									<!-- СОРТИРОВКА ТОВАРОВ .btn_sort_producrs & data-sort & data-term_id!!! -->
 								</div>
 								<div class="d-flex gap-2">
 								<a href="#" role="tablist">
@@ -208,7 +213,6 @@ $term_thumbnail_url = wp_get_attachment_url( $term_thumbnail_id );
 
 <?php
 
-// }
 
 
 do_action( 'woocommerce_after_main_content' );

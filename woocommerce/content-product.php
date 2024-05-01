@@ -29,8 +29,11 @@ $product_price = $product->get_price();
 $product_sale_price = $product->get_sale_price();
 $product_regular_price = $product->get_regular_price();
 $product_link = get_permalink($product_id);
-// $image = wp_get_attachment_image_src( get_post_thumbnail_id( $product_id ) );
-$image = '';
+$image = wp_get_attachment_image_url( $product_id, 'medium'  );
+if ( !$image ) {
+	$image = get_stylesheet_directory_uri() . '/img/placeholder.png';
+}
+// $image = '';
 // $product_name = $product->name;
 // $product_name = $product->name;
 
