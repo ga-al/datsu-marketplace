@@ -23,13 +23,13 @@ defined( 'ABSPATH' ) || exit;
 get_header( 'shop' );
 do_action( 'woocommerce_before_main_content' );
 
-$term = get_queried_object();
-$term_thumbnail_id = get_term_meta($term->term_id, 'thumbnail_id', true);
-$term_thumbnail_url = wp_get_attachment_url( $term_thumbnail_id );
+$queried_object = get_queried_object();
 
-if ( !$term_thumbnail_url ) {
-	$term_thumbnail_url = get_stylesheet_directory_uri() . '/img/placeholder.png';
+if ( isset( $queried_object->term_id ) ) {
+	$term_thumbnail_id = get_term_meta($queried_object->term_id, 'thumbnail_id', true);
 }
+
+
 
 
 ?>
@@ -48,7 +48,15 @@ if ( !$term_thumbnail_url ) {
 
 					<div class="entry-content">
 						<h1 class="display-5 text-primary fw-bold mt-md-0 my-4"><?php woocommerce_page_title(); ?></h1>
-							<img src="<?= $term_thumbnail_url ?>" class="img-fluid" alt="...">
+							<?php
+								if ( isset($term_thumbnail_id) && $term_thumbnail_id ) {
+									$term_thumbnail_url = wp_get_attachment_url( $term_thumbnail_id );
+									?>
+										<img src="<?= $term_thumbnail_url ?>" class="img-fluid" alt="...">
+									<?php
+								}
+							?>
+
 							<nav class="d-flex justify-content-between align-items-center my-3">
 								<div class="nav nav-tabs orderby custom-select d-flex gap-md-5" id="nav-tab" role="tablist" >
 									<!-- СОРТИРОВКА ТОВАРОВ .me_btn_sort_producrs & data-sort & data-term_id !!! -->

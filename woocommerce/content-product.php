@@ -72,7 +72,8 @@ if (empty($product) || !$product->is_visible()) {
           get_template_part( 'elements/button-add-to-cart', '', $add_to_cart );
         ?>
       </div>
-      <div class="mrk-card-heart no-active ms-2"></div>
+      <!-- <div class="mrk-card-heart no-active ms-2"></div> -->
+      <?php echo do_shortcode("[yith_wcwl_add_to_wishlist]")?>
     </div>
     </div>
   </div>

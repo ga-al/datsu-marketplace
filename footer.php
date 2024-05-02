@@ -41,28 +41,65 @@
             <div>
               <h5 class="fw-medium">О компании</h5>
               <ul>
-                <li><a class="text-opacity-50 text-decoration-none" href="#">О компании</a></li>
+                <?php
+                  wp_nav_menu(array(
+                    'theme_location' => 'footer-about',
+                    'container'      => false,
+                    'menu_class'     => '',
+                    'fallback_cb'    => '__return_false',
+                    'items_wrap'     => '<ul id="footer-about" class="">%3$s</ul>',
+                    'depth'          => 1,
+                    'walker'         => new bootstrap_5_wp_nav_menu_walker()
+                  ));
+
+                ?>
+
+                <!-- <li><a class="text-opacity-50 text-decoration-none" href="#">О компании</a></li>
                 <li><a class="text-opacity-50 text-decoration-none" href="#">Новости</a></li>
                 <li><a class="text-opacity-50 text-decoration-none" href="#">Вакансии</a></li>
-                <li><a class="text-opacity-50 text-decoration-none" href="#">Реквизиты</a></li>
+                <li><a class="text-opacity-50 text-decoration-none" href="#">Реквизиты</a></li> -->
               </ul>
             </div>
             <div>
               <h5 class="fw-medium">Покупателям</h5>
               <ul>
-                <li><a class="text-opacity-50 text-decoration-none" href="#">Условия продажи</a></li>
+                <?php
+                  wp_nav_menu(array(
+                    'theme_location' => 'footer-buyers',
+                    'container'      => false,
+                    'menu_class'     => '',
+                    'fallback_cb'    => '__return_false',
+                    'items_wrap'     => '<ul id="footer-buyers" class="">%3$s</ul>',
+                    'depth'          => 1,
+                    'walker'         => new bootstrap_5_wp_nav_menu_walker()
+                  ));
+
+                ?>
+                <!-- <li><a class="text-opacity-50 text-decoration-none" href="#">Условия продажи</a></li>
                 <li><a class="text-opacity-50 text-decoration-none" href="#">Доставка</a></li>
                 <li><a class="text-opacity-50 text-decoration-none" href="#">Оплата</a></li>
                 <li><a class="text-opacity-50 text-decoration-none" href="#">Возврат</a></li>
-                <li><a class="text-opacity-50 text-decoration-none" href="#">Вопрос-ответ</a></li>
+                <li><a class="text-opacity-50 text-decoration-none" href="#">Вопрос-ответ</a></li> -->
               </ul>
             </div>
             <div>
               <h5 class="fw-medium">Партнерам</h5>
               <ul>
-                <li><a class="text-opacity-50 text-decoration-none" href="#">Сотрудничество</a></li>
-                <li><a class="text-opacity-50 text-decoration-none" href="#">Логистика</a></li>
-                <li><a class="text-opacity-50 text-decoration-none" href="#">Условия партнерства</a></li>
+                <?php
+                  wp_nav_menu(array(
+                    'theme_location' => 'footer-partners',
+                    'container'      => false,
+                    'menu_class'     => '',
+                    'fallback_cb'    => '__return_false',
+                    'items_wrap'     => '<ul id="footer-partners" class="">%3$s</ul>',
+                    'depth'          => 1,
+                    'walker'         => new bootstrap_5_wp_nav_menu_walker()
+                  ));
+
+                ?>
+                <!-- <li><a class="text-opacity-50 text-decoration-none" href="#">Сотрудничество</a></li> -->
+                <!-- <li><a class="text-opacity-50 text-decoration-none" href="#">Логистика</a></li>
+                <li><a class="text-opacity-50 text-decoration-none" href="#">Условия партнерства</a></li> -->
               </ul>
             </div>
           <?php endif; ?>
@@ -73,9 +110,23 @@
           <?php if (is_active_sidebar('footer-3')) : ?>
             <h5 class="text-white">Соц.сети</h5>
             <ul class="d-md-block d-flex gap-4">
-              <li><a class="text-white text-decoration-underline" href="#">Телеграм</a></li>
+
+              <?php
+                  wp_nav_menu(array(
+                    'theme_location' => 'footer-social',
+                    'container'      => false,
+                    'menu_class'     => '',
+                    'fallback_cb'    => '__return_false',
+                    'items_wrap'     => '<ul id="footer-social" class="">%3$s</ul>',
+                    'depth'          => 1,
+                    'walker'         => new bootstrap_5_wp_nav_menu_walker()
+                  ));
+
+                ?>
+
+              <!-- <li><a class="text-white text-decoration-underline" href="#">Телеграм</a></li>
               <li><a class="text-white text-decoration-underline" href="#">WhatsApp</a></li>
-              <li><a class="text-white text-decoration-underline" href="#">Wechat</a></li>
+              <li><a class="text-white text-decoration-underline" href="#">Wechat</a></li> -->
             </ul>
           <?php endif; ?>
         </div>
@@ -98,7 +149,7 @@
     </div>
   </div>
 
-  
+
 
 </footer>
 

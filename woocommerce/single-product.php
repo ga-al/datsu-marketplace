@@ -77,12 +77,12 @@ $total_count = count( $gallery_attachment_ids );
 
 			<div class="entry-content">
 				<h1 class="fs-1 fw-normal mt-md-0 mt-4"><?php echo $product_name; ?> </h1>
-				<p class="mb-3 ps-lg-1">
+				<!-- <p class="mb-3 ps-lg-1">
 					<span class="text-secondary me-3" style="font-size: 12px;">Артикул: <?php echo $product_sku; ?></span>
 					<span class="text-secondary" style="font-size: 12px;">Код покупателя: 12345678-?? </span>
 
 					<span class="text-secondary" style="font-size: 12px;">Код продавца: <?php echo $product_vendor_id ?></span>
-				</p>
+				</p> -->
 
 				<div class="row">
 					<!-- слайдер с табами изображениями - НАЧАЛО -->
@@ -259,17 +259,17 @@ $total_count = count( $gallery_attachment_ids );
 										<?php if ( $product_sale_price ) { ?>
 											<span class="text-decoration-line-through text-secondary fs-4 ps-2"><?php echo $product_regular_price . ' ' . get_woocommerce_currency_symbol() ?></span>
 										<?php }?>
-
-										<div class="mrk-card-heart no-active ms-auto"></div>
+										<?php echo do_shortcode("[yith_wcwl_add_to_wishlist]") ?>
+										<!-- <div class="mrk-card-heart no-active ms-auto"></div> -->
 									</div>
 								</div>
 								<div class="col-12">
-									<div class="mrk-box-bonus d-flex align-items-center justify-content-between px-3 py-2 rounded" style="min-height: 0;">
+									<!-- <div class="mrk-box-bonus d-flex align-items-center justify-content-between px-3 py-2 rounded" style="min-height: 0;">
 										<div>За этот заказ вы получите:
 											<div class="text-primary fs-3 fw-bold">+ 75 баллов</div>
 										</div>
 										<a href="" role="button" class="text-decoration-underline fw-medium">Подробнее</a>
-									</div>
+									</div> -->
 								</div>
 								<div class="col-12">
 									<div class="row align-items-center mx-auto w-100 gap-2">
@@ -309,7 +309,7 @@ $total_count = count( $gallery_attachment_ids );
 								</div>
 							</div>
 						</div>
-						<p class="fw-bold fs-5 mt-3 mb-2">Скачать документацию: </p>
+						<!-- <p class="fw-bold fs-5 mt-3 mb-2">Скачать документацию: </p>
 						<form class="row g-2">
 							<div class="col-md-6">
 								<div class="position-relative">
@@ -392,7 +392,7 @@ $total_count = count( $gallery_attachment_ids );
 								</div>
 								</div>
 							</div>
-						</form>
+						</form> -->
 					</div>
 					<!-- слайдер с табами изображениями -  КОНЕЦ -->
 				</div>
@@ -564,6 +564,7 @@ $total_count = count( $gallery_attachment_ids );
 												?>
 												</div>
 											</div>
+											<?php echo do_shortcode("[yith_wcwl_add_to_wishlist]") ?>
 										</div>
 									</div>
 								<?php
@@ -716,6 +717,7 @@ $total_count = count( $gallery_attachment_ids );
 													?>
 													</div>
 												</div>
+												<?php echo do_shortcode("[yith_wcwl_add_to_wishlist]") ?>
 											</div>
 										</div>
 									<?php

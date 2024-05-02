@@ -14,3 +14,86 @@ function me_arhive_sort_product() {
     echo '';
     wp_die();
 }
+
+
+if (!function_exists('me_register_menu')) {
+    function me_register_menu() {
+    //   require_once('inc/class-bootstrap-5-navwalker.php');
+      // Register Menus
+      register_nav_menu('main-menu', 'Main menu');
+      register_nav_menu('footer-about', 'О компании');
+      register_nav_menu('footer-buyers', 'Покупателям');
+      register_nav_menu('footer-partners', 'Партнерам');
+      register_nav_menu('footer-social', 'Соц.сети');
+    }
+}
+add_action('after_setup_theme', 'me_register_menu');
+
+
+
+add_action('after_setup_theme', 'me_auto_create_pages');
+function me_auto_create_pages() {
+    $pages_create = get_option('me_auto_create_pages');
+    $page_not_exists = [
+        [
+            'title' => 'О компании',
+        ],
+        [
+            'title' => 'Новости',
+        ],
+        [
+            'title' => 'Вакансии',
+        ],
+        [
+            'title' => 'Реквизиты',
+        ],
+        [
+            'title' => 'Условия продажи',
+        ],
+        [
+            'title' => 'Доставка',
+        ],
+        [
+            'title' => 'Оплата',
+        ],
+        [
+            'title' => 'Возврат',
+        ],
+        [
+            'title' => 'Вопрос-ответ',
+        ],
+        [
+            'title' => 'Сотрудничество',
+        ],
+        [
+            'title' => 'Логистика',
+        ],
+        [
+            'title' => 'Условия партнерства',
+        ],
+
+    ];
+
+    if ( ! $pages_create ) {
+
+        foreach ($page_not_exists as $index => $pageData ) {
+            $new_post = array(
+                'post_title' => $pageData['title'],
+                'post_content' => '',
+                'post_status' => 'publish',
+                'post_author' => 1,
+                'post_type' => 'page',
+            );
+            wp_insert_post($new_post);
+        }
+        update_option( 'me_auto_create_pages', 1 );
+    }
+
+
+}
+
+function get_current_vendor_id() {
+    $product_vendor = yith_get_vendor(false, 'user');
+    $product_vendor_id = $product_vendor ? $product_vendor->id : '-';
+    return $product_vendor_id;
+}
