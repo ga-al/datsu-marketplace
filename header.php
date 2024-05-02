@@ -53,7 +53,8 @@
               <rect width="16" height="16" fill="white" transform="translate(0 0.5)"/>
               </clipPath>
               </defs>
-            </svg>Москва, ID <?php echo get_current_vendor_id(); ?>
+            </svg>Москва
+             <!-- ID <?php echo get_current_vendor_id(); ?> -->
           </a>
           <!-- Bootstrap 5 Nav Walker Main Menu -->
           <?php
@@ -111,7 +112,8 @@
                         <rect width="16" height="16" fill="white" transform="translate(0 0.5)"/>
                         </clipPath>
                         </defs>
-                      </svg>Москва, ID <?php echo get_current_vendor_id(); ?>
+                      </svg>Москва
+                       <!-- ID <?php echo get_current_vendor_id(); ?> -->
                     </a>
                     <!-- Top Nav 2 Widget -->
                     <?php if (is_active_sidebar('top-nav-2')) : ?>
