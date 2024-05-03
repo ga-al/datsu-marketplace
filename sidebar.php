@@ -96,7 +96,8 @@ if (!is_active_sidebar('sidebar-1')) {
     <br><br>
     <?php
       if ( is_archive() ) {
-        echo do_shortcode('[wcpf_filters id="130"]');
+        // echo do_shortcode('[wcpf_filters id="130"]');
+        echo do_shortcode('[wcpf_filters id="258"]');
       }
     ?>
 
