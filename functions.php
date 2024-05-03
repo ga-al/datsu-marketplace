@@ -11,10 +11,11 @@
     // Compiled main.css
     $modified_bootscoreChildCss = date('YmdHi', filemtime(get_stylesheet_directory() . '/css/main.css'));
     wp_enqueue_style('main', get_stylesheet_directory_uri() . '/css/main.css', array('parent-style'), $modified_bootscoreChildCss);
+    wp_enqueue_style('me-style', get_stylesheet_directory_uri() . '/css/me_style.css');
 
     // custom.js
     wp_enqueue_script('custom-js', get_stylesheet_directory_uri() . '/js/custom.js', false, '', true);
-    wp_enqueue_script('me_product-sort', get_stylesheet_directory_uri() . '/js/me_product-sort.js', false, '', true);
+    wp_enqueue_script('me-sctipts', get_stylesheet_directory_uri() . '/js/me_sctipts.js', false, '', true);
   }
 
 

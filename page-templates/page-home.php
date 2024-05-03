@@ -10,6 +10,10 @@
  */
 
 get_header();
+
+$social_menu = me_render_social();
+
+
 ?>
   <div id="content" class="site-content <?= bootscore_container_class(); ?> py-5 mt-4">
     <div id="primary" class="content-area">
@@ -39,7 +43,10 @@ get_header();
                         </button>
                       </div>
                       <div class="mrk-social position-absolute">
-                        <div class="d-flex gap-4">
+
+
+                        <?php echo $social_menu; ?>
+                        <!-- <div class="d-flex gap-4">
                           <a class="mrk-social-item" href="#" role="button">
                             <img src="<?= esc_url(get_stylesheet_directory_uri()); ?>/img/svg/skype-outline.svg" alt="">
                           </a>
@@ -52,7 +59,7 @@ get_header();
                           <a class="mrk-social-item" href="#" role="button">
                             <img src="<?= esc_url(get_stylesheet_directory_uri()); ?>/img/svg/telegram.svg" alt="">
                           </a>
-                        </div>
+                        </div> -->
                       </div>
                     </div>
                       <div class="row thumbs mrk-gallery-thumbs mx-auto flex-nowrap gap-2">
@@ -355,20 +362,21 @@ get_header();
                               </form>
                             </div>
                             <div class="mrk-social position-absolute">
-                              <div class="d-flex gap-4">
-                              <a class="mrk-social-item" href="#" role="button">
-                                  <img src="<?= esc_url(get_stylesheet_directory_uri()); ?>/img/svg/skype-outline.svg" alt="">
-                              </a>
-                              <a class="mrk-social-item" href="#" role="button">
-                                  <img src="<?= esc_url(get_stylesheet_directory_uri()); ?>/img/svg/whatsapp.svg" alt="">
-                              </a>
-                              <a class="mrk-social-item" href="#" role="button">
-                                  <img src="<?= esc_url(get_stylesheet_directory_uri()); ?>/img/svg/discord.svg" alt="">
-                              </a>
-                              <a class="mrk-social-item" href="#" role="button">
-                                  <img src="<?= esc_url(get_stylesheet_directory_uri()); ?>/img/svg/telegram.svg" alt="">
-                              </a>
-                              </div>
+                              <?php echo $social_menu; ?>
+                              <!-- <div class="d-flex gap-4">
+                                <a class="mrk-social-item" href="#" role="button">
+                                    <img src="<?= esc_url(get_stylesheet_directory_uri()); ?>/img/svg/skype-outline.svg" alt="">
+                                </a>
+                                <a class="mrk-social-item" href="#" role="button">
+                                    <img src="<?= esc_url(get_stylesheet_directory_uri()); ?>/img/svg/whatsapp.svg" alt="">
+                                </a>
+                                <a class="mrk-social-item" href="#" role="button">
+                                    <img src="<?= esc_url(get_stylesheet_directory_uri()); ?>/img/svg/discord.svg" alt="">
+                                </a>
+                                <a class="mrk-social-item" href="#" role="button">
+                                    <img src="<?= esc_url(get_stylesheet_directory_uri()); ?>/img/svg/telegram.svg" alt="">
+                                </a>
+                              </div> -->
                             </div>
                         </div>
                       </div>
@@ -380,7 +388,9 @@ get_header();
 
           </div>
           <!-- col -->
-          <?php get_sidebar(); ?>
+          <?php
+
+          get_sidebar(); ?>
         </div>
         <!-- row -->
 

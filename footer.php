@@ -112,7 +112,7 @@
             <ul class="d-md-block d-flex gap-4">
 
               <?php
-                  wp_nav_menu(array(
+                  $as = wp_nav_menu(array(
                     'theme_location' => 'footer-social',
                     'container'      => false,
                     'menu_class'     => '',
