@@ -22,8 +22,7 @@ add_action('wp_ajax_me_FORM_page_home', 'me_FORM_page_home');
 add_action('wp_ajax_nopriv_me_FORM_page_home', 'me_FORM_page_home');
 
 function me_FORM_page_home() {
-    // $to = 'mixalev10a@gmail.com';
-    $to = 'fisher-sport14@mail.ru';
+    $to = 'mixalev10a@gmail.com';
     $subj = 'Перезвонить';
 
     $name = isset($_POST['name']) ? $_POST['name'] : '';
@@ -31,7 +30,7 @@ function me_FORM_page_home() {
 
     $message = "Перезвонить \n Имя: $name \n Телефон: $phone";
     $res = wp_mail($to, $subj, $message, [
-        'From: Nasledie Digital <no-reply@nasledie.digital>',
+        'From: ME <no-reply@mixalev10a@gmail.com>',
         'content-type: text/html',
     ]);
 
