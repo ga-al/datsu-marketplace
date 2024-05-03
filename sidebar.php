@@ -94,17 +94,20 @@ if (!is_active_sidebar('sidebar-1')) {
 
     <br><br>
     <br><br>
-    <div class="offcanvas-header">
-        <span class="h5 offcanvas-title text-primary">Фильтр товаров</span>
-      </div>
+
     <?php
-      if (  is_product_category() ) {
-        // echo do_shortcode('[wcpf_filters id="130"]');
-        echo do_shortcode('[wcpf_filters id="258"]');
-      }
 
       if ( is_archive() || is_category() || is_product_category() ) {
         // echo do_shortcode('[wcpf_filters id="130"]');
+
+
+        ?>
+
+        <div class="offcanvas-header">
+          <span class="h5 offcanvas-title text-primary">Фильтр товаров</span>
+        </div>
+        <?php
+
         echo do_shortcode('[wcpf_filters id="258"]');
       }
     ?>
