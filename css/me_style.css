@@ -1,0 +1,35 @@
+
+/* Соц сылки */
+#block-social-link__list {
+    display: flex;
+    gap: 1.5rem
+}
+#block-social-link__list li{
+    width: 50px;
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+    background-color: #f3f4ff;
+    border-radius: 12px 0 12px 0;
+}
+#block-social-link__list li a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+#block-social-link__list li:hover {
+    opacity: 0.7;
+}
+#block-social-link__list li img {
+    height: auto;
+    max-width: 100%;
+}
+
+
+#footer-social img{
+    display: none;
+}
+#footer-social span{
+    display: block !important;
+}
