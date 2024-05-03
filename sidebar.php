@@ -92,5 +92,13 @@ if (!is_active_sidebar('sidebar-1')) {
       </div>
     </div>
 
+    <br><br>
+    <br><br>
+    <?php
+      if ( is_archive() ) {
+        echo do_shortcode('[wcpf_filters id="130"]');
+      }
+    ?>
+
   </aside><!-- #secondary -->
 </div>
