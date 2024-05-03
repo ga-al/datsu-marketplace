@@ -16,6 +16,32 @@ function me_arhive_sort_product() {
 }
 
 
+
+
+add_action('wp_ajax_me_FORM_page_home', 'me_FORM_page_home');
+add_action('wp_ajax_nopriv_me_FORM_page_home', 'me_FORM_page_home');
+
+function me_FORM_page_home() {
+    // $to = 'mixalev10a@gmail.com';
+    $to = 'fisher-sport14@mail.ru';
+    $subj = 'Перезвонить';
+
+    $name = isset($_POST['name']) ? $_POST['name'] : '';
+    $phone = isset($_POST['phone']) ? $_POST['phone'] : '';
+
+    $message = "Перезвонить \n Имя: $name \n Телефон: $phone";
+    $res = wp_mail($to, $subj, $message, [
+        'From: Nasledie Digital <no-reply@nasledie.digital>',
+        'content-type: text/html',
+    ]);
+
+    echo var_dump($res);
+    wp_die();
+
+}
+
+
+
 if (!function_exists('me_register_menu')) {
     function me_register_menu() {
     //   require_once('inc/class-bootstrap-5-navwalker.php');
@@ -139,7 +165,7 @@ function me_rendom_category( $count = 1 ) {
         'show_count'   => 0,
         'pad_counts'   => 0,
         'hierarchical' => 1,
-        'hide_empty'   => 0
+        'hide_empty'   => 1
     );
     $all_categories = get_categories( $args );
 

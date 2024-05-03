@@ -1,15 +1,19 @@
 jQuery(function ($) {
 
     $(document).ready(function () {
-        sortProductArchive();
-
-        console.log('qwewqeqw');
+        me_sortProductArchive();
 
 
+        $(document).on('submit', "#page_home_form", function(e) {
+            e.preventDefault();
+
+            me_FORM_page_home();
+
+        })
 
     });
 
-    function sortProductArchive() {
+    function me_sortProductArchive() {
         $('.me_btn_sort_producrs').on('click', function() {
             let btn = $(this)
             let sort = btn.data('sort')
@@ -44,5 +48,47 @@ jQuery(function ($) {
             // });
         });
     }
+
+
+
+    function me_FORM_page_home() {
+
+            console.log( $('#page_home_form') );
+        if ( ! $('#page_home_form').length ) return;
+
+        let form = $('#page_home_form')
+
+
+
+        let phone = form.find('#inputPhone').val();
+        let name = form.find('#inputName').val();
+
+
+        $.ajax({
+            type: "GET",
+            url: "/wp-admin/admin-ajax.php",
+            data: {
+                'action': 'me_FORM_page_home',
+                'phone': phone,
+                'name': name,
+            },
+            beforeSend: function () {},
+            success: function (response) {
+                $('.page_home_form__title').text('Отправлено')
+                $('#page_home_form').trigger("reset");
+
+                setTimeout(() => {
+                    $('.page_home_form__title').text('оставьте заявку, мы вам перезвоним')
+                }, 3500);
+
+
+            }
+        });
+
+
+
+    }
+
+
 
 });

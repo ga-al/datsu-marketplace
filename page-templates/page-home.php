@@ -344,18 +344,19 @@ $social_menu = me_render_social();
                         <div class="mrk-image-full">
                           <div class="mrk-image-top mx-auto position-relative"><img class="mrk-form-image mx-auto h-100 w-100" src="<?= esc_url(get_stylesheet_directory_uri()); ?>/img/form-image.jpg" alt="vidio-image">
                             <div class="form-blur mrk-bg-blur position-absolute start-0 bottom-0">
-                              <h1 class="d-inline-block text-uppercase text-dark fw-bold">оставьте заявку, мы вам перезвоним</h1>
-                              <form class="row row-gap-3 row-gap-md-0 mt-3">
+                              <h1 class="d-inline-block text-uppercase text-dark fw-bold page_home_form__title">оставьте заявку, мы вам перезвоним</h1>
+                              <form id="page_home_form" class="row row-gap-3 row-gap-md-0 mt-3">
                                 <div class="col-md-8">
                                   <label for="inputName" class="visually-hidden-focusable">Имя</label>
                                   <input class="form-control" type="text" id="inputName" placeholder="Имя">
                                 </div>
                                 <div class="col-md-4">
                                   <label for="inputPhone" class="visually-hidden-focusable">Телефон</label>
-                                  <input class="form-control" type="tel" id="inputPhone" name="phone" placeholder="+7" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}">
+                                  <!-- pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" -->
+                                  <input class="form-control" type="tel" id="inputPhone" name="phone" placeholder="+7">
                                 </div>
                                 <div class="col-12 mt-md-4 mt-3">
-                                  <button class="btn btn-primary" href="#" type="button">
+                                  <button class="btn btn-primary" href="#" type="submit">
                                     Оставить заявку
                                   </button>
                                 </div>
