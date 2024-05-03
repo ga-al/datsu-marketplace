@@ -95,7 +95,7 @@ if (!is_active_sidebar('sidebar-1')) {
     <br><br>
     <br><br>
     <?php
-      if ( is_archive() || is_category()) {
+      if ( is_archive() || is_category() || is_product_category()) {
         // echo do_shortcode('[wcpf_filters id="130"]');
         echo do_shortcode('[wcpf_filters id="258"]');
       }
