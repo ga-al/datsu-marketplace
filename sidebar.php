@@ -98,7 +98,6 @@ if (!is_active_sidebar('sidebar-1')) {
         <span class="h5 offcanvas-title text-primary">Фильтр товаров</span>
       </div>
     <?php
-      var_dump( is_product_category() );
       if (  is_product_category() ) {
         // echo do_shortcode('[wcpf_filters id="130"]');
         echo do_shortcode('[wcpf_filters id="258"]');
