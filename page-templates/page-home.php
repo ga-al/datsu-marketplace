@@ -246,7 +246,7 @@ $social_menu = me_render_social();
                           <div class="col-md-6 col-lg-4 mb-4">
                             <div class="card border-0 h-100">
                               <div class="card-kit-img">
-                                <div class="mrk-card-heart no-active"></div>
+                                <div class="mrk-card-heart no-active"><?php echo do_shortcode("[yith_wcwl_add_to_wishlist]") ?></div>
                                 <img class="card-img-top" src="<?php echo $product_attachment_url ?>" alt="">
                               </div>
                               <div class="card-body d-flex flex-column h-100">
