@@ -28,6 +28,7 @@ function me_FORM_page_home() {
     $name = isset($_POST['name']) ? $_POST['name'] : '';
     $phone = isset($_POST['phone']) ? $_POST['phone'] : '';
 
+    var_dump($_POST);
     $message = "Перезвонить \n Имя: $name \n Телефон: $phone";
     $res = wp_mail($to, $subj, $message, [
         'From: ME <mixalev10a@gmail.com>',
