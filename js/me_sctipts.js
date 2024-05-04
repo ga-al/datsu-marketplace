@@ -64,6 +64,9 @@ jQuery(function ($) {
         let name = form.find('#inputName').val();
 
 
+
+        console.log(  phone, name  );
+
         $.ajax({
             type: "GET",
             url: "/wp-admin/admin-ajax.php",
