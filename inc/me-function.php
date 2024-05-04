@@ -38,7 +38,11 @@ function me_FORM_page_home() {
     wp_die();
 
 }
+add_action( 'wp_mail_failed',  'mail_failed' );
 
+function mail_failed( $wp_error ) {
+	error_log( print_r( $wp_error, true ) );
+}
 
 
 if (!function_exists('me_register_menu')) {
