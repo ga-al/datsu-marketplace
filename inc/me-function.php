@@ -30,7 +30,7 @@ function me_FORM_page_home() {
 
     $message = "Перезвонить \n Имя: $name \n Телефон: $phone";
     $res = wp_mail($to, $subj, $message, [
-        'From: ME <no-reply@mixalev10a@gmail.com>',
+        'From: ME mixalev10a@gmail.com>',
         'content-type: text/html',
     ]);
 
