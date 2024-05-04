@@ -54,6 +54,9 @@ jQuery(function ($) {
     function me_FORM_page_home() {
 
             console.log( $('#page_home_form') );
+
+
+
         if ( ! $('#page_home_form').length ) return;
 
         let form = $('#page_home_form')
@@ -68,7 +71,7 @@ jQuery(function ($) {
         console.log(  phone, name  );
 
         $.ajax({
-            type: "GET",
+            type: "POST",
             url: "/wp-admin/admin-ajax.php",
             data: {
                 'action': 'me_FORM_page_home',
