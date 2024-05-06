@@ -279,11 +279,11 @@ input[type="number"]::-webkit-outer-spin-button {
     background-image: url("img/svg/heart.svg");
 }
 
-.yith-wcwl-add-button>a i {
+.mrk-card-heart .yith-wcwl-add-button>a i {
   opacity: 0;
 }
 
-.yith-wcwl-add-button {
+.mrk-card-heart .yith-wcwl-add-button {
   text-align: right;
 }
 

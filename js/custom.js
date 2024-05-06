@@ -13,7 +13,9 @@ jQuery(function ($) {
 
     // динамика сердечек
     $('.mrk-card-heart a').on('click', function() {
+        $('.mrk-card-heart .feedback').css('display', 'none');
         $('.mrk-card-heart').toggleClass( "no-active" );
+        $('.mrk-card-heart a').find("[data-title='']");
     })
  
     // чат
