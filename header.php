@@ -74,8 +74,8 @@
       <nav id="nav-main" class="navbar navbar-expand-lg py-0">
 
         <div class="<?= bootscore_container_class(); ?> ps-xxl-2">
-          <div class="row align-items-center w-100">
-            <div class="col-11 col-md-4 col-xl-3">
+          <div class="row align-items-center mx-auto w-100">
+            <div class="col-11 col-md-4 col-xl-3 px-0">
               <!-- Navbar Brand -->
               <div class="mrk-logo my-lg-0 my-2">
                 <!-- <div class="header-bg header-bg-exxy"></div> -->

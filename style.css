@@ -407,7 +407,7 @@ input[type="number"]::-webkit-outer-spin-button {
 }
 .mrk-cards-kits .card {
   margin: 0 auto;
-  max-width: 250px;
+  /* max-width: 250px; */
 }
 .mrk-chat-image {
   position: relative;
@@ -1231,8 +1231,12 @@ body .modal .carousel-control-next, body .modal  .carousel-control-prev {
 }
 @media (max-width: 1300px) {
   .mrk-gallery-top, .mrk-gallery-thumbs, .mrk-image-top, .mrk-chat-image, .mrk-chat-gallery {
-      width: 100%;
-      height: 100%;
+    width: 100%;
+    height: 100%;
+  }
+
+  .mrk-gallery-thumbs {
+    overflow-x: hidden;
   }
   .mrk-chat-gallery {
       left: 0;
@@ -1270,6 +1274,9 @@ body .modal .carousel-control-next, body .modal  .carousel-control-prev {
   }
   .footer-brand img {
       width: 90px;
+  }
+  .mrk-cards-kits .card {
+    max-width: 250px;
   }
 }
 @media (max-width: 620px) {
