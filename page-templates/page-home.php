@@ -75,7 +75,7 @@ $social_menu = me_render_social();
             </div>
             <div class="<?= bootscore_container_class(); ?> pe-xxl-2 pe-md-3 px-2">
               <section>
-                <!-- <h2 class="text-primary text-uppercase fw-bold">Все для профессионалов</h2> -->
+                <h2 class="text-primary text-uppercase fw-bold">Все для профессионалов</h2>
                 <form class="row g-3 mt-3">
                   <div class="col-md-4">
                     <div class="position-relative">
