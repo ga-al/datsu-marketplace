@@ -278,6 +278,15 @@ input[type="number"]::-webkit-outer-spin-button {
 .mrk-card-heart.no-active a {
     background-image: url("img/svg/heart.svg");
 }
+
+.yith-wcwl-add-button>a i {
+  opacity: 0;
+}
+
+.yith-wcwl-add-button {
+  text-align: right;
+}
+
 .mrk-advantages {
     display: flex;
     flex-direction: column;
