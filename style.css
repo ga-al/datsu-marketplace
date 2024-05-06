@@ -1229,6 +1229,11 @@ body .modal .carousel-control-next, body .modal  .carousel-control-prev {
   }
   
 }
+@media (max-width: 1400px) {
+  .cart-content-count {
+    margin-left: 15px;
+  }
+}
 @media (max-width: 1300px) {
   .mrk-gallery-top, .mrk-gallery-thumbs, .mrk-image-top, .mrk-chat-image, .mrk-chat-gallery {
     width: 100%;
@@ -1252,6 +1257,7 @@ body .modal .carousel-control-next, body .modal  .carousel-control-prev {
   .mrk-gallery-blur {
       padding: 20px 20px 20px;
   }
+
 }
 @media (max-width: 992px) {
   .mrk-project-chat {

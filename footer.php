@@ -14,7 +14,7 @@
 
 ?>
 
-<footer class="mt-auto mb-md-0 pb-md-0 mb-5 pb-4">
+<footer class="mt-auto mb-md-0 pb-md-0 mb-5 pb-5">
 
   <div class="bootscore-footer bg-dark text-light py-md-5 py-4">
     <div class="<?= bootscore_container_class(); ?>">
