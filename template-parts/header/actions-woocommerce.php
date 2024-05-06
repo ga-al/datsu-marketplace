@@ -37,20 +37,33 @@ defined( 'ABSPATH' ) || exit;
 <?php
 if ( is_account_page() ) {
  // Do nothing
-} else { ?>
-  <a href="" class="ms-md-2 border-0" role="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvas-user" aria-controls="offcanvas-user">
-    <img class="d-block mx-auto mb-1" src="<?= esc_url(get_stylesheet_directory_uri()); ?>/img/svg/person-circle.svg" alt="">
-    <span class="visually-focusable fw-medium text-nowrap">Войти</span>
-  </a>
-<?php } ?>
+} else {
 
 
-<a href="" class="ms-md-2 border-0" role="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvas-user" aria-controls="offcanvas-user">
+  if ( is_user_logged_in() ) {
+    ?>
+      <a href="" class="ms-md-2 border-0" role="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvas-user" aria-controls="offcanvas-user">
+        <img class="d-block mx-auto mb-1" src="<?= esc_url(get_stylesheet_directory_uri()); ?>/img/svg/person-circle.svg" alt="">
+        <span class="visually-focusable fw-medium text-nowrap">Аккаунт</span>
+      </a>
+    <?php
+  } else {
+    ?>
+      <a href="" class="ms-md-2 border-0" role="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvas-user" aria-controls="offcanvas-user">
+        <img class="d-block mx-auto mb-1" src="<?= esc_url(get_stylesheet_directory_uri()); ?>/img/svg/person-circle.svg" alt="">
+        <span class="visually-focusable fw-medium text-nowrap">Войти</span>
+      </a>
+    <?php
+  }
+} ?>
+
+
+<a href="/wishlist/" class="ms-md-2 border-0" >
   <img class="d-block mx-auto mb-1" src="<?= esc_url(get_stylesheet_directory_uri()); ?>/img/svg/heart.svg" alt="">
   <span class="visually-focusable fw-medium text-nowrap">Избранное</span>
 </a>
 
-<a href="" class="ms-md-2 border-0" role="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvas-user" aria-controls="offcanvas-user">
+<a href="/my-account/orders/" class="ms-md-2 border-0" >
   <img class="d-block mx-auto mb-1" src="<?= esc_url(get_stylesheet_directory_uri()); ?>/img/svg/handbag.svg" alt="">
   <span class="visually-focusable fw-medium text-nowrap">Заказы</span>
 </a>
@@ -64,7 +77,7 @@ if ( is_cart() ) {
   <a class="btn btn-outline-secondary ms-1 ms-md-2" href="<?= wc_get_cart_url() ?>">
     <i class="fa-solid fa-arrow-left d-none d-md-inline me-2"></i><i class="fa-solid fa-bag-shopping"></i><span class="visually-hidden-focusable">Вернуться в корзину</span>
   </a>
-  <?php 
+  <?php
 } else { ?>
   <!-- Add mini-cart toggler -->
   <a href="" class="ms-md-2 position-relative" role="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvas-cart" aria-controls="offcanvas-cart">
