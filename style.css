@@ -319,6 +319,9 @@ input[type="number"]::-webkit-outer-spin-button {
 .woocommerce .quantity {
     width: 100%;
 }
+.wc-breadcrumb .breadcrumb-item:first-child a::before {
+  display: none;
+}
 .mrk-box-bonus {
   min-height: 125px;
   background-color: #DCE4FF;

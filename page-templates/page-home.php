@@ -76,7 +76,7 @@ $social_menu = me_render_social();
             <div class="<?= bootscore_container_class(); ?> pe-xxl-2 pe-md-3 px-2">
               <section>
                 <!-- <h2 class="text-primary text-uppercase fw-bold">Все для профессионалов</h2> -->
-                <!-- <form class="row g-3 mt-3">
+                <form class="row g-3 mt-3">
                   <div class="col-md-4">
                     <div class="position-relative">
                       <label for="formFileLg1" class="form-label visually-hidden-focusable">Пример большого ввода файла</label>
@@ -131,8 +131,8 @@ $social_menu = me_render_social();
                       </div>
                     </div>
                   </div>
-                </form> -->
-                <!-- <div class="mrk-cards-info">
+                </form>
+                <div class="mrk-cards-info">
                   <div class="row">
                     <div class="col-6 col-md-4 mb-4">
                       <div class="card border-0 pt-4">
@@ -194,7 +194,7 @@ $social_menu = me_render_social();
                         </div>
                       </div>
                     </div>
-                </div> -->
+                </div>
               </section>
               <?php
               $arr = me_rendom_category();

@@ -15,10 +15,6 @@ jQuery(function ($) {
     $('.mrk-card-heart').on('click', function() {
         $( this ).toggleClass( "no-active" );
     })
-
-    $('.mrk-card-heart').on('click', function() {
-        $( this ).toggleClass( "no-active" );
-    })
  
     // чат
     if ($('.ready-made-solutions').length) {
