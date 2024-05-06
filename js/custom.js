@@ -12,8 +12,8 @@ jQuery(function ($) {
     });
 
     // динамика сердечек
-    $('.mrk-card-heart').on('click', function() {
-        $( this ).toggleClass( "no-active" );
+    $('.mrk-card-heart a').on('click', function() {
+        $('.mrk-card-heart').toggleClass( "no-active" );
     })
  
     // чат
