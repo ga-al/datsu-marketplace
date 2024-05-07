@@ -81,7 +81,7 @@ if ( is_cart() ) {
 } else { ?>
   <!-- Add mini-cart toggler -->
   <a href="" class="ms-md-2 position-relative" role="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvas-cart" aria-controls="offcanvas-cart">
-  <img class="d-block mx-auto mb-1" src="<?= esc_url(get_stylesheet_directory_uri()); ?>/img/svg/cart4.svg" alt="корзина"><span class="visually-focusable fw-medium text-nowrap">Корзина</span>
+  <img class="d-block mx-auto mb-1" src="<?= esc_url(get_stylesheet_directory_uri()); ?>/img/svg/cart4.svg" alt="корзина"><span class="visually-focusable fw-medium text-nowrap">Корзина</span><br>
     <?php if (in_array('woocommerce/woocommerce.php', apply_filters('active_plugins', get_option('active_plugins')))) {
       $count = WC()->cart->cart_contents_count;
       ?>

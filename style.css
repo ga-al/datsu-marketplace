@@ -1231,7 +1231,7 @@ body .modal .carousel-control-next, body .modal  .carousel-control-prev {
 }
 @media (max-width: 1400px) {
   .cart-content-count {
-    margin-left: 15px;
+    margin-left: -17px;
   }
 }
 @media (max-width: 1300px) {

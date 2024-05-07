@@ -77,7 +77,7 @@
           <div class="row align-items-center mx-auto w-100">
             <div class="col-11 col-md-4 col-xl-3 px-0">
               <!-- Navbar Brand -->
-              <div class="mrk-logo my-lg-0 my-2">
+              <div class="mrk-logo">
                 <!-- <div class="header-bg header-bg-exxy"></div> -->
                 <!-- <div class="header-bg header-bg-newyear"></div> -->
                 <!-- <div class="header-bg header-bg-procent"></div> -->
@@ -92,7 +92,7 @@
               </div>
             </div>
             <div class="col-md-8 col-xl-9 pe-0">
-              <div class="d-flex justify-content-end gap-3">
+              <div class="d-flex justify-content-end pt-lg-0 pt-3 gap-3">
                 <!-- Offcanvas Navbar -->
                 <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvas-navbar">
                   <div class="offcanvas-header">
@@ -135,7 +135,7 @@
                   </div>
                 </div>
 
-                <div class="header-actions d-md-flex d-none align-items-center gap-4 " style="margin-right: -7px;">
+                <div class="header-actions d-md-flex d-none gap-4 " style="margin-right: -7px;">
 
                   <!-- Top Nav Widget -->
                   <?php if (is_active_sidebar('top-nav')) : ?>
@@ -151,7 +151,7 @@
                   ?>
 
                   <!-- Navbar Toggler -->
-                  <button class="btn btn-outline-primary d-lg-none ms-1 ms-md-2" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvas-navbar" aria-controls="offcanvas-navbar">
+                  <button class="btn btn-outline-primary d-lg-none h-50 ms-1 ms-md-2" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvas-navbar" aria-controls="offcanvas-navbar">
                     <i class="fa-solid fa-bars"></i><span class="visually-hidden-focusable">Menu</span>
                   </button>
 
