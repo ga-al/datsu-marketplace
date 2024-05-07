@@ -56,8 +56,6 @@ $product_vendor_id = $product_vendor ? $product_vendor->id : '-';
 ?>
 
 
-
-
 <?php
 
 $gallery_attachment_ids = $_product->get_gallery_image_ids();

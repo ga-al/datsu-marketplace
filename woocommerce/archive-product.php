@@ -21,15 +21,12 @@ defined( 'ABSPATH' ) || exit;
 // $_product = wc_get_product( get_the_ID() );
 
 get_header( 'shop' );
-do_action( 'woocommerce_before_main_content' );
 
 $queried_object = get_queried_object();
 
 if ( isset( $queried_object->term_id ) ) {
 	$term_thumbnail_id = get_term_meta($queried_object->term_id, 'thumbnail_id', true);
 }
-
-
 
 
 ?>
