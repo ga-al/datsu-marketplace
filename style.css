@@ -454,7 +454,9 @@ border-bottom: 1px dashed var(--bs-secondary);
   margin-bottom: 0;
   color: var(--bs-gray-400);
 }
-
+.share-link {
+  cursor: pointer;
+}
 
 
 

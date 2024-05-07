@@ -418,10 +418,7 @@ var mainSecondSwiper = new Swiper('.swiper-children', {
     },
 })
 
-const shareBtns = document.querySelector('.share-buttons')
+const shareBtns = document.querySelector('.share-buttons.hide')
 document.querySelector('.share-link').addEventListener('click', function() {
-    
-    console.log(shareBtns)
     shareBtns.classList.toggle('hide')
-    
 })
