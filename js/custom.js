@@ -73,7 +73,6 @@ jQuery(function ($) {
 
 if (document.querySelectorAll('.slider')) {
     
-
     const sliderItem = document.querySelector('.slider')
     const youtubes = document.querySelectorAll('.swiper-slide.youtube')
     const ImageYoutubes = document.querySelectorAll('.swiper-slide .youtube')
@@ -417,4 +416,11 @@ var mainSecondSwiper = new Swiper('.swiper-children', {
         el: ".swiper-pagination",
         clickable: true,
     },
+})
+
+const shareBtns = document.querySelector('.share-buttons')
+document.querySelector('.share-link').addEventListener('click', function() {
+    if(shareBtns) {
+        shareBtns.classList.toggle('hide')
+    } 
 })
