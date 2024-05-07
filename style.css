@@ -36,6 +36,10 @@ input[type="number"]::-webkit-outer-spin-button {
 .form-blur .form-control {
     border-radius: 0 0 12px 0!important;
 }
+a:hover {
+  opacity: 1;
+  color: var(--bs-primary);
+}
 .search-field {
     /* height: 44px; */
     background-color: #F3F4FF;
@@ -501,14 +505,14 @@ border-bottom: 1px dashed var(--bs-secondary);
   max-height: 385px;
 }
 .nav-tabs .nav-link.active, .nav-tabs .nav-item.show .nav-link {
-  border-color: transparent;
+  border: none;
   color: var(--bs-primary);
 }
 .nav-tabs {
-  border-bottom: transparent;
+  border: none;
 }
 .nav-tabs .nav-link:hover, .nav-tabs .nav-link:focus {
-  border: transparent;
+  border: none;
 }
 .btn-tabs-list button:not(:disabled) {
   border: transparent;
