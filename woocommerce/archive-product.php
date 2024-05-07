@@ -216,8 +216,6 @@ if ( isset( $queried_object->term_id ) ) {
 
 <?php
 
-
-do_action( 'woocommerce_after_main_content' );
 do_action( 'woocommerce_sidebar' );
 
 get_footer( 'shop' );
