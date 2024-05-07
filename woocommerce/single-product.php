@@ -233,8 +233,7 @@ $total_count = count( $gallery_attachment_ids );
 								$shareButtons = mps_share_buttons( $product_id );
 								if ( $shareButtons ) {
 									foreach ($shareButtons as $key => $btn) {
-										echo '<a class="share-btn" style="display: inline-block; width: max-content; margin: 15px
-										; padding: 5px; border: 1px solid blue;" href="'.$btn['url'].'">'.$btn['title'].'</a>';
+										echo '<a href="'.$btn['url'].'">'.$btn['title'].'</a>';
 									}
 								}
 							?>
