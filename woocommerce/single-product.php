@@ -551,7 +551,7 @@ $total_count = count( $gallery_attachment_ids );
 												<div class="mrk-card-quantity-kits">
 												<?php
 													$me_add_to_cart = [
-														"classes" => "btn btn-primary btn-order-kits w-100 ",
+														"classes" => "btn btn-primary btn-order-kits d-flex justify-content-center w-100 ",
 														"product_title" => $together_product_name,
 														"product_id" => $together_product_id,
 														"product_sku" => $together_product_sku,
@@ -703,7 +703,7 @@ $total_count = count( $gallery_attachment_ids );
 													<div class="mrk-card-quantity-kits">
 													<?php
 														$me_add_to_cart = [
-															"classes" => "btn btn-primary btn-order-kits w-100 ",
+															"classes" => "btn btn-primary btn-order-kits d-flex justify-content-center w-100 ",
 															"product_title" => $similar_product_name,
 															"product_id" => $similar_product_id,
 															"product_sku" => $similar_product_sku,
