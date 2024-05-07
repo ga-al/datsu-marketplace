@@ -10,6 +10,6 @@ $classes = isset( $args['classes'] ) && $args['classes'] ? $args['classes'] : fa
 ?>
 
 <a href="?add-to-cart=<?php echo $product_id; ?>" class="<?php echo $classes?> add_to_cart_button ajax_add_to_cart" product-title="<?php echo $product_name; ?>" data-product_id="<?php echo $product_id; ?>" data-product_sku="<?php echo $product_sku; ?>">
-    <img class="pe-1" src="<?= esc_url(get_stylesheet_directory_uri()); ?>/img/svg/cart4-white.svg" alt="корзина">
+    <img class="pe-1 mx-0" src="<?= esc_url(get_stylesheet_directory_uri()); ?>/img/svg/cart4-white.svg" alt="корзина">
     В корзину
 </a>
