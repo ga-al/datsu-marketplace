@@ -495,6 +495,25 @@ border-bottom: 1px dashed var(--bs-secondary);
   background-color: transparent;
   color: var(--bs-dark);
 }
+.woocommerce img, .woocommerce-page img {
+  display: block;
+  margin: 0 auto;
+  max-height: 385px;
+}
+.nav-tabs .nav-link.active, .nav-tabs .nav-item.show .nav-link {
+  border-color: transparent;
+  color: var(--bs-primary);
+}
+.nav-tabs {
+  border-bottom: transparent;
+}
+.nav-tabs .nav-link:hover, .nav-tabs .nav-link:focus {
+  border: transparent;
+}
+.btn-tabs-list button:not(:disabled) {
+  border: transparent;
+  background: transparent;
+}
 
 
 
