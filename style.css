@@ -98,11 +98,6 @@ input[type="number"]::-webkit-outer-spin-button {
     border: 0;
     box-shadow: none;
 }
-button:not(:disabled) {
-  list-style: none;
-  border: none;
-  background: transparent;
-}
 .btn-toggle {
     padding: .25rem .5rem;
     background-color: transparent;
@@ -225,6 +220,9 @@ button:not(:disabled) {
     padding: 11px 1.875rem;
     letter-spacing: 1.2px;
 }
+a.btn:hover {
+  opacity: 1;
+}
 .mrk-download {
     border: 1px solid #E9EEFF;
 }
@@ -335,6 +333,12 @@ button:not(:disabled) {
 }
 .wc-breadcrumb .breadcrumb-item:first-child a::before {
   display: none;
+}
+.breadcrumb-item + .breadcrumb-item::before {
+  padding-top: 2px;
+}
+.breadcrumb-item a {
+  opacity: .5;
 }
 .mrk-box-bonus {
   min-height: 125px;
@@ -1255,7 +1259,12 @@ body .modal .carousel-control-next, body .modal  .carousel-control-prev {
 }
 .swiper-general .card-title {
   max-height: 42px;
+  min-height: 42px;
   overflow: hidden;
+}
+.swiper-horizontal>.swiper-pagination-bullets, .swiper-pagination-bullets.swiper-pagination-horizontal {
+  background: rgb(0 0 0 / 24%);
+  padding: 5px;
 }
 
 
