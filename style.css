@@ -221,7 +221,7 @@ button:not(:disabled) {
 .thumbnail {
     max-width: 340.5px;
 }
-.mrk-gallery .btn, .mrk-logo .btn, .mrk-cards-kits .btn, .mrk-image-full .btn {
+.mrk-gallery .btn, .mrk-logo .btn, .mrk-cart-quantity .btn, .mrk-image-full .btn, .mrk-card-quantity-kits .btn, .mrk-card-quantity-kit .btn  {
     padding: 11px 1.875rem;
     letter-spacing: 1.2px;
 }

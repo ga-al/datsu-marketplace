@@ -308,7 +308,7 @@ $total_count = count( $gallery_attachment_ids );
 								</div>
 							</div>
 						</div>
-						<!-- <p class="fw-bold fs-5 mt-3 mb-2">Скачать документацию: </p>
+						<p class="fw-bold fs-5 mt-3 mb-2">Скачать документацию: </p>
 						<form class="row g-2">
 							<div class="col-md-6">
 								<div class="position-relative">
@@ -391,7 +391,7 @@ $total_count = count( $gallery_attachment_ids );
 								</div>
 								</div>
 							</div>
-						</form> -->
+						</form>
 					</div>
 					<!-- слайдер с табами изображениями -  КОНЕЦ -->
 				</div>
@@ -452,10 +452,8 @@ $total_count = count( $gallery_attachment_ids );
 
 					<div class="swiper-wrapper">
 
-
 						<?php
 							foreach ($together as $key => $together_product) {
-
 
 								$together_product_id = $together_product->get_id();
 								$together_product_url = get_permalink( $together_product_id );
@@ -471,7 +469,6 @@ $total_count = count( $gallery_attachment_ids );
 								if ( !$together_attachment_url ) {
 									$together_attachment_url = get_stylesheet_directory_uri() . '/img/placeholder.png';
 								}
-
 
 								?>
 									<div class="swiper-slide">
@@ -563,7 +560,6 @@ $total_count = count( $gallery_attachment_ids );
 												?>
 												</div>
 											</div>
-											<?php echo do_shortcode("[yith_wcwl_add_to_wishlist]") ?>
 										</div>
 									</div>
 								<?php
@@ -716,7 +712,6 @@ $total_count = count( $gallery_attachment_ids );
 													?>
 													</div>
 												</div>
-												<?php echo do_shortcode("[yith_wcwl_add_to_wishlist]") ?>
 											</div>
 										</div>
 									<?php
