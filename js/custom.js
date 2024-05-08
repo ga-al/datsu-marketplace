@@ -312,12 +312,13 @@ if (document.querySelectorAll('.slider').length) {
         columnWidth: 110,
         // percentPosition: true,
         })
-
+        console.log('masonry')
         msnrySlider.layout()
     }
         
     function masonrySliderDelete() {
         if (msnrySlider) msnrySlider.destroy();
+        console.log('nomasonry')
     }
      
     function sliderModals(modal) {
