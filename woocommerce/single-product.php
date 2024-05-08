@@ -239,7 +239,7 @@ $total_count = count( $gallery_attachment_ids );
 						<div class="card card-body border-0 mt-xl-0 mt-5 px-0 bg-light">
 							<div class="row g-3 px-4">
 								<div class="col-12">
-									<div class="d-flex justify-content-xl-start justify-content-md-center justify-content-start align-items-center mb-3">
+									<div class="d-flex justify-content-xl-between justify-content-md-center justify-content-start align-items-center mb-3">
 
 										<h2 class="text-danger text-nowrap m-0 display-5" style="font-weight: 800;">
 											<?php

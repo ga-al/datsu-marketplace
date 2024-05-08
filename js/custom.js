@@ -70,7 +70,7 @@ jQuery(function ($) {
 
 
 // Slider
-if (document.querySelectorAll('.slider')) {
+if (document.querySelectorAll('.slider').length) {
 
     const sliderItem = document.querySelector('.slider')
     console.log(sliderItem)
