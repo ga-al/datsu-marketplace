@@ -18,10 +18,7 @@
 defined( 'ABSPATH' ) || exit;
 
 
-
 get_header( 'shop' );
-do_action( 'woocommerce_before_main_content' );
-
 
 $term = get_queried_object();
 if ( ! isset( $term->term_id ) ) {
@@ -238,7 +235,6 @@ $product_video = $gallery_attachment_ids = $cat_image_url = false;
 
 <?php
 
-do_action( 'woocommerce_after_main_content' );
 do_action( 'woocommerce_sidebar' );
 
 get_footer( 'shop' );
