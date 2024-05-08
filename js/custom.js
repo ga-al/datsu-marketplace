@@ -206,7 +206,8 @@ if (document.querySelectorAll('.slider').length) {
                 allowSlidePrev: true,
                 slideToClickedSlide: true,
             },
-            768: {
+            992: {
+                direction: getDirection(),
                 // allowSlideNext: false,
                 // allowSlidePrev: false,
             }
@@ -273,7 +274,12 @@ if (document.querySelectorAll('.slider').length) {
                 allowSlideNext: true,
                 allowTouchMove:true,
             },
-            800: {
+            // 800: {
+            //     autoHeight: true,
+            //     allowTouchMove: false,
+            // }
+            992: {
+                direction: getDirection(),
                 autoHeight: true,
                 allowTouchMove: false,
             }
