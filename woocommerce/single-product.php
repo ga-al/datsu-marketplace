@@ -281,7 +281,7 @@ $total_count = count( $gallery_attachment_ids );
 											<div class="mrk-card-quantity-kits">
 												<?php
 													$me_add_to_cart = [
-														"classes" => "btn btn-primary btn-order-kits w-100 ",
+														"classes" => "btn btn-primary btn-order-kits d-flex justify-content-center w-100 ",
 														"product_title" => $product_name,
 														"product_id" => $product_id,
 														"product_sku" => $product_sku,

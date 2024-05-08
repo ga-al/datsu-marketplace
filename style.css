@@ -15,6 +15,22 @@ All style editing is done via scss/_bscore_custom.scss
     --bs-breadcrumb-divider: url("../img/svg/arrow-right.svg");
     --bs-emphasis-color-rgb: 9, 56, 206;
 }
+::-webkit-scrollbar {
+  width: var(--scrollbarWidth);
+  height: var(--scrollbarHeight);
+  background-color: var(--white);
+}
+
+::-webkit-scrollbar-track {
+  background: var(--scrollbarBg);
+  border-radius: var(--scrollbarBorderRadius);
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: var(--scrollbarThumb);
+  border-radius: var(--scrollbarBorderRadius);
+  border: var(--scrollbarBorder);
+}
 h1 {
     font-size: calc(1.60rem + 1.125vw);
 }
@@ -517,6 +533,9 @@ border-bottom: 1px dashed var(--bs-secondary);
 .btn-tabs-list button:not(:disabled) {
   border: transparent;
   background: transparent;
+}
+.nav-tabs .nav-link {
+  border: none;
 }
 
 
