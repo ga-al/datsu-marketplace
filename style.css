@@ -970,7 +970,7 @@ body .modal .carousel-control-next, body .modal  .carousel-control-prev {
   } */
 }
 
-@media (min-width: 1440px) {
+@media (min-width: 780px) {
   .slider-vertical .slider__images {
       height: 100%;
   }
@@ -1006,7 +1006,7 @@ body .modal .carousel-control-next, body .modal  .carousel-control-prev {
   
 }
 
-@media (max-width: 1440px) {
+@media (max-width: 780px) {
     .swiper-slide {
         max-height: 100%;
     }
