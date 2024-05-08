@@ -70,13 +70,15 @@ jQuery(function ($) {
 
 
 // Slider
-
 if (document.querySelectorAll('.slider')) {
-    
+
     const sliderItem = document.querySelector('.slider')
+    console.log(sliderItem)
     const youtubes = document.querySelectorAll('.swiper-slide.youtube')
     const ImageYoutubes = document.querySelectorAll('.swiper-slide .youtube')
     const modalItem = document.querySelectorAll('.modal')
+    const swiperSliders = document.querySelectorAll('.swiper-slide')
+    const fullSliders = document.querySelectorAll('.fullscrin')
     const sliderImagesModals = document.querySelectorAll('.slider__images--modal') 
     
     const mediaQuery = window.matchMedia('(min-width: 769px)')
@@ -95,14 +97,63 @@ if (document.querySelectorAll('.slider')) {
     let iframeThumb
     let urlThumb
         
-    if (document.querySelector('.slider-vertical')) {
+
+    if (sliderItem.classList.contains('slider-vertical')) {
         document.querySelector('.slider-thumb__images .swiper-wrapper').classList.add('slider-grid')
-        addYoutubes(youtubes)
+        if(youtubes) {
+            addYoutubes(youtubes)
+        }
         masonrySlider()
     }
 
+    if (sliderItem.classList.contains('slider-horizontal')) {
+        document.querySelector('.slider-thumb__images .swiper-wrapper').classList.remove('slider-grid')
+        if(youtubes) {
+            removeYoutubes(youtubes)
+        }
+        masonrySliderDelete()
+    }
+
+    swiperSliders.forEach((swiper) => {
+        getOffsetSlide(swiper)
+        
+        const swiperImage = swiper.querySelector('.image-4x3 img')
+        if (swiperImage) {
+            const swiperImageParent = swiperImage.parentNode.parentNode
+            getOffsetParentSlide(swiperImage, swiperImageParent)  
+        }
+    })   
+   
+    function getOffsetSlide(slide) {
+        if (slide.offsetWidth > slide.offsetHeight) {
+            slide.classList.add('slider-horizont')
+            slide.classList.remove('slider-vertic')
+        } 
+         if (slide.offsetWidth <= slide.offsetHeight) {
+            slide.classList.remove('slider-horizont')
+            slide.classList.add('slider-vertic')
+        }
+    }
+
+    function getOffsetParentSlide(slide, parent) {
+        if (slide.offsetWidth > slide.offsetHeight) {
+            parent.classList.add('slider-horizont')
+            parent.classList.remove('slider-vertic')
+        } 
+        if (slide.offsetWidth <= slide.offsetHeight) {
+            parent.classList.remove('slider-horizont')
+            parent.classList.add('slider-vertic')
+        }
+    }
+   
+    getSliderView(fullSliders)
+    getSliderView(swiperSliders)
+
     if (window.matchMedia('(max-width: 769px)').matches) {
         document.querySelector('.slider.slider-vertical').classList.remove('slider-vertical')
+        if (document.querySelector('.slider.slider-vertical.slider-card')) {
+            document.querySelector('.slider.slider-vertical.slider-card').classList.remove('slider-vertical')
+        }
         document.querySelector('.slider-thumb__images .swiper-wrapper').classList.remove('slider-grid')
         removeYoutubes(youtubes)
         masonrySliderDelete()
@@ -123,22 +174,27 @@ if (document.querySelectorAll('.slider')) {
                 clicked = true
                 if (mediaQuery.matches) {
                     sliderThumbs.changeDirection(getDirection())
-                    addYoutubes(youtubes)
+                    // addYoutubes(youtubes)
                     
-                    if (this.clickedSlide.classList.contains('ratio-16x9')) {
+                    if (this.clickedSlide.classList.contains('slider-horizont')) {
                         clicked = false
                         sliderThumbs.changeDirection(getDirection())
                         sliderItem.classList.remove('slider-vertical')
+                        sliderItem.classList.add('slider-horizontal')
                         sliderThumbs.wrapperEl.classList.remove('slider-grid')
-                        removeYoutubes(youtubes)
+                        masonrySliderDelete()
+                    } else if (this.clickedSlide.classList.contains('slider-vertic')) {
+                        sliderThumbs.changeDirection(getDirection())
+                        sliderItem.classList.remove('slider-horizontal')
+                        sliderItem.classList.add('slider-vertical')
+                        sliderThumbs.wrapperEl.classList.add('slider-grid')
+                        masonrySlider()
                     }
 
                     if (document.querySelector('.slider-grid')) {
                         this.mousewheel.disable()
-                        masonrySlider()
                     } else {
                         this.mousewheel.enable()
-                        masonrySliderDelete()
                     }
                 }
             }
@@ -175,32 +231,31 @@ if (document.querySelectorAll('.slider')) {
                     hideIframe()
                     if (mediaQuery.matches) {
                         clicked = true
-                        sliderItem.classList.add('slider-vertical')
                         sliderThumbs.changeDirection(getDirection())
-        
-                        sliderThumbs.wrapperEl.classList.add('slider-grid')
-                        addYoutubes(youtubes)
+
+                        const index_currentSlide = this.realIndex;
+                        const currentSlide = this.slides[index_currentSlide]
                         
-                        if (sliderImages.activeIndex === 0 && youtubes.length) {
-                            clicked = false
+                        if (currentSlide.classList.contains('slider-vertic')) {
+                            sliderItem.classList.remove('slider-horizontal')
+                            sliderItem.classList.add('slider-vertical')
+                            sliderThumbs.wrapperEl.classList.add('slider-grid')
+                            masonrySlider()
+                            if(youtubes) {
+                                addYoutubes(youtubes)
+                            }
+                        } 
+                        if (currentSlide.classList.contains('slider-horizont')) {
                             sliderThumbs.changeDirection(getDirection())
                             sliderItem.classList.remove('slider-vertical')
+                            sliderItem.classList.add('slider-horizontal')
                             sliderThumbs.wrapperEl.classList.remove('slider-grid')
-                            removeYoutubes(youtubes)
-                        }
-                    
-                        let swiperSliders = sliderImages.wrapperEl.querySelectorAll('.swiper-slide')
-                        let fullSliders = sliderImages.wrapperEl.querySelectorAll('.fullscrin')
-                        console.log(fullSliders)
+                            masonrySliderDelete()
+                            if(youtubes) {
+                                removeYoutubes(youtubes)
+                            }
+                        } 
                         
-                        getSliderView(fullSliders)
-                        getSliderView(swiperSliders)
-                        
-                        if (document.querySelector('.slider-grid')) {
-                        masonrySlider()
-                        } else {
-                        masonrySliderDelete()
-                        }
                     } else {
                     sliderThumbs.wrapperEl.classList.remove('slider-grid')
                     }
@@ -220,6 +275,7 @@ if (document.querySelectorAll('.slider')) {
                 allowTouchMove:true,
             },
             800: {
+                autoHeight: true,
                 allowTouchMove: false,
             }
             },
@@ -246,7 +302,6 @@ if (document.querySelectorAll('.slider')) {
     }
         
     function masonrySlider() {
-        console.log('masonry')
         msnrySlider = new Masonry( document.querySelector('.slider-grid'), {
         gutter: 10,
         columnWidth: 110,
@@ -257,15 +312,7 @@ if (document.querySelectorAll('.slider')) {
     function masonrySliderDelete() {
         if (msnrySlider) msnrySlider.destroy();
     }
-    
-    if (document.querySelectorAll('.slider__images--main') && document.querySelectorAll('.slider-thumb__images--main')) {
-        if (isMobileWidth) {
-        sliderThumbActive('.slider__images--main', '.slider-thumb__images--main')
-        } else {
-        sliderThumbActive('.slider__images--main', '.slider-thumb__images--main')
-        }
-    }
-        
+     
     function sliderModals(modal) {
         carousel = new bootstrap.Carousel(modal, {
         // interval: 2000,
@@ -280,7 +327,7 @@ if (document.querySelectorAll('.slider')) {
                 videoIframe = this.querySelector('.iframe')
                 videoURL = videoIframe.getAttribute('src')
                 srcUrl = videoURL+srcModal
-                let currentSlide = this.querySelector('.carousel-item.active')
+                const currentSlide = this.querySelector('.carousel-item.active')
                     
             if (currentSlide.querySelector('.iframe')) {
                 videoIframe.setAttribute('src', srcUrl)
@@ -292,25 +339,21 @@ if (document.querySelectorAll('.slider')) {
             carousel.to(invoker.getAttribute('data-slider')) 
             
             if (!this.querySelector('.iframe')) {
-                if(!this.querySelector('.carousel-item').classList.contains('active')) {
-                    this.querySelector('.carousel-item').classList.add('active')
-                }
-            }
+                this.querySelector('.carousel-item').classList.add('active') 
+                console.log(carousel.to(invoker.getAttribute('data-slider')) )
+            } 
     
             el.addEventListener('slid.bs.carousel', function(e) {
-                
-                let currentSlide = this.querySelector('.carousel-item.active')
-                    
+                const currentSlide = this.querySelector('.carousel-item.active')
                 if (currentSlide && videoIframe) {
 
-                    let videoURLa = videoIframe.getAttribute('src');
+                    let videoURLa = videoIframe.getAttribute('src')
                     if (videoURL === videoIframe.setAttribute('src', srcUrl)) {
                         videoIframe.setAttribute('src', videoURLa)
                     } 
                     if (videoIframe && videoIframe.setAttribute('src', videoURL)) {
                         videoIframe.setAttribute('src', srcUrl)
                     }
-                
                 }
             })
             })
@@ -321,7 +364,6 @@ if (document.querySelectorAll('.slider')) {
                 iframeUrl = this.querySelector('.iframe')
                 iframeUrl.setAttribute('src', videoURL)
             }
-            
         });
     }) 
         
@@ -352,30 +394,38 @@ if (document.querySelectorAll('.slider')) {
 
     if (youtubes.length > 0) {
         youtubes.forEach (thumb => {
-            iframeThumb = thumb.querySelector('.iframe')
-            urlThumb = iframeThumb.getAttribute('src')
-            let urlId = YouTubeGetID(urlThumb)
-            let srcLoop = `?rel=0&autoplay=1&loop=1&mute=1&start=10&end=40&controls=0&cc_load_policy=3&iv_load_policy=3&playlist=${urlId}`
-            let urlPlay = urlThumb + srcLoop
-            console.log(urlThumb)
-            console.log(urlPlay)
-            
-            if (urlThumb !== null) {
+          iframeThumb = thumb.querySelector('.iframe')
+          urlThumb = iframeThumb.getAttribute('src')
+          let urlId = YouTubeGetID(urlThumb)
+          let srcLoop = `?rel=0&autoplay=1&loop=1&mute=1&start=10&end=40&controls=0&cc_load_policy=3&iv_load_policy=3&playlist=${urlId}`
+          let urlPlay = urlThumb + srcLoop
+          console.log(urlThumb)
+          console.log(urlPlay)
+          
+          if (urlThumb !== null) {
             iframeThumb.setAttribute('src', urlPlay)
             console.log(iframeThumb)
-            }
+          }
             
         })
     }
-        
+      
     function YouTubeGetID(url){
-    if (url) {
-        url = url.split(/(vi\/|v=|\/v\/|youtu\.be\/|\/embed\/)/);
-        return (url[2] !== undefined) ? url[2].split(/[^0-9a-z_\-]/i)[0] : url[2];
+        if (url) {
+            url = url.split(/(vi\/|v=|\/v\/|youtu\.be\/|\/embed\/)/);
+            return (url[2] !== undefined) ? url[2].split(/[^0-9a-z_\-]/i)[0] : url[2];
+        }
     }
+
+    if (document.querySelectorAll('.slider__images--main') && document.querySelectorAll('.slider-thumb__images--main')) {
+        if (isMobileWidth) {
+        sliderThumbActive('.slider__images--main', '.slider-thumb__images--main')
+        } else {
+        sliderThumbActive('.slider__images--main', '.slider-thumb__images--main')
+        }
     }
-}
-    
+       
+}  
 
 // Slider-cards
 let swiper = new Swiper(".swiper-general", {
