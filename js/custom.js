@@ -246,6 +246,7 @@ if (document.querySelectorAll('.slider')) {
     }
         
     function masonrySlider() {
+        console.log('masonry')
         msnrySlider = new Masonry( document.querySelector('.slider-grid'), {
         gutter: 10,
         columnWidth: 110,
