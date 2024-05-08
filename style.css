@@ -434,6 +434,9 @@ a.btn:hover {
   min-width: 170px;
   /* max-width: 220px; */
 }
+.mrk-cart .yith-wcwl-add-to-wishlist {
+  margin-top: 0;
+}
 .mrk-cards-kits .card {
   margin: 0 auto;
   /* max-width: 250px; */
