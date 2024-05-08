@@ -312,6 +312,8 @@ if (document.querySelectorAll('.slider').length) {
         columnWidth: 110,
         // percentPosition: true,
         })
+
+        msnrySlider.layout()
     }
         
     function masonrySliderDelete() {
