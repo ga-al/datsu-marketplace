@@ -16,32 +16,28 @@ get_header();
 
       <!-- Hook to add something nice -->
       <?php bs_after_primary(); ?>
+      <main id="main" class="site-main">
+        <div class="row">
+          <?php get_sidebar(); ?>
+          <div class="<?= bootscore_main_col_class(); ?> order-first order-md-last">
 
-      <div class="row">
-        <?php get_sidebar(); ?>
-        <div class="<?= bootscore_main_col_class(); ?> order-first order-md-last">
+              <header class="entry-header">
+                <?php the_post(); ?>
+                <h1><?php the_title(); ?></h1>
+                <?php bootscore_post_thumbnail(); ?>
+              </header>
 
-          <main id="main" class="site-main">
+              <div class="entry-content">
+                <?php the_content(); ?>
+              </div>
 
-            <header class="entry-header">
-              <?php the_post(); ?>
-              <h1><?php the_title(); ?></h1>
-              <?php bootscore_post_thumbnail(); ?>
-            </header>
+              <footer class="entry-footer">
+                <?php comments_template(); ?>
+              </footer>
 
-            <div class="entry-content">
-              <?php the_content(); ?>
-            </div>
-
-            <footer class="entry-footer">
-              <?php comments_template(); ?>
-            </footer>
-
-          </main>
-
+          </div>
         </div>
-      </div>
-
+      </main>
     </div>
   </div>
 
