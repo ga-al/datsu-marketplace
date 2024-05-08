@@ -28,7 +28,6 @@ if ( isset( $queried_object->term_id ) ) {
 	$term_thumbnail_id = get_term_meta($queried_object->term_id, 'thumbnail_id', true);
 }
 
-
 ?>
 
 <div id="content" class="site-content <?= bootscore_container_class(); ?> py-5 mt-4">
