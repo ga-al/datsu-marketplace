@@ -175,7 +175,6 @@ if (document.querySelectorAll('.slider')) {
                 if (mediaQuery.matches) {
                     sliderThumbs.changeDirection(getDirection())
                     // addYoutubes(youtubes)
-                    console.log(this.clickedSlide)
                     if (this.clickedSlide.classList.contains('slider-horizont')) {
                         clicked = false
                         sliderThumbs.changeDirection(getDirection())
@@ -305,7 +304,7 @@ if (document.querySelectorAll('.slider')) {
         msnrySlider = new Masonry( document.querySelector('.slider-grid'), {
         gutter: 10,
         columnWidth: 110,
-        percentPosition: true,
+        // percentPosition: true,
         })
     }
         
