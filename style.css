@@ -543,9 +543,13 @@ border-bottom: 1px dashed var(--bs-secondary);
 }
 .yith-wcwl-add-to-wishlist .feedback .yith-wcwl-icon {
   color: #dd3c3c;
-  font-size: 16px;
+  font-size: 20px;
 }
-.mrk-card-heart.no-active [a="data-title"] {
+.yith-wcwl-add-button a.button.alt:not(a.checkout-button):hover, .yith-wcwl-add-button a.button:hover {
+  background-color: transparent;
+  color: #dd3c3c;
+}
+.yith-wcwl-wishlistexistsbrowse a {
   display: none;
 }
 
