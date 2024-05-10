@@ -310,15 +310,13 @@ if (document.querySelectorAll('.slider').length) {
         msnrySlider = new Masonry( document.querySelector('.slider-grid'), {
         gutter: 10,
         columnWidth: 110,
-        // percentPosition: true,
+        percentPosition: true,
         })
-        console.log('masonry')
         msnrySlider.layout()
     }
         
     function masonrySliderDelete() {
         if (msnrySlider) msnrySlider.destroy();
-        console.log('nomasonry')
     }
      
     function sliderModals(modal) {
