@@ -85,7 +85,7 @@ $total_count = count( $gallery_attachment_ids );
 				<div class="row">
 					<!-- слайдер с табами изображениями - НАЧАЛО -->
 					<div class="col-xl-7">
-					<div class="row justify-content-xl-start justify-content-center">
+						<div class="row justify-content-xl-start justify-content-center">
 							<?php if ( $product_video) { ?> 
 								<div class="slider slider-horizontal">
 								<? } else { ?> 
@@ -216,6 +216,7 @@ $total_count = count( $gallery_attachment_ids );
 								</div>
 							</div>
 						</div>
+					</div>
 					<div class="col-xl-5 mt-xl-0 mt-5">
 						<div class="share-block">
 							<a href="" role="button">Вопрос-ответ</a>
