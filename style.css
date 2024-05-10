@@ -543,8 +543,9 @@ border-bottom: 1px dashed var(--bs-secondary);
 }
 .yith-wcwl-add-to-wishlist .feedback .yith-wcwl-icon {
   color: #dd3c3c;
+  font-size: 16px;
 }
-.mrk-card-heart.no-active data-title {
+.mrk-card-heart.no-active [a="data-title"] {
   display: none;
 }
 
