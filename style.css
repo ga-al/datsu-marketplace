@@ -544,6 +544,10 @@ border-bottom: 1px dashed var(--bs-secondary);
   color: #dd3c3c;
 }
 
+.yith-wcwl-add-to-wishlist .feedback .yith-wcwl-icon a.button.alt:not(a.checkout-button) {
+  border: none;
+}
+
 
 
 
