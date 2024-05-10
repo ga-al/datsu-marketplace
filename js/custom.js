@@ -175,6 +175,7 @@ if (document.querySelectorAll('.slider').length) {
                 if (mediaQuery.matches) {
                     sliderThumbs.changeDirection(getDirection())
                     // addYoutubes(youtubes)
+                    
                     if (this.clickedSlide.classList.contains('slider-horizont')) {
                         clicked = false
                         sliderThumbs.changeDirection(getDirection())
@@ -277,7 +278,7 @@ if (document.querySelectorAll('.slider').length) {
             // 800: {
             //     autoHeight: true,
             //     allowTouchMove: false,
-            // }
+            // },
             992: {
                 direction: getDirection(),
                 autoHeight: true,
@@ -307,14 +308,17 @@ if (document.querySelectorAll('.slider').length) {
     }
         
     function masonrySlider() {
-        msnrySlider = new Masonry(document.querySelector('.slider-grid'), {
+        msnrySlider = new Masonry( document.querySelector('.slider-grid'), {
+            itemSelector: '.swiper-slide',
             gutter: 10,
             columnWidth: 110,
             percentPosition: true,
         })
         msnrySlider.layout()
+            
     }
-        
+
+    
     function masonrySliderDelete() {
         if (msnrySlider) msnrySlider.destroy();
     }
@@ -431,7 +435,7 @@ if (document.querySelectorAll('.slider').length) {
         }
     }
        
-}  
+} 
 
 // Slider-cards
 let swiper = new Swiper(".swiper-general", {
