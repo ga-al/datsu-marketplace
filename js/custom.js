@@ -308,9 +308,10 @@ if (document.querySelectorAll('.slider').length) {
         
     function masonrySlider() {
         msnrySlider = new Masonry( document.querySelector('.slider-grid'), {
-        gutter: 10,
-        columnWidth: 110,
-        percentPosition: true,
+            itemSelector: '.swiper-slide',
+            gutter: 10,
+            columnWidth: 110,
+            percentPosition: true,
         })
         msnrySlider.layout()
     }
