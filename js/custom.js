@@ -257,8 +257,15 @@ if (document.querySelectorAll('.slider').length) {
                             }
                         } 
                         
+                    } 
+                    // else {
+                    // // sliderThumbs.wrapperEl.classList.remove('slider-grid')
+                    // }
+
+                    if (document.querySelector('.slider-grid')) {
+                        this.mousewheel.disable()
                     } else {
-                    sliderThumbs.wrapperEl.classList.remove('slider-grid')
+                        this.mousewheel.enable()
                     }
                 }
             },
