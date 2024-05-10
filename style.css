@@ -540,6 +540,9 @@ border-bottom: 1px dashed var(--bs-secondary);
 .nav-tabs .nav-link {
   border: none;
 }
+.yith-wcwl-add-to-wishlist .feedback .yith-wcwl-icon {
+  color: var(--bs-danger-rgb);
+}
 
 
 
