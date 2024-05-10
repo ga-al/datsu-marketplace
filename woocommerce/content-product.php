@@ -73,7 +73,7 @@ if (empty($product) || !$product->is_visible()) {
         ?>
       </div>
       <!-- <div class="mrk-card-heart no-active ms-2"></div> -->
-      <?php echo do_shortcode("[yith_wcwl_add_to_wishlist]")?>
+      <div class="mrk-card-heart no-active"><?php echo do_shortcode("[yith_wcwl_add_to_wishlist]")?></div>
     </div>
     </div>
   </div>
