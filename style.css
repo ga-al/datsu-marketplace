@@ -297,6 +297,7 @@ a.btn:hover {
     background-size: 20px;
     background-repeat: no-repeat;
     cursor: pointer;
+    border: none!important;
 }
 .mrk-card-heart.no-active a {
     background-image: url("img/svg/heart.svg");
@@ -543,11 +544,9 @@ border-bottom: 1px dashed var(--bs-secondary);
 .yith-wcwl-add-to-wishlist .feedback .yith-wcwl-icon {
   color: #dd3c3c;
 }
-
-.yith-wcwl-add-to-wishlist .feedback .yith-wcwl-icon a.button.alt:not(a.checkout-button) {
-  border: none;
+.mrk-card-heart.no-active data-title {
+  display: none;
 }
-
 
 
 

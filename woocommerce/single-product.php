@@ -256,7 +256,9 @@ $total_count = count( $gallery_attachment_ids );
 										<?php if ( $product_sale_price ) { ?>
 											<span class="text-decoration-line-through text-secondary fs-4 ps-2"><?php echo $product_regular_price . ' ' . get_woocommerce_currency_symbol() ?></span>
 										<?php }?>
-										<?php echo do_shortcode("[yith_wcwl_add_to_wishlist]") ?>
+										<div class="mrk-card-heart no-active">
+											<?php echo do_shortcode("[yith_wcwl_add_to_wishlist]") ?>
+										</div>
 										<!-- <div class="mrk-card-heart no-active ms-auto"></div> -->
 									</div>
 								</div>
