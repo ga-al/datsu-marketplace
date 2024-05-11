@@ -166,8 +166,8 @@ if (document.querySelectorAll('.slider').length) {
             direction: getDirection(),
             slidesPerView: 'auto',
             speed: 600,
-            grabCursor: true,
-            mousewheel: true,
+            grabCursor: false,
+            mousewheel: false,
             spaceBetween: 10,
             on: {
             click: function () {
@@ -184,7 +184,7 @@ if (document.querySelectorAll('.slider').length) {
                         sliderThumbs.wrapperEl.classList.remove('slider-grid')
                         masonrySliderDelete()
                     } else if (this.clickedSlide.classList.contains('slider-vertic')) {
-                        sliderThumbs.changeDirection(getDirection())
+                        // sliderThumbs.changeDirection(getDirection())
                         sliderItem.classList.remove('slider-horizontal')
                         sliderItem.classList.add('slider-vertical')
                         sliderThumbs.wrapperEl.classList.add('slider-grid')
@@ -238,35 +238,37 @@ if (document.querySelectorAll('.slider').length) {
                         const currentSlide = this.slides[index_currentSlide]
                         
                         if (currentSlide.classList.contains('slider-vertic')) {
+                            sliderThumbs.changeDirection(getDirection())
                             sliderItem.classList.remove('slider-horizontal')
                             sliderItem.classList.add('slider-vertical')
                             sliderThumbs.wrapperEl.classList.add('slider-grid')
                             masonrySlider()
+                           
                             if(youtubes) {
                                 addYoutubes(youtubes)
                             }
                         } 
-                        if (currentSlide.classList.contains('slider-horizont')) {
+                        else if (currentSlide.classList.contains('slider-horizont')) {
+                            clicked = false
                             sliderThumbs.changeDirection(getDirection())
                             sliderItem.classList.remove('slider-vertical')
                             sliderItem.classList.add('slider-horizontal')
                             sliderThumbs.wrapperEl.classList.remove('slider-grid')
                             masonrySliderDelete()
+                            
                             if(youtubes) {
                                 removeYoutubes(youtubes)
                             }
-                        } 
-                        
-                    } 
-                    // else {
-                    // // sliderThumbs.wrapperEl.classList.remove('slider-grid')
-                    // }
-
-                    if (document.querySelector('.slider-grid')) {
-                        this.mousewheel.disable()
-                    } else {
-                        this.mousewheel.enable()
+                        }
                     }
+                    // } else {
+                    // sliderThumbs.wrapperEl.classList.remove('slider-grid')
+                    // }
+                    // if (document.querySelector('.slider-grid')) {
+                    //     this.mousewheel.disable()
+                    // } else {
+                    //     this.mousewheel.enable()
+                    // }
                 }
             },
             thumbs: {
@@ -442,7 +444,7 @@ if (document.querySelectorAll('.slider').length) {
         }
     }
        
-} 
+}
 
 // Slider-cards
 let swiper = new Swiper(".swiper-general", {
