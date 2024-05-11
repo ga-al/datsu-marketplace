@@ -290,8 +290,8 @@ a.btn:hover {
 }
 .mrk-card-heart a {
     margin-left: 136px;
-    width: 20px;
-    height: 20px;
+    width: 24px;
+    height: 24px;
     background-image: url("img/svg/heart-fill.svg");
     background-position: center;
     background-size: 20px;
