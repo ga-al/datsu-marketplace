@@ -302,10 +302,10 @@ a.btn:hover {
 .mrk-card-heart.no-active a {
     background-image: url("img/svg/heart.svg");
 }
-
+/* 
 .mrk-card-heart .yith-wcwl-add-button>a i {
   opacity: 0;
-}
+} */
 
 .mrk-card-heart .yith-wcwl-add-button {
   text-align: right;
