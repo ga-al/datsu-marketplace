@@ -556,8 +556,16 @@ border-bottom: 1px dashed var(--bs-secondary);
 .yith-wcwl-wishlistexistsbrowse a {
   display: none;
 }
-
-
+.wcpf-field-button .wcpf-button:hover {
+  border: 1px solid var(--bs-primary);
+  border-top-left-radius: 12px;
+  border-bottom-right-radius: 12px;
+  padding: 11px 1.875rem;
+  letter-spacing: 1.2px;
+}
+.wcpf-field-button .wcpf-button:hover {
+  background: var(--bs-primary);
+}
 
 
 
