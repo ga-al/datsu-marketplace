@@ -289,7 +289,7 @@ a.btn:hover {
     max-width: 156px;
 }
 .mrk-card-heart a {
-    margin-left: 136px;
+    margin-left: 0;
     width: 24px;
     height: 24px;
     background-image: url("img/svg/heart-fill.svg");
@@ -615,7 +615,7 @@ max-width: 743px;
 
 .slider__images {
   height: auto;
-  width: 100%;
+  width: 75%;
   border-radius: 5px;
   overflow: hidden;
 }
@@ -755,7 +755,7 @@ min-width: 110px;
   flex-direction: column;
   margin-top: 0;
   height: 100%;
-  max-width: 244px;
+  width: 40%;
 }
 
 .slider-vertical .slider-thumb .swiper-overlay {
