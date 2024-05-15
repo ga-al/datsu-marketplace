@@ -74,7 +74,7 @@ $social_menu = me_render_social();
               </div>
             </div>
             <div class="<?= bootscore_container_class(); ?> pe-xxl-2 pe-md-3 px-2">
-              <section>
+              <!-- <section>
                 <h2 class="text-primary text-uppercase fw-bold">Все для профессионалов</h2>
                 <form class="row g-3 mt-3">
                   <div class="col-md-4">
@@ -195,7 +195,7 @@ $social_menu = me_render_social();
                       </div>
                     </div>
                 </div>
-              </section>
+              </section> -->
               <?php
               $arr = me_rendom_category();
               $randomKey = array_rand( $arr, 3) ;
@@ -211,8 +211,8 @@ $social_menu = me_render_social();
                 ?>
                   <section class="mt-4">
                     <div class="d-flex justify-content-between align-items-center flex-wrap">
-                      <h2 class="text-primary text-uppercase fw-bold"><?php echo $term_name ?></h2>
-                      <a class="fs-3 fw-medium" href="<?php echo $term_link ?>">Смотреть все</a>
+                      <h2 class="text-primary text-uppercase w-100 fw-bold"><?php echo $term_name ?></h2>
+                      <a class="fs-4 fw-medium" href="<?php echo $term_link ?>">Смотреть все</a>
                     </div>
                     <div class="mrk-cards-kits mt-3">
                       <div class="row">
