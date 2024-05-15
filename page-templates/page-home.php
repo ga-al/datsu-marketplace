@@ -209,7 +209,7 @@ $social_menu = me_render_social();
                 $term_link = get_category_link($term_id);
 
                 ?>
-                  <section class="mt-4">
+                  <section class="mt-5">
                     <div class="d-flex justify-content-between align-items-center flex-wrap">
                       <h2 class="text-primary text-uppercase w-100 fw-bold"><?php echo $term_name ?></h2>
                       <a class="fs-4 fw-medium" href="<?php echo $term_link ?>">Смотреть все</a>
@@ -243,7 +243,7 @@ $social_menu = me_render_social();
                               $product_attachment_url = get_stylesheet_directory_uri() . '/img/placeholder.png';
                             }
                         ?>
-                          <div class="col-md-6 col-lg-4 mb-4">
+                          <div class="col-md-6 col-lg-3 mb-4">
                             <div class="card h-100">
                               <div class="card-kit-img">
                                 <div class="mrk-card-heart no-active"><?php echo do_shortcode("[yith_wcwl_add_to_wishlist]") ?></div>
