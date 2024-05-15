@@ -36,7 +36,7 @@
         </div>
 
         <!-- Footer 2 Widget -->
-        <div class="col-md-11 col-lg-7 d-flex justify-content-md-around justify-content-between flex-wrap row-gap-3 order-0">
+        <div class="col-md-12 col-lg-9 d-flex justify-content-md-around justify-content-between flex-wrap row-gap-3 order-0">
           <?php if (is_active_sidebar('footer-2')) : ?>
             <div class="col-6 col-md-3">
               <h5 class="fw-medium">О компании</h5>
