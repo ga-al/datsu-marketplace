@@ -244,15 +244,15 @@ $social_menu = me_render_social();
                             }
                         ?>
                           <div class="col-md-6 col-lg-4 mb-4">
-                            <div class="card border-0 h-100">
+                            <div class="card h-100">
                               <div class="card-kit-img">
                                 <div class="mrk-card-heart no-active"><?php echo do_shortcode("[yith_wcwl_add_to_wishlist]") ?></div>
-                                <img class="card-img-top" src="<?php echo $product_attachment_url ?>" alt="">
+                                <a href="<?php echo $product_link ?>"><img class="card-img-top" src="<?php echo $product_attachment_url ?>" alt=""></a>
                               </div>
                               <div class="card-body d-flex flex-column h-100 px-lg-3 px-0">
-                                <p class="card-title fw-medium text-dark fs-6 mb-4">
+                                <a href="<?php echo $product_link ?>" class="card-title fw-medium text-dark fs-6 mb-4">
                                 <?php echo $product_name ?>
-                                </p>
+                                </a>
                                 <div class="mt-auto">
 
                                 <?php if ( $product_sale_price ) { ?>

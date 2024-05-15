@@ -556,6 +556,9 @@ border-bottom: 1px dashed var(--bs-secondary);
 .yith-wcwl-wishlistexistsbrowse a {
   display: none;
 }
+.yith-wcwl-wishlistaddedbrowse {
+  text-align: right;
+}
 .wcpf-field-button .wcpf-button {
   border: 1px solid var(--bs-primary);
   border-top-left-radius: 12px;
