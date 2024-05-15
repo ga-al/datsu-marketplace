@@ -33,7 +33,7 @@ class Custom_Walker_Category extends Walker_Category {
         if ( $depth === 0 ) {
             $output .= "$indent<ul class='list ps-0'>\n";
         } else {
-            $output .= "$indent<div class='collapse' id='$cat_slug-collapse' $depth ><ul class='list ps-0 '>\n";
+            $output .= "$indent<div class='collapse show' id='$cat_slug-collapse' $depth ><ul class='list ps-0 '>\n";
         }
 
 	}
