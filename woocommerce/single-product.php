@@ -97,10 +97,10 @@ $total_count = count( $gallery_attachment_ids );
 											if ($total_count > 1) {
 											?>
 											<div class="swiper-slide" data-slider="0" data-bs-toggle="modal" data-bs-target="#backdrop-1" data-bs-gallery="<?php echo $product_video; ?>" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" frameborder="0">
-												<div class="position-absolute start-0 top-0 mt-2 ms-2 text-start">
+												<!-- <div class="position-absolute start-0 top-0 mt-2 ms-2 text-start">
 													<div class="mrk-hit">хит</div>
 													<div class="mrk-new">новинка</div>
-												</div>
+												</div> -->
 												<div class="youtube ratio ratio-16x9 h-100">
 													<iframe class="iframe object-fit-cover" src="<?php echo $product_video; ?>" frameborder="0" allowfullscreen></iframe>
 												</div>
@@ -308,7 +308,7 @@ $total_count = count( $gallery_attachment_ids );
 								</div>
 							</div>
 						</div>
-						<p class="fw-bold fs-5 mt-3 mb-2">Скачать документацию: </p>
+						<!-- <p class="fw-bold fs-5 mt-3 mb-2">Скачать документацию: </p>
 						<form class="row g-2">
 							<div class="col-md-6">
 								<div class="position-relative">
@@ -391,7 +391,7 @@ $total_count = count( $gallery_attachment_ids );
 								</div>
 								</div>
 							</div>
-						</form>
+						</form> -->
 					</div>
 					<!-- слайдер с табами изображениями -  КОНЕЦ -->
 				</div>
@@ -426,7 +426,7 @@ $total_count = count( $gallery_attachment_ids );
 				<!-- Swiper -->
 				<div class="swiper swiper-general">
 					<div class="d-flex justify-content-between align-items-center">
-						<h2 class="display-4 fw-bold mb-4">Покупают вместе</h2>
+						<h2 class="fs-2 fw-bold mb-4">Покупают вместе</h2>
 						<div>
 							<div class="swiper-button-prev uploaded-in-prev text-white rounded"></div>
 							<div class="swiper-button-next uploaded-in-next text-white rounded"></div>
@@ -477,31 +477,31 @@ $total_count = count( $gallery_attachment_ids );
 												<div class="swiper swiper-children">
 													<div class="swiper-wrapper">
 														<div class="swiper-slide">
-															<div class="position-absolute start-0 top-0 mt-2 ms-2 text-start">
+															<!-- <div class="position-absolute start-0 top-0 mt-2 ms-2 text-start">
 																<div class="mrk-hit">хит</div>
 																<div class="mrk-new">новинка</div>
-															</div>
+															</div> -->
 															<img class="card-img-top" src="<?php echo $together_attachment_url ?>" alt="">
 														</div>
 														<div class="swiper-slide">
-															<div class="position-absolute start-0 top-0 mt-2 ms-2 text-start">
+															<!-- <div class="position-absolute start-0 top-0 mt-2 ms-2 text-start">
 																<div class="mrk-hit">хит</div>
 																<div class="mrk-new">новинка</div>
-															</div>
+															</div> -->
 															<img class="card-img-top" src="<?php echo $together_attachment_url ?>" alt="">
 														</div>
 														<div class="swiper-slide">
-															<div class="position-absolute start-0 top-0 mt-2 ms-2 text-start">
+															<!-- <div class="position-absolute start-0 top-0 mt-2 ms-2 text-start">
 																<div class="mrk-hit">хит</div>
 																<div class="mrk-new">новинка</div>
-															</div>
+															</div> -->
 															<img class="card-img-top" src="<?php echo $together_attachment_url ?>" alt="">
 														</div>
 														<div class="swiper-slide">
-															<div class="position-absolute start-0 top-0 mt-2 ms-2 text-start">
+															<!-- <div class="position-absolute start-0 top-0 mt-2 ms-2 text-start">
 																<div class="mrk-hit">хит</div>
 																<div class="mrk-new">новинка</div>
-															</div>
+															</div> -->
 															<img class="card-img-top" src="<?php echo $together_attachment_url ?>" alt="">
 														</div>
 													</div>
@@ -576,9 +576,9 @@ $total_count = count( $gallery_attachment_ids );
 					?>
 
 				</div>
-				<div class="swiper swiper-general my-5">
+				<!-- <div class="swiper swiper-general my-5">
 					<div class="d-flex justify-content-between align-items-center">
-						<h2 class="display-4 fw-bold my-5 mb-4">Похожие товары</h2>
+						<h2 class="fs-2 fw-bold my-5 mb-4">Похожие товары</h2>
 						<div>
 							<div class="swiper-button-prev uploaded-in-prev text-white rounded"></div>
 							<div class="swiper-button-next uploaded-in-next text-white rounded"></div>
@@ -722,7 +722,7 @@ $total_count = count( $gallery_attachment_ids );
 						}
 						wp_reset_postdata();
 					?>
-				</div>
+				</div> -->
 			</div>
 		</main>
 		<div class="modal fade" id="backdrop-1" tabindex="-1" role="dialog" aria-labelledby="backdrop-1" aria-hidden="true">
