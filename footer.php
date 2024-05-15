@@ -22,7 +22,7 @@
       <div class="row gap-md-0 gap-3">
 
         <!-- Footer 1 Widget -->
-        <div class="col-lg-3 d-flex order-lg-0 order-1">
+        <div class="col-lg-3 d-flex align-items-center order-lg-0 order-1">
           <?php if (is_active_sidebar('footer-1')) : ?>
             <a class="footer-brand xs d-md-none ms-md-3 pe-md-2" href="<?= esc_url(home_url()); ?>"><img src="<?= esc_url(get_stylesheet_directory_uri()); ?>/img/logo/logo-footer-sm.svg" alt="logo" class="logo xs"></a>
             <a class="footer-brand md d-none d-md-block pe-2" href="<?= esc_url(home_url()); ?>"><img src="<?= esc_url(get_stylesheet_directory_uri()); ?>/img/logo/logo-footer.svg" alt="logo" class="logo md"></a>
@@ -36,9 +36,9 @@
         </div>
 
         <!-- Footer 2 Widget -->
-        <div class="col-md-11 col-lg-7 d-flex justify-content-md-around justify-content-between flex-wrap order-0">
+        <div class="col-md-11 col-lg-7 d-flex justify-content-md-around justify-content-between flex-wrap row-gap-3 order-0">
           <?php if (is_active_sidebar('footer-2')) : ?>
-            <div class="col-6 col-md-4 col-lg-3">
+            <div class="col-6 col-md-3">
               <h5 class="fw-medium">О компании</h5>
               <ul>
                 <?php
@@ -60,7 +60,7 @@
                 <li><a class="text-opacity-50 text-decoration-none" href="#">Реквизиты</a></li> -->
               </ul>
             </div>
-            <div class="col-6 col-md-4 col-lg-3">
+            <div class="col-6 col-md-3">
               <h5 class="fw-medium">Покупателям</h5>
               <ul>
                 <?php
@@ -82,7 +82,7 @@
                 <li><a class="text-opacity-50 text-decoration-none" href="#">Вопрос-ответ</a></li> -->
               </ul>
             </div>
-            <div class="col-6 col-md-4 col-lg-3">
+            <div class="col-6 col-md-3">
               <h5 class="fw-medium">Партнерам</h5>
               <ul>
                 <?php
@@ -104,7 +104,7 @@
             </div>
           <?php endif; ?>
           <!-- Footer 3 Widget -->
-          <div class="col-6 col-md-4 col-lg-3">
+          <div class="col-6 col-md-3">
             <?php if (is_active_sidebar('footer-3')) : ?>
               <h5 class="text-white">Соц.сети</h5>
               <ul class="d-md-block d-flex gap-4">
