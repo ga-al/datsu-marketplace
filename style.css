@@ -553,9 +553,9 @@ border-bottom: 1px dashed var(--bs-secondary);
   background-color: transparent;
   color: #dd3c3c;
 }
-.yith-wcwl-wishlistexistsbrowse a {
+/* .yith-wcwl-wishlistexistsbrowse a {
   display: none;
-}
+} */
 .yith-wcwl-wishlistaddedbrowse {
   text-align: right;
 }
