@@ -312,6 +312,7 @@ a.btn:hover {
 }
 
 .mrk-card-heart .yith-wcwl-add-button {
+  margin-right: -8px;
   text-align: right;
 }
 
@@ -557,7 +558,7 @@ border-bottom: 1px dashed var(--bs-secondary);
 .yith-wcwl-wishlistexistsbrowse a {
   display: none;
 }
-.yith-wcwl-wishlistaddedbrowse {
+.yith-wcwl-wishlistaddedbrowse, .yith-wcwl-wishlistexistsbrowse {
   text-align: right;
 }
 .wcpf-field-button .wcpf-button {
