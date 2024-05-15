@@ -113,10 +113,10 @@ $total_count = count( $gallery_attachment_ids );
 											</div>
 											<?php
 											} else {?>
-											<div class="position-absolute start-0 top-0 mt-2 ms-2 text-start">
+											<!-- <div class="position-absolute start-0 top-0 mt-2 ms-2 text-start">
 												<div class="mrk-hit">хит</div>
 												<div class="mrk-new">новинка</div>
-											</div>
+											</div> -->
 											<div class="swiper-slide" data-slider="0" data-bs-toggle="modal" data-bs-target="#backdrop-video" data-bs-gallery="<?php echo $product_video; ?>" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" frameborder="0">
 												<div class="youtube ratio ratio-16x9 video-one h-100">
 													<iframe class="iframe object-fit-cover" src="<?php echo $product_video; ?>" frameborder="0" allowfullscreen></iframe>
@@ -134,10 +134,10 @@ $total_count = count( $gallery_attachment_ids );
 											foreach ($gallery_attachment_ids as $gallery_attachment_id) {
 												if ($total_count > 1) {
 												?>
-												<div class="position-absolute start-0 top-0 mt-2 ms-2 text-start">
+												<!-- <div class="position-absolute start-0 top-0 mt-2 ms-2 text-start">
 													<div class="mrk-hit">хит</div>
 													<div class="mrk-new">новинка</div>
-												</div>
+												</div> -->
 												<div class="swiper-slide" data-slider="0" data-bs-toggle="modal" data-bs-target="#backdrop-1" data-bs-gallery="<?= wp_get_attachment_url( $gallery_attachment_id, 'full' ); ?>" title="увеличить окно просмотра">
 													<div class="image-4x3"><img src="<?= wp_get_attachment_url( $gallery_attachment_id, 'full' ); ?>" alt="image">
 														<div class="fullscrin" data-slider="0" data-bs-toggle="modal" data-bs-target="#backdrop-1" data-bs-gallery="<?= wp_get_attachment_url( $gallery_attachment_id, 'full' ); ?>" title="увеличить окно просмотра">
@@ -151,10 +151,10 @@ $total_count = count( $gallery_attachment_ids );
 												<?php
 												} else {
 												?>
-												<div class="position-absolute start-0 top-0 mt-2 ms-2 text-start">
+												<!-- <div class="position-absolute start-0 top-0 mt-2 ms-2 text-start">
 													<div class="mrk-hit">хит</div>
 													<div class="mrk-new">новинка</div>
-												</div>
+												</div> -->
 												<div class="swiper-slide" data-slider="0" data-bs-toggle="modal" data-bs-target="#backdrop-image" data-bs-gallery="<?= wp_get_attachment_url( $gallery_attachment_id, 'full' ); ?>" title="увеличить окно просмотра">
 													<div class="image-4x3 image-one">
 														<img src="<?= wp_get_attachment_url( $gallery_attachment_id, 'full' ); ?>" alt="image">
@@ -424,7 +424,7 @@ $total_count = count( $gallery_attachment_ids );
 				</div>
 
 				<!-- Swiper -->
-				<div class="swiper swiper-general">
+				<div class="swiper swiper-general my-5">
 					<div class="d-flex justify-content-between align-items-center">
 						<h2 class="fs-2 fw-bold mb-4">Покупают вместе</h2>
 						<div>
