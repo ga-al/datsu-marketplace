@@ -546,6 +546,7 @@ border-bottom: 1px dashed var(--bs-secondary);
   border: none;
 }
 .yith-wcwl-add-to-wishlist .feedback .yith-wcwl-icon {
+  margin-right: -8px;
   color: #dd3c3c;
   font-size: 18px;
 }
@@ -553,9 +554,9 @@ border-bottom: 1px dashed var(--bs-secondary);
   background-color: transparent;
   color: #dd3c3c;
 }
-/* .yith-wcwl-wishlistexistsbrowse a {
+.yith-wcwl-wishlistexistsbrowse a {
   display: none;
-} */
+}
 .yith-wcwl-wishlistaddedbrowse {
   text-align: right;
 }
