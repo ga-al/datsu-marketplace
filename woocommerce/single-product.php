@@ -86,9 +86,9 @@ $total_count = count( $gallery_attachment_ids );
 					<!-- слайдер с табами изображениями - НАЧАЛО -->
 					<div class="col-xl-7">
 						<div class="row justify-content-xl-start justify-content-center">
-							<?php if ( $product_video) { ?> 
+							<?php if ( $product_video) { ?>
 								<div class="slider slider-horizontal">
-								<? } else { ?> 
+								<? } else { ?>
 								<div class="slider slider-vertical">
 								<? } ?>
 								<div class="swiper slider__images order-2 slider__images--main slider__images-cotalog">
@@ -203,10 +203,10 @@ $total_count = count( $gallery_attachment_ids );
 													<div class="swiper-slide swiper-item"><img src="<?= wp_get_attachment_url( $gallery_attachment_id, 'thumb' ); ?>" alt="thumb"></div>
 
 												<?php
-												} else {  
+												} else {
 												?>
 													<div class="swiper-slide swiper-item"></div>
-													
+
 												<?php
 												}}
 											}
@@ -465,7 +465,7 @@ $total_count = count( $gallery_attachment_ids );
 								$together_product_regular_price = $together_product->get_regular_price();
 								$together_product_link = get_permalink($together_product);
 								$together_product_attributes = $together_product->get_attributes();
-								$together_attachment_url = wp_get_attachment_url( $together_product_id, 'thumb' );
+								$together_attachment_url = wp_get_attachment_image_url( get_post_thumbnail_id( $product_id ), 'medium' );
 								if ( !$together_attachment_url ) {
 									$together_attachment_url = get_stylesheet_directory_uri() . '/img/placeholder.png';
 								}
@@ -613,7 +613,7 @@ $total_count = count( $gallery_attachment_ids );
 									$similar_product_regular_price = $similar_product->get_regular_price();
 									$similar_product_link = get_permalink($similar_product);
 									$similar_product_attributes = $similar_product->get_attributes();
-									$similar_attachment_url = wp_get_attachment_url( $similar_product_id, 'thumb' );
+									$similar_attachment_url = wp_get_attachment_image_url( get_post_thumbnail_id( $product_id ), 'medium' );
 									if ( !$similar_attachment_url ) {
 										$similar_attachment_url = get_stylesheet_directory_uri() . '/img/placeholder.png';
 									}
