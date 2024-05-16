@@ -106,7 +106,7 @@
           <!-- Footer 3 Widget -->
           <div class="col-6 col-md-3">
             <?php if (is_active_sidebar('footer-3')) : ?>
-              <h5 class="text-white">Соц.сети</h5>
+              <h5 class="fw-medium">Соц.сети</h5>
               <ul class="d-md-block d-flex gap-4">
 
                 <?php
