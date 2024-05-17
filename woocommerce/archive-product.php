@@ -53,7 +53,7 @@ if ( isset( $queried_object->term_id ) ) {
 								}
 							?>
 							
-							<nav class="d-flex justify-content-between align-items-center" style="margin-top: -4rem">
+							<nav class="d-flex justify-content-between align-items-center mt-2">
 								<div></div>
 								<div class="btn-tabs-list d-flex gap-2">
 								<button role="tablist" class="grid-box">
