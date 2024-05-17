@@ -46,8 +46,8 @@ if (empty($product) || !$product->is_visible()) {
 }
 ?>
 
-<div class="d-flex mb-5">
-  <div class="flex-shrink-0"><img class="object-fit-contain me-4" src="<?php echo $image ?>" alt="" style="width: 70px;"></div>
+<div class="d-flex mb-5 line-cards">
+  <div class="flex-shrink-0"><img class="object-fit-contain me-4" src="<?php echo $product_attachment_url ?> ?>" alt="" style="width: 70px;"></div>
   <div class="flex-grow-1 py-0">
   <div class="row g-3">
     <div class="col-xl-8 col-lg-7">
@@ -77,5 +77,47 @@ if (empty($product) || !$product->is_visible()) {
     </div>
     </div>
   </div>
+  </div>
+</div>
+
+<div class="col-md-4 col-xl-3 mb-4 grid-cards hide">
+  <div class="card border-0 h-100">
+    <div class="card-kit-img">
+      <div class="mrk-card-heart no-active"><?php echo do_shortcode("[yith_wcwl_add_to_wishlist]") ?></div>
+      <a href="<?php echo $product_url ?>"><img class="card-img-top" src="<?php echo $product_attachment_url ?>" alt=""></a>
+    </div>
+    <div class="card-body d-flex flex-column h-100 px-lg-3 px-0">
+      <a href="<?php echo $product_url ?>" class="card-title fw-medium text-dark fs-6 mb-4">
+      <?php echo $product_name ?>
+      </a>
+      <div class="mt-auto">
+
+      <?php if ( $product_sale_price ) { ?>
+        <h3 class="text-primary fw-bold text-nowrap d-inline-block"><?php echo $product_sale_price . ' ' . get_woocommerce_currency_symbol(); ?></h3>
+        <span class="text-decoration-line-through fs-5 ps-2"><?php echo $product_regular_price . ' ' . get_woocommerce_currency_symbol(); ?></span>
+        <span class="text-danger fw-bold pb-1 ps-2" style="font-size: 1rem;">
+          <?php
+            echo round(100 - ($product_sale_price / $product_regular_price * 100));
+          ?>
+          %
+        </span>
+      <?php } else { ?>
+        <h3 class="text-primary fw-bold text-nowrap d-inline-block"><?php echo $product_regular_price . ' ' . get_woocommerce_currency_symbol(); ?></h3>
+      <?php } ?>
+      </div>
+      <div class="mrk-cart">
+        <div class="mrk-cart-quantity">
+          <?php
+            $me_add_to_cart = [
+              "classes" => "btn btn-primary btn-order-kits w-100 ",
+              "product_title" => $product_name,
+              "product_id" => $product_id,
+              "product_sku" => $product_sku,
+            ];
+            get_template_part( 'elements/button-add-to-cart', '', $me_add_to_cart );
+          ?>
+        </div>
+      </div>
+    </div>
   </div>
 </div>

@@ -40,6 +40,15 @@ jQuery(function ($) {
         console.log('no-chat')
     }
 
+    $('.grid-box').on('click', function() {
+        $('.grid-cards').removeClass('hide')
+        $('.line-cards').addClass('hide')
+    })
+    $('.line-box').on('click', function() {
+        $('.line-cards').removeClass('hide')
+        $('.grid-cards').addClass('hide')
+    })
+
 
 }); // jQuery End
 
