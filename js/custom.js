@@ -493,25 +493,17 @@ if (document.querySelector('.share-buttons')) {
     shareBtns.classList.toggle('hide')
 })
 }
-const products = document.querySelectorAll('.products')
+const blockCards = document.querySelectorAll('.block-cards')
 
 document.querySelector('.grid-box').addEventListener('click', function() {
     console.log('grid')
     
-    products.forEach(el => {
+    blockCards.forEach(el => {
         if(el.classList.contains('hide')) {
             el.сlassList.remove('hide')  
         } else {
             el.classList.add('hide')
         }
        
-    })
-})
-
-document.querySelector('.line-box').addEventListener('click', function() {
-    console.log('line')
-    
-    products.forEach(el => {
-        el.сlassList.toggle('hide')  
     })
 })
