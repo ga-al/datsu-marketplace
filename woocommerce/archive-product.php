@@ -36,7 +36,7 @@ if ( isset( $queried_object->term_id ) ) {
 		<!-- Hook to add something nice -->
 		<?php bs_after_primary(); ?>
 		<main id="main" class="site-main">
-			<?php woocommerce_breadcrumb()?>
+			
 			<!-- Post List -->
 			<div class="row px-2">
 				<div class="<?= bootscore_main_col_class(); ?> px-0">
@@ -44,16 +44,9 @@ if ( isset( $queried_object->term_id ) ) {
 
 					<div class="entry-content">
 						<h1 class="display-5 text-primary fw-bold mt-md-0 my-4"><?php woocommerce_page_title(); ?></h1>
-							<?php
-								if ( isset($term_thumbnail_id) && $term_thumbnail_id ) {
-									$term_thumbnail_url = wp_get_attachment_url( $term_thumbnail_id );
-									?>
-										<img src="<?= $term_thumbnail_url ?>" class="img-fluid" alt="...">
-									<?php
-								}
-							?>
-							
-							<nav class="d-flex justify-content-between align-items-center mt-2">
+						<?php woocommerce_breadcrumb()?>
+
+						<nav class="d-flex justify-content-between align-items-center mt-2">
 								<div></div>
 								<div class="btn-tabs-list d-flex gap-2">
 								<button role="tablist" class="grid-box">
@@ -93,6 +86,15 @@ if ( isset( $queried_object->term_id ) ) {
 									?>
 								</div>
 							</div>
+							<?php
+								if ( isset($term_thumbnail_id) && $term_thumbnail_id ) {
+									$term_thumbnail_url = wp_get_attachment_url( $term_thumbnail_id );
+									?>
+										<img src="<?= $term_thumbnail_url ?>" class="img-fluid" alt="...">
+									<?php
+								}
+							?>
+							
 					</div>
 				</div>
 
