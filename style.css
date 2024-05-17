@@ -524,6 +524,17 @@ border-bottom: 1px dashed var(--bs-secondary);
   background-color: transparent;
   color: var(--bs-dark);
 }
+
+.woocommerce-order-details .share-buttons { 
+  right: 0; 
+}
+
+.woocommerce-order-details button {
+  border: transparent;
+  background: transparent;
+  color: var(--bs-primary);
+}
+
 .woocommerce img, .woocommerce-page img {
   display: block;
   margin: 0 auto;
