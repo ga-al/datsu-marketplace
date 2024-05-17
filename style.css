@@ -563,6 +563,7 @@ border-bottom: 1px dashed var(--bs-secondary);
   font-size: 18px;
 }
 .yith-wcwl-add-button a.button.alt:not(a.checkout-button):hover, .yith-wcwl-add-button a.button:hover, .yith-wcwl-wishlistexistsbrowse .feedback .yith-wcwl-icon {
+  width: 24px;
   background-color: transparent;
   color: #dd3c3c;
 }
