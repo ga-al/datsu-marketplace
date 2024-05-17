@@ -97,7 +97,7 @@ class Custom_Walker_Category extends Walker_Category {
 		}
 
         if ( $depth === 0 ) {
-            $link = sprintf('<h3 class="text-uppercase">%s</h3>',$cat_name);
+            // $link = sprintf('<h3 class="text-uppercase">%s</h3>',$cat_name);
         } else if ( $depth === 1 ) {
             $link = '<button class="btn btn-toggle d-inline-flex align-items-center border-0 text-uppercase text-start fs-6" data-bs-toggle="collapse" data-bs-target="#'.$category->slug.'-collapse" aria-expanded="true">'.$cat_name.'</button>';
         } else {

@@ -43,7 +43,7 @@ if ( isset( $queried_object->term_id ) ) {
 					<!-- Grid Layout -->
 
 					<div class="entry-content">
-						<h1 class="display-5 text-primary fw-bold mt-md-0 my-4"><?php woocommerce_page_title(); ?></h1>
+						<h1 class="display-5 text-primary fw-bold mt-md-0 mb-md-2 my-4"><?php woocommerce_page_title(); ?></h1>
 						<?php woocommerce_breadcrumb()?>
 
 						<nav class="d-flex justify-content-between align-items-center mt-2">
