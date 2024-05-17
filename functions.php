@@ -21,7 +21,7 @@
 
 if (!function_exists('bootscore_sidebar_col_class')) {
   function bootscore_sidebar_col_class() {
-    return "col-lg-3 d-lg-block d-none order-first";
+    return "col-lg-3 order-first";
   }
 }
 
