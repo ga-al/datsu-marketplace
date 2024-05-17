@@ -536,7 +536,7 @@ border-bottom: 1px dashed var(--bs-secondary);
 }
 
 .woocommerce img, .woocommerce-page img {
-  display: block;
+  /* display: block; */
   margin: 0 auto;
   max-height: 385px;
 }
