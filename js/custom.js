@@ -47,8 +47,8 @@ jQuery(function ($) {
     const blocks = document.querySelectorAll(".mrk-cart-quantity");
 
     // храним шаблоны в удобном для редактирования месте
-    const orderHTML = `<a href="#" class="btn-order btn btn-primary d-inline-block w-100">
-    <img class="mx-auto pe-1" src="<?= esc_url(get_stylesheet_directory_uri()); ?>/img/svg/cart4-white.svg" alt="корзина">
+    const orderHTML = `<a href="#" class="btn-order btn btn-primary w-100">
+    <img class="d-inline-block mx-auto pe-1" src="<?= esc_url(get_stylesheet_directory_uri()); ?>/img/svg/cart4-white.svg" alt="корзина">
     В корзину
     </a>`;
 
