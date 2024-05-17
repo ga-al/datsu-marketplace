@@ -21,7 +21,7 @@
 
 if (!function_exists('bootscore_sidebar_col_class')) {
   function bootscore_sidebar_col_class() {
-    return "col-md-4 col-lg-3 order-first";
+    return "col-md-4 d-lg-block d-none order-first";
   }
 }
 
@@ -31,9 +31,21 @@ if (!function_exists('bootscore_sidebar_offcanvas_class')) {
   }
 }
 
+if (!function_exists('bootscore_main_col_class')) {
+  function bootscore_main_col_class() {
+    if (!is_active_sidebar('sidebar-1')) {
+      // Sidebar is empty
+      return "col";
+    } else {
+      // Sidebar has widgets
+      return "col-lg-9";
+    }
+  }
+}
+
 if (!function_exists('bootscore_sidebar_toggler_class')) {
   function bootscore_sidebar_toggler_class() {
-    return "d-md-none btn btn-outline-primary w-100 mb-md-4 mb-2 d-flex justify-content-between align-items-center";
+    return "d-lg-none btn btn-outline-primary w-100 mb-md-4 mb-2 d-flex justify-content-between align-items-center";
   }
 }
 

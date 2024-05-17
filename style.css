@@ -1434,6 +1434,9 @@ body .modal .carousel-control-next, body .modal  .carousel-control-prev {
   .mrk-cards-kits .card {
     max-width: 250px;
   }
+  .woocommerce-order-details .share-buttons {
+    top: 0;
+  }
 }
 @media (max-width: 620px) {
   .header-actions {

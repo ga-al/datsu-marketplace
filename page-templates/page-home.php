@@ -243,7 +243,7 @@ $social_menu = me_render_social();
                               $product_attachment_url = get_stylesheet_directory_uri() . '/img/placeholder.png';
                             }
                         ?>
-                          <div class="col-md-6 col-lg-4 col-xl-3 mb-4">
+                          <div class="col-md-4 col-xl-3 mb-4">
                             <div class="card border-0 h-100">
                               <div class="card-kit-img">
                                 <div class="mrk-card-heart no-active"><?php echo do_shortcode("[yith_wcwl_add_to_wishlist]") ?></div>
