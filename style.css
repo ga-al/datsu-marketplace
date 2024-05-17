@@ -573,7 +573,9 @@ border-bottom: 1px dashed var(--bs-secondary);
   background: var(--bs-primary);
 }
 
-
+#yith-wcwl-popup-message {
+  display: none;
+}
 
 
 
