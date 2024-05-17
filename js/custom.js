@@ -494,13 +494,17 @@ if (document.querySelector('.share-buttons')) {
 })
 }
 const products = document.querySelectorAll('.products')
-const lineCards = document.querySelectorAll('.line-cards')
 
 document.querySelector('.grid-box').addEventListener('click', function() {
     console.log('grid')
     
     products.forEach(el => {
-        el.сlassList.toggle('hide')  
+        if(el.classList.contains('hide')) {
+            el.сlassList.remove('hide')  
+        } else {
+            el.classList.add('hide')
+        }
+       
     })
 })
 
