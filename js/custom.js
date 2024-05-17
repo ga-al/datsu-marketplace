@@ -40,17 +40,6 @@ jQuery(function ($) {
         console.log('no-chat')
     }
 
-    $('.grid-box').on('click', function() {
-        console.log('grid')
-        $('.grid-cards').removeClass('hide')
-        $('.line-cards').addClass('hide')
-    })
-    $('.line-box').on('click', function() {
-        console.log('line')
-        $('.line-cards').removeClass('hide')
-        $('.grid-cards').addClass('hide')
-    })
-
 
 }); // jQuery End
 
@@ -504,3 +493,25 @@ if (document.querySelector('.share-buttons')) {
     shareBtns.classList.toggle('hide')
 })
 }
+const gridCards = document.querySelectorAll('.grid-cards')
+const lineCards = document.querySelectorAll('.line-cards')
+
+document.querySelector('.grid-box').addEventListener('click', function() {
+    console.log('grid')
+    
+    gridCards.forEach(gridEl => {
+        gridEl.removeClass('hide')
+    })
+    lineCards.forEach(lineEl => {
+        lineEl.addClass('hide')
+    })
+})
+document.querySelector('.line-box').addEventListener('click', function() {
+    console.log('line')
+    gridCards.forEach(gridEl => {
+        gridEl.removeClass('hide')
+    })
+    lineCards.forEach(lineEl => {
+        lineEl.addClass('hide')
+    })
+})
