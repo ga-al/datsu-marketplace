@@ -589,6 +589,9 @@ border-bottom: 1px dashed var(--bs-secondary);
   display: none!important;
 }
 
+.wcpf-filter {
+  padding: 0 1rem 0 0;
+}
 
 
 
