@@ -593,6 +593,13 @@ border-bottom: 1px dashed var(--bs-secondary);
 .current-cat a {
   color: var(--bs-primary);
 }
+.btn-tabs-list svg {
+  fill: #c8cbe5;
+}
+.btn-tabs-list:hover svg, .btn-tabs-list.active svg {
+  fill: var(--bs-dark);
+}
+
 
 
 
