@@ -47,7 +47,7 @@ if (empty($product) || !$product->is_visible()) {
 ?>
 
 <div class="d-flex mb-5 line-cards">
-  <div class="flex-shrink-0"><img class="object-fit-contain me-4" src="<?php echo $product_attachment_url ?> ?>" alt="" style="width: 70px;"></div>
+  <div class="flex-shrink-0"><img class="object-fit-contain me-4" src="<?php echo $image; ?> ?>" alt="" style="width: 70px;"></div>
   <div class="flex-grow-1 py-0">
   <div class="row g-3">
     <div class="col-xl-8 col-lg-7">
@@ -84,7 +84,7 @@ if (empty($product) || !$product->is_visible()) {
   <div class="card border-0 h-100">
     <div class="card-kit-img">
       <div class="mrk-card-heart no-active"><?php echo do_shortcode("[yith_wcwl_add_to_wishlist]") ?></div>
-      <a href="<?php echo $product_url ?>"><img class="card-img-top" src="<?php echo $product_attachment_url ?>" alt=""></a>
+      <a href="<?php echo $product_url ?>"><img class="card-img-top" src="<?php echo $image; ?>" alt=""></a>
     </div>
     <div class="card-body d-flex flex-column h-100 px-lg-3 px-0">
       <a href="<?php echo $product_url ?>" class="card-title fw-medium text-dark fs-6 mb-4">

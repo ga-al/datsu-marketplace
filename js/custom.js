@@ -41,10 +41,12 @@ jQuery(function ($) {
     }
 
     $('.grid-box').on('click', function() {
+        console.log('grid')
         $('.grid-cards').removeClass('hide')
         $('.line-cards').addClass('hide')
     })
     $('.line-box').on('click', function() {
+        console.log('line')
         $('.line-cards').removeClass('hide')
         $('.grid-cards').addClass('hide')
     })
