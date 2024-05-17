@@ -54,16 +54,6 @@ if ( isset( $queried_object->term_id ) ) {
 							?>
 							
 							<nav class="d-flex justify-content-between align-items-center my-3">
-								<div class="nav nav-tabs orderby custom-select d-flex gap-md-5" id="nav-tab" role="tablist" >
-									<!-- СОРТИРОВКА ТОВАРОВ .me_btn_sort_producrs & data-sort & data-term_id !!! -->
-									<button data-sort="me_by_popularity" data-term_id="<?php echo $term->term_id ?>" class="nav-link active me_btn_sort_producrs" id="nav-home-tab"  data-bs-toggle="tab" data-bs-target="#nav-home" type="button" role="tab" aria-controls="nav-home" aria-selected="false" tabindex="-1">по популярности
-									</button>
-									<button data-sort="me_by_price" data-term_id="<?php echo $term->term_id ?>" class="nav-link me_btn_sort_producrs" id="nav-profile-tab"  data-bs-toggle="tab" data-bs-target="#nav-profile" type="button" role="tab" aria-controls="nav-profile" aria-selected="false" tabindex="-1" >по цене
-									</button>
-									<button data-sort="me_by_name" data-term_id="<?php echo $term->term_id ?>" class="nav-link me_btn_sort_producrs" id="nav-contact-tab"  data-bs-toggle="tab" data-bs-target="#nav-contact" type="button" role="tab" aria-controls="nav-contact" aria-selected="true" >по названию
-									</button>
-									<!-- СОРТИРОВКА ТОВАРОВ .btn_sort_producrs & data-sort & data-term_id!!! -->
-								</div>
 								<div class="btn-tabs-list d-flex gap-2">
 								<button role="tablist">
 									<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -80,7 +70,7 @@ if ( isset( $queried_object->term_id ) ) {
 							<div class="tab-content pt-4" id="nav-tabContent">
 								<div class="tab-pane fade active show" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">
 
-						<!-- Loop Products Category -->
+								<!-- Loop Products Category -->
 									<?php
 
 										if ( woocommerce_product_loop() ) {
