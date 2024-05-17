@@ -111,7 +111,7 @@ if ( isset( $queried_object->term_id ) ) {
 												while ( have_posts() ) {
 													the_post();
 													do_action( 'woocommerce_shop_loop' );
-													wc_get_template_part( 'content', 'product', 'grid' );
+													wc_get_template_part( 'content-product-grid');
 												}
 											}
 											woocommerce_product_loop_end();
