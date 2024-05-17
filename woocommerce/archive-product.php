@@ -77,7 +77,7 @@ if ( isset( $queried_object->term_id ) ) {
 							</nav>
 							<div class="tab-content pt-4" id="nav-tabContent">
 								<div class="tab-pane fade active show" id="nav-line-home" role="tabpanel" aria-labelledby="nav-line-tab">
-
+								<p>line</p>
 								<!-- Loop Products Category -->
 									<?php
 
@@ -100,7 +100,7 @@ if ( isset( $queried_object->term_id ) ) {
 									?>
 								</div>
 								<div class="tab-pane fade" id="nav-grid-home" role="tabpanel" aria-labelledby="nav-grid-tab">
-
+									<p>grid</p>
 								<!-- Loop Products Category -->
 									<?php
 
