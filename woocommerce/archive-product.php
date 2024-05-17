@@ -54,6 +54,7 @@ if ( isset( $queried_object->term_id ) ) {
 							?>
 							
 							<nav class="d-flex justify-content-between align-items-center my-3">
+								<div></div>
 								<div class="btn-tabs-list d-flex gap-2">
 								<button role="tablist">
 									<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
