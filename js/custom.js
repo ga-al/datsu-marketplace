@@ -500,18 +500,18 @@ document.querySelector('.grid-box').addEventListener('click', function() {
     console.log('grid')
     
     gridCards.forEach(gridEl => {
-        gridEl.removeClass('hide')
+        gridEl.сlassList.remove('hide')
     })
     lineCards.forEach(lineEl => {
-        lineEl.addClass('hide')
+        lineEl.classList.add('hide')
     })
 })
 document.querySelector('.line-box').addEventListener('click', function() {
     console.log('line')
     gridCards.forEach(gridEl => {
-        gridEl.removeClass('hide')
+        gridEl.classList.add('hide')
     })
     lineCards.forEach(lineEl => {
-        lineEl.addClass('hide')
+        lineEl.classList.remove('hide')
     })
 })
