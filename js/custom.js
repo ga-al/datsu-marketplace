@@ -493,25 +493,21 @@ if (document.querySelector('.share-buttons')) {
     shareBtns.classList.toggle('hide')
 })
 }
-const gridCards = document.querySelectorAll('.grid-cards')
+const products = document.querySelectorAll('.products')
 const lineCards = document.querySelectorAll('.line-cards')
 
 document.querySelector('.grid-box').addEventListener('click', function() {
     console.log('grid')
     
-    gridCards.forEach(gridEl => {
-        gridEl.сlassList.remove('hide')
-    })
-    lineCards.forEach(lineEl => {
-        lineEl.classList.add('hide')
+    products.forEach(el => {
+        el.сlassList.toggle('hide')  
     })
 })
+
 document.querySelector('.line-box').addEventListener('click', function() {
     console.log('line')
-    gridCards.forEach(gridEl => {
-        gridEl.classList.add('hide')
-    })
-    lineCards.forEach(lineEl => {
-        lineEl.classList.remove('hide')
+    
+    products.forEach(el => {
+        el.сlassList.toggle('hide')  
     })
 })
