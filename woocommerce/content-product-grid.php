@@ -3,7 +3,7 @@
 /**
  * The template for displaying product content within loops
  *
- * This template can be overridden by copying it to yourtheme/woocommerce/content-product-grid.php.
+ * This template can be overridden by copying it to yourtheme/woocommerce/content-product.php.
  *
  * HOWEVER, on occasion WooCommerce will need to update template files and you
  * (the theme developer) will need to copy the new files to your theme to
