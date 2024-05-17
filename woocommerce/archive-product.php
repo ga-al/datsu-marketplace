@@ -108,14 +108,16 @@ if ( isset( $queried_object->term_id ) ) {
 								?>
 							</div>
 						</div>
-						<?php
-							if ( isset($term_thumbnail_id) && $term_thumbnail_id ) {
-								$term_thumbnail_url = wp_get_attachment_url( $term_thumbnail_id );
-								?>
-									<img src="<?= $term_thumbnail_url ?>" class="img-fluid" alt="...">
-								<?php
-							}
-						?>
+						<div>
+							<?php
+								if ( isset($term_thumbnail_id) && $term_thumbnail_id ) {
+									$term_thumbnail_url = wp_get_attachment_url( $term_thumbnail_id );
+									?>
+										<img src="<?= $term_thumbnail_url ?>" class="img-fluid" alt="...">
+									<?php
+								}
+							?>
+						</div>
 							
 					</div>
 				</div>
