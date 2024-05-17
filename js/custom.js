@@ -493,17 +493,3 @@ if (document.querySelector('.share-buttons')) {
     shareBtns.classList.toggle('hide')
 })
 }
-const blockCards = document.querySelectorAll('.block-cards')
-
-document.querySelector('.grid-box').addEventListener('click', function() {
-    console.log('grid')
-    
-    blockCards.forEach(el => {
-        if(el.classList.contains('hide')) {
-            el.сlassList.remove('hide')  
-        } else {
-            el.classList.add('hide')
-        }
-       
-    })
-})
