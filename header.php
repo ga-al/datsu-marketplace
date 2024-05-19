@@ -135,7 +135,7 @@
                   </div>
                 </div>
 
-                <div class="header-actions d-md-flex d-none gap-4 " style="margin-right: -7px;">
+                <div class="header-actions d-md-flex d-none gap-4 ">
 
                   <!-- Top Nav Widget -->
                   <?php if (is_active_sidebar('top-nav')) : ?>
