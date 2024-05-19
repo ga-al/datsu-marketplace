@@ -424,157 +424,155 @@ $total_count = count( $gallery_attachment_ids );
 				</div>
 
 				<!-- Swiper -->
-				<div class="swiper swiper-general my-5">
-					<div class="d-flex justify-content-between align-items-center">
-						<h2 class="fs-2 fw-bold mb-4">Покупают вместе</h2>
-						<div>
-							<div class="swiper-button-prev uploaded-in-prev text-white rounded"></div>
-							<div class="swiper-button-next uploaded-in-next text-white rounded"></div>
-						</div>
-					</div>
-
-					<?php
-						$together_query = new WC_Product_Query( array(
-							'limit' => 10,
-							'product_category_id' => $terms_id,
-							'orderby' => 'date',
-							'order' => 'DESC',
-							'exclude' => [$product_id],
-							'return' => 'objects',
-						) );
-						$together = $together_query->get_products();
-					?>
-					<?php
-
-					if ( $together ) {
-
-					?>
-
-					<div class="swiper-wrapper">
-
+				<h2 class="fs-2 fw-bold mb-4">Покупают вместе</h2>
+				<div class="my-5">
+					<div class="swiper swiper-general">
+				
 						<?php
-							foreach ($together as $key => $together_product) {
+							$together_query = new WC_Product_Query( array(
+								'limit' => 10,
+								'product_category_id' => $terms_id,
+								'orderby' => 'date',
+								'order' => 'DESC',
+								'exclude' => [$product_id],
+								'return' => 'objects',
+							) );
+							$together = $together_query->get_products();
+						?>
+						<?php
 
-								$together_product_id = $together_product->get_id();
-								$together_product_url = get_permalink( $together_product_id );
-								$together_product_sku = $together_product->get_sku();
-								$together_product_name = $together_product->get_name();
-								$together_product_slug = $together_product->get_slug();
-								$together_product_price = $together_product->get_price();
-								$together_product_sale_price = $together_product->get_sale_price();
-								$together_product_regular_price = $together_product->get_regular_price();
-								$together_product_link = get_permalink($together_product);
-								$together_product_attributes = $together_product->get_attributes();
-								$together_attachment_url = wp_get_attachment_image_url( get_post_thumbnail_id( $product_id ), 'medium' );
-								if ( !$together_attachment_url ) {
-									$together_attachment_url = get_stylesheet_directory_uri() . '/img/placeholder.png';
-								}
+						if ( $together ) {
 
-								?>
-									<div class="swiper-slide">
-										<div class="card border-0">
-											<div class="card-kit-img">
-												<div class="swiper swiper-children">
-													<div class="swiper-wrapper">
-														<div class="swiper-slide">
-															<!-- <div class="position-absolute start-0 top-0 mt-2 ms-2 text-start">
-																<div class="mrk-hit">хит</div>
-																<div class="mrk-new">новинка</div>
-															</div> -->
-															<img class="card-img-top" src="<?php echo $together_attachment_url ?>" alt="">
+						?>
+
+						<div class="swiper-wrapper">
+
+							<?php
+								foreach ($together as $key => $together_product) {
+
+									$together_product_id = $together_product->get_id();
+									$together_product_url = get_permalink( $together_product_id );
+									$together_product_sku = $together_product->get_sku();
+									$together_product_name = $together_product->get_name();
+									$together_product_slug = $together_product->get_slug();
+									$together_product_price = $together_product->get_price();
+									$together_product_sale_price = $together_product->get_sale_price();
+									$together_product_regular_price = $together_product->get_regular_price();
+									$together_product_link = get_permalink($together_product);
+									$together_product_attributes = $together_product->get_attributes();
+									$together_attachment_url = wp_get_attachment_image_url( get_post_thumbnail_id( $product_id ), 'medium' );
+									if ( !$together_attachment_url ) {
+										$together_attachment_url = get_stylesheet_directory_uri() . '/img/placeholder.png';
+									}
+
+									?>
+										<div class="swiper-slide">
+											<div class="card border-0">
+												<div class="card-kit-img">
+													<div class="swiper swiper-children">
+														<div class="swiper-wrapper">
+															<div class="swiper-slide">
+																<!-- <div class="position-absolute start-0 top-0 mt-2 ms-2 text-start">
+																	<div class="mrk-hit">хит</div>
+																	<div class="mrk-new">новинка</div>
+																</div> -->
+																<img class="card-img-top" src="<?php echo $together_attachment_url ?>" alt="">
+															</div>
+															<div class="swiper-slide">
+																<!-- <div class="position-absolute start-0 top-0 mt-2 ms-2 text-start">
+																	<div class="mrk-hit">хит</div>
+																	<div class="mrk-new">новинка</div>
+																</div> -->
+																<img class="card-img-top" src="<?php echo $together_attachment_url ?>" alt="">
+															</div>
+															<div class="swiper-slide">
+																<!-- <div class="position-absolute start-0 top-0 mt-2 ms-2 text-start">
+																	<div class="mrk-hit">хит</div>
+																	<div class="mrk-new">новинка</div>
+																</div> -->
+																<img class="card-img-top" src="<?php echo $together_attachment_url ?>" alt="">
+															</div>
+															<div class="swiper-slide">
+																<!-- <div class="position-absolute start-0 top-0 mt-2 ms-2 text-start">
+																	<div class="mrk-hit">хит</div>
+																	<div class="mrk-new">новинка</div>
+																</div> -->
+																<img class="card-img-top" src="<?php echo $together_attachment_url ?>" alt="">
+															</div>
 														</div>
-														<div class="swiper-slide">
-															<!-- <div class="position-absolute start-0 top-0 mt-2 ms-2 text-start">
-																<div class="mrk-hit">хит</div>
-																<div class="mrk-new">новинка</div>
-															</div> -->
-															<img class="card-img-top" src="<?php echo $together_attachment_url ?>" alt="">
-														</div>
-														<div class="swiper-slide">
-															<!-- <div class="position-absolute start-0 top-0 mt-2 ms-2 text-start">
-																<div class="mrk-hit">хит</div>
-																<div class="mrk-new">новинка</div>
-															</div> -->
-															<img class="card-img-top" src="<?php echo $together_attachment_url ?>" alt="">
-														</div>
-														<div class="swiper-slide">
-															<!-- <div class="position-absolute start-0 top-0 mt-2 ms-2 text-start">
-																<div class="mrk-hit">хит</div>
-																<div class="mrk-new">новинка</div>
-															</div> -->
-															<img class="card-img-top" src="<?php echo $together_attachment_url ?>" alt="">
-														</div>
+														<div class="swiper-button-next next-btn text-white rounded"></div>
+														<div class="swiper-button-prev prev-btn text-white rounded"></div>
+														<div class="swiper-pagination"></div>
 													</div>
-													<div class="swiper-button-next next-btn text-white rounded"></div>
-													<div class="swiper-button-prev prev-btn text-white rounded"></div>
-													<div class="swiper-pagination"></div>
 												</div>
-											</div>
-											<div class="card-body px-0">
-												<div class="d-flex align-items-end flex-wrap mt-auto mb-2">
+												<div class="card-body px-0">
+													<div class="d-flex align-items-end flex-wrap mt-auto mb-2">
 
-													<?php if ( $together_product_sale_price ) { ?>
-														<h3 class="text-danger text-nowrap d-inline-block mb-0" style="font-size: 2rem;font-weight: 800;"><?php echo $together_product_sale_price . ' ' . get_woocommerce_currency_symbol(); ?></h3>
-														<span class="text-decoration-line-through text-secondary fs-4 fw-medium ps-2"><?php echo $together_product_regular_price . ' ' . get_woocommerce_currency_symbol(); ?></span>
-														<span class="text-danger fw-bold pb-1 ps-2" style="font-size: 1rem;">
-															<?php
-																echo round(100 - ($together_product_sale_price / $together_product_regular_price * 100));
-															?>
-															%
-														</span>
-													<?php } else { ?>
-														<h3 class="text-danger text-nowrap d-inline-block mb-0" style="font-size: 2rem;font-weight: 800;"><?php echo $together_product_regular_price . ' ' . get_woocommerce_currency_symbol(); ?></h3>
-													<?php } ?>
+														<?php if ( $together_product_sale_price ) { ?>
+															<h3 class="text-danger text-nowrap d-inline-block mb-0" style="font-size: 2rem;font-weight: 800;"><?php echo $together_product_sale_price . ' ' . get_woocommerce_currency_symbol(); ?></h3>
+															<span class="text-decoration-line-through text-secondary fs-4 fw-medium ps-2"><?php echo $together_product_regular_price . ' ' . get_woocommerce_currency_symbol(); ?></span>
+															<span class="text-danger fw-bold pb-1 ps-2" style="font-size: 1rem;">
+																<?php
+																	echo round(100 - ($together_product_sale_price / $together_product_regular_price * 100));
+																?>
+																%
+															</span>
+														<?php } else { ?>
+															<h3 class="text-danger text-nowrap d-inline-block mb-0" style="font-size: 2rem;font-weight: 800;"><?php echo $together_product_regular_price . ' ' . get_woocommerce_currency_symbol(); ?></h3>
+														<?php } ?>
 
 
-												</div>
-												<p class="card-title fw-medium text-dark text-start fs-6 mb-3">
-													<a href="<?php echo get_permalink($together_product_id); ?>"><?php echo $together_product_name; ?></a>
-												</p>
-												<div class="mrk-bonus text-start">
-													<span class="text-primary py-1 px-2 me-2">+75 баллов</span>
-													<p class="d-inline-block mb-0">4.5
-														<svg class="mb-1" width="16" height="17" viewBox="0 0 16 17" fill="none" xmlns="http://www.w3.org/2000/svg">
-															<g clip-path="url(#clip0_1152_2371)">
-															<path d="M5.35399 5.619L7.53799 1.292C7.57993 1.20495 7.64547 1.13143 7.72715 1.07981C7.80883 1.02819 7.90336 1.00053 7.99999 1C8.18299 1 8.36599 1.097 8.46499 1.292L10.649 5.619L15.547 6.315C15.6691 6.33419 15.7808 6.39491 15.8633 6.48691C15.9459 6.57891 15.9941 6.69655 16 6.82C16.007 6.90219 15.9953 6.98489 15.9659 7.06194C15.9364 7.13899 15.89 7.2084 15.83 7.265L12.307 10.621L13.137 15.351C13.215 15.794 12.777 16.141 12.391 15.943L7.99999 13.687L3.61099 15.943C3.56508 15.9668 3.51587 15.9837 3.46499 15.993C3.12299 16.053 2.79699 15.739 2.86499 15.351L3.69499 10.621L0.172988 7.265C0.118233 7.2132 0.0747109 7.15069 0.0451227 7.08137C0.0155346 7.01204 0.000511966 6.93737 0.00098751 6.862C0.00103952 6.75544 0.0304489 6.65095 0.0859875 6.56C0.125386 6.49407 0.179086 6.43783 0.243125 6.39542C0.307164 6.35302 0.379908 6.32553 0.455988 6.315L5.35399 5.619ZM7.99999 12.527C8.08071 12.5267 8.16031 12.5459 8.23199 12.583L11.918 14.477L11.224 10.52C11.2076 10.429 11.2138 10.3354 11.2421 10.2473C11.2703 10.1593 11.3197 10.0795 11.386 10.015L14.293 7.245L10.241 6.669C10.1571 6.65633 10.0775 6.62351 10.0091 6.57335C9.94061 6.52319 9.88534 6.45719 9.84799 6.381L8.00099 2.723L7.99999 2.726V12.526V12.527Z" fill="#FFA800"/>
-															</g>
-															<defs>
-															<clipPath id="clip0_1152_2371">
-															<rect width="16" height="16" fill="white" transform="translate(0 0.5)"/>
-															</clipPath>
-															</defs>
-														</svg>
+													</div>
+													<p class="card-title fw-medium text-dark text-start fs-6 mb-3">
+														<a href="<?php echo get_permalink($together_product_id); ?>"><?php echo $together_product_name; ?></a>
 													</p>
+													<div class="mrk-bonus text-start">
+														<span class="text-primary py-1 px-2 me-2">+75 баллов</span>
+														<p class="d-inline-block mb-0">4.5
+															<svg class="mb-1" width="16" height="17" viewBox="0 0 16 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+																<g clip-path="url(#clip0_1152_2371)">
+																<path d="M5.35399 5.619L7.53799 1.292C7.57993 1.20495 7.64547 1.13143 7.72715 1.07981C7.80883 1.02819 7.90336 1.00053 7.99999 1C8.18299 1 8.36599 1.097 8.46499 1.292L10.649 5.619L15.547 6.315C15.6691 6.33419 15.7808 6.39491 15.8633 6.48691C15.9459 6.57891 15.9941 6.69655 16 6.82C16.007 6.90219 15.9953 6.98489 15.9659 7.06194C15.9364 7.13899 15.89 7.2084 15.83 7.265L12.307 10.621L13.137 15.351C13.215 15.794 12.777 16.141 12.391 15.943L7.99999 13.687L3.61099 15.943C3.56508 15.9668 3.51587 15.9837 3.46499 15.993C3.12299 16.053 2.79699 15.739 2.86499 15.351L3.69499 10.621L0.172988 7.265C0.118233 7.2132 0.0747109 7.15069 0.0451227 7.08137C0.0155346 7.01204 0.000511966 6.93737 0.00098751 6.862C0.00103952 6.75544 0.0304489 6.65095 0.0859875 6.56C0.125386 6.49407 0.179086 6.43783 0.243125 6.39542C0.307164 6.35302 0.379908 6.32553 0.455988 6.315L5.35399 5.619ZM7.99999 12.527C8.08071 12.5267 8.16031 12.5459 8.23199 12.583L11.918 14.477L11.224 10.52C11.2076 10.429 11.2138 10.3354 11.2421 10.2473C11.2703 10.1593 11.3197 10.0795 11.386 10.015L14.293 7.245L10.241 6.669C10.1571 6.65633 10.0775 6.62351 10.0091 6.57335C9.94061 6.52319 9.88534 6.45719 9.84799 6.381L8.00099 2.723L7.99999 2.726V12.526V12.527Z" fill="#FFA800"/>
+																</g>
+																<defs>
+																<clipPath id="clip0_1152_2371">
+																<rect width="16" height="16" fill="white" transform="translate(0 0.5)"/>
+																</clipPath>
+																</defs>
+															</svg>
+														</p>
+													</div>
 												</div>
-											</div>
-											<div class="card-footer border-0 p-0 mt-auto">
-												<div class="mrk-card-quantity-kits">
-												<?php
-													$me_add_to_cart = [
-														"classes" => "btn btn-primary btn-order-kits d-flex justify-content-center w-100 ",
-														"product_title" => $together_product_name,
-														"product_id" => $together_product_id,
-														"product_sku" => $together_product_sku,
-													];
-													get_template_part( 'elements/button-add-to-cart', '', $me_add_to_cart );
-												?>
+												<div class="card-footer border-0 p-0 mt-auto">
+													<div class="mrk-card-quantity-kits">
+													<?php
+														$me_add_to_cart = [
+															"classes" => "btn btn-primary btn-order-kits d-flex justify-content-center w-100 ",
+															"product_title" => $together_product_name,
+															"product_id" => $together_product_id,
+															"product_sku" => $together_product_sku,
+														];
+														get_template_part( 'elements/button-add-to-cart', '', $me_add_to_cart );
+													?>
+													</div>
 												</div>
 											</div>
 										</div>
-									</div>
-								<?php
+									<?php
+								}
+							?>
+
+
+						</div>
+
+						<?php
 							}
+							wp_reset_postdata();
+
 						?>
 
-
 					</div>
-
-					<?php
-						}
-						wp_reset_postdata();
-
-					?>
-
+					<div class="swiper-button-prev uploaded-in-prev"></div>
+					<div class="swiper-button-next uploaded-in-next"></div>
 				</div>
 				<!-- <div class="swiper swiper-general my-5">
 					<div class="d-flex justify-content-between align-items-center">
