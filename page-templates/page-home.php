@@ -238,7 +238,7 @@ $social_menu = me_render_social();
                             $product_regular_price = $product->get_regular_price();
                             $product_link = get_permalink($product);
                             $product_attributes = $product->get_attributes();
-                            $product_attachment_url = wp_get_attachment_url( $product_id, 'thumb' );
+                            $product_attachment_url = wp_get_attachment_image_url( get_post_thumbnail_id( $product_id ), 'medium' );
                             if ( !$product_attachment_url ) {
                               $product_attachment_url = get_stylesheet_directory_uri() . '/img/placeholder.png';
                             }

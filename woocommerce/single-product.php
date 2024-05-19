@@ -465,7 +465,7 @@ $total_count = count( $gallery_attachment_ids );
 								$together_product_regular_price = $together_product->get_regular_price();
 								$together_product_link = get_permalink($together_product);
 								$together_product_attributes = $together_product->get_attributes();
-								$together_attachment_url = wp_get_attachment_url( $together_product_id, 'thumb' );
+								$together_attachment_url = wp_get_attachment_image_url( get_post_thumbnail_id( $product_id ), 'medium' );
 								if ( !$together_attachment_url ) {
 									$together_attachment_url = get_stylesheet_directory_uri() . '/img/placeholder.png';
 								}
