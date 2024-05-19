@@ -1560,4 +1560,8 @@ body .modal .carousel-control-next, body .modal  .carousel-control-prev {
   .mrk-card-img-descript {
     max-width: 80px!important;
   }
+  .products .card {
+    max-width: 290px;
+    margin: 0 auto;
+  }
 }
