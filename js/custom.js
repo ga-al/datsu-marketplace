@@ -244,12 +244,18 @@ if (document.querySelectorAll('.slider').length) {
                             sliderItem.classList.add('slider-horizontal')
                             sliderThumbs.wrapperEl.classList.remove('slider-grid')
                             masonrySliderDelete()
+                            if(youtubes) {
+                                removeYoutubes(youtubes)
+                            }
                         } else if (currentSlide.classList.contains('slider-vertic')) {
                             // sliderThumbs.changeDirection(getDirection())
                             sliderItem.classList.remove('slider-horizontal')
                             sliderItem.classList.add('slider-vertical')
                             sliderThumbs.wrapperEl.classList.add('slider-grid')
                             masonrySlider()
+                            if(youtubes) {
+                                addYoutubes(youtubes)
+                            }
                         }
                         
                         // if (currentSlide.classList.contains('slider-vertic')) {
