@@ -425,7 +425,7 @@ $total_count = count( $gallery_attachment_ids );
 
 				<!-- Swiper -->
 				<h2 class="fs-2 fw-bold mb-4">Покупают вместе</h2>
-				<div class="my-5 posititon-relative">
+				<div class="my-5 position-relative">
 					<div class="swiper swiper-general">
 				
 						<?php
