@@ -83,7 +83,7 @@ $total_count = count( $gallery_attachment_ids );
 
 				<div class="row">
 					<!-- слайдер с табами изображениями - НАЧАЛО -->
-					<div class="col-xl-7">
+					<div class="col-xxl-7 col-lg-6">
 						<div class="row justify-content-xl-start justify-content-center">
 							<?php if ( $product_video) { ?> 
 								<div class="slider slider-horizontal">
@@ -216,7 +216,7 @@ $total_count = count( $gallery_attachment_ids );
 							</div>
 						</div>
 					</div>
-					<div class="col-xl-5 mt-xl-0 mt-5">
+					<div class="col-xxl-5 col-lg-6 mt-xl-0 mt-5">
 						<h1 class="fs-1 fw-normal mt-md-0 mt-4"><?php echo $product_name; ?> </h1>
 						<?php woocommerce_breadcrumb(); ?>
 						
