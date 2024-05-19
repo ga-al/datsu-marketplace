@@ -40,7 +40,7 @@ $social_menu = me_render_social();
                         <h1 class="d-inline-block text-uppercase text-primary fw-bold">все для стеклянных козырьков</h1>
                         <a class="btn btn-otline-primary d-flex align-items-center justify-content-center gap-2 text-nowrap mt-2" href="/shop/" type="button">
                           Смотреть готовые решения
-                        </ф>
+                        </a>
                       </div>
                       <div class="mrk-social position-absolute">
 

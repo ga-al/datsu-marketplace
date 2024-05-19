@@ -1394,6 +1394,9 @@ body .modal .carousel-control-next, body .modal  .carousel-control-prev {
 @media (min-width: 992px) {
   .site-main {
     padding-top: 1rem !important;
+    margin-top: 20px;
+  }
+  .home .site-main {
     margin-top: 48px;
   }
   
