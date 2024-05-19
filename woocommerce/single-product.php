@@ -83,7 +83,7 @@ $total_count = count( $gallery_attachment_ids );
 
 				<div class="row">
 					<!-- слайдер с табами изображениями - НАЧАЛО -->
-					<div class="col-xxl-7 col-lg-6">
+					<div class="col-xxl-7 col-xl-6 col-md-8">
 						<div class="row justify-content-xl-start justify-content-center">
 							<?php if ( $product_video) { ?> 
 								<div class="slider slider-horizontal">
@@ -216,7 +216,7 @@ $total_count = count( $gallery_attachment_ids );
 							</div>
 						</div>
 					</div>
-					<div class="col-xxl-5 col-lg-6 mt-xl-0 mt-5">
+					<div class="col-xxl-5 col-xl-6 col-md-4 mt-xl-0 mt-5">
 						<h1 class="fs-1 fw-normal mt-md-0 mt-4"><?php echo $product_name; ?> </h1>
 						<?php woocommerce_breadcrumb(); ?>
 						
@@ -257,7 +257,7 @@ $total_count = count( $gallery_attachment_ids );
 								<div class="col-12">
 									<div class="row align-items-center mx-auto w-100 gap-2">
 										<div class="col px-0">
-											<div class="quantity quantity-product-card">
+											<div class="quantity quantity quantity-product-card">
 												<budton type="button" class="minus input-group-text flex-grow-1 justify-content-center">&minus;</budton><label class="screen-reader-text" for="quantity_661bd21d11c6d">Количество товара blockly is a ROS package</label>
 												<input type="number" id="quantity_661bd21d11c6d" class="input-text qty text flex-grow-1" name="cart[9778d5d219c5080b9a6a17bef029331c][qty]" value="1" aria-label="Количество товара" size="4" min="0" max="" step="1" placeholder="" inputmode="numeric" autocomplete="off">
 												<button type="button" class="plus input-group-text flex-grow-1 justify-content-center">&plus;</button>
@@ -284,7 +284,7 @@ $total_count = count( $gallery_attachment_ids );
 						<div class="row">
 							<div class="col-12">
 								<div class="d-flex pt-3">
-									<div class="mrk-services d-flex justify-content-between w-100">
+									<div class="mrk-services d-flex justify-content-xl-between flex-wrap gap-2 w-100">
 										<div><a href="/oplata/" role="button">Условия оплаты</a></div>
 										<div><a href="/dostavka/" role="button">Доставка</a></div>
 										<div><a href="/vozvrat/" role="button">Возврат</a></div>
