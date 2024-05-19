@@ -44,6 +44,9 @@ input[type="number"]::-webkit-outer-spin-button {
     -webkit-appearance: none;
     margin: 0;
 }
+#page {
+  overflow-x: hidden;
+}
 .form-control {
     box-sizing: border-box;
     height: 44px;
@@ -561,6 +564,7 @@ border-bottom: 1px dashed var(--bs-secondary);
   display: block;
   margin: 0 auto;
   max-height: 385px;
+  object-fit: contain;
 }
 .nav-tabs .nav-link.active, .nav-tabs .nav-item.show .nav-link {
   border: none;
@@ -1533,6 +1537,9 @@ body .modal .carousel-control-next, body .modal  .carousel-control-prev {
     width: 100%;
   }
   .thumbnail {
+    padding: 0;
+  }
+  .wcpf-filter {
     padding: 0;
   }
 
