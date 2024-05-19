@@ -219,7 +219,7 @@ $social_menu = me_render_social();
 
                         <?php
                           $random_query = new WC_Product_Query( array(
-                            'limit' => 3,
+                            'limit' => 4,
                             'product_category_id' => $term_id,
                             'orderby' => 'rand',
                             'return' => 'objects',
