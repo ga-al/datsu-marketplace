@@ -50,10 +50,10 @@ if (empty($product) || !$product->is_visible()) {
   <div class="card border-0 h-100">
     <div class="card-kit-img">
       <div class="mrk-card-heart no-active"><?php echo do_shortcode("[yith_wcwl_add_to_wishlist]") ?></div>
-      <a href="<?php echo $product_url ?>"><img class="card-img-top" src="<?php echo $image; ?>" alt=""></a>
+      <a href="<?php echo $product_link; ?>"><img class="card-img-top" src="<?php echo $image; ?>" alt=""></a>
     </div>
     <div class="card-body d-flex flex-column h-100 px-lg-3 px-0">
-      <a href="<?php echo $product_url ?>" class="card-title fw-medium text-dark fs-6 mb-4">
+      <a href="<?php echo $product_link; ?>" class="card-title fw-medium text-dark fs-6 mb-4">
       <?php echo $product_name ?>
       </a>
       <div class="mt-auto">
