@@ -621,8 +621,11 @@ border-bottom: 1px dashed var(--bs-secondary);
   position: absolute;
   right: 0;
 }
+.wishlist_table.mobile li .additional-info-wrapper .product-remove .fa-trash:before {
+  color: var(--bs-danger-rbk);
+}
 .product-add-to-cart a {
-  padding: 7px 1.875rem;
+  padding: 5px 1.875rem;
 }
 .wcpf-field-button .wcpf-button:hover, .product-add-to-cart a:hover {
   background: var(--bs-primary);
