@@ -1067,7 +1067,7 @@ body .modal .carousel-control-next, body .modal  .carousel-control-prev {
       min-width: 244px;
   }
   .slider.slider-vertical {
-    height: 520px;
+    height: 600px;
   }
   .slider.slider-vertical.slider-card {
     height: 660px;
