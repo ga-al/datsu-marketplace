@@ -60,7 +60,7 @@ if (empty($product) || !$product->is_visible()) {
         <span class="text-decoration-line-through fs-5 ps-2"><?php echo $product_regular_price; ?> ₽</span>
       <?php } ?>
     </div>
-    <div class="mrk-cart d-flex align-items-center justify-content-lg-end gap-2">
+    <div class="mrk-cart d-flex align-items-center justify-content-lg-end gap-2 me-2">
       <div class="mrk-cart-quantity w-75">
         <?php
           $add_to_cart = [
