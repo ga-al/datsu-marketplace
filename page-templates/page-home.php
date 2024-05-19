@@ -38,7 +38,7 @@ $social_menu = me_render_social();
                       <div class="mrk-gallery-top mx-auto position-relative"><img class="mrk-gallery-image mx-auto h-100 w-100" src="<?= esc_url(get_stylesheet_directory_uri()); ?>/img/gallery/image-1.jpg" alt="vidio-image">
                       <div class="mrk-gallery-blur mrk-bg-blur position-absolute start-0 bottom-0">
                         <h1 class="d-inline-block text-uppercase text-primary fw-bold">все для стеклянных козырьков</h1>
-                        <a class="btn btn-otline-primary d-flex align-items-center justify-content-center gap-2 text-nowrap mt-2" href="/shop/" type="button">
+                        <a class="btn btn-outline-primary d-flex align-items-center justify-content-center gap-2 text-nowrap mt-2" href="/shop/" type="button">
                           Смотреть готовые решения
                         </a>
                       </div>

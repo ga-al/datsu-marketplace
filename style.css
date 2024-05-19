@@ -246,6 +246,9 @@ a:hover {
   padding: 11px 1.875rem;
   letter-spacing: 1.2px;
 }
+.mrk-gallery .btn {
+  width: 280px;
+}
 a.btn:hover {
   opacity: 1;
 }
