@@ -212,7 +212,7 @@ a:hover {
 }
 .mrk-gallery-top, .mrk-image-top {
   width: 1039px;
-  height: calc(100vh - 134px);
+  height: calc(100vh - 154px);
   max-height: 594px;
   overflow: hidden;
 }
@@ -1469,6 +1469,9 @@ body .modal .carousel-control-next, body .modal  .carousel-control-prev {
     position: static;
     justify-content: start;
     width: 100%;
+  }
+  .thumbnail {
+    padding: 0;
   }
 
 }
