@@ -225,7 +225,7 @@ a:hover {
   height: 100%;
   margin-top: 8px;
   position: absolute;
-  bottom: 23px;
+  bottom: 30px;
   right: -50px;
   width: 190px;
   justify-content: flex-end;
@@ -542,8 +542,13 @@ border-bottom: 1px dashed var(--bs-secondary);
   color: var(--bs-dark);
 }
 
+.woocommerce-order-details {
+  position: relative;
+}
+
 .woocommerce-order-details .share-buttons { 
   right: 0; 
+  top: 74%;
 }
 
 .woocommerce-order-details button {
@@ -653,6 +658,10 @@ border-bottom: 1px dashed var(--bs-secondary);
 
 .slider.slider-horizontal {
 max-width: 743px;
+}
+
+.slider.slider-horizontal .slider__images.slider__images-cotalog {
+  min-width: 700px;
 }
 
 .slider.slider-vertical {
@@ -1086,6 +1095,10 @@ body .modal .carousel-control-next, body .modal  .carousel-control-prev {
 
   .slider__images .youtube {
       min-height: 400px;
+  }
+
+  .slider.slider-horizontal .slider__images.slider__images-cotalog {
+    min-width: 100%;
   }
 
   .slider-vertical .slider__images .swiper-slide .image-4x3 {

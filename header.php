@@ -41,7 +41,7 @@
   <?php if(is_front_page()){?>
     <div class="fixed-top bg-white">
     <?php } else { ?>
-      <div class="fixed-top bg-white pt-3"> 
+      <div class="fixed-top bg-white pt-0 pt-lg-3"> 
     <?php }?>
       <?php if(is_front_page()){?>
         <nav class="navbar navbar-expand-lg d-lg-flex d-none py-2 py-lg-0">

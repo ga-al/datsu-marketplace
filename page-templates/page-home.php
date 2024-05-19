@@ -32,7 +32,7 @@ $social_menu = me_render_social();
               <div class="row ms-lg-2 g-0">
 
                 <div class="col">
-                  <div class="card-body pt-0 px-0">
+                  <div class="card-body pt-0 pb-md-4 px-0">
 
                     <div class="mrk-gallery">
                       <div class="mrk-gallery-top mx-auto position-relative"><img class="mrk-gallery-image mx-auto h-100 w-100" src="<?= esc_url(get_stylesheet_directory_uri()); ?>/img/gallery/image-1.jpg" alt="vidio-image">
@@ -296,7 +296,7 @@ $social_menu = me_render_social();
                 if ( $key == 1 ) {
                   ?>
 
-                  <section class="pt-5 mt-4 pb-3">
+                  <section class="pt-4 mt-4 pb-3">
                     <div class="row g-3">
                       <div class="col-md-6 col-lg-3">
                         <div class="mrk-advantages">
