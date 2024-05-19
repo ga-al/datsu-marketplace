@@ -230,8 +230,8 @@ if (document.querySelectorAll('.slider').length) {
             on: {
                 slideChange: function () {
                     hideIframe()
+                    clicked = true
                     if (mediaQuery.matches) {
-                        clicked = true
                         sliderThumbs.changeDirection(getDirection())
 
                         const index_currentSlide = this.realIndex;
