@@ -222,9 +222,14 @@ a:hover {
   overflow: hidden;
 }
 .mrk-gallery-thumbs {
-  width: 1039px;
+  /* width: 1039px; */
   height: 100%;
   margin-top: 8px;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 190px;
+  justify-content: flex-end;
 }
 .mrk-gallery-thumbs img {
   width: 100%;
@@ -233,7 +238,10 @@ a:hover {
   object-fit: cover;
 }
 .thumbnail {
-    max-width: 340.5px;
+  position: relative;
+  max-height: 100px;
+  background: white;
+  padding: 5px;
 }
 .mrk-gallery .btn, .mrk-logo .btn, .mrk-cart-quantity .btn, .mrk-image-full .btn, .mrk-card-quantity-kits .btn, .mrk-card-quantity-kit .btn  {
   padding: 11px 1.875rem;
@@ -1389,15 +1397,6 @@ body .modal .carousel-control-next, body .modal  .carousel-control-prev {
     padding-top: 1rem !important;
     margin-top: 48px;
   }
-  #secondary {
-    margin-top: 1rem;
-  }
-  .mrk-gallery {
-    margin-top: -4rem;
-  }
-  .header-actions {
-    margin-right: 0;
-  }
   
 }
 @media (max-width: 1400px) {
@@ -1440,6 +1439,15 @@ body .modal .carousel-control-next, body .modal  .carousel-control-prev {
   .mrk-chat-menu ul li {
       padding: .5rem .4rem;
   }
+  #secondary {
+    margin-top: 1rem;
+  }
+  .mrk-gallery {
+    margin-top: -4rem;
+  }
+  .header-actions {
+    margin-right: 0;
+  }
 }
 @media (max-width: 768px) {
   .mrk-logo .btn {
@@ -1457,6 +1465,10 @@ body .modal .carousel-control-next, body .modal  .carousel-control-prev {
   }
   .woocommerce-order-details .share-buttons {
     top: 0;
+  }
+  .mrk-gallery-thumbs {
+    position: static;
+    justify-content: start;
   }
 }
 @media (max-width: 620px) {

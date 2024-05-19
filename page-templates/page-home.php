@@ -62,10 +62,10 @@ $social_menu = me_render_social();
                         </div> -->
                       </div>
                     </div>
-                      <div class="row thumbs mrk-gallery-thumbs mx-auto flex-nowrap gap-2">
-                        <div class="col-4 thumbnail p-0"><a class="active" href="#" data-path="<?= esc_url(get_stylesheet_directory_uri()); ?>/img/gallery/image-1.jpg"><img class="img-thumbnail border-0 p-0" src="<?= esc_url(get_stylesheet_directory_uri()); ?>/img/gallery/image-1.jpg" alt="vidio-thumb"></a></div>
-                        <div class="col-4 thumbnail p-0"><a href="#" data-path="<?= esc_url(get_stylesheet_directory_uri()); ?>/img/gallery/image-2.jpg"><img class="img-thumbnail border-0 p-0" src="<?= esc_url(get_stylesheet_directory_uri()); ?>/img/gallery/image-2.jpg" alt="vidio-thumb"></a></div>
-                        <div class="col-4 thumbnail p-0"><a href="#" data-path="<?= esc_url(get_stylesheet_directory_uri()); ?>/img/gallery/image-3.jpg"><img class="img-thumbnail border-0 p-0" src="<?= esc_url(get_stylesheet_directory_uri()); ?>/img/gallery/image-3.jpg" alt="vidio-thumb"></a></div>
+                      <div class="row thumbs mrk-gallery-thumbs flex-md-column flex-nowrap gap-2">
+                        <div class="col-4 col-md-12 thumbnail"><a class="active" href="#" data-path="<?= esc_url(get_stylesheet_directory_uri()); ?>/img/gallery/image-1.jpg"><img class="img-thumbnail border-0 p-0" src="<?= esc_url(get_stylesheet_directory_uri()); ?>/img/gallery/image-1.jpg" alt="vidio-thumb"></a></div>
+                        <div class="col-4 col-md-12 thumbnail"><a href="#" data-path="<?= esc_url(get_stylesheet_directory_uri()); ?>/img/gallery/image-2.jpg"><img class="img-thumbnail border-0 p-0" src="<?= esc_url(get_stylesheet_directory_uri()); ?>/img/gallery/image-2.jpg" alt="vidio-thumb"></a></div>
+                        <div class="col-4 col-md-12 thumbnail"><a href="#" data-path="<?= esc_url(get_stylesheet_directory_uri()); ?>/img/gallery/image-3.jpg"><img class="img-thumbnail border-0 p-0" src="<?= esc_url(get_stylesheet_directory_uri()); ?>/img/gallery/image-3.jpg" alt="vidio-thumb"></a></div>
                       </div>
                     </div>
 
