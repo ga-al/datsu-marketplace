@@ -1055,7 +1055,7 @@ body .modal .carousel-control-next, body .modal  .carousel-control-prev {
 
   .slider-vertical .slider__images .swiper-slide .image-4x3 img {
     width: 100%;
-    max-height: 640px;
+    max-height: 600px;
   }
   .slider-vertical .slider__images .swiper-slide .image-4x3, .slider-vertical .slider__images .swiper-slide {
       height: 100%;
