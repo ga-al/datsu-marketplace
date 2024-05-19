@@ -253,15 +253,9 @@ if (document.querySelectorAll('.slider').length) {
                             sliderItem.classList.add('slider-vertical')
                             sliderThumbs.wrapperEl.classList.add('slider-grid')
                             masonrySlider()
-                            // if(youtubes) {
-                            //     addYoutubes(youtubes)
-                            // }
-                        }
-
-                         if (document.querySelector('.slider-grid')) {
-                            currentSlide.mousewheel.disable()
-                        } else {
-                            currentSlide.mousewheel.enable()
+                            if(youtubes) {
+                                addYoutubes(youtubes)
+                            }
                         }
                         
                         // if (currentSlide.classList.contains('slider-vertic')) {
