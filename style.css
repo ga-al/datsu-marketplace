@@ -1107,6 +1107,10 @@ body .modal .carousel-control-next, body .modal  .carousel-control-prev {
   .slider__images.slider__images-cotalog.swiper-horizontal img {
     max-height: 590px;
   }
+  .slider-vertical .slider__images {
+    width: 76%;
+  }
+  
   /* .slider.slider-vertical {
       height: calc(100vh - 199px);
   } */
