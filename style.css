@@ -1134,8 +1134,11 @@ body .modal .carousel-control-next, body .modal  .carousel-control-prev {
 }
 @media (max-width: 1200px) {
   .slider-vertical {
-      align-items: start;
-      height: 100%;
+    align-items: start;
+    height: 100%;
+  }
+  .swiper-button-next.uploaded-in-next, .swiper-button-prev.uploaded-in-prev {
+    top: -15px;
   }
 }
 @media (max-width: 1024px) {
@@ -1318,7 +1321,7 @@ body .modal .carousel-control-next, body .modal  .carousel-control-prev {
   right: 8%;
   left: auto;
 }
-.swiper-general .swiper-button-prev.uploaded-in-prev {
+.swiper-button-prev.uploaded-in-prev {
   right: auto;
   left: 8%;
 }
