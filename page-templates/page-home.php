@@ -209,7 +209,7 @@ $social_menu = me_render_social();
                 $term_link = get_category_link($term_id);
 
                 ?>
-                  <section class="mt-5">
+                  <section class="mt-5 pb-3">
                     <div class="d-flex justify-content-between align-items-center flex-wrap">
                       <h2 class="text-primary text-uppercase w-100 fw-bold"><?php echo $term_name ?></h2>
                       <a class="fs-4 fw-medium" href="<?php echo $term_link ?>">Смотреть все</a>
@@ -296,7 +296,7 @@ $social_menu = me_render_social();
                 if ( $key == 1 ) {
                   ?>
 
-                  <section class="pt-4 pb-5">
+                  <section class="pt-5 mt-4 pb-3">
                     <div class="row g-3">
                       <div class="col-md-6 col-lg-3">
                         <div class="mrk-advantages">
@@ -325,14 +325,10 @@ $social_menu = me_render_social();
                     </div>
                   </section>
 
-
                   <?php
                 }
-
-
               }
               ?>
-
 
               <section>
                 <div class="card border-0 mb-4 position-md-absolute">
