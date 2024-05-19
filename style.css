@@ -672,9 +672,9 @@ border-bottom: 1px dashed var(--bs-secondary);
 max-width: 743px;
 }
 
-.slider.slider-horizontal .slider__images.slider__images-cotalog {
+/* .slider.slider-horizontal .slider__images.slider__images-cotalog {
   min-width: 700px;
-}
+} */
 
 .slider.slider-vertical {
   column-gap: 10px;
@@ -1125,9 +1125,9 @@ body .modal .carousel-control-next, body .modal  .carousel-control-prev {
       min-height: 400px;
   }
 
-  .slider.slider-horizontal .slider__images.slider__images-cotalog {
+  /* .slider.slider-horizontal .slider__images.slider__images-cotalog {
     min-width: 100%;
-  }
+  } */
 
   .slider-vertical .slider__images .swiper-slide .image-4x3 {
       width: auto;
