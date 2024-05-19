@@ -292,7 +292,7 @@ $total_count = count( $gallery_attachment_ids );
 								</div>
 							</div>
 						</div>
-						<div class="share-block">
+						<div class="share-block mt-2">
 							<a href="" role="button">Вопрос-ответ</a>
 							<span class="share-link position-relative ms-3">
 								<svg class="me-2" width="16" height="17" viewBox="0 0 16 17" fill="none" xmlns="http://www.w3.org/2000/svg">

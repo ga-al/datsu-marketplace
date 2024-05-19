@@ -775,7 +775,8 @@ background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns%3D'http%3A%
 
 .slider.slider-vertical .slider__images img {
   height: auto;
-  object-fit: cover;
+  /* object-fit: cover; */
+  object-fit: contain;
 }
 
 .slider.slider-vertical .slider__images .swiper-slide {
@@ -940,7 +941,7 @@ iframe {
 .fullscrin {
   position: absolute;
   top: 0;
-  right: 5px;
+  right: 8px;
   width: 24px;
   height: 24px;
   cursor: pointer;
@@ -1054,7 +1055,7 @@ body .modal .carousel-control-next, body .modal  .carousel-control-prev {
 
   .slider-vertical .slider__images .swiper-slide .image-4x3 img {
     width: 100%;
-    max-height: 651px;
+    max-height: 640px;
   }
   .slider-vertical .slider__images .swiper-slide .image-4x3, .slider-vertical .slider__images .swiper-slide {
       height: 100%;
@@ -1408,7 +1409,7 @@ body .modal .carousel-control-next, body .modal  .carousel-control-prev {
 @media (min-width: 992px) {
   .site-main {
     padding-top: 1rem !important;
-    margin-top: 20px;
+    /* margin-top: 20px; */
   }
   .home .site-main {
     margin-top: 48px;
