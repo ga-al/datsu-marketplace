@@ -39,9 +39,9 @@
 
   <header id="masthead" class="site-header">
   <?php if(is_front_page()){?>
-    <div class="fixed-top bg-white mt-3">
+    <div class="fixed-top bg-white">
     <?php } else { ?>
-      <div class="fixed-top bg-white"> 
+      <div class="fixed-top bg-white mt-3"> 
     <?php }?>
       <?php if(is_front_page()){?>
         <nav class="navbar navbar-expand-lg d-lg-flex d-none py-2 py-lg-0">
