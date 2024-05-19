@@ -216,14 +216,14 @@ $total_count = count( $gallery_attachment_ids );
 							</div>
 						</div>
 					</div>
-					<div class="col-xxl-5 col-xl-6 col-md-4 mt-xl-0 mt-5">
+					<div class="col-xxl-5 col-xl-6 col-md-4 mt-md-0 mt-5">
 						<h1 class="fs-1 fw-normal mt-md-0 mt-4"><?php echo $product_name; ?> </h1>
 						<?php woocommerce_breadcrumb(); ?>
 						
 						<div class="card card-body border-0 mt-xl-0 mt-5 px-0 bg-light">
 							<div class="row g-3 px-4">
 								<div class="col-12">
-									<div class="d-flex justify-content-md-between justify-content-start align-items-center mb-3">
+									<div class="d-flex justify-content-between align-items-center mb-3">
 
 										<h2 class="text-danger text-nowrap m-0 display-5" style="font-weight: 800;">
 											<?php
@@ -257,7 +257,7 @@ $total_count = count( $gallery_attachment_ids );
 								<div class="col-12">
 									<div class="row align-items-center mx-auto w-100 gap-2">
 										<div class="col px-0">
-											<div class="quantity quantity quantity-product-card">
+											<div class="quantity flex-nowrap quantity-product-card">
 												<budton type="button" class="minus input-group-text flex-grow-1 justify-content-center">&minus;</budton><label class="screen-reader-text" for="quantity_661bd21d11c6d">Количество товара blockly is a ROS package</label>
 												<input type="number" id="quantity_661bd21d11c6d" class="input-text qty text flex-grow-1" name="cart[9778d5d219c5080b9a6a17bef029331c][qty]" value="1" aria-label="Количество товара" size="4" min="0" max="" step="1" placeholder="" inputmode="numeric" autocomplete="off">
 												<button type="button" class="plus input-group-text flex-grow-1 justify-content-center">&plus;</button>
