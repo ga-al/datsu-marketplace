@@ -1313,18 +1313,14 @@ body .modal .carousel-control-next, body .modal  .carousel-control-prev {
 .swiper-general .swiper-slide {
   max-height: 100%;
 }
-.swiper-button-next.uploaded-in-next, .swiper-button-prev.uploaded-in-prev {
-  top: 30px;
-  margin-top: -7px;
-} 
 
 .swiper-button-next.uploaded-in-next {
-  right: 0;
+  right: 8%;
   left: auto;
 }
 .swiper-general .swiper-button-prev.uploaded-in-prev {
   right: auto;
-  left: 0;
+  left: 8%;
 }
 .swiper-button-next.uploaded-in-next::after {
   background-image: url('img/svg/arrow-right2.svg')!important;
@@ -1337,7 +1333,7 @@ body .modal .carousel-control-next, body .modal  .carousel-control-prev {
 }
 .swiper-button-next.uploaded-in-next:after,
 .swiper-button-prev.uploaded-in-prev:after {
-  background-size: 1rem;
+  background-size: 2rem;
 }
 .mrk-bonus {
   font-weight: bold;
