@@ -248,7 +248,7 @@ if (document.querySelectorAll('.slider').length) {
                             //     removeYoutubes(youtubes)
                             // }
                         } else if (currentSlide.classList.contains('slider-vertic')) {
-                            // sliderThumbs.changeDirection(getDirection())
+                            sliderThumbs.changeDirection(getDirection())
                             sliderItem.classList.remove('slider-horizontal')
                             sliderItem.classList.add('slider-vertical')
                             sliderThumbs.wrapperEl.classList.add('slider-grid')
