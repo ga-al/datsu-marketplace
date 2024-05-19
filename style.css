@@ -608,14 +608,18 @@ border-bottom: 1px dashed var(--bs-secondary);
   color: var(--bs-primary);
   letter-spacing: 1.2px;
 }
-.additional-info-wrapper {
+.wishlist_table.mobile li .additional-info-wrapper {
   position: relative;
   height: 50px;
   margin-bottom: 2rem;
 }
-.product-add-to-cart {
+.wishlist_table.mobile li .additional-info-wrapper .move-to-another-wishlist, .wishlist_table.mobile li .additional-info-wrapper .product-add-to-cart {
   position: absolute;
   left: 0;
+}
+.wishlist_table.mobile li .additional-info-wrapper .product-remove {
+  position: absolute;
+  right: 0;
 }
 .product-add-to-cart a {
   padding: 7px 1.875rem;
