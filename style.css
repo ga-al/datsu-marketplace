@@ -1218,7 +1218,7 @@ body .modal .carousel-control-next, body .modal  .carousel-control-prev {
   }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 769px) {
 .slider {
   height: auto;
   margin-right: 0;
@@ -1227,16 +1227,9 @@ body .modal .carousel-control-next, body .modal  .carousel-control-prev {
     max-height: none;
 }
 
-/* .swiper-slide-active {
-  height: auto;
-} */
-
-/* .swiper-overlay {
-  display: none;
-} */
-
 .slider__images {
   margin-bottom: 0;
+  width: 100%;
 }
 
 .slider .slider-thumb {
