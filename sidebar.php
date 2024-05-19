@@ -92,9 +92,6 @@ if (!is_active_sidebar('sidebar-1')) {
       </div>
     </div>
 
-    <br><br>
-    <br><br>
-
     <?php
 
       if ( is_archive() || is_category() || is_product_category() ) {
@@ -103,7 +100,7 @@ if (!is_active_sidebar('sidebar-1')) {
 
         ?>
 
-        <div class="offcanvas-header">
+        <div class="offcanvas-header filter-products">
           <span class="h5 offcanvas-title text-primary">Фильтр товаров</span>
         </div>
         <?php
