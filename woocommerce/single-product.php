@@ -311,11 +311,11 @@ $total_count = count( $gallery_attachment_ids );
 											
 											foreach ($shareButtons as $key => $btn) {
 												if ($btn['title'] == 'Telegram') {
-													echo `<a href="'.$btn['url'].'"><img src="'.esc_url(get_stylesheet_directory_uri()).'/img/svg/telegram.svg" alt=""></a>`;
+													echo `<a href="'.$btn['url'].'"><img src="'.bloginfo('template_url').'/img/svg/telegram.svg" alt=""></a>`;
 												} else if ($btn['title'] == 'WhatApp') {
-													echo `<a href="'.$btn['url'].'"><img src="'.esc_url(get_stylesheet_directory_uri()).'/img/svg/whatsapp.svg" alt=""></a>`;
+													echo `<a href="'.$btn['url'].'"><img src="'.bloginfo('template_url').'/img/svg/whatsapp.svg" alt=""></a>`;
 												} else if ($btn['title'] == 'Vkontakte') {
-													echo `<a href="'.$btn['url'].'"><img src="'.esc_url(get_stylesheet_directory_uri()).'/img/svg/vkontakte.svg" alt=""></a>`;
+													echo `<a href="'.$btn['url'].'"><img src="'.bloginfo('template_url').'/img/svg/vkontakte.svg" alt=""></a>`;
 												}
 												
 											}
