@@ -1440,16 +1440,17 @@ body .modal .carousel-control-next, body .modal  .carousel-control-prev {
   background: #4F628E;
 }
 
-.swiper-pagination-bullet {
+/* .swiper-pagination-bullet {
   background: #fff;
   border-radius: 0;
-}
+} */
 .swiper-pagination-bullet-active {
-  width: 16px;
-  height: 16px;
+  width: 10px;
+  height: 10px;
   box-sizing: border-box;
-  border: 4px solid #4e5d8a;
+  background: #4F628E;
   vertical-align: middle;
+  border-radius: 50%;
 }
 .swiper-general .swiper-slide img, .swiper-general .swiper-slide .iframe {
   border-radius: 0;
@@ -1459,10 +1460,7 @@ body .modal .carousel-control-next, body .modal  .carousel-control-prev {
   min-height: 42px;
   overflow: hidden;
 }
-.swiper-horizontal>.swiper-pagination-bullets, .swiper-pagination-bullets.swiper-pagination-horizontal {
-  background: rgb(0 0 0 / 24%);
-  padding: 5px;
-}
+
 
 
 
