@@ -310,13 +310,7 @@ $total_count = count( $gallery_attachment_ids );
 										if ( $shareButtons ) {
 											
 											foreach ($shareButtons as $key => $btn) {
-												if ($btn['title'] == 'Telegram') {
-													echo '<a href="'.$btn['url'].'"></a>';
-												} else if ($btn['title'] == 'WhatApp') {
-													echo '<a href="'.$btn['url'].'"></a>';
-												} else if ($btn['title'] == 'Vkontakte') {
-													echo '<a href="'.$btn['url'].'"></a>';
-												}
+												echo '<a href="'.$btn['url'].'"></a>';
 												
 											}
 										} 
