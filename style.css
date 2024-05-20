@@ -563,8 +563,9 @@ border-bottom: 1px dashed var(--bs-secondary);
 }
 
 .woocommerce-order-details .share-buttons { 
-  right: 0; 
-  top: 84%;
+  top: 74%;
+  left: 80%;
+  transform: translateX(-26%);
 }
 
 .woocommerce-order-details button {
@@ -1554,9 +1555,6 @@ body .modal .carousel-control-next, body .modal  .carousel-control-prev {
   }
   .mrk-cards-kits .card {
     max-width: 250px;
-  }
-  .woocommerce-order-details .share-buttons {
-    top: 0;
   }
   .mrk-gallery-thumbs {
     position: static;
