@@ -683,9 +683,6 @@ border-bottom: 1px dashed var(--bs-secondary);
   height: auto;
   max-height: calc(100vh - 120px);
   font-size: 18px;
-  background: #f3f4ff;
-  background-size: cover;
-  background-position: center;
   text-align: center;
 }
 
