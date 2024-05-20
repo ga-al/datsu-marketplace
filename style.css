@@ -661,9 +661,6 @@ border-bottom: 1px dashed var(--bs-secondary);
 .shop_table {
   padding: 0;
 }
-.image-one .woocommerce img, .image-one .woocommerce-page img {
-  max-height: 600px;
-}
 
 
 
