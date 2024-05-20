@@ -308,13 +308,14 @@ $total_count = count( $gallery_attachment_ids );
 									<?php
 										$shareButtons = mps_share_buttons( $product_id );
 										if ( $shareButtons ) {
+											
 											foreach ($shareButtons as $key => $btn) {
 												if ($btn['title'] == 'Telegram') {
-													echo '<a href="'.$btn['url'].'"><img src="/img/svg/telegram.svg" alt=""></a>';
+													echo `<a href="'.$btn['url'].'"><img src="'.esc_url(get_stylesheet_directory_uri()).'/img/svg/telegram.svg" alt=""></a>`;
 												} else if ($btn['title'] == 'WhatApp') {
-													echo '<a href="'.$btn['url'].'"><img src="/img/svg/whatsapp.svg" alt=""></a>';
+													echo `<a href="'.$btn['url'].'"><img src="'.esc_url(get_stylesheet_directory_uri()).'/img/svg/whatsapp.svg" alt=""></a>`;
 												} else if ($btn['title'] == 'Vkontakte') {
-													echo '<a href="'.$btn['url'].'"><img src="/img/svg/vkontakte.svg" alt=""></a>';
+													echo `<a href="'.$btn['url'].'"><img src="'.esc_url(get_stylesheet_directory_uri()).'/img/svg/vkontakte.svg" alt=""></a>`;
 												}
 												
 											}
