@@ -508,9 +508,9 @@ var mainSecondSwiper = new Swiper('.swiper-children', {
         clickable: true,
     },
 })
-// if (document.querySelector('.share-buttons')) {
-//     const shareBtns = document.querySelector('.share-buttons.hide')
-//     document.querySelector('.share-link').addEventListener('click', function() {
-//     shareBtns.classList.toggle('hide')
-// })
-// }
+if (document.querySelector('.share-buttons')) {
+    const shareBtns = document.querySelector('.share-buttons.hide')
+    document.querySelector('.share-link').addEventListener('click', function() {
+    shareBtns.classList.toggle('hide')
+})
+}

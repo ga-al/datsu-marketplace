@@ -513,13 +513,11 @@ border-bottom: 1px dashed var(--bs-secondary);
 }
 .share-buttons {
   position: absolute;
-  top: 25px;
-  right: -75px;
+  top: -16px;
+  left: 110px;
   display: flex;
   gap: 1rem;
-  padding: 20px;
-  background: #dce4ff;
-  border-radius: 5px;
+  padding: 10px;
   z-index: 10;
 }
 .share-buttons a {
@@ -527,12 +525,14 @@ border-bottom: 1px dashed var(--bs-secondary);
   width: 20px;
   height: 20px;
   background-repeat: no-repeat;
-  background-size: cover;
+  background-size: 28px;
   background-position: center;
-  padding: 5px;
-  border: 1px solid var(--bs-primary);
+  padding: 27px;
+  background-color: #f3f4ff;
+  border-radius: 12px 0 12px 0;
+  /* border: 1px solid var(--bs-primary);
   border-bottom-right-radius: 10px;
-  border-top-left-radius: 10px;
+  border-top-left-radius: 10px; */
   transition: all .25s;
 }
 .share-buttons a:nth-child(1) {
@@ -545,18 +545,18 @@ border-bottom: 1px dashed var(--bs-secondary);
   background-image: url(img/svg/vkontakte.svg);
 }   
 
-.share-buttons a:nth-child(2) {
+/* .share-buttons a:nth-child(2) {
   background-color: #279732;
   border: 1px solid #279732;
 }
 .share-buttons a:hover:nth-child(2) {
   background-color: transparent;
   border: 1px solid #279732;
-}
-.share-buttons a:hover {
+} */
+/* .share-buttons a:hover {
   background-color: transparent;
   color: var(--bs-dark);
-}
+} */
 
 .woocommerce-order-details {
   position: relative;
