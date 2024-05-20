@@ -85,7 +85,7 @@ $total_count = count( $gallery_attachment_ids );
 					<!-- слайдер с табами изображениями - НАЧАЛО -->
 					<div class="col-xxl-7 col-xl-6 col-md-8">
 						<div class="row justify-content-xl-start justify-content-center">
-							<?php if ( $gallery_attachment_ids && $product_video || $product_video) {
+							<?php if ( $gallery_attachment_ids || $product_video) {
 								foreach ($gallery_attachment_ids as $gallery_attachment_id) {
 									if ($total_count > 1) {
 									?>
