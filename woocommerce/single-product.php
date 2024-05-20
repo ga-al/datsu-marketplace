@@ -310,7 +310,7 @@ $total_count = count( $gallery_attachment_ids );
 										if ( $shareButtons ) {
 											foreach ($shareButtons as $key => $btn) {
 												echo '<a href="'.$btn['url'].'">'.$btn['title'].'</a>';
-												var_dump($btn);
+												var_dump($shareButtons);
 											}
 										} 
 									?>
