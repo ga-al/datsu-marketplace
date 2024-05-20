@@ -67,6 +67,7 @@ a:hover {
 .site-main {
     position: relative;
     margin-top: 10px;
+    padding: 1rem;
 }
 .mrk-logo {
   position: relative;

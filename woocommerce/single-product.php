@@ -81,7 +81,7 @@ $total_count = count( $gallery_attachment_ids );
 					<span class="text-secondary" style="font-size: 12px;">Код продавца: <?php echo $product_vendor_id ?></span>
 				</p> -->
 
-				<div class="row">
+				<div class="row pb-lg-5 pb-4">
 					<!-- слайдер с табами изображениями - НАЧАЛО -->
 					<div class="col-xxl-7 col-xl-6 col-lg-7">
 						<div class="row justify-content-xl-start justify-content-center">
@@ -223,7 +223,7 @@ $total_count = count( $gallery_attachment_ids );
 						</div>
 					</div>
 					<div class="col-xxl-5 col-xl-6 col-lg-5 mt-md-0 mt-5">
-						<h1 class="fs-1 fw-normal mt-md-0 mt-4"><?php echo $product_name; ?> </h1>
+						<h1 class="fs-1 fw-normal mt-lg-0 mt-4"><?php echo $product_name; ?> </h1>
 						<?php woocommerce_breadcrumb(); ?>
 						
 						<div class="card card-body border-0 mt-xl-0 mt-5 px-0 bg-light">
@@ -406,7 +406,7 @@ $total_count = count( $gallery_attachment_ids );
 					<!-- слайдер с табами изображениями -  КОНЕЦ -->
 				</div>
 				<div class="col-12 ">
-					<div class="mrk-description card card-body border-0 px-md-0 mt-5">
+					<div class="mrk-description card card-body border-0 px-md-0 pt-lg-0 pt-5 mt-5">
 						<div class="row px-md-3">
 							<div class="col-md-6 pe-md-3 px-0">
 								<h2 class="mrk-block-title text-nowrap fw-medium pb-2">Описание</h2>
