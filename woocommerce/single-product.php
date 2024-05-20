@@ -85,7 +85,7 @@ $total_count = count( $gallery_attachment_ids );
 					<!-- слайдер с табами изображениями - НАЧАЛО -->
 					<div class="col-xxl-7 col-xl-6 col-md-8">
 						<div class="row justify-content-xl-start justify-content-center">
-							<?php if ( $gallery_attachment_ids) {
+							<?php if ( $gallery_attachment_ids && $product_video || $product_video) {
 								foreach ($gallery_attachment_ids as $gallery_attachment_id) {
 									if ($total_count > 1) {
 									?>
@@ -221,9 +221,9 @@ $total_count = count( $gallery_attachment_ids );
 									</div>
 							
 								<?php
-									} else {?>
+									} else if (($total_count == 1)) {?>
 									<div class="col-12">
-										<div class="">
+										<div class="image-one">
 											<div class="image-4x3"><img src="<?= wp_get_attachment_url( $gallery_attachment_id, 'full' ); ?>" alt="image">
 												<div class="fullscrin" data-slider="0" data-bs-toggle="modal" data-bs-target="#backdrop-1" data-bs-gallery="<?= wp_get_attachment_url( $gallery_attachment_id, 'full' ); ?>" title="увеличить окно просмотра">
 													<svg class="bi bi-aspect-ratio bg-opacity-75 text-bg-secondary" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
