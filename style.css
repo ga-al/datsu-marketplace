@@ -34,7 +34,7 @@ h1 {
     font-size: clamp(1.5rem, 1.179rem + 1.607vw, 2.625rem);
 }
 h2 {
-    font-size: calc(1.24rem + 1.125vw);
+    font-size: clamp(1.25rem, 0.964rem + 1.429vw, 2.25rem);
 }
 input{
     all: unset;
@@ -229,7 +229,8 @@ a:hover {
   height: 100%;
   margin-top: 8px;
   position: absolute;
-  bottom: calc(100vh - 480px);
+  bottom: 50%;
+  margin-bottom: -82px;
   right: 0;
   width: 82px;
   justify-content: flex-end;
