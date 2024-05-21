@@ -356,6 +356,14 @@ a.btn:hover {
   bottom: 11px;
 }
 
+.woocommerce .woocommerce-ordering select {
+  border: transparent;
+}
+
+.form-select:focus, select:focus, .form-control:focus {
+  box-shadow: none;
+}
+
 .mrk-advantages {
   display: flex;
   flex-direction: column;
