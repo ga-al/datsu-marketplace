@@ -343,7 +343,17 @@ a.btn:hover {
 
 .mrk-card-heart {
   position: absolute;
-  right: 14px;
+  right: 28px;
+  bottom: -96px;
+}
+
+.mrk-cart {
+  position: relative;
+}
+
+.mrk-cart .mrk-card-heart {
+  right: 0;
+  bottom: 11px;
 }
 
 .mrk-advantages {
