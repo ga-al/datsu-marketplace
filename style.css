@@ -109,9 +109,6 @@ a:hover {
   /* background: rgba(255, 255, 255, 0.5);
   backdrop-filter: blur(3px); */
 }
-.form-blur {
-  background: rgba(255, 255, 255, .2);
-}
 .form-blur h1 {
   letter-spacing: .4px;
 }

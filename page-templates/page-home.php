@@ -341,7 +341,7 @@ $social_menu = me_render_social();
                           <div class="mrk-image-top mx-auto"><img class="mrk-form-image mx-auto h-100 w-100" src="<?= esc_url(get_stylesheet_directory_uri()); ?>/img/form-image.jpg" alt="vidio-image">
                             <div class="form-blur mrk-bg-blur position-absolute start-0 bottom-0">
                               <h1 class="d-inline-block text-uppercase text-dark fw-bold page_home_form__title">оставьте заявку, мы вам перезвоним</h1>
-                              <form id="page_home_form" class="row row-gap-3 row-gap-md-0 mt-3">
+                              <form id="page_home_form" class="row row-gap-3 row-gap-md-0 mb-3 mt-3">
                                 <div class="col-md-8">
                                   <label for="inputName" class="visually-hidden-focusable">Имя</label>
                                   <input class="form-control" type="text" id="inputName" placeholder="Имя">
