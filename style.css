@@ -337,6 +337,15 @@ a.btn:hover {
   text-align: right;
 }
 
+.card-kit-img {
+  position: relative;
+}
+
+.mrk-card-heart {
+  position: absolute;
+  right: 14px;
+}
+
 .mrk-advantages {
   display: flex;
   flex-direction: column;
@@ -660,6 +669,14 @@ border-bottom: 1px dashed var(--bs-secondary);
 .shop_table {
   padding: 0;
 }
+.nav-tabs.orderby {
+  position: absolute;
+  right: 0rem;
+  margin-top: 21px;
+}
+
+
+
 
 
 
