@@ -1590,6 +1590,10 @@ body .modal .carousel-control-next, body .modal  .carousel-control-prev {
     position: static;
     justify-content: start;
     width: 100%;
+    margin-bottom: 0;
+  }
+  .mrk-gallery-blur {
+    bottom: 115px!important;
   }
   .thumbnail {
     padding: 0;
