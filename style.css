@@ -249,6 +249,9 @@ a:hover {
   padding: 11px 1.875rem 12px;
   letter-spacing: 1.2px;
 }
+.mrk-cart-quantity .btn {
+  padding-top: 9px;
+}
 .mrk-gallery .btn {
   width: 280px;
 }
@@ -1599,7 +1602,10 @@ body .modal .carousel-control-next, body .modal  .carousel-control-prev {
   .woocommerce .woocommerce-ordering select {
     margin-left: -10px;
   }
-
+  .products .card {
+    max-width: 270px;
+    margin: 0 auto;
+  }
 }
 @media (max-width: 620px) {
   .header-actions {
@@ -1620,5 +1626,8 @@ body .modal .carousel-control-next, body .modal  .carousel-control-prev {
   .products .card {
     max-width: 290px;
     margin: 0 auto;
+  }
+  .woocommerce .woocommerce-ordering {
+    width: 200px;
   }
 }

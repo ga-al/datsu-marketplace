@@ -25,7 +25,7 @@ if (!defined('ABSPATH')) {
 
 <div class="row align-items-center mb-3">
   <!-- End in orderby.php -->
-  <div class="col-8">
+  <div class="col-8 col-md-7 col-xl-8">
     <p class="woocommerce-result-count">
       <?php
       if (1 === $total) {
