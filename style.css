@@ -1571,6 +1571,9 @@ body .modal .carousel-control-next, body .modal  .carousel-control-prev {
   .header-actions {
     margin-right: 0;
   }
+  .home .mrk-card-heart {
+    right: -62px;
+  }
 }
 @media (max-width: 769px) {
   .mrk-logo .btn {
