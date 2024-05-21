@@ -1569,7 +1569,7 @@ body .modal .carousel-control-next, body .modal  .carousel-control-prev {
     margin-right: 0;
   }
 }
-@media (max-width: 768px) {
+@media (max-width: 769px) {
   .mrk-logo .btn {
       width: 100px;
       height: 38px;
