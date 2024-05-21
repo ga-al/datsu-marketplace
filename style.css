@@ -31,7 +31,7 @@ All style editing is done via scss/_bscore_custom.scss
   border: var(--scrollbarBorder);
 } */
 h1 {
-    font-size: calc(1.60rem + 1.125vw);
+    font-size: clamp(1.5rem, 1.179rem + 1.607vw, 2.625rem);
 }
 h2 {
     font-size: calc(1.24rem + 1.125vw);
@@ -106,8 +106,8 @@ a:hover {
 }
 .mrk-bg-blur {
   padding: 40px 30px 30px;
-  background: rgba(255, 255, 255, 0.5);
-  backdrop-filter: blur(3px);
+  /* background: rgba(255, 255, 255, 0.5);
+  backdrop-filter: blur(3px); */
 }
 .form-blur {
   background: rgba(255, 255, 255, .2);
@@ -229,9 +229,9 @@ a:hover {
   height: 100%;
   margin-top: 8px;
   position: absolute;
-  bottom: 30px;
-  right: -50px;
-  width: 190px;
+  bottom: calc(100vh - 480px);
+  right: 0;
+  width: 82px;
   justify-content: flex-end;
 }
 .mrk-gallery-thumbs img {
@@ -243,7 +243,7 @@ a:hover {
 .thumbnail {
   max-height: 100px;
   background: white;
-  padding: 5px;
+  padding: 1px;
 }
 .mrk-gallery .btn, .mrk-logo .btn, .mrk-cart-quantity .btn, .mrk-image-full .btn, .mrk-card-quantity-kits .btn, .mrk-card-quantity-kit .btn  {
   padding: 11px 1.875rem 12px;
@@ -390,7 +390,7 @@ a.btn:hover {
 }
 .mrk-social {
   top: 2rem;
-  right: 10%;
+  right: 0;
   z-index: 10;
 }
 .mrk-social-item {
@@ -1519,9 +1519,6 @@ body .modal .carousel-control-next, body .modal  .carousel-control-prev {
   .cart-content-count {
     margin-left: -17px;
   }
-  .mrk-gallery-thumbs {
-    right: 0;
-  }
 }
 @media (max-width: 1300px) {
   .mrk-gallery-top, .mrk-image-top, .mrk-chat-image, .mrk-chat-gallery {
@@ -1545,6 +1542,9 @@ body .modal .carousel-control-next, body .modal  .carousel-control-prev {
   }
   .mrk-gallery-blur {
       padding: 20px 20px 20px;
+  }
+  .mrk-gallery-thumbs, .mrk-social {
+    right: 1rem;
   }
 
 }
@@ -1612,9 +1612,9 @@ body .modal .carousel-control-next, body .modal  .carousel-control-prev {
       justify-content: space-between;
       width: 100%;
   }
-  .mrk-social {
+  /* .mrk-social {
       right: 20px;
-  }
+  } */
 }
 @media (max-width: 426px) {
   .mrk-advantages {
