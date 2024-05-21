@@ -338,7 +338,7 @@ $social_menu = me_render_social();
                       <div class="card-body pt-0 px-0">
 
                         <div class="mrk-image-full">
-                          <div class="mrk-image-top mx-auto position-relative"><img class="mrk-form-image mx-auto h-100 w-100" src="<?= esc_url(get_stylesheet_directory_uri()); ?>/img/form-image.jpg" alt="vidio-image">
+                          <div class="mrk-image-top mx-auto"><img class="mrk-form-image mx-auto h-100 w-100" src="<?= esc_url(get_stylesheet_directory_uri()); ?>/img/form-image.jpg" alt="vidio-image">
                             <div class="form-blur mrk-bg-blur position-absolute start-0 bottom-0">
                               <h1 class="d-inline-block text-uppercase text-dark fw-bold page_home_form__title">оставьте заявку, мы вам перезвоним</h1>
                               <form id="page_home_form" class="row row-gap-3 row-gap-md-0 mt-3">

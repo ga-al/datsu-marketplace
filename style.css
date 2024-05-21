@@ -113,7 +113,6 @@ a:hover {
   background: rgba(255, 255, 255, .2);
 }
 .form-blur h1 {
-  font-size: 2rem;
   letter-spacing: .4px;
 }
 .navbar-toggler, .navbar-toggler:focus {
@@ -349,6 +348,10 @@ a.btn:hover {
   position: absolute;
   right: 28px;
   bottom: -88px;
+}
+
+.home .mrk-card-heart {
+  right: -6px;
 }
 
 .mrk-cart {
@@ -1611,6 +1614,9 @@ body .modal .carousel-control-next, body .modal  .carousel-control-prev {
     max-width: 270px;
     margin: 0 auto;
   }
+  .home .mrk-card-heart {
+    right: -23px;
+  }
 }
 @media (max-width: 620px) {
   .header-actions {
@@ -1640,5 +1646,8 @@ body .modal .carousel-control-next, body .modal  .carousel-control-prev {
   .mrk-cart .mrk-card-heart {
     right: 20px;
     bottom: 51px;
+  }
+  .mrk-gallery-blur {
+    padding: 20px 3px;
   }
 }
