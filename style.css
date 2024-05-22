@@ -307,7 +307,7 @@ a.btn:hover {
 }
 .mrk-cards-kits .card-kit-img {
     margin: 1rem auto 0;
-    max-width: 196px;
+    max-width: 200px;
 }
 .mrk-card-heart a {
     margin-left: 0;
@@ -348,7 +348,7 @@ a.btn:hover {
 }
 
 .home .mrk-card-heart {
-  right: -6px;
+  right: 7px;
 }
 
 .mrk-cart {
