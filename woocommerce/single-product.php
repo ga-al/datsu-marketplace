@@ -286,7 +286,7 @@ $total_count = count( $gallery_attachment_ids );
 						<div class="row">
 							<div class="col-12">
 								<div class="d-flex pt-3">
-									<div class="mrk-services d-flex justify-content-xl-between flex-wrap gap-2 w-100">
+									<div class="mrk-services d-flex justify-content-xl-start flex-wrap gap-2 w-100">
 										<div><a href="/oplata/" role="button">Условия оплаты</a></div>
 										<div><a href="/dostavka/" role="button">Доставка</a></div>
 										<div><a href="/vozvrat/" role="button">Возврат</a></div>
