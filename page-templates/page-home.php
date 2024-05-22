@@ -247,7 +247,51 @@ $social_menu = me_render_social();
                             <div class="card border-0 h-100">
                               <div class="card-kit-img">
                                 <div class="mrk-card-heart no-active"><?php echo do_shortcode("[yith_wcwl_add_to_wishlist]") ?></div>
-                                <a href="<?php echo $product_url ?>"><img class="card-img-top" src="<?php echo $product_attachment_url ?>" alt=""></a>
+                                <div class="swiper swiper-children">
+                                  <?php
+                                      $together_query = new WC_Product_Query( array(
+                                        'limit' => 5,
+                                        'product_category_id' => $term_id,
+                                        'orderby' => 'date',
+                                        'order' => 'DESC',
+                                        'exclude' => [$product_id],
+                                        'return' => 'objects',
+                                      ) );
+                                      $together = $together_query->get_products();
+                                    ?>
+                                    <?php
+
+                                    if ( $together ) {
+
+                                    ?>
+                                    <div class="swiper-wrapper">
+                                      <?php
+                                        foreach ($together as $key => $together_product) {
+
+                                          $together_attachment_url = $product_attachment_url;
+
+                                        ?>
+                                        <div class="swiper-slide">
+                                          <!-- <div class="position-absolute start-0 top-0 mt-2 ms-2 text-start">
+                                            <div class="mrk-hit">хит</div>
+                                            <div class="mrk-new">новинка</div>
+                                          </div> -->
+                                          <div class="mrk-card-heart no-active"><?php echo do_shortcode("[yith_wcwl_add_to_wishlist]") ?></div>
+                                          <img class="card-img-top" src="<?php echo $together_attachment_url ?>" alt="">
+                                        </div>
+                                        <?php
+                                          }
+                                        ?>
+                                    </div>
+                                    <?php
+                                      }
+                                      wp_reset_postdata();
+
+                                    ?>
+                                  <div class="swiper-button-next next-btn text-white rounded"></div>
+                                  <div class="swiper-button-prev prev-btn text-white rounded"></div>
+                                  <div class="swiper-pagination"></div>
+                                </div>
                               </div>
                               <div class="card-body d-flex flex-column h-100 px-lg-3 px-0">
                                 <a href="<?php echo $product_url ?>" class="card-title fw-medium text-dark fs-6 mb-4">
