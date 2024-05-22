@@ -238,55 +238,50 @@ $social_menu = me_render_social();
                             $product_regular_price = $product->get_regular_price();
                             $product_link = get_permalink($product);
                             $product_attributes = $product->get_attributes();
-                            $product_attachment_url = wp_get_attachment_image_url( get_post_thumbnail_id( $product_id ), 'medium' );
-                            if ( !$product_attachment_url ) {
-                              $product_attachment_url = get_stylesheet_directory_uri() . '/img/placeholder.png';
+
+
+
+
+                            $gallery_attachment_ids = $product->get_gallery_image_ids();
+                            $product_thumbnail_id = get_post_thumbnail_id( $product_id );
+                            if ( !$gallery_attachment_ids ) {
+                              $gallery_attachment_ids = [ $product_thumbnail_id ];
                             }
+
+
+
+
                         ?>
                           <div class="col-md-4 col-xl-3 px-lg-0">
                             <div class="card border-0 h-100 card h-100 px-lg-0 px-3">
                               <div class="card-kit-img">
                                 <div class="swiper swiper-children">
-                                  <?php
-                                      $together_query = new WC_Product_Query( array(
-                                        'limit' => 5,
-                                        'product_category_id' => $term_id,
-                                        'orderby' => 'date',
-                                        'order' => 'DESC',
-                                        'exclude' => [$product_id],
-                                        'return' => 'objects',
-                                      ) );
-                                      $together = $together_query->get_products();
-                                    ?>
+                                  <div class="swiper-wrapper">
                                     <?php
+                                      foreach ($gallery_attachment_ids as $key => $gallery_attachment_id) {
 
-                                    if ( $together ) {
+                                        $image_src = wp_get_attachment_url( $gallery_attachment_id, 'medium' );
 
-                                    ?>
-                                    <div class="swiper-wrapper">
-                                      <?php
-                                        foreach ($together as $key => $together_product) {
+                                        if ( !$image_src ) {
+                                          $image_src = get_stylesheet_directory_uri() . '/img/placeholder.png';
+                                        }
 
-                                          $together_attachment_url = $product_attachment_url;
 
-                                        ?>
+                                      ?>
                                         <div class="swiper-slide">
                                           <!-- <div class="position-absolute start-0 top-0 mt-2 ms-2 text-start">
                                             <div class="mrk-hit">хит</div>
                                             <div class="mrk-new">новинка</div>
                                           </div> -->
-                                          <div class="mrk-card-heart no-active"><?php echo do_shortcode("[yith_wcwl_add_to_wishlist]") ?></div>
-                                          <img class="card-img-top" src="<?php echo $together_attachment_url ?>" alt="">
+                                          <img class="card-img-top" src="<?php echo $image_src ?>" alt="">
                                         </div>
-                                        <?php
-                                          }
-                                        ?>
-                                    </div>
-                                    <?php
-                                      }
-                                      wp_reset_postdata();
+                                      <?php
+                                        }
+                                      ?>
+                                  </div>
 
-                                    ?>
+                                  <div class="mrk-card-heart no-active"><?php echo do_shortcode("[yith_wcwl_add_to_wishlist]") ?></div>
+
                                   <div class="swiper-button-next next-btn text-white rounded"></div>
                                   <div class="swiper-button-prev prev-btn text-white rounded"></div>
                                   <div class="swiper-pagination"></div>

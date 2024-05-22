@@ -466,10 +466,19 @@ $total_count = count( $gallery_attachment_ids );
 								$together_product_regular_price = $together_product->get_regular_price();
 								$together_product_link = get_permalink($together_product);
 								$together_product_attributes = $together_product->get_attributes();
-								$together_attachment_url = wp_get_attachment_image_url( get_post_thumbnail_id( $product_id ), 'medium' );
-								if ( !$together_attachment_url ) {
-									$together_attachment_url = get_stylesheet_directory_uri() . '/img/placeholder.png';
+								// $together_attachment_url = wp_get_attachment_image_url( get_post_thumbnail_id( $product_id ), 'medium' );
+								// if ( !$together_attachment_url ) {
+								// 	$together_attachment_url = get_stylesheet_directory_uri() . '/img/placeholder.png';
+								// }
+
+								$together_gallery_attachment_ids = $product->get_gallery_image_ids();
+
+								$together_thumbnail_id = get_post_thumbnail_id( $product_id );
+
+								if ( !$together_gallery_attachment_ids ) {
+								  $together_gallery_attachment_ids = [ $together_thumbnail_id ];
 								}
+
 
 								?>
 									<div class="swiper-slide">
@@ -477,34 +486,23 @@ $total_count = count( $gallery_attachment_ids );
 											<div class="card-kit-img">
 												<div class="swiper swiper-children">
 													<div class="swiper-wrapper">
-														<div class="swiper-slide">
-															<!-- <div class="position-absolute start-0 top-0 mt-2 ms-2 text-start">
-																<div class="mrk-hit">хит</div>
-																<div class="mrk-new">новинка</div>
-															</div> -->
-															<img class="card-img-top" src="<?php echo $together_attachment_url ?>" alt="">
-														</div>
-														<div class="swiper-slide">
-															<!-- <div class="position-absolute start-0 top-0 mt-2 ms-2 text-start">
-																<div class="mrk-hit">хит</div>
-																<div class="mrk-new">новинка</div>
-															</div> -->
-															<img class="card-img-top" src="<?php echo $together_attachment_url ?>" alt="">
-														</div>
-														<div class="swiper-slide">
-															<!-- <div class="position-absolute start-0 top-0 mt-2 ms-2 text-start">
-																<div class="mrk-hit">хит</div>
-																<div class="mrk-new">новинка</div>
-															</div> -->
-															<img class="card-img-top" src="<?php echo $together_attachment_url ?>" alt="">
-														</div>
-														<div class="swiper-slide">
-															<!-- <div class="position-absolute start-0 top-0 mt-2 ms-2 text-start">
-																<div class="mrk-hit">хит</div>
-																<div class="mrk-new">новинка</div>
-															</div> -->
-															<img class="card-img-top" src="<?php echo $together_attachment_url ?>" alt="">
-														</div>
+														<?php
+															foreach ($together_gallery_attachment_ids as $key => $gallery_attachment_id) {
+																$image_src = wp_get_attachment_url( $gallery_attachment_id, 'medium' );
+
+																if ( !$image_src ) {
+																	$image_src = get_stylesheet_directory_uri() . '/img/placeholder.png';
+																}
+														?>
+
+															<div class="swiper-slide">
+																<img class="card-img-top" src="<?php echo $image_src ?>" alt="">
+															</div>
+														<?php
+															}
+														?>
+
+
 													</div>
 													<div class="swiper-button-next next-btn text-white rounded"></div>
 													<div class="swiper-button-prev prev-btn text-white rounded"></div>
@@ -617,11 +615,17 @@ $total_count = count( $gallery_attachment_ids );
 									$similar_product_regular_price = $similar_product->get_regular_price();
 									$similar_product_link = get_permalink($similar_product);
 									$similar_product_attributes = $similar_product->get_attributes();
-									$similar_attachment_url = wp_get_attachment_image_url( get_post_thumbnail_id( $product_id ), 'medium' );
-									if ( !$similar_attachment_url ) {
-										$similar_attachment_url = get_stylesheet_directory_uri() . '/img/placeholder.png';
-									}
+									// $similar_attachment_url = wp_get_attachment_image_url( get_post_thumbnail_id( $product_id ), 'medium' );
+									// if ( !$similar_attachment_url ) {
+									// 	$similar_attachment_url = get_stylesheet_directory_uri() . '/img/placeholder.png';
+									// }
+									$$similar_gallery_attachment_ids = $product->get_gallery_image_ids();
 
+									$similar_thumbnail_id = get_post_thumbnail_id( $product_id );
+
+									if ( !$$similar_gallery_attachment_ids ) {
+									  $$similar_gallery_attachment_ids = [ $similar_thumbnail_id ];
+									}
 
 									?>
 										<div class="swiper-slide">
