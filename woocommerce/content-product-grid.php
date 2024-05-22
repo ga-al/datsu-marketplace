@@ -51,36 +51,58 @@ if (empty($product) || !$product->is_visible()) {
     <div class="card-kit-img">
       <div class="mrk-card-heart no-active"><?php echo do_shortcode("[yith_wcwl_add_to_wishlist]") ?></div>
       <div class="swiper swiper-children">
-        <div class="swiper-wrapper">
-          <div class="swiper-slide">
-            <!-- <div class="position-absolute start-0 top-0 mt-2 ms-2 text-start">
-              <div class="mrk-hit">хит</div>
-              <div class="mrk-new">новинка</div>
-            </div> -->
-            <img class="card-img-top" src="<?php echo $together_attachment_url ?>" alt="">
+        <?php
+            $together_query = new WC_Product_Query( array(
+              'limit' => 10,
+              'product_category_id' => $terms_id,
+              'orderby' => 'date',
+              'order' => 'DESC',
+              'exclude' => [$product_id],
+              'return' => 'objects',
+            ) );
+            $together = $together_query->get_products();
+          ?>
+          <?php
+
+          if ( $together ) {
+
+          ?>
+          <div class="swiper-wrapper">
+            <?php
+              foreach ($together as $key => $together_product) {
+
+                $together_product_id = $together_product->get_id();
+                $together_product_url = get_permalink( $together_product_id );
+                $together_product_sku = $together_product->get_sku();
+                $together_product_name = $together_product->get_name();
+                $together_product_slug = $together_product->get_slug();
+                $together_product_price = $together_product->get_price();
+                $together_product_sale_price = $together_product->get_sale_price();
+                $together_product_regular_price = $together_product->get_regular_price();
+                $together_product_link = get_permalink($together_product);
+                $together_product_attributes = $together_product->get_attributes();
+                $together_attachment_url = wp_get_attachment_image_url( get_post_thumbnail_id( $product_id ), 'medium' );
+                if ( !$together_attachment_url ) {
+                  $together_attachment_url = get_stylesheet_directory_uri() . '/img/placeholder.png';
+                }
+
+							?>
+              <div class="swiper-slide">
+                <!-- <div class="position-absolute start-0 top-0 mt-2 ms-2 text-start">
+                  <div class="mrk-hit">хит</div>
+                  <div class="mrk-new">новинка</div>
+                </div> -->
+                <img class="card-img-top" src="<?php echo $together_attachment_url ?>" alt="">
+              </div>
+              <?php
+								}
+							?>
           </div>
-          <div class="swiper-slide">
-            <!-- <div class="position-absolute start-0 top-0 mt-2 ms-2 text-start">
-              <div class="mrk-hit">хит</div>
-              <div class="mrk-new">новинка</div>
-            </div> -->
-            <img class="card-img-top" src="<?php echo $together_attachment_url ?>" alt="">
-          </div>
-          <div class="swiper-slide">
-            <!-- <div class="position-absolute start-0 top-0 mt-2 ms-2 text-start">
-              <div class="mrk-hit">хит</div>
-              <div class="mrk-new">новинка</div>
-            </div> -->
-            <img class="card-img-top" src="<?php echo $together_attachment_url ?>" alt="">
-          </div>
-          <div class="swiper-slide">
-            <!-- <div class="position-absolute start-0 top-0 mt-2 ms-2 text-start">
-              <div class="mrk-hit">хит</div>
-              <div class="mrk-new">новинка</div>
-            </div> -->
-            <img class="card-img-top" src="<?php echo $image; ?>" alt="">
-          </div>
-        </div>
+          <?php
+            }
+            wp_reset_postdata();
+
+          ?>
         <div class="swiper-button-next next-btn text-white rounded"></div>
         <div class="swiper-button-prev prev-btn text-white rounded"></div>
         <div class="swiper-pagination"></div>
