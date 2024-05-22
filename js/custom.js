@@ -45,7 +45,7 @@ jQuery(function ($) {
 
     // Вывод счётчика корзины
     const blocks = document.querySelectorAll(".mrk-cart-quantity");
-    const kitsBlocks = document.querySelectorAll(".mrk-card-quantity-kits");
+    // const kitsBlocks = document.querySelectorAll(".mrk-card-quantity-kits");
 
     // храним шаблоны в удобном для редактирования месте
     // const orderHTML = `<a href="#" class="btn-order btn btn-primary w-100">
@@ -63,9 +63,9 @@ jQuery(function ($) {
         renameQuantiyElement(item, 'btn-order');
     });
 
-    kitsBlocks.forEach(item => {
-        renameQuantiyElement(item, 'btn-order-kits');
-    });
+    // kitsBlocks.forEach(item => {
+    //     renameQuantiyElement(item, 'btn-order-kits');
+    // });
 
     function renameQuantiyElement(block, btn) {
         block.addEventListener("click", (event) => {
