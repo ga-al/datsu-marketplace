@@ -33,6 +33,19 @@ $image = wp_get_attachment_image_url( get_post_thumbnail_id( $product_id ), 'med
 if ( !$image ) {
 	$image = get_stylesheet_directory_uri() . '/img/placeholder.png';
 }
+
+$terms = get_the_terms( $product_id, 'product_cat' );
+
+$terms_id = [];
+$term_parent_main = '';
+foreach ($terms as $key => $term) {
+	$terms_id[] = $term->term_id;
+
+	if ( $term->term_id === 0 ) {
+		$term_parent_main = $term->term_id;
+	}
+
+}
 // $image = '';
 // $product_name = $product->name;
 // $product_name = $product->name;

@@ -53,7 +53,7 @@ if (empty($product) || !$product->is_visible()) {
       <div class="swiper swiper-children">
         <?php
             $together_query = new WC_Product_Query( array(
-              'limit' => 10,
+              'limit' => 5,
               'product_category_id' => $terms_id,
               'orderby' => 'date',
               'order' => 'DESC',
@@ -71,20 +71,7 @@ if (empty($product) || !$product->is_visible()) {
             <?php
               foreach ($together as $key => $together_product) {
 
-                $together_product_id = $together_product->get_id();
-                $together_product_url = get_permalink( $together_product_id );
-                $together_product_sku = $together_product->get_sku();
-                $together_product_name = $together_product->get_name();
-                $together_product_slug = $together_product->get_slug();
-                $together_product_price = $together_product->get_price();
-                $together_product_sale_price = $together_product->get_sale_price();
-                $together_product_regular_price = $together_product->get_regular_price();
-                $together_product_link = get_permalink($together_product);
-                $together_product_attributes = $together_product->get_attributes();
-                $together_attachment_url = wp_get_attachment_image_url( get_post_thumbnail_id( $product_id ), 'medium' );
-                if ( !$together_attachment_url ) {
-                  $together_attachment_url = get_stylesheet_directory_uri() . '/img/placeholder.png';
-                }
+                $together_attachment_url = $image;
 
 							?>
               <div class="swiper-slide">
