@@ -357,7 +357,7 @@ a.btn:hover {
 
 .mrk-cart .mrk-card-heart {
   right: 0;
-  bottom: 11px;
+  top: 9px
 }
 
 .woocommerce .woocommerce-ordering select {
@@ -1636,8 +1636,7 @@ body .modal .carousel-control-next, body .modal  .carousel-control-prev {
 }
 @media (max-width: 320px) {
   .mrk-cart .mrk-card-heart {
-    right: 20px;
-    bottom: 51px;
+    right: -10px;
   }
   .mrk-gallery-blur {
     padding: 20px 3px;
