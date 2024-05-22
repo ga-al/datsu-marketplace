@@ -52,9 +52,7 @@ $product_vendor_id = $product_vendor ? $product_vendor->id : '-';
 
 // var_dump( $_product );
 
-
 ?>
-
 
 <?php
 
@@ -229,7 +227,7 @@ $total_count = count( $gallery_attachment_ids );
 						<div class="card card-body border-0 mt-xl-0 mt-5 px-0 bg-light">
 							<div class="row g-3 px-4">
 								<div class="col-12">
-									<div class="d-flex justify-content-between align-items-center mb-3">
+									<div class="d-flex justify-content-start align-items-end gap-2 mb-3">
 
 										<h2 class="text-danger text-nowrap m-0 display-5" style="font-weight: 800;">
 											<?php
@@ -240,11 +238,9 @@ $total_count = count( $gallery_attachment_ids );
 											}
 											?>
 										</h2>
-										<br>
-
 
 										<?php if ( $product_sale_price ) { ?>
-											<span class="text-decoration-line-through text-secondary fs-4 ps-2"><?php echo $product_regular_price . ' ' . get_woocommerce_currency_symbol() ?></span>
+											<span class="text-decoration-line-through text-secondary fs-2 ps-2"><?php echo $product_regular_price . ' ' . get_woocommerce_currency_symbol() ?></span>
 										<?php }?>
 										<div class="mrk-card-heart no-active">
 											<?php echo do_shortcode("[yith_wcwl_add_to_wishlist]") ?>
