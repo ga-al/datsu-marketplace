@@ -1497,6 +1497,10 @@ body .modal .carousel-control-next, body .modal  .carousel-control-prev {
   overflow: hidden;
 }
 
+.card-title:hover {
+  color: var(--bs-primary);
+}
+
 
 
 
