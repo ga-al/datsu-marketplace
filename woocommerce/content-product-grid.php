@@ -49,7 +49,7 @@ if (empty($product) || !$product->is_visible()) {
 <div class="col-md-4 col-xl-3 mb-4">
   <div class="card border-0 h-100">
     <div class="card-kit-img">
-      <div class="mrk-card-heart no-active"><?php echo do_shortcode("[yith_wcwl_add_to_wishlist]") ?></div>
+      
       <div class="swiper swiper-children">
         <?php
             $together_query = new WC_Product_Query( array(
@@ -79,6 +79,7 @@ if (empty($product) || !$product->is_visible()) {
                   <div class="mrk-hit">хит</div>
                   <div class="mrk-new">новинка</div>
                 </div> -->
+                <div class="mrk-card-heart no-active"><?php echo do_shortcode("[yith_wcwl_add_to_wishlist]") ?></div>
                 <img class="card-img-top" src="<?php echo $together_attachment_url ?>" alt="">
               </div>
               <?php

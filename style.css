@@ -1475,10 +1475,6 @@ body .modal .carousel-control-next, body .modal  .carousel-control-prev {
   background: #fff;
 }
 
-.swiper-children .swiper-slide {
-  background: #4F628E;
-}
-
 /* .swiper-pagination-bullet {
   background: #fff;
   border-radius: 0;
