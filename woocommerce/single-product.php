@@ -536,7 +536,7 @@ $total_count = count( $gallery_attachment_ids );
 													<p class="card-title fw-medium text-dark text-start fs-6 mb-3">
 														<a href="<?php echo get_permalink($together_product_id); ?>"><?php echo $together_product_name; ?></a>
 													</p>
-													<div class="mrk-bonus text-start">
+													<!-- <div class="mrk-bonus text-start">
 														<span class="text-primary py-1 px-2 me-2">+75 баллов</span>
 														<p class="d-inline-block mb-0">4.5
 															<svg class="mb-1" width="16" height="17" viewBox="0 0 16 17" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -550,7 +550,7 @@ $total_count = count( $gallery_attachment_ids );
 																</defs>
 															</svg>
 														</p>
-													</div>
+													</div> -->
 												</div>
 												<div class="card-footer border-0 p-0 mt-auto">
 													<div class="mrk-card-quantity-kits">
