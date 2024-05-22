@@ -243,10 +243,9 @@ $social_menu = me_render_social();
                               $product_attachment_url = get_stylesheet_directory_uri() . '/img/placeholder.png';
                             }
                         ?>
-                          <div class="col-md-4 col-xl-3">
-                            <div class="card border-0 h-100">
+                          <div class="col-md-4 col-xl-3 px-lg-0">
+                            <div class="card border-0 h-100 card h-100 px-lg-0 px-3">
                               <div class="card-kit-img">
-                                <div class="mrk-card-heart no-active"><?php echo do_shortcode("[yith_wcwl_add_to_wishlist]") ?></div>
                                 <div class="swiper swiper-children">
                                   <?php
                                       $together_query = new WC_Product_Query( array(
