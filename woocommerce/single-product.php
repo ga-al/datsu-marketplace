@@ -52,9 +52,7 @@ $product_vendor_id = $product_vendor ? $product_vendor->id : '-';
 
 // var_dump( $_product );
 
-
 ?>
-
 
 <?php
 
@@ -71,10 +69,9 @@ $total_count = count( $gallery_attachment_ids );
 		<!-- Hook to add something nice -->
 		<?php bs_after_primary(); ?>
 		<main id="main" class="site-main">
-			<?php woocommerce_breadcrumb(); ?>
 
 			<div class="entry-content">
-				<h1 class="fs-1 fw-normal mt-md-0 mt-4"><?php echo $product_name; ?> </h1>
+
 				<!-- <p class="mb-3 ps-lg-1">
 					<span class="text-secondary me-3" style="font-size: 12px;">Артикул: <?php echo $product_sku; ?></span>
 					<span class="text-secondary" style="font-size: 12px;">Код покупателя: 12345678-?? </span>
@@ -82,164 +79,155 @@ $total_count = count( $gallery_attachment_ids );
 					<span class="text-secondary" style="font-size: 12px;">Код продавца: <?php echo $product_vendor_id ?></span>
 				</p> -->
 
-				<div class="row">
+				<div class="row pb-lg-5 pb-4">
 					<!-- слайдер с табами изображениями - НАЧАЛО -->
-					<div class="col-xl-7">
+					<div class="col-xxl-7 col-xl-6 col-lg-7">
 						<div class="row justify-content-xl-start justify-content-center">
+
 							<?php if ( $product_video) { ?>
-								<div class="slider slider-horizontal">
-								<? } else { ?>
-								<div class="slider slider-vertical">
-								<? } ?>
-								<div class="swiper slider__images order-2 slider__images--main slider__images-cotalog">
-									<div class="swiper-wrapper">
-										<?php if ( $product_video) {
-											if ($total_count > 1) {
-											?>
-											<div class="swiper-slide" data-slider="0" data-bs-toggle="modal" data-bs-target="#backdrop-1" data-bs-gallery="<?php echo $product_video; ?>" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" frameborder="0">
-												<!-- <div class="position-absolute start-0 top-0 mt-2 ms-2 text-start">
-													<div class="mrk-hit">хит</div>
-													<div class="mrk-new">новинка</div>
-												</div> -->
-												<div class="youtube ratio ratio-16x9 h-100">
-													<iframe class="iframe object-fit-cover" src="<?php echo $product_video; ?>" frameborder="0" allowfullscreen></iframe>
-												</div>
-												<div class="fullscrin" data-slider="0" data-bs-toggle="modal" data-bs-target="#backdrop-1" data-bs-gallery="<?php echo $product_video; ?>?rel=0&amp;autoplay=1" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" title="увеличить окно просмотра" frameborder="0">
-													<svg class="bi bi-aspect-ratio bg-opacity-75 text-bg-secondary" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
-													<path d="M0 3.5A1.5 1.5 0 0 1 1.5 2h13A1.5 1.5 0 0 1 16 3.5v9a1.5 1.5 0 0 1-1.5 1.5h-13A1.5 1.5 0 0 1 0 12.5v-9zM1.5 3a.5.5 0 0 0-.5.5v9a.5.5 0 0 0 .5.5h13a.5.5 0 0 0 .5-.5v-9a.5.5 0 0 0-.5-.5h-13z"></path>
-													<path d="M2 4.5a.5.5 0 0 1 .5-.5h3a.5.5 0 0 1 0 1H3v2.5a.5.5 0 0 1-1 0v-3zm12 7a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1 0-1H13V8.5a.5.5 0 0 1 1 0v3z"></path>
-													</svg>
-												</div>
-											</div>
-											<?php
-											} else {?>
+
+							<div class="slider slider-horizontal">
+
+							<? } else { ?>
+
+							<div class="slider slider-vertical">
+
+							<? } ?>
+
+							<div class="swiper slider__images order-2 slider__images--main slider__images-cotalog">
+								<div class="swiper-wrapper">
+									<?php if ( $product_video) {
+										if ($total_count > 1) {
+										?>
+										<div class="swiper-slide" data-slider="0" data-bs-toggle="modal" data-bs-target="#backdrop-1" data-bs-gallery="<?php echo $product_video; ?>" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" frameborder="0">
 											<!-- <div class="position-absolute start-0 top-0 mt-2 ms-2 text-start">
 												<div class="mrk-hit">хит</div>
 												<div class="mrk-new">новинка</div>
 											</div> -->
-											<div class="swiper-slide" data-slider="0" data-bs-toggle="modal" data-bs-target="#backdrop-video" data-bs-gallery="<?php echo $product_video; ?>" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" frameborder="0">
-												<div class="youtube ratio ratio-16x9 video-one h-100">
-													<iframe class="iframe object-fit-cover" src="<?php echo $product_video; ?>" frameborder="0" allowfullscreen></iframe>
-												</div>
-												<div class="fullscrin" data-slider="0" data-bs-toggle="modal" data-bs-target="#backdrop-video" data-bs-gallery="<?php echo $product_video; ?>?rel=0&amp;autoplay=1" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" title="увеличить окно просмотра" frameborder="0">
-													<svg class="bi bi-aspect-ratio bg-opacity-75 text-bg-secondary" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
-													<path d="M0 3.5A1.5 1.5 0 0 1 1.5 2h13A1.5 1.5 0 0 1 16 3.5v9a1.5 1.5 0 0 1-1.5 1.5h-13A1.5 1.5 0 0 1 0 12.5v-9zM1.5 3a.5.5 0 0 0-.5.5v9a.5.5 0 0 0 .5.5h13a.5.5 0 0 0 .5-.5v-9a.5.5 0 0 0-.5-.5h-13z"></path>
-													<path d="M2 4.5a.5.5 0 0 1 .5-.5h3a.5.5 0 0 1 0 1H3v2.5a.5.5 0 0 1-1 0v-3zm12 7a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1 0-1H13V8.5a.5.5 0 0 1 1 0v3z"></path>
-													</svg>
+											<div class="youtube ratio ratio-16x9 h-100">
+												<iframe class="iframe object-fit-cover" src="<?php echo $product_video; ?>" frameborder="0" allowfullscreen></iframe>
+											</div>
+											<div class="fullscrin" data-slider="0" data-bs-toggle="modal" data-bs-target="#backdrop-1" data-bs-gallery="<?php echo $product_video; ?>?rel=0&amp;autoplay=1" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" title="увеличить окно просмотра" frameborder="0">
+												<svg class="bi bi-aspect-ratio bg-opacity-75 text-bg-secondary" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+												<path d="M0 3.5A1.5 1.5 0 0 1 1.5 2h13A1.5 1.5 0 0 1 16 3.5v9a1.5 1.5 0 0 1-1.5 1.5h-13A1.5 1.5 0 0 1 0 12.5v-9zM1.5 3a.5.5 0 0 0-.5.5v9a.5.5 0 0 0 .5.5h13a.5.5 0 0 0 .5-.5v-9a.5.5 0 0 0-.5-.5h-13z"></path>
+												<path d="M2 4.5a.5.5 0 0 1 .5-.5h3a.5.5 0 0 1 0 1H3v2.5a.5.5 0 0 1-1 0v-3zm12 7a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1 0-1H13V8.5a.5.5 0 0 1 1 0v3z"></path>
+												</svg>
+											</div>
+										</div>
+										<?php
+										} else {?>
+										<!-- <div class="position-absolute start-0 top-0 mt-2 ms-2 text-start">
+											<div class="mrk-hit">хит</div>
+											<div class="mrk-new">новинка</div>
+										</div> -->
+										<div class="swiper-slide" data-slider="0" data-bs-toggle="modal" data-bs-target="#backdrop-video" data-bs-gallery="<?php echo $product_video; ?>" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" frameborder="0">
+											<div class="youtube ratio ratio-16x9 video-one h-100">
+												<iframe class="iframe object-fit-cover" src="<?php echo $product_video; ?>" frameborder="0" allowfullscreen></iframe>
+											</div>
+											<div class="fullscrin" data-slider="0" data-bs-toggle="modal" data-bs-target="#backdrop-video" data-bs-gallery="<?php echo $product_video; ?>?rel=0&amp;autoplay=1" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" title="увеличить окно просмотра" frameborder="0">
+												<svg class="bi bi-aspect-ratio bg-opacity-75 text-bg-secondary" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+												<path d="M0 3.5A1.5 1.5 0 0 1 1.5 2h13A1.5 1.5 0 0 1 16 3.5v9a1.5 1.5 0 0 1-1.5 1.5h-13A1.5 1.5 0 0 1 0 12.5v-9zM1.5 3a.5.5 0 0 0-.5.5v9a.5.5 0 0 0 .5.5h13a.5.5 0 0 0 .5-.5v-9a.5.5 0 0 0-.5-.5h-13z"></path>
+												<path d="M2 4.5a.5.5 0 0 1 .5-.5h3a.5.5 0 0 1 0 1H3v2.5a.5.5 0 0 1-1 0v-3zm12 7a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1 0-1H13V8.5a.5.5 0 0 1 1 0v3z"></path>
+												</svg>
+											</div>
+										</div>
+									<? }
+									}
+									if ( $gallery_attachment_ids) {
+										foreach ($gallery_attachment_ids as $gallery_attachment_id) {
+											if ($total_count > 1) {
+											?>
+											<!-- <div class="position-absolute start-0 top-0 mt-2 ms-2 text-start">
+												<div class="mrk-hit">хит</div>
+												<div class="mrk-new">новинка</div>
+											</div> -->
+											<div class="swiper-slide" data-slider="0" data-bs-toggle="modal" data-bs-target="#backdrop-1" data-bs-gallery="<?= wp_get_attachment_url( $gallery_attachment_id, 'full' ); ?>" title="увеличить окно просмотра">
+												<div class="image-4x3"><img src="<?= wp_get_attachment_url( $gallery_attachment_id, 'full' ); ?>" alt="image">
+													<div class="fullscrin" data-slider="0" data-bs-toggle="modal" data-bs-target="#backdrop-1" data-bs-gallery="<?= wp_get_attachment_url( $gallery_attachment_id, 'full' ); ?>" title="увеличить окно просмотра">
+														<svg class="bi bi-aspect-ratio bg-opacity-75 text-bg-secondary" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+														<path d="M0 3.5A1.5 1.5 0 0 1 1.5 2h13A1.5 1.5 0 0 1 16 3.5v9a1.5 1.5 0 0 1-1.5 1.5h-13A1.5 1.5 0 0 1 0 12.5v-9zM1.5 3a.5.5 0 0 0-.5.5v9a.5.5 0 0 0 .5.5h13a.5.5 0 0 0 .5-.5v-9a.5.5 0 0 0-.5-.5h-13z"></path>
+														<path d="M2 4.5a.5.5 0 0 1 .5-.5h3a.5.5 0 0 1 0 1H3v2.5a.5.5 0 0 1-1 0v-3zm12 7a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1 0-1H13V8.5a.5.5 0 0 1 1 0v3z"></path>
+														</svg>
+													</div>
 												</div>
 											</div>
-										<? }
-										}
-										if ( $gallery_attachment_ids) {
-											foreach ($gallery_attachment_ids as $gallery_attachment_id) {
-												if ($total_count > 1) {
-												?>
-												<!-- <div class="position-absolute start-0 top-0 mt-2 ms-2 text-start">
-													<div class="mrk-hit">хит</div>
-													<div class="mrk-new">новинка</div>
-												</div> -->
-												<div class="swiper-slide" data-slider="0" data-bs-toggle="modal" data-bs-target="#backdrop-1" data-bs-gallery="<?= wp_get_attachment_url( $gallery_attachment_id, 'full' ); ?>" title="увеличить окно просмотра">
-													<div class="image-4x3"><img src="<?= wp_get_attachment_url( $gallery_attachment_id, 'full' ); ?>" alt="image">
-														<div class="fullscrin" data-slider="0" data-bs-toggle="modal" data-bs-target="#backdrop-1" data-bs-gallery="<?= wp_get_attachment_url( $gallery_attachment_id, 'full' ); ?>" title="увеличить окно просмотра">
-															<svg class="bi bi-aspect-ratio bg-opacity-75 text-bg-secondary" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+											<?php
+											} else {
+											?>
+											<!-- <div class="position-absolute start-0 top-0 mt-2 ms-2 text-start">
+												<div class="mrk-hit">хит</div>
+												<div class="mrk-new">новинка</div>
+											</div> -->
+											<div class="swiper-slide" data-slider="0" data-bs-toggle="modal" data-bs-target="#backdrop-image" data-bs-gallery="<?= wp_get_attachment_url( $gallery_attachment_id, 'full' ); ?>" title="увеличить окно просмотра">
+												<div class="image-4x3 image-one">
+													<img src="<?= wp_get_attachment_url( $gallery_attachment_id, 'full' ); ?>" alt="image">
+													<div class="fullscrin" data-slider="0" data-bs-toggle="modal" data-bs-target="#backdrop-image" data-bs-gallery="<?= wp_get_attachment_url( $gallery_attachment_id, 'full' ); ?>" title="увеличить окно просмотра">
+														<svg class="bi bi-aspect-ratio bg-opacity-75 text-bg-secondary" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
 															<path d="M0 3.5A1.5 1.5 0 0 1 1.5 2h13A1.5 1.5 0 0 1 16 3.5v9a1.5 1.5 0 0 1-1.5 1.5h-13A1.5 1.5 0 0 1 0 12.5v-9zM1.5 3a.5.5 0 0 0-.5.5v9a.5.5 0 0 0 .5.5h13a.5.5 0 0 0 .5-.5v-9a.5.5 0 0 0-.5-.5h-13z"></path>
 															<path d="M2 4.5a.5.5 0 0 1 .5-.5h3a.5.5 0 0 1 0 1H3v2.5a.5.5 0 0 1-1 0v-3zm12 7a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1 0-1H13V8.5a.5.5 0 0 1 1 0v3z"></path>
-															</svg>
-														</div>
+														</svg>
 													</div>
 												</div>
-												<?php
-												} else {
-												?>
-												<!-- <div class="position-absolute start-0 top-0 mt-2 ms-2 text-start">
-													<div class="mrk-hit">хит</div>
-													<div class="mrk-new">новинка</div>
-												</div> -->
-												<div class="swiper-slide" data-slider="0" data-bs-toggle="modal" data-bs-target="#backdrop-image" data-bs-gallery="<?= wp_get_attachment_url( $gallery_attachment_id, 'full' ); ?>" title="увеличить окно просмотра">
-													<div class="image-4x3 image-one">
-														<img src="<?= wp_get_attachment_url( $gallery_attachment_id, 'full' ); ?>" alt="image">
-														<div class="fullscrin" data-slider="0" data-bs-toggle="modal" data-bs-target="#backdrop-image" data-bs-gallery="<?= wp_get_attachment_url( $gallery_attachment_id, 'full' ); ?>" title="увеличить окно просмотра">
-															<svg class="bi bi-aspect-ratio bg-opacity-75 text-bg-secondary" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
-																<path d="M0 3.5A1.5 1.5 0 0 1 1.5 2h13A1.5 1.5 0 0 1 16 3.5v9a1.5 1.5 0 0 1-1.5 1.5h-13A1.5 1.5 0 0 1 0 12.5v-9zM1.5 3a.5.5 0 0 0-.5.5v9a.5.5 0 0 0 .5.5h13a.5.5 0 0 0 .5-.5v-9a.5.5 0 0 0-.5-.5h-13z"></path>
-																<path d="M2 4.5a.5.5 0 0 1 .5-.5h3a.5.5 0 0 1 0 1H3v2.5a.5.5 0 0 1-1 0v-3zm12 7a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1 0-1H13V8.5a.5.5 0 0 1 1 0v3z"></path>
-															</svg>
-														</div>
-													</div>
-												</div>
-												<?php }
-											}
-										} ?>
+											</div>
+											<?php }
+										}
+									} ?>
 
-									</div>
-									<div class="swiper-button-prev text-white rounded"> </div>
-									<div class="swiper-button-next text-white rounded"></div>
 								</div>
-								<div class="slider-thumb order-1 d-flex px-md-0 px-2">
-									<div class="swiper slider-thumb__images slider-thumb__images--main" thumbsSlider="" style="--swiper-navigation-color:#000;--swiper-pagination-color:#000">
-										<div class="swiper-wrapper">
-											<?php
-											if ( $product_video) {
-												if ($total_count > 1) {
-												?>
-												<div class="swiper-slide youtube ratio slide-horizontal">
-													<iframe class="iframe" width="560" height="315" src="<?php echo $product_video; ?>" title="YouTube video" frameborder="0"></iframe>
-													<!-- <video class="iframe object-fit-cover" autoplay muted loop poster="<?= get_stylesheet_directory_uri(); ?>/img/video-thumb.png">
-													<source src="<?= get_stylesheet_directory_uri(); ?>/assets/video-thumb.webm" type="video/webm">
-													<source src="<?= get_stylesheet_directory_uri(); ?>/assets/video-thumb.mp4" type="video/mp4">
-													</video> -->
-													<!-- <iframe class="iframe" width="560" height="315" src="https://www.youtube.com/embed/WAl60Fn--SQ?si=fDU1jMa6qKpuCmjg" title="YouTube video" frameborder="0"></iframe> -->
-												</div>
-
-												<?php }
-												else { ?>
-												<div class="swiper-slide youtube ratio slide-horizontal"></div>
-												<?php }
-											}
-
-											if ( $gallery_attachment_ids) {
-												foreach ($gallery_attachment_ids as $gallery_attachment_id) {
-												if ($total_count > 1) {
-												?>
-													<div class="swiper-slide swiper-item"><img src="<?= wp_get_attachment_url( $gallery_attachment_id, 'thumb' ); ?>" alt="thumb"></div>
-
-												<?php
-												} else {
-												?>
-													<div class="swiper-slide swiper-item"></div>
-
-												<?php
-												}}
-											}
+								<div class="swiper-button-prev text-white rounded"> </div>
+								<div class="swiper-button-next text-white rounded"></div>
+							</div>
+							<div class="slider-thumb order-1 d-flex px-md-0 px-2">
+								<div class="swiper slider-thumb__images slider-thumb__images--main" thumbsSlider="" style="--swiper-navigation-color:#000;--swiper-pagination-color:#000">
+									<div class="swiper-wrapper">
+										<?php
+										if ( $product_video) {
+											if ($total_count > 1) {
 											?>
-										</div>
+											<div class="swiper-slide youtube ratio slide-horizontal">
+												<iframe class="iframe" width="560" height="315" src="<?php echo $product_video; ?>" title="YouTube video" frameborder="0"></iframe>
+												<!-- <video class="iframe object-fit-cover" autoplay muted loop poster="<?= get_stylesheet_directory_uri(); ?>/img/video-thumb.png">
+												<source src="<?= get_stylesheet_directory_uri(); ?>/assets/video-thumb.webm" type="video/webm">
+												<source src="<?= get_stylesheet_directory_uri(); ?>/assets/video-thumb.mp4" type="video/mp4">
+												</video> -->
+												<!-- <iframe class="iframe" width="560" height="315" src="https://www.youtube.com/embed/WAl60Fn--SQ?si=fDU1jMa6qKpuCmjg" title="YouTube video" frameborder="0"></iframe> -->
+											</div>
+
+											<?php }
+											else { ?>
+											<div class="swiper-slide youtube ratio slide-horizontal"></div>
+											<?php }
+										}
+
+										if ( $gallery_attachment_ids) {
+											foreach ($gallery_attachment_ids as $gallery_attachment_id) {
+											if ($total_count > 1) {
+											?>
+												<div class="swiper-slide swiper-item"><img src="<?= wp_get_attachment_url( $gallery_attachment_id, 'thumb' ); ?>" alt="thumb"></div>
+
+											<?php
+											} else {
+											?>
+												<div class="swiper-slide swiper-item"></div>
+
+											<?php
+											}}
+										}
+										?>
 									</div>
 								</div>
 							</div>
+							</div>
 						</div>
 					</div>
-					<div class="col-xl-5 mt-xl-0 mt-5">
-						<div class="share-block">
-							<a href="" role="button">Вопрос-ответ</a>
-							<span class="share-link position-relative ms-3">
-								<svg class="me-2" width="16" height="17" viewBox="0 0 16 17" fill="none" xmlns="http://www.w3.org/2000/svg">
-									<path d="M13.5003 1.49995C13.1024 1.49995 12.7209 1.65798 12.4396 1.93929C12.1583 2.22059 12.0003 2.60212 12.0003 2.99995C12.0003 3.39777 12.1583 3.7793 12.4396 4.06061C12.7209 4.34191 13.1024 4.49995 13.5003 4.49995C13.8981 4.49995 14.2796 4.34191 14.5609 4.06061C14.8422 3.7793 15.0003 3.39777 15.0003 2.99995C15.0003 2.60212 14.8422 2.22059 14.5609 1.93929C14.2796 1.65798 13.8981 1.49995 13.5003 1.49995ZM11.0003 2.99995C11.0002 2.41338 11.2064 1.84546 11.5827 1.39556C11.9591 0.945654 12.4817 0.642411 13.059 0.538885C13.6364 0.435359 14.2318 0.538141 14.741 0.82925C15.2502 1.12036 15.6409 1.58126 15.8446 2.13131C16.0484 2.68135 16.0522 3.28553 15.8555 3.83812C15.6587 4.39071 15.274 4.85654 14.7685 5.15409C14.263 5.45165 13.669 5.56198 13.0903 5.4658C12.5117 5.36962 11.9853 5.07304 11.6033 4.62795L4.88527 7.74795C5.03971 8.23739 5.03971 8.76251 4.88527 9.25195L11.6033 12.3719C12.0071 11.9023 12.5709 11.5993 13.1855 11.5216C13.8 11.4439 14.4215 11.5972 14.9294 11.9516C15.4374 12.3061 15.7957 12.8365 15.9349 13.4401C16.0741 14.0436 15.9843 14.6774 15.6829 15.2185C15.3814 15.7596 14.8898 16.1696 14.3033 16.3689C13.7169 16.5682 13.0773 16.5427 12.5085 16.2974C11.9398 16.052 11.4824 15.6042 11.225 15.0408C10.9676 14.4774 10.9285 13.8385 11.1153 13.2479L4.39727 10.1279C4.0647 10.5155 3.62142 10.7919 3.12704 10.92C2.63267 11.0481 2.11093 11.0217 1.632 10.8444C1.15308 10.6671 0.739941 10.3474 0.448173 9.92824C0.156404 9.50909 0 9.01064 0 8.49995C0 7.98925 0.156404 7.49081 0.448173 7.07166C0.739941 6.65252 1.15308 6.33278 1.632 6.15547C2.11093 5.97816 2.63267 5.95177 3.12704 6.07986C3.62142 6.20795 4.0647 6.48438 4.39727 6.87195L11.1153 3.75195C11.0388 3.50862 11 3.25501 11.0003 2.99995V2.99995ZM2.50027 6.99995C2.10244 6.99995 1.72091 7.15798 1.43961 7.43929C1.1583 7.72059 1.00027 8.10212 1.00027 8.49995C1.00027 8.89777 1.1583 9.2793 1.43961 9.56061C1.72091 9.84191 2.10244 9.99995 2.50027 9.99995C2.89809 9.99995 3.27962 9.84191 3.56093 9.56061C3.84223 9.2793 4.00027 8.89777 4.00027 8.49995C4.00027 8.10212 3.84223 7.72059 3.56093 7.43929C3.27962 7.15798 2.89809 6.99995 2.50027 6.99995ZM13.5003 12.4999C13.1024 12.4999 12.7209 12.658 12.4396 12.9393C12.1583 13.2206 12.0003 13.6021 12.0003 13.9999C12.0003 14.3978 12.1583 14.7793 12.4396 15.0606C12.7209 15.3419 13.1024 15.4999 13.5003 15.4999C13.8981 15.4999 14.2796 15.3419 14.5609 15.0606C14.8422 14.7793 15.0003 14.3978 15.0003 13.9999C15.0003 13.6021 14.8422 13.2206 14.5609 12.9393C14.2796 12.658 13.8981 12.4999 13.5003 12.4999Z" fill="#262626"/>
-								</svg>Поделиться
-								<div class="share-buttons hide">
-									<?php
-										$shareButtons = mps_share_buttons( $product_id );
-										if ( $shareButtons ) {
-											foreach ($shareButtons as $key => $btn) {
-												echo '<a href="'.$btn['url'].'">'.$btn['title'].'</a>';
-											}
-										}
-									?>
-								</div>
-							</span>
-						</div>
+					<div class="col-xxl-5 col-xl-6 col-lg-5 mt-md-0 mt-5">
+						<h1 class="fs-1 fw-normal mt-lg-0 mt-4"><?php echo $product_name; ?> </h1>
+						<?php woocommerce_breadcrumb(); ?>
+
 						<div class="card card-body border-0 mt-xl-0 mt-5 px-0 bg-light">
 							<div class="row g-3 px-4">
 								<div class="col-12">
-									<div class="d-flex justify-content-md-between justify-content-start align-items-center mb-3">
+									<div class="d-flex justify-content-start align-items-end gap-2 mb-3">
 
 										<h2 class="text-danger text-nowrap m-0 display-5" style="font-weight: 800;">
 											<?php
@@ -250,11 +238,9 @@ $total_count = count( $gallery_attachment_ids );
 											}
 											?>
 										</h2>
-										<br>
-
 
 										<?php if ( $product_sale_price ) { ?>
-											<span class="text-decoration-line-through text-secondary fs-4 ps-2"><?php echo $product_regular_price . ' ' . get_woocommerce_currency_symbol() ?></span>
+											<span class="text-decoration-line-through text-secondary fs-2 ps-2"><?php echo $product_regular_price . ' ' . get_woocommerce_currency_symbol() ?></span>
 										<?php }?>
 										<div class="mrk-card-heart no-active">
 											<?php echo do_shortcode("[yith_wcwl_add_to_wishlist]") ?>
@@ -273,7 +259,7 @@ $total_count = count( $gallery_attachment_ids );
 								<div class="col-12">
 									<div class="row align-items-center mx-auto w-100 gap-2">
 										<div class="col px-0">
-											<div class="quantity quantity-product-card">
+											<div class="quantity flex-nowrap quantity-product-card">
 												<budton type="button" class="minus input-group-text flex-grow-1 justify-content-center">&minus;</budton><label class="screen-reader-text" for="quantity_661bd21d11c6d">Количество товара blockly is a ROS package</label>
 												<input type="number" id="quantity_661bd21d11c6d" class="input-text qty text flex-grow-1" name="cart[9778d5d219c5080b9a6a17bef029331c][qty]" value="1" aria-label="Количество товара" size="4" min="0" max="" step="1" placeholder="" inputmode="numeric" autocomplete="off">
 												<button type="button" class="plus input-group-text flex-grow-1 justify-content-center">&plus;</button>
@@ -300,13 +286,33 @@ $total_count = count( $gallery_attachment_ids );
 						<div class="row">
 							<div class="col-12">
 								<div class="d-flex pt-3">
-									<div class="mrk-services d-flex justify-content-between w-100">
+									<div class="mrk-services d-flex justify-content-xl-start flex-wrap gap-2 w-100">
 										<div><a href="/oplata/" role="button">Условия оплаты</a></div>
 										<div><a href="/dostavka/" role="button">Доставка</a></div>
 										<div><a href="/vozvrat/" role="button">Возврат</a></div>
 									</div>
 								</div>
 							</div>
+						</div>
+						<div class="share-block mt-4">
+							<a href="" role="button">Вопрос-ответ</a>
+							<span class="share-link position-relative ms-3">
+								<svg class="me-2" width="16" height="17" viewBox="0 0 16 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<path d="M13.5003 1.49995C13.1024 1.49995 12.7209 1.65798 12.4396 1.93929C12.1583 2.22059 12.0003 2.60212 12.0003 2.99995C12.0003 3.39777 12.1583 3.7793 12.4396 4.06061C12.7209 4.34191 13.1024 4.49995 13.5003 4.49995C13.8981 4.49995 14.2796 4.34191 14.5609 4.06061C14.8422 3.7793 15.0003 3.39777 15.0003 2.99995C15.0003 2.60212 14.8422 2.22059 14.5609 1.93929C14.2796 1.65798 13.8981 1.49995 13.5003 1.49995ZM11.0003 2.99995C11.0002 2.41338 11.2064 1.84546 11.5827 1.39556C11.9591 0.945654 12.4817 0.642411 13.059 0.538885C13.6364 0.435359 14.2318 0.538141 14.741 0.82925C15.2502 1.12036 15.6409 1.58126 15.8446 2.13131C16.0484 2.68135 16.0522 3.28553 15.8555 3.83812C15.6587 4.39071 15.274 4.85654 14.7685 5.15409C14.263 5.45165 13.669 5.56198 13.0903 5.4658C12.5117 5.36962 11.9853 5.07304 11.6033 4.62795L4.88527 7.74795C5.03971 8.23739 5.03971 8.76251 4.88527 9.25195L11.6033 12.3719C12.0071 11.9023 12.5709 11.5993 13.1855 11.5216C13.8 11.4439 14.4215 11.5972 14.9294 11.9516C15.4374 12.3061 15.7957 12.8365 15.9349 13.4401C16.0741 14.0436 15.9843 14.6774 15.6829 15.2185C15.3814 15.7596 14.8898 16.1696 14.3033 16.3689C13.7169 16.5682 13.0773 16.5427 12.5085 16.2974C11.9398 16.052 11.4824 15.6042 11.225 15.0408C10.9676 14.4774 10.9285 13.8385 11.1153 13.2479L4.39727 10.1279C4.0647 10.5155 3.62142 10.7919 3.12704 10.92C2.63267 11.0481 2.11093 11.0217 1.632 10.8444C1.15308 10.6671 0.739941 10.3474 0.448173 9.92824C0.156404 9.50909 0 9.01064 0 8.49995C0 7.98925 0.156404 7.49081 0.448173 7.07166C0.739941 6.65252 1.15308 6.33278 1.632 6.15547C2.11093 5.97816 2.63267 5.95177 3.12704 6.07986C3.62142 6.20795 4.0647 6.48438 4.39727 6.87195L11.1153 3.75195C11.0388 3.50862 11 3.25501 11.0003 2.99995V2.99995ZM2.50027 6.99995C2.10244 6.99995 1.72091 7.15798 1.43961 7.43929C1.1583 7.72059 1.00027 8.10212 1.00027 8.49995C1.00027 8.89777 1.1583 9.2793 1.43961 9.56061C1.72091 9.84191 2.10244 9.99995 2.50027 9.99995C2.89809 9.99995 3.27962 9.84191 3.56093 9.56061C3.84223 9.2793 4.00027 8.89777 4.00027 8.49995C4.00027 8.10212 3.84223 7.72059 3.56093 7.43929C3.27962 7.15798 2.89809 6.99995 2.50027 6.99995ZM13.5003 12.4999C13.1024 12.4999 12.7209 12.658 12.4396 12.9393C12.1583 13.2206 12.0003 13.6021 12.0003 13.9999C12.0003 14.3978 12.1583 14.7793 12.4396 15.0606C12.7209 15.3419 13.1024 15.4999 13.5003 15.4999C13.8981 15.4999 14.2796 15.3419 14.5609 15.0606C14.8422 14.7793 15.0003 14.3978 15.0003 13.9999C15.0003 13.6021 14.8422 13.2206 14.5609 12.9393C14.2796 12.658 13.8981 12.4999 13.5003 12.4999Z" fill="#262626"/>
+								</svg>Поделиться
+								<div class="share-buttons">
+									<?php
+										$shareButtons = mps_share_buttons( $product_id );
+										if ( $shareButtons ) {
+
+											foreach ($shareButtons as $key => $btn) {
+												echo '<a href="'.$btn['url'].'"></a>';
+
+											}
+										}
+									?>
+								</div>
+							</span>
 						</div>
 						<!-- <p class="fw-bold fs-5 mt-3 mb-2">Скачать документацию: </p>
 						<form class="row g-2">
@@ -396,7 +402,7 @@ $total_count = count( $gallery_attachment_ids );
 					<!-- слайдер с табами изображениями -  КОНЕЦ -->
 				</div>
 				<div class="col-12 ">
-					<div class="mrk-description card card-body border-0 px-md-0 mt-5">
+					<div class="mrk-description card card-body border-0 px-md-0 pt-lg-0 pt-5 mt-5">
 						<div class="row px-md-3">
 							<div class="col-md-6 pe-md-3 px-0">
 								<h2 class="mrk-block-title text-nowrap fw-medium pb-2">Описание</h2>
@@ -424,33 +430,28 @@ $total_count = count( $gallery_attachment_ids );
 				</div>
 
 				<!-- Swiper -->
-				<div class="swiper swiper-general my-5">
-					<div class="d-flex justify-content-between align-items-center">
-						<h2 class="fs-2 fw-bold mb-4">Покупают вместе</h2>
-						<div>
-							<div class="swiper-button-prev uploaded-in-prev text-white rounded"></div>
-							<div class="swiper-button-next uploaded-in-next text-white rounded"></div>
-						</div>
-					</div>
+				<h2 class="fs-2 fw-bold mb-4">Покупают вместе</h2>
+				<div class="my-5 position-relative">
+					<div class="swiper swiper-general">
 
-					<?php
-						$together_query = new WC_Product_Query( array(
-							'limit' => 10,
-							'product_category_id' => $terms_id,
-							'orderby' => 'date',
-							'order' => 'DESC',
-							'exclude' => [$product_id],
-							'return' => 'objects',
-						) );
-						$together = $together_query->get_products();
-					?>
-					<?php
+						<?php
+							$together_query = new WC_Product_Query( array(
+								'limit' => 10,
+								'product_category_id' => $terms_id,
+								'orderby' => 'date',
+								'order' => 'DESC',
+								'exclude' => [$product_id],
+								'return' => 'objects',
+							) );
+							$together = $together_query->get_products();
+						?>
+						<?php
 
-					if ( $together ) {
+						if ( $together ) {
 
-					?>
+						?>
 
-					<div class="swiper-wrapper">
+						<div class="swiper-wrapper">
 
 						<?php
 							foreach ($together as $key => $together_product) {
@@ -531,7 +532,7 @@ $total_count = count( $gallery_attachment_ids );
 												<p class="card-title fw-medium text-dark text-start fs-6 mb-3">
 													<a href="<?php echo get_permalink($together_product_id); ?>"><?php echo $together_product_name; ?></a>
 												</p>
-												<div class="mrk-bonus text-start">
+												<!-- <div class="mrk-bonus text-start">
 													<span class="text-primary py-1 px-2 me-2">+75 баллов</span>
 													<p class="d-inline-block mb-0">4.5
 														<svg class="mb-1" width="16" height="17" viewBox="0 0 16 17" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -545,7 +546,7 @@ $total_count = count( $gallery_attachment_ids );
 															</defs>
 														</svg>
 													</p>
-												</div>
+												</div> -->
 											</div>
 											<div class="card-footer border-0 p-0 mt-auto">
 												<div class="mrk-card-quantity-kits">
@@ -567,14 +568,17 @@ $total_count = count( $gallery_attachment_ids );
 						?>
 
 
+						</div>
+
+						<?php
+							}
+							wp_reset_postdata();
+
+						?>
+
 					</div>
-
-					<?php
-						}
-						wp_reset_postdata();
-
-					?>
-
+					<div class="swiper-button-prev uploaded-in-prev"></div>
+					<div class="swiper-button-next uploaded-in-next"></div>
 				</div>
 				<!-- <div class="swiper swiper-general my-5">
 					<div class="d-flex justify-content-between align-items-center">

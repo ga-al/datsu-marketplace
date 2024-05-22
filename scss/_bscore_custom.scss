@@ -38,15 +38,17 @@
 html {
     scroll-padding-top: 99px;
 }
-
-.btn {
+.btn, .wc-block-components-button:not(.is-link) {
     border-radius: 12px 0 12px 0!important;
+}
+.wc-block-components-button:not(.is-link) {
+    border-color: var(--bs-primary);
+    background-color: white;
 }
 .input-group-text.btn {
     width: 64px;
     border-radius: 0 0 12px 0!important;
 }
-
 .nav-link {
     color: var(--#{$prefix}secondary);
 }

@@ -32,15 +32,15 @@ $social_menu = me_render_social();
               <div class="row ms-lg-2 g-0">
 
                 <div class="col">
-                  <div class="card-body pt-0 px-0">
+                  <div class="card-body pt-0 pb-md-4 px-0">
 
-                    <div class="mrk-gallery">
-                      <div class="mrk-gallery-top mx-auto position-relative"><img class="mrk-gallery-image mx-auto h-100 w-100" src="<?= esc_url(get_stylesheet_directory_uri()); ?>/img/gallery/image-1.jpg" alt="vidio-image">
+                    <div class="mrk-gallery position-relative">
+                      <div class="mrk-gallery-top mx-auto "><img class="mrk-gallery-image mx-auto h-100 w-100" src="<?= esc_url(get_stylesheet_directory_uri()); ?>/img/gallery/image-1.jpg" alt="vidio-image">
                       <div class="mrk-gallery-blur mrk-bg-blur position-absolute start-0 bottom-0">
-                        <h1 class="d-inline-block text-uppercase text-white fw-bold">все для стеклянных козырьков</h1>
-                        <button class="btn btn-primary d-flex align-items-center justify-content-center gap-2 text-nowrap mt-2" href="#" type="button">
+                        <h1 class="d-inline-block text-uppercase text-primary fw-bold">все для стеклянных козырьков</h1>
+                        <a class="btn btn-outline-primary d-flex align-items-center justify-content-center gap-2 text-white text-nowrap mt-2" href="/shop/" type="button">
                           Смотреть готовые решения
-                        </button>
+                        </a>
                       </div>
                       <div class="mrk-social position-absolute">
 
@@ -62,10 +62,10 @@ $social_menu = me_render_social();
                         </div> -->
                       </div>
                     </div>
-                      <div class="row thumbs mrk-gallery-thumbs mx-auto flex-nowrap gap-2">
-                        <div class="col-4 thumbnail p-0"><a class="active" href="#" data-path="<?= esc_url(get_stylesheet_directory_uri()); ?>/img/gallery/image-1.jpg"><img class="img-thumbnail border-0 p-0" src="<?= esc_url(get_stylesheet_directory_uri()); ?>/img/gallery/image-1.jpg" alt="vidio-thumb"></a></div>
-                        <div class="col-4 thumbnail p-0"><a href="#" data-path="<?= esc_url(get_stylesheet_directory_uri()); ?>/img/gallery/image-2.jpg"><img class="img-thumbnail border-0 p-0" src="<?= esc_url(get_stylesheet_directory_uri()); ?>/img/gallery/image-2.jpg" alt="vidio-thumb"></a></div>
-                        <div class="col-4 thumbnail p-0"><a href="#" data-path="<?= esc_url(get_stylesheet_directory_uri()); ?>/img/gallery/image-3.jpg"><img class="img-thumbnail border-0 p-0" src="<?= esc_url(get_stylesheet_directory_uri()); ?>/img/gallery/image-3.jpg" alt="vidio-thumb"></a></div>
+                      <div class="row thumbs mrk-gallery-thumbs flex-md-column flex-nowrap mx-0 mx-md-auto gap-2">
+                        <div class="col-4 col-md-12 thumbnail"><a class="active" href="#" data-path="<?= esc_url(get_stylesheet_directory_uri()); ?>/img/gallery/image-1.jpg"><img class="img-thumbnail border-0 p-0" src="<?= esc_url(get_stylesheet_directory_uri()); ?>/img/gallery/image-1.jpg" alt="vidio-thumb"></a></div>
+                        <div class="col-4 col-md-12 thumbnail"><a href="#" data-path="<?= esc_url(get_stylesheet_directory_uri()); ?>/img/gallery/image-2.jpg"><img class="img-thumbnail border-0 p-0" src="<?= esc_url(get_stylesheet_directory_uri()); ?>/img/gallery/image-2.jpg" alt="vidio-thumb"></a></div>
+                        <div class="col-4 col-md-12 thumbnail"><a href="#" data-path="<?= esc_url(get_stylesheet_directory_uri()); ?>/img/gallery/image-3.jpg"><img class="img-thumbnail border-0 p-0" src="<?= esc_url(get_stylesheet_directory_uri()); ?>/img/gallery/image-3.jpg" alt="vidio-thumb"></a></div>
                       </div>
                     </div>
 
@@ -73,7 +73,7 @@ $social_menu = me_render_social();
                 </div>
               </div>
             </div>
-            <div class="<?= bootscore_container_class(); ?> pe-xxl-2 pe-md-3 px-2">
+            <div class="<?= bootscore_container_class(); ?> pe-xxl-2 pe-lg-3 px-2">
               <!-- <section>
                 <h2 class="text-primary text-uppercase fw-bold">Все для профессионалов</h2>
                 <form class="row g-3 mt-3">
@@ -209,7 +209,7 @@ $social_menu = me_render_social();
                 $term_link = get_category_link($term_id);
 
                 ?>
-                  <section class="mt-5">
+                  <section class="mt-5 pb-3">
                     <div class="d-flex justify-content-between align-items-center flex-wrap">
                       <h2 class="text-primary text-uppercase w-100 fw-bold"><?php echo $term_name ?></h2>
                       <a class="fs-4 fw-medium" href="<?php echo $term_link ?>">Смотреть все</a>
@@ -219,7 +219,7 @@ $social_menu = me_render_social();
 
                         <?php
                           $random_query = new WC_Product_Query( array(
-                            'limit' => 3,
+                            'limit' => 4,
                             'product_category_id' => $term_id,
                             'orderby' => 'rand',
                             'return' => 'objects',
@@ -243,11 +243,54 @@ $social_menu = me_render_social();
                               $product_attachment_url = get_stylesheet_directory_uri() . '/img/placeholder.png';
                             }
                         ?>
-                          <div class="col-md-6 col-lg-4 col-xl-3 mb-4">
-                            <div class="card border-0 h-100">
+                          <div class="col-md-4 col-xl-3 px-lg-0">
+                            <div class="card border-0 h-100 card h-100 px-lg-0 px-3">
                               <div class="card-kit-img">
-                                <div class="mrk-card-heart no-active"><?php echo do_shortcode("[yith_wcwl_add_to_wishlist]") ?></div>
-                                <a href="<?php echo $product_url ?>"><img class="card-img-top" src="<?php echo $product_attachment_url ?>" alt=""></a>
+                                <div class="swiper swiper-children">
+                                  <?php
+                                      $together_query = new WC_Product_Query( array(
+                                        'limit' => 5,
+                                        'product_category_id' => $term_id,
+                                        'orderby' => 'date',
+                                        'order' => 'DESC',
+                                        'exclude' => [$product_id],
+                                        'return' => 'objects',
+                                      ) );
+                                      $together = $together_query->get_products();
+                                    ?>
+                                    <?php
+
+                                    if ( $together ) {
+
+                                    ?>
+                                    <div class="swiper-wrapper">
+                                      <?php
+                                        foreach ($together as $key => $together_product) {
+
+                                          $together_attachment_url = $product_attachment_url;
+
+                                        ?>
+                                        <div class="swiper-slide">
+                                          <!-- <div class="position-absolute start-0 top-0 mt-2 ms-2 text-start">
+                                            <div class="mrk-hit">хит</div>
+                                            <div class="mrk-new">новинка</div>
+                                          </div> -->
+                                          <div class="mrk-card-heart no-active"><?php echo do_shortcode("[yith_wcwl_add_to_wishlist]") ?></div>
+                                          <img class="card-img-top" src="<?php echo $together_attachment_url ?>" alt="">
+                                        </div>
+                                        <?php
+                                          }
+                                        ?>
+                                    </div>
+                                    <?php
+                                      }
+                                      wp_reset_postdata();
+
+                                    ?>
+                                  <div class="swiper-button-next next-btn text-white rounded"></div>
+                                  <div class="swiper-button-prev prev-btn text-white rounded"></div>
+                                  <div class="swiper-pagination"></div>
+                                </div>
                               </div>
                               <div class="card-body d-flex flex-column h-100 px-lg-3 px-0">
                                 <a href="<?php echo $product_url ?>" class="card-title fw-medium text-dark fs-6 mb-4">
@@ -296,7 +339,7 @@ $social_menu = me_render_social();
                 if ( $key == 1 ) {
                   ?>
 
-                  <section class="pt-4 pb-5">
+                  <section class="pt-4 mt-4 pb-3">
                     <div class="row g-3">
                       <div class="col-md-6 col-lg-3">
                         <div class="mrk-advantages">
@@ -325,14 +368,10 @@ $social_menu = me_render_social();
                     </div>
                   </section>
 
-
                   <?php
                 }
-
-
               }
               ?>
-
 
               <section>
                 <div class="card border-0 mb-4 position-md-absolute">
@@ -342,10 +381,10 @@ $social_menu = me_render_social();
                       <div class="card-body pt-0 px-0">
 
                         <div class="mrk-image-full">
-                          <div class="mrk-image-top mx-auto position-relative"><img class="mrk-form-image mx-auto h-100 w-100" src="<?= esc_url(get_stylesheet_directory_uri()); ?>/img/form-image.jpg" alt="vidio-image">
+                          <div class="mrk-image-top mx-auto"><img class="mrk-form-image mx-auto h-100 w-100" src="<?= esc_url(get_stylesheet_directory_uri()); ?>/img/form-image.jpg" alt="vidio-image">
                             <div class="form-blur mrk-bg-blur position-absolute start-0 bottom-0">
                               <h1 class="d-inline-block text-uppercase text-dark fw-bold page_home_form__title">оставьте заявку, мы вам перезвоним</h1>
-                              <form id="page_home_form" class="row row-gap-3 row-gap-md-0 mt-3">
+                              <form id="page_home_form" class="row row-gap-3 row-gap-md-0 mb-3 mt-3">
                                 <div class="col-md-8">
                                   <label for="inputName" class="visually-hidden-focusable">Имя</label>
                                   <input class="form-control" type="text" id="inputName" placeholder="Имя">

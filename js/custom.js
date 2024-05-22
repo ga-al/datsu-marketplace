@@ -45,12 +45,13 @@ jQuery(function ($) {
 
     // Вывод счётчика корзины
     const blocks = document.querySelectorAll(".mrk-cart-quantity");
+    // const kitsBlocks = document.querySelectorAll(".mrk-card-quantity-kits");
 
     // храним шаблоны в удобном для редактирования месте
-    const orderHTML = `<a href="#" class="btn-order btn btn-primary w-100">
-    <img class="mx-auto pe-1" src="<?= esc_url(get_stylesheet_directory_uri()); ?>/img/svg/cart4-white.svg" alt="корзина">
-    В корзину
-    </a>`;
+    // const orderHTML = `<a href="#" class="btn-order btn btn-primary w-100">
+    // <img class="d-inline-block mx-auto pe-1" src="<?= esc_url(get_stylesheet_directory_uri()); ?>/img/svg/cart4-white.svg" alt="корзина">
+    // В корзину
+    // </a>`;
 
     const quantityHTML = `
     <div class="quantity btn btn-outline-primary d-flex justify-content-center align-items-center">
@@ -58,15 +59,21 @@ jQuery(function ($) {
     <input type="number" class="input-text qty text border-0 text-primary py-0" name="cart[111][qty]" value="1" aria-label="Количество товара" size="4" min="0" max="" step="1" placeholder="" inputmode="numeric" autocomplete="off">
     <button type="button" class="plus input-group-text border-0 text-primary py-0">+</button></div>`;
    
-    blocks.forEach((block) => {
-        block.addEventListener("click", (event) => {
-            if (event.target.classList.contains('btn-order')) {
-                block.innerHTML = quantityHTML;
-            
-            }
-        });
+    blocks.forEach(item => {
+        renameQuantiyElement(item, 'btn-order');
     });
 
+    // kitsBlocks.forEach(item => {
+    //     renameQuantiyElement(item, 'btn-order-kits');
+    // });
+
+    function renameQuantiyElement(block, btn) {
+        block.addEventListener("click", (event) => {
+            if (event.target.classList.contains(btn)) {
+                block.innerHTML = quantityHTML;
+            }
+        });
+    }
 
 
 // Slider
@@ -230,36 +237,57 @@ if (document.querySelectorAll('.slider').length) {
             on: {
                 slideChange: function () {
                     hideIframe()
+                    clicked = true
                     if (mediaQuery.matches) {
-                        clicked = true
                         sliderThumbs.changeDirection(getDirection())
 
                         const index_currentSlide = this.realIndex;
                         const currentSlide = this.slides[index_currentSlide]
-                        
-                        if (currentSlide.classList.contains('slider-vertic')) {
-                            sliderThumbs.changeDirection(getDirection())
-                            sliderItem.classList.remove('slider-horizontal')
-                            sliderItem.classList.add('slider-vertical')
-                            sliderThumbs.wrapperEl.classList.add('slider-grid')
-                            masonrySlider()
-                           
-                            if(youtubes) {
-                                addYoutubes(youtubes)
-                            }
-                        } 
-                        else if (currentSlide.classList.contains('slider-horizont')) {
+
+                        if (currentSlide.classList.contains('slider-horizont')) {
                             clicked = false
                             sliderThumbs.changeDirection(getDirection())
                             sliderItem.classList.remove('slider-vertical')
                             sliderItem.classList.add('slider-horizontal')
                             sliderThumbs.wrapperEl.classList.remove('slider-grid')
                             masonrySliderDelete()
-                            
+                            // if(youtubes) {
+                            //     removeYoutubes(youtubes)
+                            // }
+                        } else if (currentSlide.classList.contains('slider-vertic')) {
+                            sliderThumbs.changeDirection(getDirection())
+                            sliderItem.classList.remove('slider-horizontal')
+                            sliderItem.classList.add('slider-vertical')
+                            sliderThumbs.wrapperEl.classList.add('slider-grid')
+                            masonrySlider()
                             if(youtubes) {
-                                removeYoutubes(youtubes)
+                                addYoutubes(youtubes)
                             }
                         }
+                        
+                        // if (currentSlide.classList.contains('slider-vertic')) {
+                        //     // sliderThumbs.changeDirection(getDirection())
+                        //     sliderItem.classList.remove('slider-horizontal')
+                        //     sliderItem.classList.add('slider-vertical')
+                        //     sliderThumbs.wrapperEl.classList.add('slider-grid')
+                        //     masonrySlider()
+                           
+                        //     if(youtubes) {
+                        //         addYoutubes(youtubes)
+                        //     }
+                        // } 
+                        // else if (currentSlide.classList.contains('slider-horizont')) {
+                        //     clicked = false
+                        //     sliderThumbs.changeDirection(getDirection())
+                        //     sliderItem.classList.remove('slider-vertical')
+                        //     sliderItem.classList.add('slider-horizontal')
+                        //     sliderThumbs.wrapperEl.classList.remove('slider-grid')
+                        //     masonrySliderDelete()
+                            
+                        //     if(youtubes) {
+                        //         removeYoutubes(youtubes)
+                        //     }
+                        // }
                     }
                     // } else {
                     // sliderThumbs.wrapperEl.classList.remove('slider-grid')

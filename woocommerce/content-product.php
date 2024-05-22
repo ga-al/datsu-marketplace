@@ -29,9 +29,22 @@ $product_price = $product->get_price();
 $product_sale_price = $product->get_sale_price();
 $product_regular_price = $product->get_regular_price();
 $product_link = get_permalink($product_id);
-$image = wp_get_attachment_image_url( $product_id, 'medium'  );
+$image = wp_get_attachment_image_url( get_post_thumbnail_id( $product_id ), 'medium' );
 if ( !$image ) {
 	$image = get_stylesheet_directory_uri() . '/img/placeholder.png';
+}
+
+$terms = get_the_terms( $product_id, 'product_cat' );
+
+$terms_id = [];
+$term_parent_main = '';
+foreach ($terms as $key => $term) {
+	$terms_id[] = $term->term_id;
+
+	if ( $term->term_id === 0 ) {
+		$term_parent_main = $term->term_id;
+	}
+
 }
 // $image = '';
 // $product_name = $product->name;
@@ -47,7 +60,7 @@ if (empty($product) || !$product->is_visible()) {
 ?>
 
 <div class="d-flex mb-5">
-  <div class="flex-shrink-0"><img class="object-fit-contain me-4" src="<?php echo $image ?>" alt="" style="width: 70px;"></div>
+  <div class="flex-shrink-0"><img class="object-fit-contain me-4" src="<?php echo $image; ?> ?>" alt="" style="width: 70px;"></div>
   <div class="flex-grow-1 py-0">
   <div class="row g-3">
     <div class="col-xl-8 col-lg-7">
@@ -60,7 +73,7 @@ if (empty($product) || !$product->is_visible()) {
         <span class="text-decoration-line-through fs-5 ps-2"><?php echo $product_regular_price; ?> ₽</span>
       <?php } ?>
     </div>
-    <div class="mrk-cart d-flex align-items-center justify-content-lg-end gap-2">
+    <div class="mrk-cart d-flex align-items-center justify-content-lg-center gap-2">
       <div class="mrk-cart-quantity w-75">
         <?php
           $add_to_cart = [
@@ -79,3 +92,4 @@ if (empty($product) || !$product->is_visible()) {
   </div>
   </div>
 </div>
+
