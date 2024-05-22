@@ -343,13 +343,13 @@ a.btn:hover {
 
 .mrk-card-heart {
   position: absolute;
-  right: 28px;
-  bottom: -88px;
+  right: 18px;
+  top: -4px;
 }
 
-.home .mrk-card-heart {
+/* .home .mrk-card-heart {
   right: -6px;
-}
+} */
 
 .mrk-cart {
   position: relative;
@@ -1564,9 +1564,9 @@ body .modal .carousel-control-next, body .modal  .carousel-control-prev {
   .header-actions {
     margin-right: 0;
   }
-  .home .mrk-card-heart {
+  /* .home .mrk-card-heart {
     right: -62px;
-  }
+  } */
 }
 @media (max-width: 769px) {
   .mrk-logo .btn {
@@ -1610,9 +1610,9 @@ body .modal .carousel-control-next, body .modal  .carousel-control-prev {
     max-width: 270px;
     margin: 0 auto;
   }
-  .home .mrk-card-heart {
+  /* .home .mrk-card-heart {
     right: -23px;
-  }
+  } */
 }
 @media (max-width: 620px) {
   .header-actions {
