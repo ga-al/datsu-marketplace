@@ -45,7 +45,7 @@ jQuery(function ($) {
 
     // Вывод счётчика корзины
     const blocks = document.querySelectorAll(".mrk-cart-quantity");
-    const kitsBlocks = document.querySelectorAll(".mrk-cart-quantity-kits");
+    const kitsBlocks = document.querySelectorAll(".mrk-card-quantity-kits");
 
     // храним шаблоны в удобном для редактирования месте
     // const orderHTML = `<a href="#" class="btn-order btn btn-primary w-100">
