@@ -1498,7 +1498,7 @@ body .modal .carousel-control-next, body .modal  .carousel-control-prev {
 }
 
 .card-title:hover {
-  color: var(--bs-primary);
+  color: var(--bs-primary)!important;
 }
 
 
