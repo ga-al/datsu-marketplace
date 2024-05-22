@@ -471,9 +471,9 @@ $total_count = count( $gallery_attachment_ids );
 								// 	$together_attachment_url = get_stylesheet_directory_uri() . '/img/placeholder.png';
 								// }
 
-								$together_gallery_attachment_ids = $product->get_gallery_image_ids();
+								$together_gallery_attachment_ids = $together_product->get_gallery_image_ids();
 
-								$together_thumbnail_id = get_post_thumbnail_id( $product_id );
+								$together_thumbnail_id = get_post_thumbnail_id( $together_product_id );
 
 								if ( !$together_gallery_attachment_ids ) {
 								  $together_gallery_attachment_ids = [ $together_thumbnail_id ];
@@ -619,9 +619,9 @@ $total_count = count( $gallery_attachment_ids );
 									// if ( !$similar_attachment_url ) {
 									// 	$similar_attachment_url = get_stylesheet_directory_uri() . '/img/placeholder.png';
 									// }
-									$$similar_gallery_attachment_ids = $product->get_gallery_image_ids();
+									$$similar_gallery_attachment_ids = $similar_product->get_gallery_image_ids();
 
-									$similar_thumbnail_id = get_post_thumbnail_id( $product_id );
+									$similar_thumbnail_id = get_post_thumbnail_id( $similar_product_id );
 
 									if ( !$$similar_gallery_attachment_ids ) {
 									  $$similar_gallery_attachment_ids = [ $similar_thumbnail_id ];
@@ -638,28 +638,28 @@ $total_count = count( $gallery_attachment_ids );
 																	<div class="mrk-hit">хит</div>
 																	<div class="mrk-new">новинка</div>
 																</div>
-																<img class="card-img-top" src="<?php echo $similar_attachment_url ?>" alt="">
+																<img class="card-img-top" src="<?php //echo $similar_attachment_url ?>" alt="">
 															</div>
 															<div class="swiper-slide">
 																<div class="position-absolute start-0 top-0 mt-2 ms-2 text-start">
 																	<div class="mrk-hit">хит</div>
 																	<div class="mrk-new">новинка</div>
 																</div>
-																<img class="card-img-top" src="<?php echo $similar_attachment_url ?>" alt="">
+																<img class="card-img-top" src="<?php //echo $similar_attachment_url ?>" alt="">
 															</div>
 															<div class="swiper-slide">
 																<div class="position-absolute start-0 top-0 mt-2 ms-2 text-start">
 																	<div class="mrk-hit">хит</div>
 																	<div class="mrk-new">новинка</div>
 																</div>
-																<img class="card-img-top" src="<?php echo $similar_attachment_url ?>" alt="">
+																<img class="card-img-top" src="<?php //echo $similar_attachment_url ?>" alt="">
 															</div>
 															<div class="swiper-slide">
 																<div class="position-absolute start-0 top-0 mt-2 ms-2 text-start">
 																	<div class="mrk-hit">хит</div>
 																	<div class="mrk-new">новинка</div>
 																</div>
-																<img class="card-img-top" src="<?php echo $similar_attachment_url ?>" alt="">
+																<img class="card-img-top" src="<?php //echo $similar_attachment_url ?>" alt="">
 															</div>
 														</div>
 														<div class="swiper-button-next next-btn text-white rounded"></div>
@@ -671,22 +671,22 @@ $total_count = count( $gallery_attachment_ids );
 													<div class="d-flex align-items-end flex-wrap mt-auto mb-2">
 
 														<?php if ( $similar_product_sale_price ) { ?>
-															<h3 class="text-danger text-nowrap d-inline-block mb-0" style="font-size: 2rem;font-weight: 800;"><?php echo $similar_product_sale_price . ' ' . get_woocommerce_currency_symbol(); ?></h3>
-															<span class="text-decoration-line-through text-secondary fs-4 fw-medium ps-2"><?php echo $similar_product_regular_price . ' ' . get_woocommerce_currency_symbol(); ?></span>
+															<h3 class="text-danger text-nowrap d-inline-block mb-0" style="font-size: 2rem;font-weight: 800;"><?php //echo $similar_product_sale_price . ' ' . get_woocommerce_currency_symbol(); ?></h3>
+															<span class="text-decoration-line-through text-secondary fs-4 fw-medium ps-2"><?php //echo $similar_product_regular_price . ' ' . get_woocommerce_currency_symbol(); ?></span>
 															<span class="text-danger fw-bold pb-1 ps-2" style="font-size: 1rem;">
 																<?php
-																	echo round(100 - ($similar_product_sale_price / $similar_product_regular_price * 100));
+																	//echo round(100 - ($similar_product_sale_price / $similar_product_regular_price * 100));
 																?>
 																%
 															</span>
 														<?php } else { ?>
-															<h3 class="text-danger text-nowrap d-inline-block mb-0" style="font-size: 2rem;font-weight: 800;"><?php echo $similar_product_regular_price . ' ' . get_woocommerce_currency_symbol(); ?></h3>
+															<h3 class="text-danger text-nowrap d-inline-block mb-0" style="font-size: 2rem;font-weight: 800;"><?php //echo $similar_product_regular_price . ' ' . get_woocommerce_currency_symbol(); ?></h3>
 														<?php } ?>
 
 
 													</div>
 													<p class="card-title fw-medium text-dark text-start fs-6 mb-3">
-														<a href="<?php echo get_permalink($similar_product_id); ?>"><?php echo $similar_product_name; ?></a>
+														<a href="<?php //echo get_permalink($similar_product_id); ?>"><?php //echo $similar_product_name; ?></a>
 													</p>
 
 
@@ -710,13 +710,13 @@ $total_count = count( $gallery_attachment_ids );
 												<div class="card-footer border-0 p-0 mt-auto">
 													<div class="mrk-card-quantity-kits">
 													<?php
-														$me_add_to_cart = [
-															"classes" => "btn btn-primary btn-order-kits d-flex justify-content-center w-100 ",
-															"product_title" => $similar_product_name,
-															"product_id" => $similar_product_id,
-															"product_sku" => $similar_product_sku,
-														];
-														get_template_part( 'elements/button-add-to-cart', '', $me_add_to_cart );
+														// $me_add_to_cart = [
+														// 	"classes" => "btn btn-primary btn-order-kits d-flex justify-content-center w-100 ",
+														// 	"product_title" => $similar_product_name,
+														// 	"product_id" => $similar_product_id,
+														// 	"product_sku" => $similar_product_sku,
+														// ];
+														// get_template_part( 'elements/button-add-to-cart', '', $me_add_to_cart );
 													?>
 													</div>
 												</div>
