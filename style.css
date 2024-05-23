@@ -542,12 +542,6 @@ border-bottom: 1px dashed var(--bs-secondary);
   color: var(--bs-gray-400);
 }
 .share-buttons {
-  position: absolute;
-  top: -16px;
-  left: 110px;
-  display: flex;
-  align-items: center;
-  gap: 1rem;
   padding: 10px;
   z-index: 10;
 }
@@ -578,11 +572,6 @@ border-bottom: 1px dashed var(--bs-secondary);
 
 .woocommerce-order-details {
   position: relative;
-}
-
-.woocommerce-order-details .share-buttons {
-  top: 104%;
-  left: 0;
 }
 
 .woocommerce-order-details button {
@@ -1247,10 +1236,7 @@ body .modal .carousel-control-next, body .modal  .carousel-control-prev {
   .swiper-button-next.uploaded-in-next, .swiper-button-prev.uploaded-in-prev {
     top: -15px;
   }
-  .share-buttons {
-    top: 19px;
-    left: -120px;
-  }
+  
 }
 @media (max-width: 1024px) {
   .slider-vertical .slider-thumb {
@@ -1585,9 +1571,7 @@ body .modal .carousel-control-next, body .modal  .carousel-control-prev {
   .mrk-cards-kits .card {
     max-width: 290px;
   }
-  .woocommerce-order-details .share-buttons {
-    top: 93%;
-  }
+  
   .mrk-gallery-thumbs {
     position: static;
     justify-content: start;
