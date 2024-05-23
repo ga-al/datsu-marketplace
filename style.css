@@ -542,6 +542,8 @@ border-bottom: 1px dashed var(--bs-secondary);
   color: var(--bs-gray-400);
 }
 .share-buttons {
+  display: flex;
+  align-items: center;
   padding: 10px;
   z-index: 10;
 }
@@ -568,6 +570,10 @@ border-bottom: 1px dashed var(--bs-secondary);
 
 .share-buttons a:hover {
   background-color: #f3f4ff;
+}
+
+.share-buttons span {
+  margin-left: 1rem;
 }
 
 .woocommerce-order-details {
