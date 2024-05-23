@@ -478,13 +478,15 @@ if (document.querySelector('.share-buttons')) {
     const copyPath = document.querySelector('.copypath')
 
     document.querySelector('.share-link').addEventListener('click', function() {
-    shareBtns.classList.toggle('hide')
+        if (shareBtns) {
+            shareBtns.classList.toggle('hide')
+        }
+    })
 
     copyPath.addEventListener('click', function(e) {
         e.preventDefault()
         copyPath.innerHTML = 'Скопировано'
         copyPath.style.color = '#212529'
     })
-})
 
 }
