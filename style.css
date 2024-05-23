@@ -1605,7 +1605,7 @@ body .modal .carousel-control-next, body .modal  .carousel-control-prev {
     margin-left: 10px;
   }
   button[name="update_cart"] {
-    margin-bottom: 10px;
+    margin-bottom: 10px!important;
   }
 
 }
@@ -1653,8 +1653,11 @@ body .modal .carousel-control-next, body .modal  .carousel-control-prev {
   }
 
   button[name="update_cart"] {
-    position: absolute;
+    position: absolute!important;
     bottom: 13rem;
     right: 28px;
+  }
+  .woocommerce .cart-collaterals .cart_totals, .woocommerce-page .cart-collaterals .cart_totals {
+    width: 55%;
   }
 }
