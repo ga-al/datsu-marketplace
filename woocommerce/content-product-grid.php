@@ -60,6 +60,12 @@ if (empty($product) || !$product->is_visible()) {
               'return' => 'objects',
             ) );
             $together = $together_query->get_products();
+
+            $gallery_attachment_ids = $product->get_gallery_image_ids();
+            $product_thumbnail_id = get_post_thumbnail_id( $product_id );
+            if ( !$gallery_attachment_ids ) {
+              $gallery_attachment_ids = [ $product_thumbnail_id ];
+            }
           ?>
           <?php
 
@@ -67,29 +73,27 @@ if (empty($product) || !$product->is_visible()) {
 
           ?>
           <div class="swiper-wrapper">
-            <?php
-              foreach ($together as $key => $together_product) {
+          <?php
+                foreach ($together_gallery_attachment_ids as $key => $gallery_attachment_id) {
+                  $image_src = wp_get_attachment_url( $gallery_attachment_id, 'medium' );
 
-                $together_attachment_url = $image;
+                  if ( !$image_src ) {
+                    $image_src = get_stylesheet_directory_uri() . '/img/placeholder.png';
+                  }
+              ?>
 
-							?>
-              <div class="swiper-slide">
-                <!-- <div class="position-absolute start-0 top-0 mt-2 ms-2 text-start">
-                  <div class="mrk-hit">хит</div>
-                  <div class="mrk-new">новинка</div>
-                </div> -->
-                <div class="mrk-card-heart no-active"><?php echo do_shortcode("[yith_wcwl_add_to_wishlist]") ?></div>
-                <img class="card-img-top" src="<?php echo $together_attachment_url ?>" alt="">
-              </div>
+                <div class="swiper-slide">
+                  <div class="mrk-card-heart no-active"><?php echo do_shortcode("[yith_wcwl_add_to_wishlist]") ?></div>
+                  <img class="card-img-top" src="<?php echo $image_src ?>" alt="">
+                </div>
+              <?php
+                }
+              ?>
+              
               <?php
 								}
 							?>
           </div>
-          <?php
-            }
-            wp_reset_postdata();
-
-          ?>
         <div class="swiper-button-next next-btn text-white rounded"></div>
         <div class="swiper-button-prev prev-btn text-white rounded"></div>
         <div class="swiper-pagination"></div>

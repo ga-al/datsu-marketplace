@@ -1625,6 +1625,9 @@ body .modal .carousel-control-next, body .modal  .carousel-control-prev {
   .woocommerce .woocommerce-ordering {
     width: 200px;
   }
+  .card-kit-img {
+    max-width: 280px;
+  }
 }
 @media (max-width: 320px) {
   .mrk-cart .mrk-card-heart {
