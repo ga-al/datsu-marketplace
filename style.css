@@ -1496,6 +1496,7 @@ body .modal .carousel-control-next, body .modal  .carousel-control-prev {
 
 
 
+
 @media (min-width: 992px) {
   .site-main {
     padding-top: 1rem !important;
@@ -1600,6 +1601,12 @@ body .modal .carousel-control-next, body .modal  .carousel-control-prev {
     max-width: 270px;
     margin: 0 auto;
   }
+  .woocommerce table.cart td.actions .coupon .button, .woocommerce-page #content table.cart td.actions .coupon .button, .woocommerce-page table.cart td.actions .coupon .button {
+    margin-left: 10px;
+  }
+  button[name="update_cart"] {
+    margin-bottom: 10px;
+  }
 
 }
 @media (max-width: 620px) {
@@ -1635,5 +1642,19 @@ body .modal .carousel-control-next, body .modal  .carousel-control-prev {
   }
   .mrk-gallery-blur {
     padding: 20px 3px;
+  }
+}
+
+@media (min-width: 769px) {
+  .woocommerce-cart .coupon {
+    width: 400px;
+    margin-left: calc(100% - 583px);
+    margin-right: 0;
+  }
+
+  button[name="update_cart"] {
+    position: absolute;
+    bottom: 13rem;
+    right: 28px;
   }
 }
