@@ -247,7 +247,7 @@ a:hover {
   letter-spacing: 1.2px;
 }
 .mrk-cart-quantity .btn {
-  padding-top: 9px;
+  padding-top: 10px;
 }
 .mrk-gallery .btn {
   width: 280px;
@@ -546,6 +546,7 @@ border-bottom: 1px dashed var(--bs-secondary);
   top: -16px;
   left: 110px;
   display: flex;
+  align-items: center;
   gap: 1rem;
   padding: 10px;
   z-index: 10;
@@ -558,7 +559,6 @@ border-bottom: 1px dashed var(--bs-secondary);
   background-size: 28px;
   background-position: center;
   padding: 27px;
-  background-color: #f3f4ff;
   border-radius: 12px 0 12px 0;
   transition: all .25s;
 }
@@ -569,11 +569,11 @@ border-bottom: 1px dashed var(--bs-secondary);
   background-image: url(img/svg/whatsapp.svg);
 }
 .share-buttons a:nth-child(3) {
-  background-image: url(img/svg/vkontakte.svg);
+  background-image: url(img/svg/chatbot.svg);
 }
 
 .share-buttons a:hover {
-  background-color: transparent;
+  background-color: #f3f4ff;
 }
 
 .woocommerce-order-details {
@@ -581,9 +581,8 @@ border-bottom: 1px dashed var(--bs-secondary);
 }
 
 .woocommerce-order-details .share-buttons {
-  top: 74%;
-  left: 80%;
-  transform: translateX(-26%);
+  top: 104%;
+  left: 0;
 }
 
 .woocommerce-order-details button {

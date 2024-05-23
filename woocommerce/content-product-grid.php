@@ -104,12 +104,12 @@ if (empty($product) || !$product->is_visible()) {
       <?php if ( $product_sale_price ) { ?>
         <h3 class="text-primary fw-bold text-nowrap d-inline-block"><?php echo $product_sale_price . ' ' . get_woocommerce_currency_symbol(); ?></h3>
         <span class="text-decoration-line-through fs-5 ps-2"><?php echo $product_regular_price . ' ' . get_woocommerce_currency_symbol(); ?></span>
-        <span class="text-danger fw-bold pb-1 ps-2" style="font-size: 1rem;">
+        <!-- <span class="text-danger fw-bold pb-1 ps-2" style="font-size: 1rem;">
           <?php
             echo round(100 - ($product_sale_price / $product_regular_price * 100));
           ?>
           %
-        </span>
+        </span> -->
       <?php } else { ?>
         <h3 class="text-primary fw-bold text-nowrap d-inline-block"><?php echo $product_regular_price . ' ' . get_woocommerce_currency_symbol(); ?></h3>
       <?php } ?>

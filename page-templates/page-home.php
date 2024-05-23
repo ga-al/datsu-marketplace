@@ -38,7 +38,7 @@ $social_menu = me_render_social();
                       <div class="mrk-gallery-top mx-auto "><img class="mrk-gallery-image mx-auto h-100 w-100" src="<?= esc_url(get_stylesheet_directory_uri()); ?>/img/gallery/image-1.jpg" alt="vidio-image">
                       <div class="mrk-gallery-blur mrk-bg-blur position-absolute start-0 bottom-0">
                         <h1 class="d-inline-block text-uppercase text-primary fw-bold">все для стеклянных козырьков</h1>
-                        <a class="btn btn-outline-primary d-flex align-items-center justify-content-center gap-2 text-white text-nowrap mt-2" href="/shop/" type="button">
+                        <a class="btn btn-outline-primary d-flex align-items-center justify-content-center gap-2 text-nowrap mt-2" href="/shop/" type="button">
                           Смотреть готовые решения
                         </a>
                       </div>
@@ -240,16 +240,11 @@ $social_menu = me_render_social();
                             $product_attributes = $product->get_attributes();
 
 
-
-
                             $gallery_attachment_ids = $product->get_gallery_image_ids();
                             $product_thumbnail_id = get_post_thumbnail_id( $product_id );
                             if ( !$gallery_attachment_ids ) {
                               $gallery_attachment_ids = [ $product_thumbnail_id ];
                             }
-
-
-
 
                         ?>
                           <div class="col-md-4 col-xl-3 px-lg-0">
@@ -296,12 +291,12 @@ $social_menu = me_render_social();
                                 <?php if ( $product_sale_price ) { ?>
                                   <h3 class="text-primary fw-bold text-nowrap d-inline-block"><?php echo $product_sale_price . ' ' . get_woocommerce_currency_symbol(); ?></h3>
                                   <span class="text-decoration-line-through fs-5 ps-2"><?php echo $product_regular_price . ' ' . get_woocommerce_currency_symbol(); ?></span>
-                                  <span class="text-danger fw-bold pb-1 ps-2" style="font-size: 1rem;">
+                                  <!-- <span class="text-danger fw-bold pb-1 ps-2" style="font-size: 1rem;">
                                     <?php
                                       echo round(100 - ($product_sale_price / $product_regular_price * 100));
                                     ?>
                                     %
-                                  </span>
+                                  </span> -->
                                 <?php } else { ?>
                                   <h3 class="text-primary fw-bold text-nowrap d-inline-block"><?php echo $product_regular_price . ' ' . get_woocommerce_currency_symbol(); ?></h3>
                                 <?php } ?>
