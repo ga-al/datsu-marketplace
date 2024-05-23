@@ -487,6 +487,9 @@ if (document.querySelector('.share-buttons')) {
         e.preventDefault()
         copyPath.innerHTML = 'Скопировано'
         copyPath.style.color = '#212529'
+        copyPath.style.width = '100%'
+        copyPath.style.padding = '0'
+        copyPath.style.backgroundImage = 'none'
     })
 
 }
