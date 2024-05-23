@@ -312,7 +312,7 @@ $total_count = count( $gallery_attachment_ids );
 										}
 									?>
 								</div>
-								<span>Скопировано</span>
+								<a href="#" class="copypath">Копировать</a>
 							</span>
 						</div>
 						<!-- <p class="fw-bold fs-5 mt-3 mb-2">Скачать документацию: </p>

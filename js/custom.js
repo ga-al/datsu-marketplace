@@ -45,14 +45,7 @@ jQuery(function ($) {
 
     // Вывод счётчика корзины
     const blocks = document.querySelectorAll(".mrk-cart-quantity");
-    // const kitsBlocks = document.querySelectorAll(".mrk-card-quantity-kits");
-
-    // храним шаблоны в удобном для редактирования месте
-    // const orderHTML = `<a href="#" class="btn-order btn btn-primary w-100">
-    // <img class="d-inline-block mx-auto pe-1" src="<?= esc_url(get_stylesheet_directory_uri()); ?>/img/svg/cart4-white.svg" alt="корзина">
-    // В корзину
-    // </a>`;
-
+   
     const quantityHTML = `
     <div class="quantity btn btn-outline-primary d-flex justify-content-center align-items-center">
     <button type="button" class="minus input-group-text border-0 text-primary py-0">-</button>	<label class="screen-reader-text" >Количество товара</label>
@@ -63,9 +56,6 @@ jQuery(function ($) {
         renameQuantiyElement(item, 'btn-order');
     });
 
-    // kitsBlocks.forEach(item => {
-    //     renameQuantiyElement(item, 'btn-order-kits');
-    // });
 
     function renameQuantiyElement(block, btn) {
         block.addEventListener("click", (event) => {
@@ -251,9 +241,7 @@ if (document.querySelectorAll('.slider').length) {
                             sliderItem.classList.add('slider-horizontal')
                             sliderThumbs.wrapperEl.classList.remove('slider-grid')
                             masonrySliderDelete()
-                            // if(youtubes) {
-                            //     removeYoutubes(youtubes)
-                            // }
+                           
                         } else if (currentSlide.classList.contains('slider-vertic')) {
                             sliderThumbs.changeDirection(getDirection())
                             sliderItem.classList.remove('slider-horizontal')
@@ -265,38 +253,8 @@ if (document.querySelectorAll('.slider').length) {
                             }
                         }
                         
-                        // if (currentSlide.classList.contains('slider-vertic')) {
-                        //     // sliderThumbs.changeDirection(getDirection())
-                        //     sliderItem.classList.remove('slider-horizontal')
-                        //     sliderItem.classList.add('slider-vertical')
-                        //     sliderThumbs.wrapperEl.classList.add('slider-grid')
-                        //     masonrySlider()
-                           
-                        //     if(youtubes) {
-                        //         addYoutubes(youtubes)
-                        //     }
-                        // } 
-                        // else if (currentSlide.classList.contains('slider-horizont')) {
-                        //     clicked = false
-                        //     sliderThumbs.changeDirection(getDirection())
-                        //     sliderItem.classList.remove('slider-vertical')
-                        //     sliderItem.classList.add('slider-horizontal')
-                        //     sliderThumbs.wrapperEl.classList.remove('slider-grid')
-                        //     masonrySliderDelete()
-                            
-                        //     if(youtubes) {
-                        //         removeYoutubes(youtubes)
-                        //     }
-                        // }
                     }
-                    // } else {
-                    // sliderThumbs.wrapperEl.classList.remove('slider-grid')
-                    // }
-                    // if (document.querySelector('.slider-grid')) {
-                    //     this.mousewheel.disable()
-                    // } else {
-                    //     this.mousewheel.enable()
-                    // }
+                   
                 }
             },
             thumbs: {
@@ -355,7 +313,6 @@ if (document.querySelectorAll('.slider').length) {
             
     }
 
-    
     function masonrySliderDelete() {
         if (msnrySlider) msnrySlider.destroy();
     }
@@ -515,9 +472,19 @@ var mainSecondSwiper = new Swiper('.swiper-children', {
         clickable: true,
     },
 })
+
 if (document.querySelector('.share-buttons')) {
     const shareBtns = document.querySelector('.share-buttons.hide')
+    const copyPath = document.querySelector('.copypath')
+
     document.querySelector('.share-link').addEventListener('click', function() {
     shareBtns.classList.toggle('hide')
+
+    copyPath.addEventListener('click', function(e) {
+        e.preventDefault()
+        copyPath.innerHTML = 'Скопировано'
+        copyPath.style.color = '#212529'
+    })
 })
+
 }
