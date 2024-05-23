@@ -104,7 +104,7 @@ if ( isset( $queried_object->term_id ) ) {
 								?>
 							</div>
 						</div>
-						<div>
+						<!-- <div>
 							<?php
 								if ( isset($term_thumbnail_id) && $term_thumbnail_id ) {
 									$term_thumbnail_url = wp_get_attachment_url( $term_thumbnail_id );
@@ -113,7 +113,7 @@ if ( isset( $queried_object->term_id ) ) {
 									<?php
 								}
 							?>
-						</div>
+						</div> -->
 							
 					</div>
 				</div>

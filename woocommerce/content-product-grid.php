@@ -29,10 +29,7 @@ $product_price = $product->get_price();
 $product_sale_price = $product->get_sale_price();
 $product_regular_price = $product->get_regular_price();
 $product_link = get_permalink($product_id);
-$image = wp_get_attachment_image_url( get_post_thumbnail_id( $product_id ), 'medium' );
-if ( !$image ) {
-	$image = get_stylesheet_directory_uri() . '/img/placeholder.png';
-}
+
 // $image = '';
 // $product_name = $product->name;
 // $product_name = $product->name;
@@ -60,6 +57,12 @@ if (empty($product) || !$product->is_visible()) {
               'return' => 'objects',
             ) );
             $together = $together_query->get_products();
+
+            $together_attachment_ids = $product->get_gallery_image_ids();
+            $product_thumbnail_id = get_post_thumbnail_id( $product_id );
+            if ( !$together_attachment_ids ) {
+              $together_attachment_ids = [ $product_thumbnail_id ];
+            }
           ?>
           <?php
 
@@ -68,22 +71,24 @@ if (empty($product) || !$product->is_visible()) {
           ?>
           <div class="swiper-wrapper">
             <?php
-              foreach ($together as $key => $together_product) {
+              foreach ($together_attachment_ids as $key => $together_attachment_id) {
+                $image_src = wp_get_attachment_url( $together_attachment_id, 'medium' );
 
-                $together_attachment_url = $image;
-
-							?>
-              <div class="swiper-slide">
-                <!-- <div class="position-absolute start-0 top-0 mt-2 ms-2 text-start">
-                  <div class="mrk-hit">хит</div>
-                  <div class="mrk-new">новинка</div>
-                </div> -->
-                <div class="mrk-card-heart no-active"><?php echo do_shortcode("[yith_wcwl_add_to_wishlist]") ?></div>
-                <img class="card-img-top" src="<?php echo $together_attachment_url ?>" alt="">
-              </div>
-              <?php
-								}
-							?>
+                if ( !$image_src ) {
+                  $image_src = get_stylesheet_directory_uri() . '/img/placeholder.png';
+                }
+            ?>
+            <div class="swiper-slide">
+              <!-- <div class="position-absolute start-0 top-0 mt-2 ms-2 text-start">
+                <div class="mrk-hit">хит</div>
+                <div class="mrk-new">новинка</div>
+              </div> -->
+              <div class="mrk-card-heart no-active"><?php echo do_shortcode("[yith_wcwl_add_to_wishlist]") ?></div>
+              <img class="card-img-top" src="<?php echo $image_src ?>" alt="">
+            </div>
+            <?php
+              }
+            ?>
           </div>
           <?php
             }
