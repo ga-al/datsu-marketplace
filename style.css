@@ -1497,7 +1497,10 @@ body .modal .carousel-control-next, body .modal  .carousel-control-prev {
   height: 17px;
   margin-right: 0.5rem;
 }
-
+.woocommerce-order-details button {
+  display: flex;
+  align-items: center;
+}
 
 
 
