@@ -19,20 +19,6 @@ jQuery(function ($) {
             let sort = btn.data('sort')
             let term_id = btn.data('term_id')
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
             // $.ajax({
             //     type: "GET",
             //     url: "/wp-admin/admin-ajax.php",
@@ -48,8 +34,6 @@ jQuery(function ($) {
             // });
         });
     }
-
-
 
     function me_FORM_page_home() {
 

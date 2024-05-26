@@ -44,3 +44,9 @@ input[name='update_cart'] {
  button[name='update_cart'] {
     display: none !important;
  }
+
+
+ /* Модалка при нажатии поделиться корзиной на стрнице /cart/ */
+.wpcss-area .wpcss-popup {
+    width:  auto !important;
+}
