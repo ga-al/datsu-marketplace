@@ -311,8 +311,6 @@ $total_count = count( $gallery_attachment_ids );
 											}
 										}
 										$currentUrl = ((!empty($_SERVER['HTTPS'])) ? 'https' : 'http') . '://' . $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI'];
-										echo $currentUrl;
-
 									?>
 									<a href="<?php echo $currentUrl ?>" class="copypath"></a>
 								</div>
