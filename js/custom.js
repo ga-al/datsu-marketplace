@@ -495,7 +495,7 @@ if (document.querySelector('.share-buttons')) {
 
 
         const textArea = document.createElement("textarea");
-        textArea.value = e.target.attr('href');
+        textArea.value = e.target.getAttribute('href');
         document.body.appendChild(textArea);
         textArea.focus();
         textArea.select();
