@@ -310,8 +310,11 @@ $total_count = count( $gallery_attachment_ids );
 
 											}
 										}
+										$currentUrl = ((!empty($_SERVER['HTTPS'])) ? 'https' : 'http') . '://' . $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI'];
+										echo $currentUrl;
+
 									?>
-									<a href="#" class="copypath"></a>
+									<a href="<?php echo $currentUrl ?>" class="copypath"></a>
 								</div>
 							</span>
 						</div>
@@ -490,9 +493,13 @@ $total_count = count( $gallery_attachment_ids );
 														<?php
 															foreach ($together_gallery_attachment_ids as $key => $gallery_attachment_id) {
 																$image_src = wp_get_attachment_url( $gallery_attachment_id, 'medium' );
+																$image_src_full = wp_get_attachment_url( $gallery_attachment_id, 'full' );
 
 																if ( !$image_src ) {
-																	$image_src = get_stylesheet_directory_uri() . '/img/placeholder.png';
+																  $image_src = get_stylesheet_directory_uri() . '/img/placeholder.png';
+																}
+																if ( !$image_src_full ) {
+																  $image_src_full = get_stylesheet_directory_uri() . '/img/placeholder.png';
 																}
 														?>
 

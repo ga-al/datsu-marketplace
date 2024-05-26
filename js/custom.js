@@ -492,6 +492,23 @@ if (document.querySelector('.share-buttons')) {
         copyPath.style.width = '100%'
         copyPath.style.padding = '0'
         copyPath.style.backgroundImage = 'none'
+
+
+        const textArea = document.createElement("textarea");
+        textArea.value = $(this).attr('href');
+        document.body.appendChild(textArea);
+        textArea.focus();
+        textArea.select();
+        try {
+            console.log('copy');
+            document.execCommand('copy');
+        } catch (err) {
+            console.error('Unable to copy to clipboard', err);
+        }
+        document.body.removeChild(textArea);
+
+
+
     })
 
 }

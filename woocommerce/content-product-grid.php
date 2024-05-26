@@ -45,7 +45,7 @@ if (empty($product) || !$product->is_visible()) {
 
 <div class="col-md-4 col-xl-3 mb-4">
   <div class="card border-0 h-100">
-    <div class="card-kit-img"> 
+    <div class="card-kit-img">
       <div class="swiper swiper-children">
         <?php
             $together_query = new WC_Product_Query( array(
@@ -74,7 +74,11 @@ if (empty($product) || !$product->is_visible()) {
               foreach ($together_attachment_ids as $key => $together_attachment_id) {
                 $image_src = wp_get_attachment_url( $together_attachment_id, 'medium' );
 
+                $image_src__full = wp_get_attachment_url( $together_attachment_id, 'full' );
                 if ( !$image_src ) {
+                  $image_src = get_stylesheet_directory_uri() . '/img/placeholder.png';
+                }
+                if ( !$image_src__full ) {
                   $image_src = get_stylesheet_directory_uri() . '/img/placeholder.png';
                 }
             ?>
