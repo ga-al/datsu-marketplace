@@ -134,16 +134,16 @@ $total_count = count( $gallery_attachment_ids );
 									<? }
 									}
 									if ( $gallery_attachment_ids) {
-										foreach ($gallery_attachment_ids as $gallery_attachment_id) {
+										foreach ($gallery_attachment_ids as $key => $gallery_attachment_id) {
 											if ($total_count > 1) {
 											?>
 											<!-- <div class="position-absolute start-0 top-0 mt-2 ms-2 text-start">
 												<div class="mrk-hit">хит</div>
 												<div class="mrk-new">новинка</div>
 											</div> -->
-											<div class="swiper-slide" data-slider="0" data-bs-toggle="modal" data-bs-target="#backdrop-1" data-bs-gallery="<?= wp_get_attachment_url( $gallery_attachment_id, 'full' ); ?>" title="увеличить окно просмотра">
+											<div class="swiper-slide" data-slider="0" data-bs-toggle="modal" data-bs-target="#backdrop-<?php echo $key ?>" data-bs-gallery="<?= wp_get_attachment_url( $gallery_attachment_id, 'full' ); ?>" title="увеличить окно просмотра">
 												<div class="image-4x3"><img src="<?= wp_get_attachment_url( $gallery_attachment_id, 'full' ); ?>" alt="image">
-													<div class="fullscrin" data-slider="0" data-bs-toggle="modal" data-bs-target="#backdrop-1" data-bs-gallery="<?= wp_get_attachment_url( $gallery_attachment_id, 'full' ); ?>" title="увеличить окно просмотра">
+													<div class="fullscrin" data-slider="0" data-bs-toggle="modal" data-bs-target="#backdrop-<?php echo $key ?>" data-bs-gallery="<?= wp_get_attachment_url( $gallery_attachment_id, 'full' ); ?>" title="увеличить окно просмотра">
 														<svg class="bi bi-aspect-ratio bg-opacity-75 text-bg-secondary" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
 														<path d="M0 3.5A1.5 1.5 0 0 1 1.5 2h13A1.5 1.5 0 0 1 16 3.5v9a1.5 1.5 0 0 1-1.5 1.5h-13A1.5 1.5 0 0 1 0 12.5v-9zM1.5 3a.5.5 0 0 0-.5.5v9a.5.5 0 0 0 .5.5h13a.5.5 0 0 0 .5-.5v-9a.5.5 0 0 0-.5-.5h-13z"></path>
 														<path d="M2 4.5a.5.5 0 0 1 .5-.5h3a.5.5 0 0 1 0 1H3v2.5a.5.5 0 0 1-1 0v-3zm12 7a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1 0-1H13V8.5a.5.5 0 0 1 1 0v3z"></path>
@@ -158,10 +158,10 @@ $total_count = count( $gallery_attachment_ids );
 												<div class="mrk-hit">хит</div>
 												<div class="mrk-new">новинка</div>
 											</div> -->
-											<div class="swiper-slide" data-slider="0" data-bs-toggle="modal" data-bs-target="#backdrop-image" data-bs-gallery="<?= wp_get_attachment_url( $gallery_attachment_id, 'full' ); ?>" title="увеличить окно просмотра">
+											<div class="swiper-slide" data-slider="0" data-bs-toggle="modal" data-bs-target="#backdrop-image-<?php echo $key ?>" data-bs-gallery="<?= wp_get_attachment_url( $gallery_attachment_id, 'full' ); ?>" title="увеличить окно просмотра">
 												<div class="image-4x3 image-one">
 													<img src="<?= wp_get_attachment_url( $gallery_attachment_id, 'full' ); ?>" alt="image">
-													<div class="fullscrin" data-slider="0" data-bs-toggle="modal" data-bs-target="#backdrop-image" data-bs-gallery="<?= wp_get_attachment_url( $gallery_attachment_id, 'full' ); ?>" title="увеличить окно просмотра">
+													<div class="fullscrin" data-slider="0" data-bs-toggle="modal" data-bs-target="#backdrop-image-<?php echo $key ?>" data-bs-gallery="<?= wp_get_attachment_url( $gallery_attachment_id, 'full' ); ?>" title="увеличить окно просмотра">
 														<svg class="bi bi-aspect-ratio bg-opacity-75 text-bg-secondary" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
 															<path d="M0 3.5A1.5 1.5 0 0 1 1.5 2h13A1.5 1.5 0 0 1 16 3.5v9a1.5 1.5 0 0 1-1.5 1.5h-13A1.5 1.5 0 0 1 0 12.5v-9zM1.5 3a.5.5 0 0 0-.5.5v9a.5.5 0 0 0 .5.5h13a.5.5 0 0 0 .5-.5v-9a.5.5 0 0 0-.5-.5h-13z"></path>
 															<path d="M2 4.5a.5.5 0 0 1 .5-.5h3a.5.5 0 0 1 0 1H3v2.5a.5.5 0 0 1-1 0v-3zm12 7a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1 0-1H13V8.5a.5.5 0 0 1 1 0v3z"></path>
