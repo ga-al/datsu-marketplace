@@ -2,13 +2,13 @@ jQuery(function ($) {
     // галлерея
     $('.mrk-gallery-thumbs a').on('click', function(event) {
         event.preventDefault();
-    
+
         let dataPath = $(this).attr('data-path');
         let galleryTop = $('.mrk-gallery-image');
-    
+
         galleryTop.attr('src', dataPath);
         $('.mrk-gallery-thumbs a.active').removeClass('active');
-        $(this).addClass('active'); 
+        $(this).addClass('active');
     });
 
     // динамика сердечек
@@ -16,7 +16,7 @@ jQuery(function ($) {
         $('.mrk-card-heart .feedback').css('display', 'none');
         $('.mrk-card-heart').toggleClass( "no-active" );
     })
- 
+
     // чат
     if ($('.ready-made-solutions').length) {
         $('.mrk-project-chat').removeClass('hide')
@@ -30,7 +30,7 @@ jQuery(function ($) {
             } else {
                 $('.mrk-project-chat').css('margin-top', '0')
             }
-            
+
           })
           $(window).trigger('scroll')
           console.log('chat')
@@ -41,17 +41,16 @@ jQuery(function ($) {
     }
 
 
-}); // jQuery End
 
     // Вывод счётчика корзины
     const blocks = document.querySelectorAll(".mrk-cart-quantity");
-   
+
     const quantityHTML = `
     <div class="quantity btn btn-outline-primary d-flex justify-content-center align-items-center">
     <button type="button" class="minus input-group-text border-0 text-primary py-0">-</button>	<label class="screen-reader-text" >Количество товара</label>
     <input type="number" class="input-text qty text border-0 text-primary py-0" name="cart[111][qty]" value="1" aria-label="Количество товара" size="4" min="0" max="" step="1" placeholder="" inputmode="numeric" autocomplete="off">
     <button type="button" class="plus input-group-text border-0 text-primary py-0">+</button></div>`;
-   
+
     blocks.forEach(item => {
         renameQuantiyElement(item, 'btn-order');
     });
@@ -66,6 +65,9 @@ jQuery(function ($) {
     }
 
 
+}); // jQuery End
+
+
 // Slider
 if (document.querySelectorAll('.slider').length) {
 
@@ -76,10 +78,10 @@ if (document.querySelectorAll('.slider').length) {
     const modalItem = document.querySelectorAll('.modal')
     const swiperSliders = document.querySelectorAll('.swiper-slide')
     const fullSliders = document.querySelectorAll('.fullscrin')
-    const sliderImagesModals = document.querySelectorAll('.slider__images--modal') 
-    
+    const sliderImagesModals = document.querySelectorAll('.slider__images--modal')
+
     const mediaQuery = window.matchMedia('(min-width: 769px)')
-    
+
     let clicked = false
     let msnrySlider
     let isMobileWidth = window.innerWidth < 769
@@ -93,7 +95,7 @@ if (document.querySelectorAll('.slider').length) {
     let iframeUrl
     let iframeThumb
     let urlThumb
-        
+
 
     if (sliderItem.classList.contains('slider-vertical')) {
         document.querySelector('.slider-thumb__images .swiper-wrapper').classList.add('slider-grid')
@@ -113,19 +115,19 @@ if (document.querySelectorAll('.slider').length) {
 
     swiperSliders.forEach((swiper) => {
         getOffsetSlide(swiper)
-        
+
         const swiperImage = swiper.querySelector('.image-4x3 img')
         if (swiperImage) {
             const swiperImageParent = swiperImage.parentNode.parentNode
-            getOffsetParentSlide(swiperImage, swiperImageParent)  
+            getOffsetParentSlide(swiperImage, swiperImageParent)
         }
-    })   
-   
+    })
+
     function getOffsetSlide(slide) {
         if (slide.offsetWidth > slide.offsetHeight) {
             slide.classList.add('slider-horizont')
             slide.classList.remove('slider-vertic')
-        } 
+        }
          if (slide.offsetWidth <= slide.offsetHeight) {
             slide.classList.remove('slider-horizont')
             slide.classList.add('slider-vertic')
@@ -136,13 +138,13 @@ if (document.querySelectorAll('.slider').length) {
         if (slide.offsetWidth > slide.offsetHeight) {
             parent.classList.add('slider-horizont')
             parent.classList.remove('slider-vertic')
-        } 
+        }
         if (slide.offsetWidth <= slide.offsetHeight) {
             parent.classList.remove('slider-horizont')
             parent.classList.add('slider-vertic')
         }
     }
-   
+
     getSliderView(fullSliders)
     getSliderView(swiperSliders)
 
@@ -158,7 +160,7 @@ if (document.querySelectorAll('.slider').length) {
 
     function sliderThumbActive(images, thumbs) {
         if (images && thumbs) {
-        
+
         sliderThumbs = new Swiper(thumbs, {
             direction: getDirection(),
             slidesPerView: 'auto',
@@ -172,7 +174,7 @@ if (document.querySelectorAll('.slider').length) {
                 if (mediaQuery.matches) {
                     sliderThumbs.changeDirection(getDirection())
                     // addYoutubes(youtubes)
-                    
+
                     if (this.clickedSlide.classList.contains('slider-horizont')) {
                         clicked = false
                         sliderThumbs.changeDirection(getDirection())
@@ -211,7 +213,7 @@ if (document.querySelectorAll('.slider').length) {
             }
             }
         })
-    
+
         sliderImages = new Swiper(images, {
             direction: 'horizontal',
             slidesPerView: 1,
@@ -241,7 +243,7 @@ if (document.querySelectorAll('.slider').length) {
                             sliderItem.classList.add('slider-horizontal')
                             sliderThumbs.wrapperEl.classList.remove('slider-grid')
                             masonrySliderDelete()
-                           
+
                         } else if (currentSlide.classList.contains('slider-vertic')) {
                             sliderThumbs.changeDirection(getDirection())
                             sliderItem.classList.remove('slider-horizontal')
@@ -252,9 +254,9 @@ if (document.querySelectorAll('.slider').length) {
                                 addYoutubes(youtubes)
                             }
                         }
-                        
+
                     }
-                   
+
                 }
             },
             thumbs: {
@@ -281,16 +283,16 @@ if (document.querySelectorAll('.slider').length) {
             }
             },
         })
-    
+
         }
     }
-    
+
     function getSliderView(slider) {
         let i
         for(i=0; i < slider.length; i++) {
             if (i != 0) {
                 slider[i].setAttribute('data-slider', i)
-                
+
             } else {
                 slider[i].setAttribute('data-slider', '0')
             }
@@ -301,7 +303,7 @@ if (document.querySelectorAll('.slider').length) {
         let direction = clicked ? 'vertical' : 'horizontal'
         return direction
     }
-        
+
     function masonrySlider() {
         msnrySlider = new Masonry( document.querySelector('.slider-grid'), {
             itemSelector: '.swiper-slide',
@@ -310,20 +312,20 @@ if (document.querySelectorAll('.slider').length) {
             percentPosition: true,
         })
         msnrySlider.layout()
-            
+
     }
 
     function masonrySliderDelete() {
         if (msnrySlider) msnrySlider.destroy();
     }
-     
+
     function sliderModals(modal) {
         carousel = new bootstrap.Carousel(modal, {
         // interval: 2000,
         touch: true
         })
     }
-        
+
     // вывод модального окна
     modalItem.forEach(modal => {
         modal.addEventListener('show.bs.modal', function (e) {
@@ -332,21 +334,21 @@ if (document.querySelectorAll('.slider').length) {
                 videoURL = videoIframe.getAttribute('src')
                 srcUrl = videoURL+srcModal
                 const currentSlide = this.querySelector('.carousel-item.active')
-                    
+
             if (currentSlide.querySelector('.iframe')) {
                 videoIframe.setAttribute('src', srcUrl)
             }}
             let invoker = e.relatedTarget
-            
+
             sliderImagesModals.forEach(el => {
             sliderModals(el)
-            carousel.to(invoker.getAttribute('data-slider')) 
-            
+            carousel.to(invoker.getAttribute('data-slider'))
+
             if (!this.querySelector('.iframe')) {
-                this.querySelector('.carousel-item').classList.add('active') 
+                this.querySelector('.carousel-item').classList.add('active')
                 console.log(carousel.to(invoker.getAttribute('data-slider')) )
-            } 
-    
+            }
+
             el.addEventListener('slid.bs.carousel', function(e) {
                 const currentSlide = this.querySelector('.carousel-item.active')
                 if (currentSlide && videoIframe) {
@@ -354,7 +356,7 @@ if (document.querySelectorAll('.slider').length) {
                     let videoURLa = videoIframe.getAttribute('src')
                     if (videoURL === videoIframe.setAttribute('src', srcUrl)) {
                         videoIframe.setAttribute('src', videoURLa)
-                    } 
+                    }
                     if (videoIframe && videoIframe.setAttribute('src', videoURL)) {
                         videoIframe.setAttribute('src', srcUrl)
                     }
@@ -369,8 +371,8 @@ if (document.querySelectorAll('.slider').length) {
                 iframeUrl.setAttribute('src', videoURL)
             }
         });
-    }) 
-        
+    })
+
     function hideIframe() {
         ImageYoutubes.forEach(video => {
         let videoEl = video.querySelectorAll('.iframe')
@@ -405,15 +407,15 @@ if (document.querySelectorAll('.slider').length) {
           let urlPlay = urlThumb + srcLoop
           console.log(urlThumb)
           console.log(urlPlay)
-          
+
           if (urlThumb !== null) {
             iframeThumb.setAttribute('src', urlPlay)
             console.log(iframeThumb)
           }
-            
+
         })
     }
-      
+
     function YouTubeGetID(url){
         if (url) {
             url = url.split(/(vi\/|v=|\/v\/|youtu\.be\/|\/embed\/)/);
@@ -428,7 +430,7 @@ if (document.querySelectorAll('.slider').length) {
         sliderThumbActive('.slider__images--main', '.slider-thumb__images--main')
         }
     }
-       
+
 }
 
 // Slider-cards

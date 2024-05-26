@@ -260,8 +260,8 @@ $total_count = count( $gallery_attachment_ids );
 									<div class="row align-items-center mx-auto w-100 gap-2">
 										<div class="col px-0">
 											<div class="quantity flex-nowrap quantity-product-card">
-												<budton type="button" class="minus input-group-text flex-grow-1 justify-content-center">&minus;</budton><label class="screen-reader-text" for="quantity_661bd21d11c6d">Количество товара blockly is a ROS package</label>
-												<input type="number" id="quantity_661bd21d11c6d" class="input-text qty text flex-grow-1" name="cart[9778d5d219c5080b9a6a17bef029331c][qty]" value="1" aria-label="Количество товара" size="4" min="0" max="" step="1" placeholder="" inputmode="numeric" autocomplete="off">
+												<budton type="button" class="minus input-group-text flex-grow-1 justify-content-center">&minus;</budton><label class="screen-reader-text" for="quantity_<?php echo $product_id ?>">Количество товара blockly is a ROS package</label>
+												<input type="number" id="quantity_<?php echo $product_id ?>" class="input-text qty text flex-grow-1" name="quantity" aria-label="Количество товара" value="1" size="4" min="0" max="" step="1" placeholder="" inputmode="numeric" autocomplete="off">
 												<button type="button" class="plus input-group-text flex-grow-1 justify-content-center">&plus;</button>
 											</div>
 										</div>
@@ -302,7 +302,7 @@ $total_count = count( $gallery_attachment_ids );
 								</svg>Поделиться
 								<div class="share-buttons">
 									<?php
-										$shareButtons = mps_share_buttons( $product_id );
+										$shareButtons = mps_share_buttons( ['type'=>'product', 'post_id' => $product_id] );
 										if ( $shareButtons ) {
 
 											foreach ($shareButtons as $key => $btn) {

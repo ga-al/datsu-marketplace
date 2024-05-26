@@ -33,3 +33,14 @@
 #footer-social span{
     display: block !important;
 }
+
+
+input[name='update_cart'] {
+    display: none !important;
+ }
+
+ /* OR TRY THIS */
+
+ button[name='update_cart'] {
+    display: none !important;
+ }

@@ -34,7 +34,7 @@ function me_FORM_page_home() {
         'content-type: text/html',
     ]);
 
-    echo var_dump($res);
+    // echo var_dump($res);
     wp_die();
 
 }
@@ -132,34 +132,48 @@ add_filter( 'woocommerce_before_checkout_billing_form', 'aaa' );
 function aaa() {
     // echo '<style> #customer_details .col-2 {display: none;}</style>';
 
-    var_dump( wc_get_order( 178 ) );
+    // var_dump( wc_get_order( 178 ) );
 }
 
+
+// add_action( 'wp_footer', 'bbloomer_cart_refresh_update_qty' );
+// function bbloomer_cart_refresh_update_qty() {
+//    if ( is_cart() || ( is_cart() && is_checkout() ) ) {
+//       wc_enqueue_js( "
+//          $('div.woocommerce').on('change', 'input.qty', function(){
+//             $('[name=\'update_cart\']').trigger('click');
+//          });
+//       " );
+//    }
+// }
 
 add_filter( 'woocommerce_checkout_fields', 'me_del_fields_checkout' );
 function me_del_fields_checkout( $fields ) {
 
-    foreach ($fields[ 'billing' ] as $key => $value) {
-        $fields[ 'billing' ][$key][ 'required' ] = false;
-    }
-    foreach ($fields[ 'shipping' ] as $key => $value) {
-        $fields[ 'shipping' ][$key][ 'required' ] = false;
-    }
+    // foreach ($fields[ 'billing' ] as $key => $value) {
+    //     $fields[ 'billing' ][$key][ 'required' ] = false;
+    // }
+    // foreach ($fields[ 'shipping' ] as $key => $value) {
+    //     $fields[ 'shipping' ][$key][ 'required' ] = false;
+    // }
 
+    // var_dump('qqqq');
     // оставляем эти поля
     // unset( $fields[ 'billing' ][ 'billing_first_name' ] ); // имя
     // unset( $fields[ 'billing' ][ 'billing_last_name' ] ); // фамилия
     // unset( $fields[ 'billing' ][ 'billing_email' ] ); // емайл
     // удаляем все эти поля
-    // unset( $fields[ 'billing' ][ 'billing_phone' ] ); // телефон
-    // unset( $fields[ 'billing' ][ 'billing_company' ] ); // компания
-    // unset( $fields[ 'billing' ][ 'billing_country' ] ); // страна
-    // unset( $fields[ 'billing' ][ 'billing_address_1' ] ); // адрес 1
-    // unset( $fields[ 'billing' ][ 'billing_address_2' ] ); // адрес 2
-    // unset( $fields[ 'billing' ][ 'billing_city' ] ); // город
-    // unset( $fields[ 'billing' ][ 'billing_state' ] ); // регион, штат
-    // unset( $fields[ 'billing' ][ 'billing_postcode' ] ); // почтовый индекс
-    // unset( $fields[ 'order' ][ 'order_comments' ] ); // заметки к заказу
+    // $fields[ 'billing' ][ 'billing_email' ][ 'required' ] = false; // телефон
+    $fields[ 'billing' ][ 'billing_phone' ][ 'required' ] = false; // емайл
+    $fields[ 'billing' ][ 'billing_last_name' ][ 'required' ] = false; // емайл
+    unset( $fields[ 'billing' ][ 'billing_company' ] ); // компания
+    unset( $fields[ 'billing' ][ 'billing_country' ] ); // страна
+    unset( $fields[ 'billing' ][ 'billing_address_1' ] ); // адрес 1
+    unset( $fields[ 'billing' ][ 'billing_address_2' ] ); // адрес 2
+    unset( $fields[ 'billing' ][ 'billing_city' ] ); // город
+    unset( $fields[ 'billing' ][ 'billing_state' ] ); // регион, штат
+    unset( $fields[ 'billing' ][ 'billing_postcode' ] ); // почтовый индекс
+    unset( $fields[ 'order' ][ 'order_comments' ] ); // заметки к заказу
 
     // $fields[ 'billing' ]['billing_phone'][ 'required' ] = false;
 
