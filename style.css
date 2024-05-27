@@ -255,6 +255,10 @@ a.btn:hover {
 .mrk-download {
   border: 1px solid #E9EEFF;
 }
+.mrk-gallery-image {
+  object-fit: cover;
+  object-position: top;
+}
 .components-button {
   border-radius: 12px 0 12px 0;
   border: 1px solid var(--bs-primary);
@@ -1516,6 +1520,7 @@ body .modal .carousel-control-next, body .modal  .carousel-control-prev {
   display: flex;
   align-items: center;
 }
+
 
 
 
