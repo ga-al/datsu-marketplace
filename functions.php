@@ -18,7 +18,8 @@
     wp_enqueue_script('me-sctipts', get_stylesheet_directory_uri() . '/js/me_sctipts.js', false, '', true);
   }
 
-
+  add_theme_support( 'post-thumbnails', array( 'post', 'page' ) );
+  
 if (!function_exists('bootscore_sidebar_col_class')) {
   function bootscore_sidebar_col_class() {
     return "col-lg-3 order-first pe-lg-2 px-0";
