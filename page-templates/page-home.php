@@ -64,15 +64,8 @@ $social_menu = me_render_social();
                         </div>
                       </div>
                       <div class="row thumbs mrk-gallery-thumbs flex-md-column flex-nowrap mx-0 mx-md-auto gap-2">
-
-                        <div class="col-4 col-md-12 thumbnail"><a class="active" href="#" data-path="<?= esc_url(get_stylesheet_directory_uri()); ?>/img/gallery/baner-home-thumb.jpeg">
-                          <img class="img-thumbnail border-0 p-0" src="<?= esc_url(get_stylesheet_directory_uri()); ?>/img/gallery/baner-home-thumb.jpeg" alt="vidio-thumb"></a>
-                        </div>
-
                         <?php
                           $images = get_field('main-banner-slider');
-
-
                           if( $images ): ?>
                                   <?php foreach( $images as $image_id ):
 
