@@ -69,11 +69,7 @@ $gallery_attachment_ids = $_product->get_gallery_image_ids();
                         </div>
                       </div>
                       <div class="row thumbs mrk-gallery-thumbs flex-md-column flex-nowrap mx-0 mx-md-auto gap-2">
-                        <?php 
-                          if ( $gallery_attachment_ids) {
-                            foreach ($gallery_attachment_ids as $key => $gallery_attachment_id) {?> 
-                          <div class="col-4 col-md-12 thumbnail"><a class="active" href="#" data-path="<?= wp_get_attachment_url( $gallery_attachment_id, 'thumb' ); ?>"><img class="img-thumbnail border-0 p-0" src="<?= wp_get_attachment_url( $gallery_attachment_id, 'thumb' ); ?>" alt="thumb"></a></div>
-                        <?php }} ?>
+                       
                         <div class="col-4 col-md-12 thumbnail"><a href="#" data-path="<?= esc_url(get_stylesheet_directory_uri()); ?>/img/gallery/image-2.jpg"><img class="img-thumbnail border-0 p-0" src="<?= esc_url(get_stylesheet_directory_uri()); ?>/img/gallery/image-2.jpg" alt="vidio-thumb"></a></div>
                         <div class="col-4 col-md-12 thumbnail"><a href="#" data-path="<?= esc_url(get_stylesheet_directory_uri()); ?>/img/gallery/image-3.jpg"><img class="img-thumbnail border-0 p-0" src="<?= esc_url(get_stylesheet_directory_uri()); ?>/img/gallery/image-3.jpg" alt="vidio-thumb"></a></div>
                       </div>
