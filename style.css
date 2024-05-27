@@ -564,8 +564,8 @@ border-bottom: 1px dashed var(--bs-secondary);
 .share-buttons a:nth-child(3) {
   background-image: url(img/svg/chatbot.svg);
 }
-.copypath {
-  background-image: url(img/svg/copy.svg)!important;
+.copypath, .wpcss-popup-content .share-buttons a:last-child {
+  background-image: url(img/svg/copy.svg);
   transition: width 1s linear;
 }
 
