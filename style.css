@@ -593,6 +593,11 @@ border-bottom: 1px dashed var(--bs-secondary);
   max-height: 385px;
   object-fit: contain;
 }
+
+body .modal-body .woocommerce img, body .modal-body .woocommerce-page img {
+  max-height: 98vh;
+}
+
 .nav-tabs .nav-link.active, .nav-tabs .nav-item.show .nav-link {
   border: none;
   color: var(--bs-primary);
@@ -1073,9 +1078,7 @@ body .modal-body .carousel-inner .carousel-item {
   height: 100%;
   transition: none;
 }
-body .modal-body .woocommerce img, body .modal-body .woocommerce-page img {
-  max-height: 98vh;
-}
+
 body .modal-body .carousel-inner .youtube {
   height: 100%;
 }
