@@ -728,7 +728,7 @@ border-bottom: 1px dashed var(--bs-secondary);
   object-fit: contain;
 }
 
-.swiper-slide img {
+.slider.slider-horizontal .swiper-slide img {
   min-height: 317px;
 }
 
