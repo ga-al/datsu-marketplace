@@ -431,13 +431,13 @@ $total_count = count( $gallery_attachment_ids );
 													if ( $attribute['is_taxonomy'] ) {
 
 														$values = wc_get_product_terms( $product_id, $attribute['name'], array( 'fields' => 'names' ) );
-														echo apply_filters( 'woocommerce_attribute', wpautop( wptexturize( implode( ', ', $values ) ) ), $attribute, $values );
+														echo apply_filters( 'woocommerce_attribute', implode( ', ', $values ) , $attribute, $values );
 
 													} else {
 
 														// Convert pipes to commas and display values
 														$values = array_map( 'trim', explode( ', ', $attribute['value'] ) );
-														echo apply_filters( 'woocommerce_attribute', wpautop( wptexturize( implode( ', ', $values ) ) ), $attribute, $values );
+														echo apply_filters( 'woocommerce_attribute', implode( ', ', $values ) , $attribute, $values );
 
 													}
 												?>
