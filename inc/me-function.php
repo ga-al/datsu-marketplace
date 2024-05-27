@@ -26,7 +26,8 @@ function misha_filter_function($content, $url) {
                     if ( $shareButtons ) {
 
                         foreach ($shareButtons as $key => $btn) {
-                            echo '<a href="'.$btn['url'].'"></a>';
+                            echo '<a class="mps-btn-'.$btn['slug'].'" href="'.$btn['btn']['url'].'"></a>';
+
                         }
                     }
                 ?>
