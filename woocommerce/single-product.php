@@ -414,13 +414,17 @@ $total_count = count( $gallery_attachment_ids );
 								<h2 class="mrk-block-title text-nowrap fw-medium pb-2">Характеристики</h2>
 								<ul class="mrk-list-group list-group-flush mb-4 ps-0">
 									<li class="mrk-list-group-item d-flex pt-1 pb-2"><span class="text-nowrap">Название</span><span class="mrk-line mx-2"></span><span class="text-nowrap">Название</span></li>
-									<li class="mrk-list-group-item d-flex pt-1 pb-2"><span class="text-nowrap">Название</span><span class="mrk-line mx-2"></span><span class="text-nowrap">Название</span></li>
 									<?php
-										if ( $_product->get_attributes() ) {
+										if ( $product_attributes ) {
+											var_dump( $product_attributes );
+											foreach ( $product_attributes as $key => $value) {
 
-											foreach ( $_product->get_attributes() as $key => $value) {
 											?>
-												<li class="mrk-list-group-item d-flex pt-1 pb-2"><span class="text-nowrap"><?php echo $value['name'] ?></span><span class="mrk-line mx-2"></span><span class="text-nowrap"><?php echo $value['options'][0] ?></span></li>
+												<li class="mrk-list-group-item d-flex pt-1 pb-2">
+													<span class="text-nowrap"><?php echo $value['name'] ?></span>
+													<span class="mrk-line mx-2"></span>
+													<span class="text-nowrap"><?php echo $value['options'][0] ?></span>
+												</li>
 											<?php
 											}
 										}
