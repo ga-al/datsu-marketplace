@@ -141,7 +141,7 @@ $total_count = count( $gallery_attachment_ids );
 												<div class="mrk-hit">хит</div>
 												<div class="mrk-new">новинка</div>
 											</div> -->
-											<div class="swiper-slide" data-slider="0" data-bs-toggle="modal" data-bs-target="#backdrop-<?php echo $key ?>" data-bs-gallery="<?= wp_get_attachment_url( $gallery_attachment_id, 'full' ); ?>" title="увеличить окно просмотра">
+											<div class="swiper-slide" data-slider="0" data-bs-toggle="modal" data-bs-target="#backdrop-1" data-bs-gallery="<?= wp_get_attachment_url( $gallery_attachment_id, 'full' ); ?>" title="увеличить окно просмотра">
 												<div class="image-4x3"><img src="<?= wp_get_attachment_url( $gallery_attachment_id, 'full' ); ?>" alt="image">
 													<div class="fullscrin" data-slider="0" data-bs-toggle="modal" data-bs-target="#backdrop-<?php echo $key ?>" data-bs-gallery="<?= wp_get_attachment_url( $gallery_attachment_id, 'full' ); ?>" title="увеличить окно просмотра">
 														<svg class="bi bi-aspect-ratio bg-opacity-75 text-bg-secondary" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
