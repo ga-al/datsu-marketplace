@@ -64,9 +64,31 @@ $social_menu = me_render_social();
                         </div>
                       </div>
                       <div class="row thumbs mrk-gallery-thumbs flex-md-column flex-nowrap mx-0 mx-md-auto gap-2">
-                        <div class="col-4 col-md-12 thumbnail"><a class="active" href="#" data-path="<?= esc_url(get_stylesheet_directory_uri()); ?>/img/gallery/baner-home-thumb.jpeg"><img class="img-thumbnail border-0 p-0" src="<?= esc_url(get_stylesheet_directory_uri()); ?>/img/gallery/baner-home-thumb.jpeg" alt="vidio-thumb"></a></div>
-                        <div class="col-4 col-md-12 thumbnail"><a href="#" data-path="<?= esc_url(get_stylesheet_directory_uri()); ?>/img/gallery/image-2.jpg"><img class="img-thumbnail border-0 p-0" src="<?= esc_url(get_stylesheet_directory_uri()); ?>/img/gallery/image-2.jpg" alt="vidio-thumb"></a></div>
-                        <div class="col-4 col-md-12 thumbnail"><a href="#" data-path="<?= esc_url(get_stylesheet_directory_uri()); ?>/img/gallery/image-3.jpg"><img class="img-thumbnail border-0 p-0" src="<?= esc_url(get_stylesheet_directory_uri()); ?>/img/gallery/image-3.jpg" alt="vidio-thumb"></a></div>
+
+                        <div class="col-4 col-md-12 thumbnail"><a class="active" href="#" data-path="<?= esc_url(get_stylesheet_directory_uri()); ?>/img/gallery/baner-home-thumb.jpeg">
+                          <img class="img-thumbnail border-0 p-0" src="<?= esc_url(get_stylesheet_directory_uri()); ?>/img/gallery/baner-home-thumb.jpeg" alt="vidio-thumb"></a>
+                        </div>
+
+                        <?php
+                          $images = get_field('main-banner-slider');
+
+
+                          if( $images ): ?>
+                                  <?php foreach( $images as $image_id ):
+
+                                    $size_thumbnail = wp_get_attachment_url( $image_id,'thumbnail'); // (thumbnail, medium, large, full or custom size)
+                                    $size_medium = wp_get_attachment_url( $image_id,'medium'); // (thumbnail, medium, large, full or custom size)
+                                    $size_large = wp_get_attachment_url( $image_id,'large'); // (thumbnail, medium, large, full or custom size)
+                                    $size_full = wp_get_attachment_url( $image_id,'full'); // (thumbnail, medium, large, full or custom size)
+
+                                    ?>
+                                    <div class="col-4 col-md-12 thumbnail"><a class="active" href="#" data-path="<?= $size_thumbnail ?>">
+                                      <img class="img-thumbnail border-0 p-0" src="<?= $size_full ?>" alt="vidio-thumb"></a>
+                                    </div>
+                                  <?php endforeach; ?>
+                        <?php endif; ?>
+
+
                       </div>
                     </div>
 
