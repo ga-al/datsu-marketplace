@@ -33,7 +33,6 @@ $product_sale_price = $_product->get_sale_price();
 $product_regular_price = $_product->get_regular_price();
 $product_link = get_permalink($_product);
 $product_attributes = $_product->get_attributes();
-
 $terms = get_the_terms( $product_id, 'product_cat' );
 
 $terms_id = [];
@@ -416,14 +415,25 @@ $total_count = count( $gallery_attachment_ids );
 									<li class="mrk-list-group-item d-flex pt-1 pb-2"><span class="text-nowrap">Название</span><span class="mrk-line mx-2"></span><span class="text-nowrap">Название</span></li>
 									<?php
 										if ( $product_attributes ) {
-											var_dump( $product_attributes );
 											foreach ( $product_attributes as $key => $value) {
+												// var_dump( wc_get_attribute( $value['id'] ) );
+
+												if ( $custom_attr = wc_get_attribute( $value['id'] ) ) {
+													$attr_name = $custom_attr->name;
+													$attr_slug =  $custom_attr->slug;
+												} else {
+													$attr_name = $value['name'];
+													$attr_slug = $value['slug'];
+												}
+												$attr_options = $value['options'];
+
+												$opts = implode(', ', $attr_options);
 
 											?>
 												<li class="mrk-list-group-item d-flex pt-1 pb-2">
-													<span class="text-nowrap"><?php echo $value['name'] ?></span>
+													<span class="text-nowrap"><?php echo $attr_name ?></span>
 													<span class="mrk-line mx-2"></span>
-													<span class="text-nowrap"><?php echo $value['options'][0] ?></span>
+													<span class="text-nowrap"><?php echo $opts ?></span>
 												</li>
 											<?php
 											}
