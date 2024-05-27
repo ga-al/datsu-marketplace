@@ -555,18 +555,18 @@ border-bottom: 1px dashed var(--bs-secondary);
   border-radius: 12px 0 12px 0;
   transition: all .25s;
 }
-.share-buttons a:nth-child(1) {
+.share-buttons .mps-btn-telegram {
   background-image: url(img/svg/telegram.svg);
 }
-.share-buttons a:nth-child(2) {
+.share-buttons .mps-btn-whatapp {
   background-image: url(img/svg/whatsapp.svg);
 }
-.share-buttons a:nth-child(3) {
+.share-buttons .mps-btn-wechat {
   background-image: url(img/svg/chatbot.svg);
 }
-.copypath, .wpcss-popup-content .share-buttons a:last-child {
+.copypath {
   background-image: url(img/svg/copy.svg);
-  transition: width 1s linear;
+  transition: width 1s linear!important;
 }
 
 .share-buttons a:hover {
