@@ -413,32 +413,40 @@ $total_count = count( $gallery_attachment_ids );
 								<h2 class="mrk-block-title text-nowrap fw-medium pb-2">Характеристики</h2>
 								<ul class="mrk-list-group list-group-flush mb-4 ps-0">
 									<li class="mrk-list-group-item d-flex pt-1 pb-2"><span class="text-nowrap">Название</span><span class="mrk-line mx-2"></span><span class="text-nowrap">Название</span></li>
-									<?php
-										if ( $product_attributes ) {
-											foreach ( $product_attributes as $key => $value) {
-												// var_dump( wc_get_attribute( $value['id'] ) );
 
-												if ( $custom_attr = wc_get_attribute( $value['id'] ) ) {
-													$attr_name = $custom_attr->name;
-													$attr_slug =  $custom_attr->slug;
-												} else {
-													$attr_name = $value['name'];
-													$attr_slug = $value['slug'];
-												}
-												$attr_options = $value['options'];
 
-												$opts = implode(', ', $attr_options);
 
-											?>
-												<li class="mrk-list-group-item d-flex pt-1 pb-2">
-													<span class="text-nowrap"><?php echo $attr_name ?></span>
-													<span class="mrk-line mx-2"></span>
-													<span class="text-nowrap"><?php echo $opts ?></span>
-												</li>
-											<?php
-											}
+									<?php foreach ( $product_attributes as $attribute ) :
+										if ( empty( $attribute['is_visible'] ) || ( $attribute['is_taxonomy'] && ! taxonomy_exists( $attribute['name'] ) ) ) {
+											continue;
 										}
-									?>
+										?>
+
+									<li class="mrk-list-group-item d-flex pt-1 pb-2">
+										<span class="text-nowrap"><?php echo wc_attribute_label( $attribute['name'] ); ?></span>
+										<span class="mrk-line mx-2"></span>
+										<span class="text-nowrap">
+
+										<?php
+													if ( $attribute['is_taxonomy'] ) {
+
+														$values = wc_get_product_terms( $product_id, $attribute['name'], array( 'fields' => 'names' ) );
+														echo apply_filters( 'woocommerce_attribute', wpautop( wptexturize( implode( ', ', $values ) ) ), $attribute, $values );
+
+													} else {
+
+														// Convert pipes to commas and display values
+														$values = array_map( 'trim', explode( ', ', $attribute['value'] ) );
+														echo apply_filters( 'woocommerce_attribute', wpautop( wptexturize( implode( ', ', $values ) ) ), $attribute, $values );
+
+													}
+												?>
+
+
+										</span>
+									</li>
+
+									<?php endforeach; ?>
 								</ul>
 							</div>
 						</div>
