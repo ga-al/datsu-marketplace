@@ -1073,6 +1073,9 @@ body .modal-body .carousel-inner .carousel-item {
   height: 100%;
   transition: none;
 }
+body .modal-body .woocommerce img, body .modal-body .woocommerce-page img {
+  max-height: 98vh;
+}
 body .modal-body .carousel-inner .youtube {
   height: 100%;
 }
