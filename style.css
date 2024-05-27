@@ -590,11 +590,11 @@ border-bottom: 1px dashed var(--bs-secondary);
 .woocommerce img, .woocommerce-page img {
   display: block;
   margin: 0 auto;
-  max-height: 385px;
+  /* max-height: 385px; */
   object-fit: contain;
 }
 
-body .modal-body .woocommerce img, body .modal-body .woocommerce-page img {
+body .modal-body .carousel-item img {
   max-height: 98vh;
 }
 
