@@ -739,7 +739,7 @@ $total_count = count( $gallery_attachment_ids );
 				</div> -->
 			</div>
 		</main>
-		<div class="modal fade" id="backdrop-1" tabindex="-1" role="dialog" aria-labelledby="backdrop-1" aria-hidden="true">
+		<div class="modal fade" id="backdrop-0" tabindex="-1" role="dialog" aria-labelledby="backdrop-0" aria-hidden="true">
 			<div class="modal-dialog modal-dialog-centered modal-fullscreen">
 				<div class="modal-content position-relative">
 					<div class="modal-header position-absolute top-0 end-0 border-0 z-3">
