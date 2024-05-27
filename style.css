@@ -565,7 +565,7 @@ border-bottom: 1px dashed var(--bs-secondary);
   background-image: url(img/svg/chatbot.svg);
 }
 .copypath {
-  background-image: url(img/svg/copy.svg);
+  background-image: url(img/svg/copy.svg)!important;
   transition: width 1s linear;
 }
 
