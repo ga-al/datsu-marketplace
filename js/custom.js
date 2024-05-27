@@ -491,7 +491,7 @@ if (document.querySelector('.share-buttons')) {
         copyPath.style.color = '#212529'
         copyPath.style.width = '100%'
         copyPath.style.padding = '0'
-        copyPath.style.backgroundImage = 'none'
+        copyPath.style.backgroundImage = 'none!important'
 
 
         const textArea = document.createElement("textarea");
