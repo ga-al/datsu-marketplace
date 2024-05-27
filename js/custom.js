@@ -468,7 +468,7 @@ var mainSecondSwiper = new Swiper('.swiper-children', {
     autoplay: {
         delay: 4500,
         disableOnInteraction: false,
-      },
+    },
     navigation: {
         nextEl: ".next-btn",
         prevEl: ".prev-btn",
@@ -476,6 +476,17 @@ var mainSecondSwiper = new Swiper('.swiper-children', {
     pagination: {
         el: ".swiper-pagination",
         clickable: true,
+    },
+    on: {
+        init() {
+          this.el.addEventListener('mouseenter', () => {
+            this.autoplay.stop();
+          });
+    
+          this.el.addEventListener('mouseleave', () => {
+            this.autoplay.start();
+          });
+        }
     },
 })
 
