@@ -728,6 +728,10 @@ border-bottom: 1px dashed var(--bs-secondary);
   object-fit: contain;
 }
 
+.swiper-slide img {
+  min-height: 317px;
+}
+
 .slider.slider-horizontal {
 max-width: 743px;
 }
@@ -881,6 +885,7 @@ background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns%3D'http%3A%
 
 .slider-vertical .slider-thumb__images .swiper-wrapper .swiper-slide.youtube {
 min-width: 110px;
+min-height: 124px;
 }
 
 .slider-vertical .slider-thumb {
@@ -1661,7 +1666,7 @@ body .modal .carousel-control-next, body .modal  .carousel-control-prev {
 @media (min-width: 769px) {
   .woocommerce-cart .coupon {
     width: 400px;
-    margin-left: calc(100% - 583px);
+    margin-left: calc(100% - 600px);
     margin-right: 0;
   }
 
