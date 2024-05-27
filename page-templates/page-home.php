@@ -12,7 +12,7 @@
 get_header();
 
 $social_menu = me_render_social();
-$gallery_attachment_ids = $_product->get_gallery_image_ids();
+
 
 ?>
   <div id="content" class="site-content <?= bootscore_container_class(); ?> py-5 mt-4">
@@ -35,23 +35,12 @@ $gallery_attachment_ids = $_product->get_gallery_image_ids();
                   <div class="card-body pt-0 pb-md-4 px-0">
 
                     <div class="mrk-gallery position-relative">
-                      <?php 
-                        if ( $gallery_attachment_ids) {
-                          foreach ($gallery_attachment_ids as $gallery_attachment_id) {
-                        
-                        ?>
-                          <div class="mrk-gallery-top mx-auto "><img class="mrk-gallery-image mx-auto h-100 w-100" src="<?= wp_get_attachment_url( $gallery_attachment_id, 'full' ); ?>" alt="image">
-                            
-                        <?php
-                        }}
-                      ?>
-                      
-                        <div class="mrk-gallery-blur mrk-bg-blur position-absolute start-0 bottom-0">
-                          <h1 class="d-inline-block text-uppercase text-primary fw-bold">все для стеклянных козырьков</h1>
-                          <a class="btn btn-outline-primary d-flex align-items-center justify-content-center gap-2 text-nowrap mt-2" href="/shop/" type="button">
-                            Смотреть готовые решения
-                          </a>
-                        </div>
+                      <div class="mrk-gallery-top mx-auto "><img class="mrk-gallery-image mx-auto h-100 w-100" src="<?= esc_url(get_stylesheet_directory_uri()); ?>/img/gallery/image-1.jpg" alt="vidio-image">
+                      <div class="mrk-gallery-blur mrk-bg-blur position-absolute start-0 bottom-0">
+                        <h1 class="d-inline-block text-uppercase text-primary fw-bold">все для стеклянных козырьков</h1>
+                        <a class="btn btn-outline-primary d-flex align-items-center justify-content-center gap-2 text-nowrap mt-2" href="/shop/" type="button">
+                          Смотреть готовые решения
+                        </a>
                       </div>
                       <div class="mrk-social position-absolute">
 
@@ -73,21 +62,11 @@ $gallery_attachment_ids = $_product->get_gallery_image_ids();
                         </div> -->
                       </div>
                     </div>
-                    <div class="row thumbs mrk-gallery-thumbs flex-md-column flex-nowrap mx-0 mx-md-auto gap-2">
-                      <?php 
-                        if ( $gallery_attachment_ids) {
-                          foreach ($gallery_attachment_ids as $gallery_attachment_id) {
-                        
-                        ?>
-                          <div class="col-4 col-md-12 thumbnail"><a class="active" href="#" data-path="<?= wp_get_attachment_url( $gallery_attachment_id, 'thumb' ); ?>"><img class="img-thumbnail border-0 p-0" src="<?= wp_get_attachment_url( $gallery_attachment_id, 'thumb' ); ?>" alt="thumb"></a></div>
-                            
-                        <?php
-                        }}
-                      ?>
-                        
-                        <!-- <div class="col-4 col-md-12 thumbnail"><a href="#" data-path="<?= esc_url(get_stylesheet_directory_uri()); ?>/img/gallery/image-2.jpg"><img class="img-thumbnail border-0 p-0" src="<?= esc_url(get_stylesheet_directory_uri()); ?>/img/gallery/image-2.jpg" alt="vidio-thumb"></a></div>
-                        <div class="col-4 col-md-12 thumbnail"><a href="#" data-path="<?= esc_url(get_stylesheet_directory_uri()); ?>/img/gallery/image-3.jpg"><img class="img-thumbnail border-0 p-0" src="<?= esc_url(get_stylesheet_directory_uri()); ?>/img/gallery/image-3.jpg" alt="vidio-thumb"></a></div> -->
-                      <!-- </div> -->
+                      <div class="row thumbs mrk-gallery-thumbs flex-md-column flex-nowrap mx-0 mx-md-auto gap-2">
+                        <div class="col-4 col-md-12 thumbnail"><a class="active" href="#" data-path="<?= esc_url(get_stylesheet_directory_uri()); ?>/img/gallery/image-1.jpg"><img class="img-thumbnail border-0 p-0" src="<?= esc_url(get_stylesheet_directory_uri()); ?>/img/gallery/image-1.jpg" alt="vidio-thumb"></a></div>
+                        <div class="col-4 col-md-12 thumbnail"><a href="#" data-path="<?= esc_url(get_stylesheet_directory_uri()); ?>/img/gallery/image-2.jpg"><img class="img-thumbnail border-0 p-0" src="<?= esc_url(get_stylesheet_directory_uri()); ?>/img/gallery/image-2.jpg" alt="vidio-thumb"></a></div>
+                        <div class="col-4 col-md-12 thumbnail"><a href="#" data-path="<?= esc_url(get_stylesheet_directory_uri()); ?>/img/gallery/image-3.jpg"><img class="img-thumbnail border-0 p-0" src="<?= esc_url(get_stylesheet_directory_uri()); ?>/img/gallery/image-3.jpg" alt="vidio-thumb"></a></div>
+                      </div>
                     </div>
 
                   </div>
