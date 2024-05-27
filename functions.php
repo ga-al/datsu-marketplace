@@ -335,3 +335,4 @@ function add_data_to_scripts() {
 	}
     wp_add_inline_script('x1team-main', 'window.x1teamMainData = '.wp_json_encode( $data ), 'before');
 }
+add_theme_support('post-thumbnails', array( 'post', 'page' ));
