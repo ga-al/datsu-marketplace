@@ -274,3 +274,149 @@ function fix_svg_mime_type( $data, $file, $filename, $mimes, $real_mime = '' ){
 
 	return $data;
 }
+
+
+
+add_filter( 'wpcss_list_shortcode', function($content){
+    $WPCleverWpcss = new WPCleverWpcss();
+
+
+    if ( ! ( $key = get_query_var( 'wpcss_id' ) ) ) {
+        return '';
+    }
+
+    $url_raw = $WPCleverWpcss->get_url( $key );
+    $url     = urlencode( $url_raw );
+    $cart    = $WPCleverWpcss->get_setting( 'cart_' . $key );
+
+    if ( empty( $cart ) || ! isset( $cart['cart'] ) ) {
+        return '';
+    }
+
+    ob_start();
+    ?>
+    <form method="post" action="">
+        <table class="wpcss-products shop_table shop_table_responsive cart woocommerce-cart-form__contents">
+            <thead>
+            <tr>
+                <?php if ( $WPCleverWpcss->get_setting( 'add_selected', 'yes' ) === 'yes' ) { ?>
+                    <th class="product-checkbox">
+                        <input type="checkbox" class="wpcss-checkbox-all" checked/>
+                    </th>
+                <?php } ?>
+                <th class="product-thumbnail">&nbsp;</th>
+                <th class="product-name"><?php echo $WPCleverWpcss->localization( 'column_product', esc_html__( 'Product', 'wpc-share-cart' ) ); ?></th>
+                <th class="product-price"><?php echo $WPCleverWpcss->localization( 'column_price', esc_html__( 'Price', 'wpc-share-cart' ) ); ?></th>
+                <th class="product-quantity"><?php echo $WPCleverWpcss->localization( 'column_quantity', esc_html__( 'Quantity', 'wpc-share-cart' ) ); ?></th>
+                <th class="product-subtotal"><?php echo $WPCleverWpcss->localization( 'column_subtotal', esc_html__( 'Subtotal', 'wpc-share-cart' ) ); ?></th>
+            </tr>
+            </thead>
+            <tbody>
+
+            <?php foreach ( $cart['cart'] as $cart_item_key => $cart_item ) {
+                $product_id = $cart_item['product_id'];
+                $_product   = wc_get_product( $product_id );
+                $link       = $WPCleverWpcss->get_setting( 'link', 'yes' );
+
+                if ( $_product && $_product->exists() && ( $cart_item['quantity'] > 0 ) && apply_filters( 'wpcss_item_visible', true, $cart_item ) ) {
+                    $product_permalink = $_product->is_visible() ? $_product->get_permalink() : ''; ?>
+                    <tr class="woocommerce-cart-form__cart-item">
+                        <?php if ( $WPCleverWpcss->get_setting( 'add_selected', 'yes' ) === 'yes' ) { ?>
+                            <td class="product-checkbox">
+                                <?php
+                                if ( isset( $cart_item['woosb_parent_id'] ) || isset( $cart_item['wooco_parent_id'] ) || isset( $cart_item['woofs_parent_id'] ) || isset( $cart_item['woobt_parent_id'] ) ) {
+                                    // don't add these special products
+                                    echo '';
+                                } else {
+                                    echo '<input type="checkbox" class="wpcss-checkbox" name="wpcss-products[]" value="' . esc_attr( $cart_item_key ) . '" checked/>';
+                                }
+                                ?>
+                            </td>
+                        <?php } ?>
+                        <td class="product-thumbnail">
+                            <?php
+                            $thumbnail = apply_filters( 'wpcss_cart_item_thumbnail', apply_filters( 'woocommerce_cart_item_thumbnail', $_product->get_image(), $cart_item, $cart_item_key ), $cart_item, $cart_item_key );
+
+                            if ( ! $product_permalink || $link === 'no' ) {
+                                echo $thumbnail;
+                            } else {
+                                printf( '<a href="%s" ' . ( $link === 'yes_popup' ? 'class="woosq-btn" data-id="' . $product_id . '"' : '' ) . ' ' . ( $link === 'yes_blank' ? 'target="_blank"' : '' ) . '>%s</a>', esc_url( $product_permalink ), $thumbnail );
+                            }
+                            ?>
+                        </td>
+                        <td class="product-name" data-title="<?php esc_attr_e( 'Product', 'wpc-share-cart' ); ?>">
+                            <?php
+                            if ( ! $product_permalink || $link === 'no' ) {
+                                echo wp_kses_post( apply_filters( 'wpcss_cart_item_name', apply_filters( 'woocommerce_cart_item_name', $_product->get_name(), $cart_item, $cart_item_key ), $cart_item, $cart_item_key ) . '&nbsp;' );
+                            } else {
+                                echo wp_kses_post( apply_filters( 'wpcss_cart_item_name', apply_filters( 'woocommerce_cart_item_name', sprintf( '<a href="%s" ' . ( $link === 'yes_popup' ? 'class="woosq-btn" data-id="' . $product_id . '"' : '' ) . ' ' . ( $link === 'yes_blank' ? 'target="_blank"' : '' ) . '>%s</a>', esc_url( $product_permalink ), $_product->get_name() ), $cart_item, $cart_item_key ), $cart_item, $cart_item_key ) );
+                            }
+
+                            do_action( 'woocommerce_after_cart_item_name', $cart_item, $cart_item_key );
+                            do_action( 'wpcss_after_cart_item_name', $cart_item, $cart_item_key );
+
+                            // Meta data.
+                            echo wc_get_formatted_cart_item_data( $cart_item );
+
+                            // Backorder notification.
+                            if ( $_product->backorders_require_notification() && $_product->is_on_backorder( $cart_item['quantity'] ) ) {
+                                echo wp_kses_post( apply_filters( 'woocommerce_cart_item_backorder_notification', '<p class="backorder_notification">' . esc_html__( 'Available on backorder', 'wpc-share-cart' ) . '</p>', $product_id ) );
+                            }
+                            ?>
+                        </td>
+                        <td class="product-price" data-title="<?php esc_attr_e( 'Price', 'wpc-share-cart' ); ?>">
+                            <?php echo apply_filters( 'wpcss_cart_item_price', apply_filters( 'woocommerce_cart_item_price', WC()->cart->get_product_price( $cart_item['data'] ), $cart_item, $cart_item_key ), $cart_item, $cart_item_key ); ?>
+                        </td>
+                        <td class="product-quantity" data-title="<?php esc_attr_e( 'Quantity', 'wpc-share-cart' ); ?>">
+                            <?php echo apply_filters( 'wpcss_cart_item_quantity', $cart_item['quantity'], $cart_item, $cart_item_key ); ?>
+                        </td>
+                        <td class="product-subtotal" data-title="<?php esc_attr_e( 'Subtotal', 'wpc-share-cart' ); ?>">
+                            <?php echo apply_filters( 'wpcss_cart_item_subtotal', apply_filters( 'woocommerce_cart_item_subtotal', WC()->cart->get_product_subtotal( $cart_item['data'], $cart_item['quantity'] ), $cart_item, $cart_item_key ), $cart_item, $cart_item_key ); ?>
+                        </td>
+                    </tr>
+                    <?php
+                }
+            } ?>
+            <tr>
+                <?php if ( $WPCleverWpcss->get_setting( 'add_selected', 'yes' ) === 'yes' ) { ?>
+                    <td class="product-checkbox">
+                        <input type="checkbox" class="wpcss-checkbox-all" checked/>
+                    </td>
+                <?php } ?>
+                <td colspan="5">
+                    <div class="wpcss-actions">
+                        <?php wp_nonce_field( 'wpcss_add_products', 'wpcss-security' ); ?>
+                        <input type="hidden" name="wpcss-key" value="<?php echo esc_attr( $key ); ?>"/>
+                        <?php if ( $WPCleverWpcss->get_setting( 'add_selected', 'yes' ) === 'yes' ) { ?>
+                            <button type="submit" class="button wpcss-add-selected" name="wpcss-action" value="selected"><?php echo $WPCleverWpcss->localization( 'selected', esc_html__( 'Add selected products to cart', 'wpc-share-cart' ) ); ?></button>
+                        <?php }
+
+                        if ( $WPCleverWpcss->get_setting( 'add_all', 'yes' ) === 'yes' ) { ?>
+                            <button type="submit" class="button wpcss-add-all" name="wpcss-action" value="all"><?php echo $WPCleverWpcss->localization( 'restore', esc_html__( 'Restore cart', 'wpc-share-cart' ) ); ?></button>
+                        <?php } ?>
+                    </div>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+    </form>
+    <div class="wpcss-share-actions">
+        <?php
+        echo $WPCleverWpcss->share_links( $url );
+
+        if ( $WPCleverWpcss->get_setting( 'page_copy', 'yes' ) === 'yes' ) {
+            echo '<div class="wpcss-copy">';
+            echo '<span class="wpcss-copy-label">' . $WPCleverWpcss->localization( 'share_link', esc_html__( 'Share link:', 'wpc-share-cart' ) ) . '</span>';
+            echo '<span class="wpcss-copy-url"><input id="wpcss_copy_url" type="url" value="' . $url_raw . '" readonly/></span>';
+            echo '<span class="wpcss-copy-btn"><input id="wpcss_copy_btn" type="button" value="' . $WPCleverWpcss->localization( 'copy_button', esc_html__( 'Copy', 'wpc-share-cart' ) ) . '"/></span>';
+            echo '</div>';
+        }
+        ?>
+    </div>
+
+    <?php
+
+    $content = ob_get_contents();
+    ob_get_clean();
+    return $content;
+});
