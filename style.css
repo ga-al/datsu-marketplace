@@ -572,19 +572,21 @@ border-bottom: 1px dashed var(--bs-secondary);
   background-image: url(img/svg/copy.svg);
   transition: width 1s linear!important;
 }
-
 .share-buttons a:hover {
   background-color: #f3f4ff;
 }
-
 .share-buttons span {
   margin-left: 1rem;
 }
-
+.share-link {
+  margin-left: 1rem;
+}
 .woocommerce-order-details {
   position: relative;
 }
-
+.wpcss-popup-content .share-link {
+  margin-left: 0;
+}
 .woocommerce-order-details button {
   border: transparent;
   background: transparent;
@@ -1604,7 +1606,6 @@ body .modal .carousel-control-next, body .modal  .carousel-control-prev {
   .mrk-cards-kits .card {
     max-width: 290px;
   }
-  
   .mrk-gallery-thumbs {
     position: static;
     justify-content: start;

@@ -19,7 +19,7 @@ function misha_filter_function($content, $url) {
     // var_dump( $content, $url );
     ob_start();
      ?>
-        <span class="share-link d-flex align-items-center ms-3">
+        <span class="share-link d-flex align-items-center">
             <div class="share-buttons">
                 <?php
                     $shareButtons = mps_share_buttons( ['type'=>'cart', 'url' => $url] );
