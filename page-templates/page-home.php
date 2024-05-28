@@ -215,7 +215,7 @@ $social_menu = me_render_social();
               <?php
               $arr = me_rendom_category();
               $randomKey = array_rand( $arr, 3) ;
-              foreach ($randomKey as  $key => $num) {
+              foreach ($randomKey as  $random_key => $num) {
                 $term = $arr[$num];
                 $term_id = $term->term_id;
                 $term_name = $term->name;
@@ -345,8 +345,7 @@ $social_menu = me_render_social();
                     </div>
                   </section>
                 <?
-
-                if ( $key == 1 ) {
+                if ( $random_key == 1 ) {
                   ?>
 
                   <section class="pt-4 mt-4 pb-3">
