@@ -717,6 +717,9 @@ body .modal-body .carousel-item img {
   min-height: 100%;
   padding: 1rem 0;
 }
+.cart_totals .shop_table {
+  min-width: inherit;
+}
 
 
 
