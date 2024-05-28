@@ -28,11 +28,11 @@ $social_menu = me_render_social();
           <div class="<?= bootscore_main_col_class(); ?> px-0">
             <!-- Grid Layout -->
 
-            <div class="card border-0 mb-4 position-md-absolute">
+            <div class="card border-0 mb-4 position-md-absolute pt-lg-0 pt-4">
               <div class="row ms-lg-2 g-0">
 
                 <div class="col">
-                  <div class="card-body pt-0 pb-md-4 px-0">
+                  <div class="card-body pt-0 pb-md-4 px-0 mt-5 mt-lg-0">
 
                     <div class="mrk-gallery position-relative">
                       <div class="mrk-gallery-top mx-auto ">

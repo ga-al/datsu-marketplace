@@ -1266,7 +1266,7 @@ body .modal .carousel-control-next, body .modal  .carousel-control-prev {
   }
 }
 
-@media (max-width: 769px) {
+@media (max-width: 768px) {
 .slider {
   height: auto;
   margin-right: 0;
@@ -1580,7 +1580,7 @@ body .modal .carousel-control-next, body .modal  .carousel-control-prev {
       padding: .5rem .4rem;
   }
   #secondary {
-    margin-top: 1rem;
+    margin-top: -15px;
   }
   .mrk-gallery {
     margin-top: -4rem;
@@ -1590,7 +1590,7 @@ body .modal .carousel-control-next, body .modal  .carousel-control-prev {
   }
 
 }
-@media (max-width: 769px) {
+@media (max-width: 767px) {
   .mrk-logo .btn {
       width: 100px;
       height: 38px;
@@ -1612,7 +1612,10 @@ body .modal .carousel-control-next, body .modal  .carousel-control-prev {
     margin-bottom: 0;
   }
   .mrk-gallery-blur {
-    bottom: 115px!important;
+    bottom: 87px!important;
+  }
+  .mrk-gallery-image {
+    min-height: 290px;
   }
   .thumbnail {
     padding: 0;
