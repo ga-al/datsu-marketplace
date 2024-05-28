@@ -639,11 +639,12 @@ body .modal-body .carousel-item img {
   text-align: right;
   height: 21px;
 }
-.wcpf-field-button .wcpf-button, .product-add-to-cart a {
+.wcpf-field-button .wcpf-button, .product-add-to-cart a, .wpcss-products .wpcss-actions button {
   border: 1px solid var(--bs-primary);
   border-top-left-radius: 12px;
   border-bottom-right-radius: 12px;
   padding: 11px 1.875rem;
+  background: inherit;
   color: var(--bs-primary);
   letter-spacing: 1.2px;
 }
@@ -663,10 +664,13 @@ body .modal-body .carousel-item img {
 .wishlist_table.mobile li .additional-info-wrapper .product-remove .fa-trash:before {
   color: var(--bs-danger);
 }
+.wpcss-products .wpcss-actions {
+  margin: 1rem 0;
+}
 .product-add-to-cart a {
   padding: 5px 1.875rem;
 }
-.wcpf-field-button .wcpf-button:hover, .product-add-to-cart a:hover {
+.wcpf-field-button .wcpf-button:hover, .product-add-to-cart a:hover, .wpcss-products .wpcss-actions button:hover {
   background: var(--bs-primary);
   color: white;
 }
@@ -702,6 +706,10 @@ body .modal-body .carousel-item img {
   position: absolute;
   right: 0rem;
   margin-top: 21px;
+}
+.product-thumbnail img {
+  max-width: 130px;
+  padding: 1rem 0;
 }
 
 
