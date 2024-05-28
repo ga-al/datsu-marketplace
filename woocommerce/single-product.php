@@ -412,9 +412,6 @@ $total_count = count( $gallery_attachment_ids );
 							<div class="col-md-6 ps-md-3 px-0">
 								<h2 class="mrk-block-title text-nowrap fw-medium pb-2">Характеристики</h2>
 								<ul class="mrk-list-group list-group-flush mb-4 ps-0">
-									<li class="mrk-list-group-item d-flex pt-1 pb-2"><span class="text-nowrap">Название</span><span class="mrk-line mx-2"></span><span class="text-nowrap">Название</span></li>
-
-
 
 									<?php foreach ( $product_attributes as $attribute ) :
 										if ( empty( $attribute['is_visible'] ) || ( $attribute['is_taxonomy'] && ! taxonomy_exists( $attribute['name'] ) ) ) {
