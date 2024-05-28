@@ -295,7 +295,7 @@ add_filter( 'wpcss_list_shortcode', function($content){
 
     ob_start();
     ?>
-    <form method="post" action="">
+    <form method="post" action="" class="table-responsive">
         <table class="wpcss-products shop_table shop_table_responsive cart woocommerce-cart-form__contents">
             <thead>
             <tr>
