@@ -654,6 +654,10 @@ body .modal-body .carousel-item img {
   height: 50px;
   margin-bottom: 2rem;
 }
+.shop_table {
+  width: 100%;
+  min-width: 900px;
+}
 .wishlist_table.mobile li .additional-info-wrapper .move-to-another-wishlist, .wishlist_table.mobile li .additional-info-wrapper .product-add-to-cart {
   position: absolute;
   left: 0;
@@ -709,7 +713,8 @@ body .modal-body .carousel-item img {
   margin-top: 21px;
 }
 .product-thumbnail img {
-  max-width: 130px;
+  max-width: 80px;
+  min-height: 100%;
   padding: 1rem 0;
 }
 
