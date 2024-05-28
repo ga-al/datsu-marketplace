@@ -647,6 +647,7 @@ body .modal-body .carousel-item img {
   background: inherit;
   color: var(--bs-primary);
   letter-spacing: 1.2px;
+  transition: .25s;
 }
 .wishlist_table.mobile li .additional-info-wrapper {
   position: relative;
