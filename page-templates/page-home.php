@@ -346,7 +346,7 @@ $social_menu = me_render_social();
                   </section>
                 <?
 
-                if ( $key == 1 ) {
+                if ( $key == 2 ) {
                   ?>
 
                   <section class="pt-4 mt-4 pb-3">
