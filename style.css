@@ -656,11 +656,8 @@ body .modal-body .carousel-item img {
 }
 .shop_table {
   width: 100%;
-  
 }
-.wpcss-products.shop_table {
-  min-width: 900px;
-}
+
 .wpcss-products.shop_table .product-name {
   min-width: 200px;
 }
