@@ -726,6 +726,9 @@ body .modal-body .carousel-item img {
 .cart_totals .shop_table {
   min-width: inherit;
 }
+.wpcss-area .wpcss-popup {
+  min-width: 250px;
+}
 
 
 
@@ -1690,6 +1693,9 @@ body .modal .carousel-control-next, body .modal  .carousel-control-prev {
   }
   .card-kit-img {
     max-width: 280px;
+  }
+  .share-buttons {
+    flex-wrap: wrap;
   }
 }
 @media (max-width: 320px) {
