@@ -661,6 +661,12 @@ body .modal-body .carousel-item img {
 .wpcss-products.shop_table {
   min-width: 900px;
 }
+.wpcss-products.shop_table .product-name {
+  min-width: 200px;
+}
+.wpcss-products.shop_table .product-price, .wpcss-products.shop_table .product-subtotal, .wpcss-products.shop_table th.product-quantity {
+  white-space: nowrap;
+}
 .wishlist_table.mobile li .additional-info-wrapper .move-to-another-wishlist, .wishlist_table.mobile li .additional-info-wrapper .product-add-to-cart {
   position: absolute;
   left: 0;

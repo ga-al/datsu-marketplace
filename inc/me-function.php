@@ -296,7 +296,7 @@ add_filter( 'wpcss_list_shortcode', function($content){
     ob_start();
     ?>
     <form method="post" action="" class="table-responsive">
-        <table class="wpcss-products shop_table shop_table_responsive cart woocommerce-cart-form__contents">
+        <table class="wpcss-products table shop_table shop_table_responsive cart woocommerce-cart-form__contents">
             <thead>
             <tr>
                 <?php if ( $WPCleverWpcss->get_setting( 'add_selected', 'yes' ) === 'yes' ) { ?>
