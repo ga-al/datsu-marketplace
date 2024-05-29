@@ -656,7 +656,10 @@ body .modal-body .carousel-item img {
 }
 .shop_table {
   width: 100%;
-  /* min-width: 900px; */
+  
+}
+.wpcss-products.shop_table {
+  min-width: 900px;
 }
 .wishlist_table.mobile li .additional-info-wrapper .move-to-another-wishlist, .wishlist_table.mobile li .additional-info-wrapper .product-add-to-cart {
   position: absolute;
