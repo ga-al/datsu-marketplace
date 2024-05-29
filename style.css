@@ -656,7 +656,7 @@ body .modal-body .carousel-item img {
 }
 .shop_table {
   width: 100%;
-  min-width: 900px;
+  /* min-width: 900px; */
 }
 .wishlist_table.mobile li .additional-info-wrapper .move-to-another-wishlist, .wishlist_table.mobile li .additional-info-wrapper .product-add-to-cart {
   position: absolute;
@@ -706,6 +706,12 @@ body .modal-body .carousel-item img {
 }
 .shop_table {
   padding: 0;
+}
+#order_review .shop_table {
+  min-width: 0;
+}
+#order_review .shop_table bdi {
+  white-space: nowrap;
 }
 .nav-tabs.orderby {
   position: absolute;
