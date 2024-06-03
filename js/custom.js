@@ -481,7 +481,7 @@ var mainSecondSwiper = new Swiper('.swiper-children', {
         init() {
             this.autoplay.stop();
             this.el.addEventListener('mouseenter', () => {
-                setTimeout(() => this.autoplay.start(), 1000);
+                setTimeout(() => this.autoplay.start(), 200);
             });
         
             this.el.addEventListener('mouseleave', () => {
