@@ -465,10 +465,10 @@ var mainSecondSwiper = new Swiper('.swiper-children', {
     slidesPerView: 1,
     spaceBetween: 0,
     centeredSlides: false,
-    autoplay: {
-        delay: 4500,
-        disableOnInteraction: false,
-    },
+    // autoplay: {
+    //     delay: 4500,
+    //     disableOnInteraction: false,
+    // },
     navigation: {
         nextEl: ".next-btn",
         prevEl: ".prev-btn",
@@ -479,13 +479,14 @@ var mainSecondSwiper = new Swiper('.swiper-children', {
     },
     on: {
         init() {
-          this.el.addEventListener('mouseenter', () => {
             this.autoplay.stop();
-          });
-    
-          this.el.addEventListener('mouseleave', () => {
-            this.autoplay.start();
-          });
+            this.el.addEventListener('mouseenter', () => {
+                this.autoplay.start();
+            });
+        
+            this.el.addEventListener('mouseleave', () => {
+                this.autoplay.stop();
+            });
         }
     },
 })
@@ -521,8 +522,6 @@ if (document.querySelector('.share-buttons')) {
             console.error('Unable to copy to clipboard', err);
         }
         document.body.removeChild(textArea);
-
-
 
     })
 
