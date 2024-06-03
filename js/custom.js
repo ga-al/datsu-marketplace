@@ -465,10 +465,10 @@ var mainSecondSwiper = new Swiper('.swiper-children', {
     slidesPerView: 1,
     spaceBetween: 0,
     centeredSlides: false,
-    // autoplay: {
-    //     delay: 4500,
-    //     disableOnInteraction: false,
-    // },
+    autoplay: {
+        delay: 2500,
+        disableOnInteraction: false,
+    },
     navigation: {
         nextEl: ".next-btn",
         prevEl: ".prev-btn",
