@@ -465,10 +465,10 @@ var mainSecondSwiper = new Swiper('.swiper-children', {
     slidesPerView: 1,
     spaceBetween: 0,
     centeredSlides: false,
-    autoplay: {
-        delay: 1000,
-        // disableOnInteraction: false,
-    },
+    // autoplay: {
+    //     delay: 1000,
+    //     // disableOnInteraction: false,
+    // },
     navigation: {
         nextEl: ".next-btn",
         prevEl: ".prev-btn",
@@ -481,7 +481,7 @@ var mainSecondSwiper = new Swiper('.swiper-children', {
         init() {
             this.autoplay.stop();
             this.el.addEventListener('mouseenter', () => {
-                this.autoplay.start();
+                setTimeout(() => this.autoplay.start(), 1000);
             });
         
             this.el.addEventListener('mouseleave', () => {
