@@ -265,7 +265,7 @@ $social_menu = me_render_social();
                         ?>
                           <div class="col-md-4 col-xl-3 px-lg-0">
                             <div class="card border-0 h-100 card h-100 px-lg-0 px-3">
-                              <div class="card-kit-img">
+                              <a href="<?php echo $product_url ?>" class="card-kit-img d-block">
                                 <div class="swiper swiper-children">
                                   <div class="swiper-wrapper">
                                     <?php
@@ -301,7 +301,7 @@ $social_menu = me_render_social();
                                   <div class="swiper-button-prev prev-btn text-white rounded"></div>
                                   <div class="swiper-pagination"></div>
                                 </div>
-                              </div>
+                              </a>
                               <div class="card-body d-flex flex-column h-100 px-lg-3 px-0">
                                 <a href="<?php echo $product_url ?>" class="card-title fw-medium text-dark fs-6 mb-4">
                                 <?php echo $product_name ?>

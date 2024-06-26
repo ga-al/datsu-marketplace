@@ -504,7 +504,7 @@ $total_count = count( $gallery_attachment_ids );
 								?>
 									<div class="swiper-slide">
 										<div class="card border-0">
-											<div class="card-kit-img">
+											<a href="<?php echo $product_url ?>" class="card-kit-img d-block">
 												<div class="swiper swiper-children">
 													<div class="swiper-wrapper">
 														<?php
@@ -533,7 +533,7 @@ $total_count = count( $gallery_attachment_ids );
 													<div class="swiper-button-prev prev-btn text-white rounded"></div>
 													<div class="swiper-pagination"></div>
 												</div>
-											</div>
+											</a>
 											<div class="card-body px-0">
 												<div class="d-flex align-items-end flex-wrap mt-auto mb-2">
 

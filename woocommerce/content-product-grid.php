@@ -45,7 +45,7 @@ if (empty($product) || !$product->is_visible()) {
 
 <div class="col-md-4 col-xl-3 mb-4">
   <div class="card border-0 h-100">
-    <div class="card-kit-img">
+    <a href="<?php echo $product_url ?>" class="card-kit-img d-block">
       <div class="swiper swiper-children">
         <?php
             $together_query = new WC_Product_Query( array(
@@ -103,7 +103,7 @@ if (empty($product) || !$product->is_visible()) {
         <div class="swiper-button-prev prev-btn text-white rounded"></div>
         <div class="swiper-pagination"></div>
       </div>
-    </div>
+    </a>
     <div class="card-body d-flex flex-column h-100 px-lg-3 px-0">
       <a href="<?php echo $product_link; ?>" class="card-title fw-medium text-dark fs-6 mb-4">
       <?php echo $product_name ?>
