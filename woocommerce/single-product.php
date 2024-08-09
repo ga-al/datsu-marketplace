@@ -300,7 +300,6 @@ $total_count = count( $gallery_attachment_ids );
 											$the_title       = $bundled_product->get_title();
 											$bundled_price = $bundled_product->get_price();
 											
-
 											if ( $quantity > 1 ) {
 												$the_title = $quantity . ' x ' . $the_title;
 											}
@@ -355,13 +354,13 @@ $total_count = count( $gallery_attachment_ids );
 
 												</div>
 											</div>
-
 										<?php endforeach; ?>
 
 									</div>
 								<?php endif; ?>
 							
 							</form>
+							
 						<?php endif; ?>
 						
 						<div class="row">
