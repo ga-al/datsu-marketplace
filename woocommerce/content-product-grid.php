@@ -28,7 +28,7 @@ $product_slug = $product->get_slug();
 $product_price = $product->get_price();
 $product_sale_price = $product->get_sale_price();
 $product_regular_price = $product->get_regular_price();
-$product_link = get_permalink($product_id);
+$product_link = get_permalink( $product_id );
 
 // $image = '';
 // $product_name = $product->name;
@@ -45,7 +45,7 @@ if (empty($product) || !$product->is_visible()) {
 
 <div class="col-md-4 col-xl-3 mb-4">
   <div class="card border-0 h-100">
-    <a href="<?php echo $product_url ?>" class="card-kit-img d-block">
+    <a href="<?php echo $product_link ?>" class="card-kit-img d-block">
       <div class="swiper swiper-children">
         <?php
             $together_query = new WC_Product_Query( array(
