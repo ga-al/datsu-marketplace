@@ -1553,6 +1553,7 @@ body .modal .carousel-control-next, body .modal  .carousel-control-prev {
 .woocommerce-order-details button {
   display: flex;
   align-items: center;
+  margin-bottom: 1rem;
 }
 
 

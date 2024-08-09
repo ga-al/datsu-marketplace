@@ -231,9 +231,9 @@ function rudr_product_field(){
 		array(
 			'id'      => 'product_link_video',
 			'value'   => get_post_meta( get_the_ID(), 'product_link_video', true ),
-			'label'   => 'Сылка видео',
+			'label'   => 'Ссылка видео',
 			'desc_tip' => true,
-			'description' => 'Вставьте сылку на видео',
+			'description' => 'Вставьте ссылку на видео',
 		)
 	);
 	echo '</div>';
