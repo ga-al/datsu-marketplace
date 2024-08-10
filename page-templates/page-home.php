@@ -77,8 +77,16 @@ $social_menu = me_render_social();
                               $size_full = wp_get_attachment_url( $image['ID'],'full'); // (thumbnail, medium, large, full or custom size)
 
                               ?>
-                              <div class="col-4 col-md-12 thumbnail"><a class="active" href="#" data-path="<?= $size_thumbnail ?>">
-                                <img class="img-thumbnail border-0 p-0" src="<?= $size_full ?>" alt="vidio-thumb"></a>
+                              <div class="col-4 col-md-12 thumbnail">
+                                <a class="active" href="#" data-path="<?= $size_thumbnail ?>">
+                                  <img class="img-thumbnail border-0 p-0" src="<?= $size_full ?>" alt="vidio-thumb">
+                                  <div class="thumbnail-content visually-hidden">
+                                    <h1 class="d-inline-block text-uppercase text-primary fw-bold" data-title="<?= $image['title'] ?>">все для стеклянных козырьков</h1>
+                                    <a class="btn btn-outline-primary d-flex align-items-center justify-content-center gap-2 text-nowrap mt-2" data-link-text="<?= $image['caption']; ?>" href="/shop/" type="button">
+                                      Смотреть готовые решения
+                                    </a>
+                                  </a>
+                              </div>
                               </div>
                             <?php endforeach; ?>
                         <?php endif; ?>
