@@ -35,66 +35,54 @@ $social_menu = me_render_social();
                   <div class="card-body pt-0 pb-md-4 px-0 mt-5 mt-lg-0">
           
                     <div class="mrk-gallery position-relative">
+                      <div class="mrk-gallery-top mx-auto ">
+                        <img class="mrk-gallery-image mx-auto h-100 w-100" src="<?= esc_url(get_stylesheet_directory_uri()); ?>/img/gallery/baner-home-thumb.jpeg" alt="image">
+                        <div class="mrk-gallery-blur mrk-bg-blur position-absolute start-0 bottom-0">
+                          <h1 class="d-inline-block text-uppercase text-primary fw-bold">все для стеклянных козырьков</h1>
+                          <a class="btn btn-outline-primary d-flex align-items-center justify-content-center gap-2 text-nowrap mt-2" href="/shop/" type="button">
+                            Смотреть готовые решения
+                          </a>
+                        </div>
+                        
+                        <div class="mrk-social position-absolute">
+
+
+                          <?php echo $social_menu; ?>
+                          <!-- <div class="d-flex gap-4">
+                            <a class="mrk-social-item" href="#" role="button">
+                              <img src="<?= esc_url(get_stylesheet_directory_uri()); ?>/img/svg/skype-outline.svg" alt="">
+                            </a>
+                            <a class="mrk-social-item" href="#" role="button">
+                              <img src="<?= esc_url(get_stylesheet_directory_uri()); ?>/img/svg/whatsapp.svg" alt="">
+                            </a>
+                            <a class="mrk-social-item" href="#" role="button">
+                              <img src="<?= esc_url(get_stylesheet_directory_uri()); ?>/img/svg/discord.svg" alt="">
+                            </a>
+                            <a class="mrk-social-item" href="#" role="button">
+                              <img src="<?= esc_url(get_stylesheet_directory_uri()); ?>/img/svg/telegram.svg" alt="">
+                            </a>
+                          </div> -->
+                        </div>
+                      </div>
+                      <div class="row thumbs mrk-gallery-thumbs flex-md-column flex-nowrap mx-0 mx-md-auto gap-2">
                       <?php
-                        $images = get_fields('main-banner-slider');
-                        var_dump($images);
-                        if( $images ): ?>
+                          $images = get_field('main-banner-slider');
+                          var_dump($images);
+                          if( $images ): ?>
+                                  <?php foreach( $images as $image_id ):
 
-                          <div class="mrk-gallery-top mx-auto ">
+                                    $size_thumbnail = wp_get_attachment_url( $image_id,'thumbnail'); // (thumbnail, medium, large, full or custom size)
+                                    $size_medium = wp_get_attachment_url( $image_id,'medium'); // (thumbnail, medium, large, full or custom size)
+                                    $size_large = wp_get_attachment_url( $image_id,'large'); // (thumbnail, medium, large, full or custom size)
+                                    $size_full = wp_get_attachment_url( $image_id,'full'); // (thumbnail, medium, large, full or custom size)
 
-                            <?php foreach( $images as $image ):
-                              $size_full_img = wp_get_attachment_url( $image,'full'); // (thumbnail, medium, large, full or custom size)
-
-                              ?>
-                              <img class="mrk-gallery-image mx-auto h-100 w-100" src="<?= $size_full_img ?>" alt="<?= $image['alt']; ?>">
-                              <div class="mrk-gallery-blur mrk-bg-blur position-absolute start-0 bottom-0">
-                                <h1 class="d-inline-block text-uppercase text-primary fw-bold"><?= $image['title']; ?></h1>
-                                <a class="btn btn-outline-primary d-flex align-items-center justify-content-center gap-2 text-nowrap mt-2" href="/shop/" type="button">
-                                  <?= $image['caption']; ?>
-                                </a>
-                              </div>
-                            <?php endforeach; ?>
-
-                            <div class="mrk-social position-absolute">
-
-
-                              <?php echo $social_menu; ?>
-                              <!-- <div class="d-flex gap-4">
-                                <a class="mrk-social-item" href="#" role="button">
-                                  <img src="<?= esc_url(get_stylesheet_directory_uri()); ?>/img/svg/skype-outline.svg" alt="">
-                                </a>
-                                <a class="mrk-social-item" href="#" role="button">
-                                  <img src="<?= esc_url(get_stylesheet_directory_uri()); ?>/img/svg/whatsapp.svg" alt="">
-                                </a>
-                                <a class="mrk-social-item" href="#" role="button">
-                                  <img src="<?= esc_url(get_stylesheet_directory_uri()); ?>/img/svg/discord.svg" alt="">
-                                </a>
-                                <a class="mrk-social-item" href="#" role="button">
-                                  <img src="<?= esc_url(get_stylesheet_directory_uri()); ?>/img/svg/telegram.svg" alt="">
-                                </a>
-                              </div> -->
-                            </div>
-                          </div>
-                          <div class="row thumbs mrk-gallery-thumbs flex-md-column flex-nowrap mx-0 mx-md-auto gap-2">
-                            
-                            <?php foreach( $images as $image_id ):
-
-                              $size_thumbnail = wp_get_attachment_url( $image_id,'thumbnail'); // (thumbnail, medium, large, full or custom size)
-                              $size_medium = wp_get_attachment_url( $image_id,'medium'); // (thumbnail, medium, large, full or custom size)
-                              $size_large = wp_get_attachment_url( $image_id,'large'); // (thumbnail, medium, large, full or custom size)
-                              $size_full = wp_get_attachment_url( $image_id,'full'); // (thumbnail, medium, large, full or custom size)
-
-                              ?>
-
-                              <div class="col-4 col-md-12 thumbnail"><a class="active" href="#" data-path="<?= $size_thumbnail ?>">
-                                <img class="img-thumbnail border-0 p-0" src="<?= $size_full ?>" alt="vidio-thumb"></a>
-                              </div>
-                            <?php endforeach; ?>
-
-                          </div>
-
+                                    ?>
+                                    <div class="col-4 col-md-12 thumbnail"><a class="active" href="#" data-path="<?= $size_thumbnail ?>">
+                                      <img class="img-thumbnail border-0 p-0" src="<?= $size_full ?>" alt="vidio-thumb"></a>
+                                    </div>
+                                  <?php endforeach; ?>
                         <?php endif; ?>
-
+                      </div>
                     </div>
                   </div>
                 </div>
