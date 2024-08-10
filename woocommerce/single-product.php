@@ -283,7 +283,7 @@ $total_count = count( $gallery_attachment_ids );
 							</div>
 						</div>
 
-						<?php if($_product->get_bundled_items()) : ?>
+						<?php if($_product->is_type( 'variable' )) : ?>
 							
 							<form class="cart" method="post" enctype='multipart/form-data' data-product-id="<?php echo esc_attr( $_product->get_id() ); ?>">
 								<?php
@@ -298,7 +298,7 @@ $total_count = count( $gallery_attachment_ids );
 											$quantity        = $bundled_item->get_quantity();
 											$description     = $bundled_post->post_excerpt;
 											$the_title       = $bundled_product->get_title();
-											$bundled_price = $bundled_product->get_price();
+											$bundled_price   = $bundled_product->get_price();
 											
 											if ( $quantity > 1 ) {
 												$the_title = $quantity . ' x ' . $the_title;
@@ -360,7 +360,6 @@ $total_count = count( $gallery_attachment_ids );
 								<?php endif; ?>
 							
 							</form>
-							
 						<?php endif; ?>
 						
 						<div class="row">
