@@ -15,7 +15,12 @@ jQuery(function ($) {
             if ($('.mrk-gallery-thumbs a.active')) {
                 galleryBlurTitle.text(dataTitle);
                 galleryBlurLink.text(dataLinkText);
-                console.log($(this).children())
+                if(galleryBlurTitle.text() === "Все для перил и ограждений" && $(window).width() > 550) {
+                    galleryBlurTitle.addClass("w-50");
+                }
+                else {
+                    galleryBlurTitle.removeClass("w-50");
+                }
             }
            
             $('.mrk-gallery-thumbs a.active').removeClass('active');
@@ -36,8 +41,8 @@ jQuery(function ($) {
         $('.mrk-project-chat').addClass('d-lg-block')
         $(window).on('scroll',function(){
             let result
-            var smallScreen = window.matchMedia("(min-width: 992px)");
-            if (smallScreen.matches){
+            // var smallScreen = window.matchMedia("(min-width: 992px)");
+            if ($(window).width() > 992){
                 result = $('.ready-made-solutions').position().top
                 $('.mrk-project-chat').css('margin-top', result)
             } else {
