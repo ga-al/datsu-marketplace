@@ -48,9 +48,9 @@ $social_menu = me_render_social();
                             ?>
                             <img class="mrk-gallery-image mx-auto h-100 w-100" src="<?= $size_full ?>" alt="<?= $image['alt']; ?>">
                             <div class="mrk-gallery-blur mrk-bg-blur position-absolute start-0 bottom-0">
-                              <h1 class="d-inline-block text-uppercase text-primary fw-bold">все для стеклянных козырьков</h1>
+                              <h1 class="d-inline-block text-uppercase text-primary fw-bold"><?= $image['title']; ?></h1>
                               <a class="btn btn-outline-primary d-flex align-items-center justify-content-center gap-2 text-nowrap mt-2" href="/shop/" type="button">
-                                Смотреть готовые решения
+                                <?= $image['caption']; ?>
                               </a>
                             </div>
                             
