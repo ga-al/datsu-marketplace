@@ -84,7 +84,7 @@ $social_menu = me_render_social();
                                   <span class="visually-hidden" data-link-text="<?= $image['caption']; ?>">Смотреть готовые решения</span>
                                 </a>
                               </div>
-                              </div>
+                              
                             <?php endforeach; ?>
                         <?php endif; ?>
                       </div>
