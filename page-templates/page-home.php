@@ -80,12 +80,9 @@ $social_menu = me_render_social();
                               <div class="col-4 col-md-12 thumbnail">
                                 <a class="active" href="#" data-path="<?= $size_thumbnail ?>">
                                   <img class="img-thumbnail border-0 p-0" src="<?= $size_full ?>" alt="vidio-thumb">
-                                  <div class="thumbnail-content visually-hidden">
-                                    <h1 class="d-inline-block text-uppercase text-primary fw-bold" data-title="<?= $image['title'] ?>">все для стеклянных козырьков</h1>
-                                    <a class="btn btn-outline-primary d-flex align-items-center justify-content-center gap-2 text-nowrap mt-2" data-link-text="<?= $image['caption']; ?>" href="/shop/" type="button">
-                                      Смотреть готовые решения
-                                    </a>
-                                  </a>
+                                  <h1 class="d-inline-block text-uppercase text-primary fw-bold visually-hidden" data-title="<?= $image['title'] ?>">все для стеклянных козырьков</h1>
+                                  <span class="visually-hidden" data-link-text="<?= $image['caption']; ?>">Смотреть готовые решения</span>
+                                </a>
                               </div>
                               </div>
                             <?php endforeach; ?>
