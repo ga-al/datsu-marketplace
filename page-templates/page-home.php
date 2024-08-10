@@ -36,7 +36,7 @@ $social_menu = me_render_social();
           
                     <div class="mrk-gallery position-relative">
                       <?php
-                        $images = get_field('main-banner-slider');
+                        $images = get_fields('main-banner-slider');
                         var_dump($images);
                         if( $images ): ?>
 
