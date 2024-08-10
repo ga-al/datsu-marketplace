@@ -38,8 +38,8 @@ $social_menu = me_render_social();
                       <div class="mrk-gallery-top mx-auto ">
                         <img class="mrk-gallery-image mx-auto h-100 w-100" src="<?= esc_url(get_stylesheet_directory_uri()); ?>/img/gallery/baner-home-thumb.jpeg" alt="image">
                         <div class="mrk-gallery-blur mrk-bg-blur position-absolute start-0 bottom-0">
-                          <h1 class="d-inline-block text-uppercase text-primary fw-bold">все для стеклянных козырьков</h1>
-                          <a class="btn btn-outline-primary d-flex align-items-center justify-content-center gap-2 text-nowrap mt-2" href="/shop/" type="button">
+                          <h1 class="mrk-gallery-blur-title d-inline-block text-uppercase text-primary fw-bold">все для стеклянных козырьков</h1>
+                          <a class="mrk-gallery-blur-link btn btn-outline-primary d-flex align-items-center justify-content-center gap-2 text-nowrap mt-2" href="/shop/" type="button">
                             Смотреть готовые решения
                           </a>
                         </div>
@@ -80,8 +80,8 @@ $social_menu = me_render_social();
                               <div class="col-4 col-md-12 thumbnail">
                                 <a class="active" href="#" data-path="<?= $size_thumbnail ?>">
                                   <img class="img-thumbnail border-0 p-0" src="<?= $size_full ?>" alt="vidio-thumb">
-                                  <h1 class="d-inline-block text-uppercase text-primary fw-bold visually-hidden" data-title="<?= $image['title'] ?>">все для стеклянных козырьков</h1>
-                                  <span class="visually-hidden" data-link-text="<?= $image['caption']; ?>">Смотреть готовые решения</span>
+                                  <h1 class="mrk-gallery-thumbs-title d-inline-block text-uppercase text-primary fw-bold visually-hidden" data-title="<?= $image['title'] ?>">все для стеклянных козырьков</h1>
+                                  <span class="mrk-gallery-thumbs-link visually-hidden" data-link-text="<?= $image['caption']; ?>">Смотреть готовые решения</span>
                                 </a>
                               </div>
                               

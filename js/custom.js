@@ -4,14 +4,15 @@ jQuery(function ($) {
         event.preventDefault();
 
         let dataPath = $(this).attr('data-path');
-        let dataLinkText = $(this).children('span').attr('data-link-text');
-        let dataTitle = $(this).children('h1').attr('data-title');
+        let dataLinkText = $('mrk-gallery-thumbs-link').attr('data-link-text');
+        let dataTitle = $('mrk-gallery-thumbs-title').attr('data-title');
         let galleryTop = $('.mrk-gallery-image');
-        let galleryBlurTitle = $('.mrk-gallery-blur').children('h1');
-        let galleryBlurLink = $('.mrk-gallery-blur').children('a');
+        let galleryBlurTitle = $('.mrk-gallery-blur-title');
+        let galleryBlurLink = $('.mrk-gallery-blur-link');
 
         galleryTop.attr('src', dataPath);
         galleryBlurTitle.text(dataTitle);
+        console.log(galleryBlurTitle);
         galleryBlurLink.text(dataLinkText);
         $('.mrk-gallery-thumbs a.active').removeClass('active');
         $(this).addClass('active');
