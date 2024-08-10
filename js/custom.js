@@ -15,6 +15,7 @@ jQuery(function ($) {
             if ($('.mrk-gallery-thumbs a.active')) {
                 galleryBlurTitle.text(dataTitle);
                 galleryBlurLink.text(dataLinkText);
+                console.log($(this).children())
             }
            
             $('.mrk-gallery-thumbs a.active').removeClass('active');
