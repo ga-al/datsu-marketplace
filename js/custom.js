@@ -21,6 +21,24 @@ jQuery(function ($) {
                 else {
                     galleryBlurTitle.removeClass("w-50");
                 }
+
+                // Вывод списка на слайде галлереи
+
+                let galleryList = $('.mrk-gallery-list');
+                let description = $(this).children('p').text();
+                
+                if(description != '') {
+                    galleryList.removeClass('d-none');
+                   
+                    let array = description.split(';').filter(Boolean);
+                  
+                    array.forEach(function(element) {
+                        galleryList.append("<li>" + element + "</li>");
+                    }); 
+            
+                } else {
+                    galleryList.addClass('d-none');
+                }
             }
            
             $('.mrk-gallery-thumbs a.active').removeClass('active');
