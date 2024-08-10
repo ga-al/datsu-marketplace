@@ -1652,7 +1652,7 @@ body .modal .carousel-control-next, body .modal  .carousel-control-prev {
     bottom: 87px!important;
   }
   .mrk-gallery-image {
-    min-height: 290px;
+    min-height: 360px;
   }
   .thumbnail {
     padding: 0;
@@ -1706,6 +1706,10 @@ body .modal .carousel-control-next, body .modal  .carousel-control-prev {
   }
   .share-buttons {
     flex-wrap: wrap;
+  }
+  #block-social-link__list {
+    flex-wrap: wrap;
+    flex-direction: column;
   }
 }
 @media (max-width: 320px) {
