@@ -28,7 +28,10 @@ jQuery(function ($) {
                 let description = $(this).children('p').text();
                 
                 if(description != '') {
-                    galleryList.removeClass('d-none');
+                    if (galleryList.hasClass('d-none')) {
+                        galleryList.removeClass('d-none');
+                        galleryList.html('');
+                    }
                    
                     let array = description.split(';').filter(Boolean);
                   
