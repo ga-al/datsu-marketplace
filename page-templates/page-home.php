@@ -64,17 +64,18 @@ $social_menu = me_render_social();
                           </div> -->
                         </div>
                       </div>
+                      <?php var_dump(get_field('main-banner-slider')); ?>
                       <div class="row thumbs mrk-gallery-thumbs flex-md-column flex-nowrap mx-0 mx-md-auto gap-2">
                       <?php
                           $images = get_field('main-banner-slider');
-                          var_dump($images);
+                          
                           if( $images ): ?>
-                                  <?php foreach( $images as $image_id ):
+                                  <?php foreach( $images as $image ):
 
-                                    $size_thumbnail = wp_get_attachment_url( $image_id,'thumbnail'); // (thumbnail, medium, large, full or custom size)
-                                    $size_medium = wp_get_attachment_url( $image_id,'medium'); // (thumbnail, medium, large, full or custom size)
-                                    $size_large = wp_get_attachment_url( $image_id,'large'); // (thumbnail, medium, large, full or custom size)
-                                    $size_full = wp_get_attachment_url( $image_id,'full'); // (thumbnail, medium, large, full or custom size)
+                                    $size_thumbnail = wp_get_attachment_url( $image['ID'],'thumbnail'); // (thumbnail, medium, large, full or custom size)
+                                    $size_medium = wp_get_attachment_url( $image['ID'],'medium'); // (thumbnail, medium, large, full or custom size)
+                                    $size_large = wp_get_attachment_url( $image['ID'],'large'); // (thumbnail, medium, large, full or custom size)
+                                    $size_full = wp_get_attachment_url( $image['ID'],'full'); // (thumbnail, medium, large, full or custom size)
 
                                     ?>
                                     <div class="col-4 col-md-12 thumbnail"><a class="active" href="#" data-path="<?= $size_thumbnail ?>">
