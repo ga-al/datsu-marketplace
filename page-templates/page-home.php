@@ -39,17 +39,18 @@ $social_menu = me_render_social();
                         $images = get_field('main-banner-slider');
                         var_dump($images);
                         if( $images ): ?>
+
                           <div class="mrk-gallery-top mx-auto ">
 
-                            <?php foreach( $images as $image_id ):
-                              $size_full = wp_get_attachment_url( $image_id,'full'); // (thumbnail, medium, large, full or custom size)
+                            <?php foreach( $images as $image ):
+                              $size_full_img = wp_get_attachment_url( $image,'full'); // (thumbnail, medium, large, full or custom size)
 
                               ?>
-                              <img class="mrk-gallery-image mx-auto h-100 w-100" src="<?= $size_full ?>" alt="<?php echo $image_id['alt']; ?>">
+                              <img class="mrk-gallery-image mx-auto h-100 w-100" src="<?= $size_full_img ?>" alt="<?= $image['alt']; ?>">
                               <div class="mrk-gallery-blur mrk-bg-blur position-absolute start-0 bottom-0">
-                                <h1 class="d-inline-block text-uppercase text-primary fw-bold"><?php echo $image_id['title']; ?></h1>
+                                <h1 class="d-inline-block text-uppercase text-primary fw-bold"><?= $image['title']; ?></h1>
                                 <a class="btn btn-outline-primary d-flex align-items-center justify-content-center gap-2 text-nowrap mt-2" href="/shop/" type="button">
-                                  <?php echo $image_id['caption']; ?>
+                                  <?= $image['caption']; ?>
                                 </a>
                               </div>
                             <?php endforeach; ?>
@@ -91,7 +92,8 @@ $social_menu = me_render_social();
                             <?php endforeach; ?>
 
                           </div>
-                      <?php endif; ?>
+
+                        <?php endif; ?>
 
                     </div>
                   </div>
