@@ -283,7 +283,7 @@ $total_count = count( $gallery_attachment_ids );
 							</div>
 						</div>
 
-						<?php if($_product->is_type( 'variable' )) : ?>
+						<?php if( !$_product->is_type( 'variable' ) && !$_product->is_type( 'simple' ) ) : ?>
 							
 							<form class="cart" method="post" enctype='multipart/form-data' data-product-id="<?php echo esc_attr( $_product->get_id() ); ?>">
 								<?php
