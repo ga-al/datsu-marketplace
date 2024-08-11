@@ -66,30 +66,32 @@ $social_menu = me_render_social();
                           </div> -->
                         </div>
                       </div>
-                      <div class="row thumbs mrk-gallery-thumbs flex-md-column flex-nowrap mx-0 mx-md-auto gap-2">
-                      <?php
-                          $images = get_field('main-banner-slider');
-                          
-                          if( $images ): ?>
-                            <?php foreach( $images as $image ):
+                      <div class="thumbs">
+                        <div class="row mrk-gallery-thumbs flex-md-column flex-nowrap mx-0 mx-md-auto gap-2">
+                          <?php
+                            $images = get_field('main-banner-slider');
+                            
+                            if( $images ): ?>
+                              <?php foreach( $images as $image ):
 
-                              $size_thumbnail = wp_get_attachment_url( $image['ID'],'thumbnail'); // (thumbnail, medium, large, full or custom size)
-                              $size_medium = wp_get_attachment_url( $image['ID'],'medium'); // (thumbnail, medium, large, full or custom size)
-                              $size_large = wp_get_attachment_url( $image['ID'],'large'); // (thumbnail, medium, large, full or custom size)
-                              $size_full = wp_get_attachment_url( $image['ID'],'full'); // (thumbnail, medium, large, full or custom size)
+                                $size_thumbnail = wp_get_attachment_url( $image['ID'],'thumbnail'); // (thumbnail, medium, large, full or custom size)
+                                $size_medium = wp_get_attachment_url( $image['ID'],'medium'); // (thumbnail, medium, large, full or custom size)
+                                $size_large = wp_get_attachment_url( $image['ID'],'large'); // (thumbnail, medium, large, full or custom size)
+                                $size_full = wp_get_attachment_url( $image['ID'],'full'); // (thumbnail, medium, large, full or custom size)
 
-                              ?>
-                              <div class="col-4 col-md-12 thumbnail">
-                                <a class="active" href="#" data-path="<?= $size_thumbnail ?>">
-                                  <img class="img-thumbnail border-0 p-0" src="<?= $size_full ?>" alt="vidio-thumb">
-                                  <p class="mrk-gallery-thumbs-description visually-hidden"><?= $image['description'] ?></p>
-                                  <h1 class="mrk-gallery-thumbs-title d-inline-block text-uppercase text-primary fw-bold visually-hidden" data-title="<?= $image['title'] ?>">все для стеклянных козырьков</h1>
-                                  <span class="mrk-gallery-thumbs-link visually-hidden" data-link-text="<?= $image['caption']; ?>">Смотреть готовые решения</span>
-                                </a>
-                              </div>
-                              
-                            <?php endforeach; ?>
-                        <?php endif; ?>
+                                ?>
+                                <div class="col-4 col-md-12 thumbnail">
+                                  <a class="active" href="#" data-path="<?= $size_thumbnail ?>">
+                                    <img class="img-thumbnail border-0 p-0" src="<?= $size_full ?>" alt="vidio-thumb">
+                                    <p class="mrk-gallery-thumbs-description visually-hidden"><?= $image['description'] ?></p>
+                                    <h1 class="mrk-gallery-thumbs-title d-inline-block text-uppercase text-primary fw-bold visually-hidden" data-title="<?= $image['title'] ?>">все для стеклянных козырьков</h1>
+                                    <span class="mrk-gallery-thumbs-link visually-hidden" data-link-text="<?= $image['caption']; ?>">Смотреть готовые решения</span>
+                                  </a>
+                                </div>
+                                
+                              <?php endforeach; ?>
+                          <?php endif; ?>
+                        </div>
                       </div>
                     </div>
                   </div>

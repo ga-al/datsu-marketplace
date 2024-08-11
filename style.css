@@ -739,6 +739,15 @@ body .modal-body .carousel-item img {
   min-width: 250px;
 }
 
+.thumbs {
+  overflow: hidden;
+  width: 100vw;
+  max-height: 300px;
+}
+
+.mrk-gallery-thumbs {
+  overflow: auto;
+}
 
 
 
