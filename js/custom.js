@@ -1,62 +1,76 @@
 jQuery(function ($) {
-    // галлерея
+    // Галерея
+    const galleryList = $('.mrk-gallery-list');
+    const galleryTop = $('.mrk-gallery-image');
+    const galleryBlurTitle = $('.mrk-gallery-blur-title');
+    const galleryBlurLink = $('.mrk-gallery-blur-link');
+    const dataPathOne = $('.mrk-gallery-thumbs a').attr('data-path');
+    const descriptionOne = $('.mrk-gallery-thumbs').find('p:first').text();
+    const dataLinkTextOne = $('.mrk-gallery-thumbs').find('span:first').attr('data-link-text');
+    const dataTitleOne = $('.mrk-gallery-thumbs').find('h1:first').attr('data-title');
+
+    // выводим данные для первого изображения
+    galleryTop.attr('src', dataPathOne);
+    galleryBlurTitle.text(dataTitleOne);
+    galleryBlurLink.text(dataLinkTextOne);
+    showDescription(descriptionOne);
+ 
+    // добавляем возможность смены контента на слайдере при событии клике
     $('.mrk-gallery-thumbs a').on('click', function(event) {
         event.preventDefault();
 
         let dataPath = $(this).attr('data-path');
         let dataLinkText = $(this).children('span').attr('data-link-text');
         let dataTitle = $(this).children('h1').attr('data-title');
-        let galleryTop = $('.mrk-gallery-image');
-        let galleryBlurTitle = $('.mrk-gallery-blur-title');
-        let galleryBlurLink = $('.mrk-gallery-blur-link');
-
-        if ($(this)) {
-            galleryTop.attr('src', dataPath);
-            if ($('.mrk-gallery-thumbs a.active')) {
-                galleryBlurTitle.text(dataTitle);
-                galleryBlurLink.text(dataLinkText);
-                if(galleryBlurTitle.text() === "Все для перил и ограждений" && $(window).width() > 550) {
-                    galleryBlurTitle.addClass("w-50");
-                }
-                else {
-                    galleryBlurTitle.removeClass("w-50");
-                }
-
-                // Вывод списка на слайде галлереи
-
-                let galleryList = $('.mrk-gallery-list');
-                let description = $(this).children('p').text();
-                
-                if(description != '') {
-                    if (galleryList.hasClass('d-none')) {
-                        galleryList.removeClass('d-none');
-                        galleryList.html('');
-                    }
-                   
-                    let array = description.split(';').filter(Boolean);
-                  
-                    array.forEach(function(element) {
-                        galleryList.append("<li>" + element + "</li>");
-                    }); 
-            
-                } else {
-                    galleryList.addClass('d-none');
-                }
+        let description = $(this).children('p').text();
+        
+        galleryTop.attr('src', dataPath);
+        if ($('.mrk-gallery-thumbs a.active')) {
+            galleryBlurTitle.text(dataTitle);
+            galleryBlurLink.text(dataLinkText);
+            if(galleryBlurTitle.text() === "Все для перил и ограждений" && $(window).width() > 550) {
+                galleryBlurTitle.addClass("w-50");
             }
-           
+            else {
+                galleryBlurTitle.removeClass("w-50");
+            }
+
+            galleryList.addClass('d-none');
+            showDescription(description);
+        
             $('.mrk-gallery-thumbs a.active').removeClass('active');
             $(this).addClass('active');
         }
 
     });
 
-    // динамика сердечек
+    // функция для вывода списка из Описания если он есть
+    function showDescription(descript) {
+        
+        if(descript != '') {
+            if (galleryList.hasClass('d-none')) {
+                galleryList.removeClass('d-none');
+                galleryList.html('');
+            }
+            let array = descript.split(';').filter(Boolean);
+            
+            array.forEach(function(element) {
+                galleryList.append("<li>" + element + "</li>");
+            
+            }); 
+
+        } else {
+            galleryList.addClass('d-none');
+        }
+    }
+
+    // Динамика сердечек
     $('.mrk-card-heart a').on('click', function() {
         $('.mrk-card-heart .feedback').css('display', 'none');
         $('.mrk-card-heart').toggleClass( "no-active" );
     })
 
-    // чат
+    // Чат
     if ($('.ready-made-solutions').length) {
         $('.mrk-project-chat').removeClass('hide')
         $('.mrk-project-chat').addClass('d-lg-block')
@@ -79,8 +93,6 @@ jQuery(function ($) {
         console.log('no-chat')
     }
 
-
-
     // Вывод счётчика корзины
     const blocks = document.querySelectorAll(".mrk-cart-quantity");
 
@@ -94,7 +106,6 @@ jQuery(function ($) {
         renameQuantiyElement(item, 'btn-order');
     });
 
-
     function renameQuantiyElement(block, btn) {
         block.addEventListener("click", (event) => {
             if (event.target.classList.contains(btn)) {
@@ -103,9 +114,7 @@ jQuery(function ($) {
         });
     }
 
-
 }); // jQuery End
-
 
 // Slider
 if (document.querySelectorAll('.slider').length) {
@@ -561,7 +570,6 @@ if (document.querySelector('.share-buttons')) {
             console.error('Unable to copy to clipboard', err);
         }
         document.body.removeChild(textArea);
-
     })
 
 }
