@@ -37,6 +37,10 @@ jQuery(function ($) {
 
             galleryList.addClass('d-none');
             showDescription(description);
+
+            if(galleryBlurTitle.text() != "все для стеклянных козырьков") {
+                galleryBlurLink.attr('href', '');
+            }
         
             $('.mrk-gallery-thumbs a.active').removeClass('active');
             $(this).addClass('active');

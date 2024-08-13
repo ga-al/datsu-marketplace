@@ -348,9 +348,7 @@ $total_count = count( $gallery_attachment_ids );
 														}?>
 													</div>
 
-													<input type="hidden" name="add-to-cart" value="<?php echo esc_attr( $_product->get_id() ); ?>"/>
-
-													<button type="submit" class="single_add_to_cart_button button mt-2" style="max-width: 200px"><?php echo esc_html( $_product->single_add_to_cart_text() ); ?></button>
+													
 
 												</div>
 											</div>
