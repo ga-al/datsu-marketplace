@@ -15,6 +15,7 @@ jQuery(function ($) {
     galleryBlurLink.text(dataLinkTextOne);
     showDescription(descriptionOne);
     galleryBlurLink.attr('href', '/shop/');
+    galleryBlurLink.addClass('btn-outline-primary');
     if(galleryBlurTitle.text() != "все для стеклянных козырьков") {
         galleryBlurLink.attr('href', '');
         galleryBlurLink.removeClass('btn-outline-primary');
