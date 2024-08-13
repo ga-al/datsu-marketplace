@@ -14,6 +14,11 @@ jQuery(function ($) {
     galleryBlurTitle.text(dataTitleOne);
     galleryBlurLink.text(dataLinkTextOne);
     showDescription(descriptionOne);
+    galleryBlurLink.attr('href', '/shop/');
+    if(galleryBlurTitle.text() != "все для стеклянных козырьков") {
+        galleryBlurLink.attr('href', '')
+    }
+    
  
     // добавляем возможность смены контента на слайдере при событии клике
     $('.mrk-gallery-thumbs a').on('click', function(event) {
@@ -38,8 +43,12 @@ jQuery(function ($) {
             galleryList.addClass('d-none');
             showDescription(description);
 
+            let blurUrl = galleryBlurLink.attr('href', '/shop/');
+
             if(galleryBlurTitle.text() != "все для стеклянных козырьков") {
                 galleryBlurLink.attr('href', '');
+            } else {
+                blurUrl;
             }
         
             $('.mrk-gallery-thumbs a.active').removeClass('active');
