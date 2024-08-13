@@ -1717,6 +1717,11 @@ body .modal .carousel-control-next, body .modal  .carousel-control-prev {
   #block-social-link__list {
     flex-wrap: wrap;
     flex-direction: column;
+    gap: .5rem;
+  }
+  #block-social-link__list li {
+    width: 40px;
+    height: 40px;
   }
   .mrk-gallery-blur {
     bottom: 120px !important;
