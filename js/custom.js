@@ -16,7 +16,7 @@ jQuery(function ($) {
     showDescription(descriptionOne);
     galleryBlurLink.attr('href', '/shop/');
     if(galleryBlurTitle.text() != "Все для стеклянных козырьков") {
-        galleryBlurLink.attr('href', '');
+        galleryBlurLink.attr('href', '#!');
         galleryBlurLink.removeClass('btn-outline-primary');
         galleryBlurLink.addClass('btn-outline-secondary');
     }
@@ -48,7 +48,7 @@ jQuery(function ($) {
             let blurUrl = galleryBlurLink.attr('href', '/shop/');
 
             if(galleryBlurTitle.text() != "Все для стеклянных козырьков") {
-                galleryBlurLink.attr('href', '');
+                galleryBlurLink.attr('href', '#!');
                 galleryBlurLink.removeClass('btn-outline-primary');
                 galleryBlurLink.addClass('btn-outline-secondary');
             } else {
