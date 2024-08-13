@@ -15,11 +15,10 @@ jQuery(function ($) {
     galleryBlurLink.text(dataLinkTextOne);
     showDescription(descriptionOne);
     galleryBlurLink.attr('href', '/shop/');
-    galleryBlurLink.addClass('btn-outline-primary');
     if(galleryBlurTitle.text() != "все для стеклянных козырьков") {
         galleryBlurLink.attr('href', '');
-        galleryBlurLink.removeClass('btn-outline-primary');
-        galleryBlurLink.addClass('btn-outline-secondary');
+        galleryBlurLink.removeClass('btn-primary');
+        galleryBlurLink.addClass('btn-secondary');
     }
     
  
@@ -50,12 +49,12 @@ jQuery(function ($) {
 
             if(galleryBlurTitle.text() != "все для стеклянных козырьков") {
                 galleryBlurLink.attr('href', '');
-                galleryBlurLink.removeClass('btn-outline-primary');
-                galleryBlurLink.addClass('btn-outline-secondary');
+                galleryBlurLink.removeClass('btn-primary');
+                galleryBlurLink.addClass('btn-secondary');
             } else {
                 blurUrl;
-                galleryBlurLink.addClass('btn-outline-primary');
-                galleryBlurLink.removeClass('btn-outline-secondary');
+                galleryBlurLink.addClass('btn-primary');
+                galleryBlurLink.removeClass('btn-secondary');
             }
         
             $('.mrk-gallery-thumbs a.active').removeClass('active');
