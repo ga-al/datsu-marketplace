@@ -15,10 +15,10 @@ jQuery(function ($) {
     galleryBlurLink.text(dataLinkTextOne);
     showDescription(descriptionOne);
     galleryBlurLink.attr('href', '/shop/');
-    if(galleryBlurTitle.text() != "все для стеклянных козырьков") {
+    if(galleryBlurTitle.text() != "Все для стеклянных козырьков") {
         galleryBlurLink.attr('href', '');
-        galleryBlurLink.removeClass('btn-primary');
-        galleryBlurLink.addClass('btn-secondary');
+        galleryBlurLink.removeClass('btn-outline-primary');
+        galleryBlurLink.addClass('btn-outline-secondary');
     }
     
  
@@ -47,14 +47,14 @@ jQuery(function ($) {
 
             let blurUrl = galleryBlurLink.attr('href', '/shop/');
 
-            if(galleryBlurTitle.text() != "все для стеклянных козырьков") {
+            if(galleryBlurTitle.text() != "Все для стеклянных козырьков") {
                 galleryBlurLink.attr('href', '');
-                galleryBlurLink.removeClass('btn-primary');
-                galleryBlurLink.addClass('btn-secondary');
+                galleryBlurLink.removeClass('btn-outline-primary');
+                galleryBlurLink.addClass('btn-outline-secondary');
             } else {
                 blurUrl;
-                galleryBlurLink.addClass('btn-primary');
-                galleryBlurLink.removeClass('btn-secondary');
+                galleryBlurLink.addClass('btn-outline-primary');
+                galleryBlurLink.removeClass('btn-outline-secondary');
             }
         
             $('.mrk-gallery-thumbs a.active').removeClass('active');
