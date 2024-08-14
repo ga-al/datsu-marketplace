@@ -247,15 +247,15 @@ $total_count = count( $gallery_attachment_ids );
 										<!-- <div class="mrk-card-heart no-active ms-auto"></div> -->
 									</div>
 								</div>
-								<!-- <div class="col-12"> -->
-									<!-- <div class="mrk-box-bonus d-flex align-items-center justify-content-between px-3 py-2 rounded" style="min-height: 0;">
+								<!-- <div class="col-12">
+									<div class="mrk-box-bonus d-flex align-items-center justify-content-between px-3 py-2 rounded" style="min-height: 0;">
 										<div>За этот заказ вы получите:
 											<div class="text-primary fs-3 fw-bold">+ 75 баллов</div>
 										</div>
 										<a href="" role="button" class="text-decoration-underline fw-medium">Подробнее</a>
-									</div> -->
-								<!-- </div> -->
-								<!-- <div class="col-12">
+									</div>
+								</div> -->
+								<div class="col-12">
 									<div class="row align-items-center mx-auto w-100 gap-2">
 										<div class="col px-0">
 											<div class="quantity flex-nowrap quantity-product-card">
@@ -279,97 +279,10 @@ $total_count = count( $gallery_attachment_ids );
 										</div>
 
 									</div>
-								</div> -->
+								</div> 
 							</div>
 						</div>
 
-						<?php if( !$_product->is_type( 'variable' ) && !$_product->is_type( 'simple' ) ) : ?>
-							
-							<form class="cart mb-3" method="post" enctype='multipart/form-data' data-product-id="<?php echo esc_attr( $_product->get_id() ); ?>">
-								<?php
-									$bundled_items = $_product->get_bundled_items();
-								?>
-								<div class="col-12">
-									<div class="row align-items-center mx-auto w-100 gap-2">
-										<div class="col px-0">
-											<div class="quantity quantity-product-card">
-												<budton type="button" class="minus input-group-text flex-grow-1 justify-content-center">&minus;</budton><label class="screen-reader-text" for="quantity_661bd21d11c6d">Количество товара blockly is a ROS package</label>
-												<input type="number" id="quantity_661bd21d11c6d" class="input-text qty text flex-grow-1" name="cart[9778d5d219c5080b9a6a17bef029331c][qty]" value="1" aria-label="Количество товара" size="4" min="0" max="" step="1" placeholder="" inputmode="numeric" autocomplete="off">
-												<button type="button" class="plus input-group-text flex-grow-1 justify-content-center">&plus;</button>
-											</div>
-										</div>
-										<div class="col px-0">
-											<div class="mrk-card-quantity-kit">
-												
-											<input type="hidden" name="add-to-cart" value="<?php echo esc_attr( $_product->get_id() ); ?>"/>
-
-											<button type="submit" class="single_add_to_cart_button button w-100"><?php echo esc_html( $_product->single_add_to_cart_text() ); ?></button>
-											</div>
-										</div>
-										
-									</div>
-								</div>
-								<?php if ( $bundled_items ) : ?>
-									<div class="yith-wcpb-product-bundled-items border-0 mt-4 mb-3 d-flex flex-wrap gap-1 shadow-none">
-										<?php foreach ( $bundled_items as $bundled_item ) : ?>
-											<?php
-											$bundled_product = $bundled_item->get_product();
-											$bundled_post    = get_post( yit_get_base_product_id( $bundled_product ) );
-											$quantity        = $bundled_item->get_quantity();
-											$description     = $bundled_post->post_excerpt;
-											$the_title       = $bundled_product->get_title();
-											$bundled_price   = $bundled_product->get_regular_price();
-											
-											if ( $quantity > 1 ) {
-												$the_title = $quantity . ' x ' . $the_title;
-											}
-
-											$bundled_item_classes = apply_filters( 'yith_wcpb_bundled_item_classes', array( 'product', 'yith-wcpb-product-bundled-item', 'p-2' ), $bundled_item, $product );
-											$bundled_item_classes = implode( ' ', $bundled_item_classes );
-											?>
-											
-											<div class="<?php echo esc_attr( $bundled_item_classes ); ?>"
-													data-is-purchasable="<?php echo esc_attr( $bundled_product->is_purchasable() ? '1' : '0' ); ?>">
-
-												<a href="<?php echo esc_url( $bundled_product->get_permalink() ); ?>" class="d-block position-absolute top-0 start-0 bottom-0 end-0 z-1"></a>
-												<div class="yith-wcpb-product-bundled-item-image h-100 position-relative z-0">
-													<?php
-													$post_thumbnail_id = $bundled_product->get_image_id();
-													
-													if ( $post_thumbnail_id ) {
-														echo wc_get_gallery_image_html( $post_thumbnail_id, true ); 
-													} else {
-														echo '<div class="woocommerce-product-gallery__image--placeholder">';
-														echo sprintf( '<img src="%s" alt="%s" class="wp-post-image" />', esc_url( wc_placeholder_img_src() ), esc_html__( 'Awaiting product image', 'woocommerce' ) );
-														echo '</div>';
-													}
-													?>
-												</div>
-											
-												<div class="yith-wcpb-product-bundled-item-data ps-2 flex-shrink-1 mt-auto">
-												<h3 class="yith-wcpb-product-bundled-item-data__title">
-													<a href="<?php echo esc_url( $bundled_product->get_permalink() ); ?>">
-														<?php echo esc_html( $the_title ); ?>
-													</a>
-												</h3>
-											
-													<div class="bundled-price text-secondary">
-														<?php
-														if ( $bundled_price ) {
-															echo wp_kses_post( do_shortcode( $bundled_price ) ) . ' ' . get_woocommerce_currency_symbol();
-														}?>
-													</div>
-												
-												</div>
-											</div>
-										<?php endforeach; ?>
-
-									</div>
-								<?php endif; ?>
-							
-							</form>
-
-						<?php endif; ?>
 						
 						<div class="row">
 							<div class="col-12">
