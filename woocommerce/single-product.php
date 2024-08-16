@@ -317,90 +317,101 @@ $total_count = count( $gallery_attachment_ids );
 								</div>
 							</span>
 						</div>
-						<!-- <p class="fw-bold fs-5 mt-3 mb-2">Скачать документацию: </p>
-						<form class="row g-2">
-							<div class="col-md-6">
-								<div class="position-relative">
-								<label for="formFileLg1" class="form-label visually-hidden-focusable">Пример большого ввода файла</label>
-								<input class="form-control form-control-lg opacity-0 position-absolute" id="formFileLg1" type="file">
-								<div class="mrk-download d-flex p-2">
-									<div class="fw-medium">Инструкция</div>
+						<p class="fw-bold fs-5 mt-3 mb-2">Скачать документацию: </p>
+
+						<?php if( have_rows('drawing') ): ?>
+							<form class="row g-2">
+						
+								<?php while( have_rows('drawing') ): the_row(); 
+									$title_drawing = the_sub_field('title_drawing');
+									$file_drawing = the_sub_field('file_drawing');
+									?>
+									<div class="col-md-6">
+										<div class="position-relative">
+											<a href="<?= $file_drawing['url']; ?>" class="d-block" target="_blank">
+												<span class="mrk-download d-flex p-2">
+													<span class="fw-medium"><?= $title_drawing; ?></span>
+												</span>
+											</a>
+										</div>
+									</div>
+
+								<?php endwhile; ?>
+							
+								<!-- <div class="col-md-6">
+									<div class="position-relative">
+									<label for="formFileLg2" class="form-label visually-hidden-focusable">Пример большого ввода файла</label>
+									<input class="form-control form-control-lg opacity-0 position-absolute" id="formFileLg2" type="file">
+									<div class="mrk-download d-flex p-2">
+										<div class="fw-medium">Каталог</div>
+									</div>
+									</div>
 								</div>
+								<div class="col-md-6">
+									<div class="position-relative">
+									<label for="formFileLg3" class="form-label visually-hidden-focusable">Пример большого ввода файла</label>
+									<input class="form-control form-control-lg opacity-0 position-absolute" id="formFileLg3" type="file">
+									<div class="mrk-download d-flex p-2">
+										<div class="fw-medium">Протокол испытаний</div>
+									</div>
+									</div>
 								</div>
-							</div>
-							<div class="col-md-6">
-								<div class="position-relative">
-								<label for="formFileLg2" class="form-label visually-hidden-focusable">Пример большого ввода файла</label>
-								<input class="form-control form-control-lg opacity-0 position-absolute" id="formFileLg2" type="file">
-								<div class="mrk-download d-flex p-2">
-									<div class="fw-medium">Каталог</div>
+								<div class="col-md-6">
+									<div class="position-relative">
+									<label for="formFileLg4" class="form-label visually-hidden-focusable">Пример большого ввода файла</label>
+									<input class="form-control form-control-lg opacity-0 position-absolute" id="formFileLg4" type="file">
+									<div class="mrk-download d-flex p-2">
+										<div class="fw-medium">Прайс лист</div>
+									</div>
+									</div>
 								</div>
+								<div class="col-md-6">
+									<div class="position-relative">
+									<label for="formFileLg5" class="form-label visually-hidden-focusable">Пример большого ввода файла</label>
+									<input class="form-control form-control-lg opacity-0 position-absolute" id="formFileLg5" type="file">
+									<div class="mrk-download d-flex p-2">
+										<div class="fw-medium">IFC модель 3D</div>
+									</div>
+									</div>
 								</div>
-							</div>
-							<div class="col-md-6">
-								<div class="position-relative">
-								<label for="formFileLg3" class="form-label visually-hidden-focusable">Пример большого ввода файла</label>
-								<input class="form-control form-control-lg opacity-0 position-absolute" id="formFileLg3" type="file">
-								<div class="mrk-download d-flex p-2">
-									<div class="fw-medium">Протокол испытаний</div>
+								<div class="col-md-6">
+									<div class="position-relative">
+									<label for="formFileLg6" class="form-label visually-hidden-focusable">Пример большого ввода файла</label>
+									<input class="form-control form-control-lg opacity-0 position-absolute" id="formFileLg6" type="file">
+									<div class="mrk-download d-flex p-2">
+										<div class="fw-medium">Revit модель 3D</div>
+									</div>
+									</div>
 								</div>
+								<div class="col-md-6">
+									<div class="position-relative">
+									<label for="formFileLg7" class="form-label visually-hidden-focusable">Пример большого ввода файла</label>
+									<input class="form-control form-control-lg opacity-0 position-absolute" id="formFileLg7" type="file">
+									<div class="mrk-download d-flex p-2">
+										<div class="fw-medium">PDF чертежи</div>
+									</div>
+									</div>
 								</div>
-							</div>
-							<div class="col-md-6">
-								<div class="position-relative">
-								<label for="formFileLg4" class="form-label visually-hidden-focusable">Пример большого ввода файла</label>
-								<input class="form-control form-control-lg opacity-0 position-absolute" id="formFileLg4" type="file">
-								<div class="mrk-download d-flex p-2">
-									<div class="fw-medium">Прайс лист</div>
+								<div class="col-md-6">
+									<div class="position-relative">
+									<label for="formFileLg8" class="form-label visually-hidden-focusable">Пример большого ввода файла</label>
+									<input class="form-control form-control-lg opacity-0 position-absolute" id="formFileLg8" type="file">
+									<div class="mrk-download d-flex p-2">
+										<div class="fw-medium">Протокол испытаний</div>
+									</div>
+									</div>
 								</div>
-								</div>
-							</div>
-							<div class="col-md-6">
-								<div class="position-relative">
-								<label for="formFileLg5" class="form-label visually-hidden-focusable">Пример большого ввода файла</label>
-								<input class="form-control form-control-lg opacity-0 position-absolute" id="formFileLg5" type="file">
-								<div class="mrk-download d-flex p-2">
-									<div class="fw-medium">IFC модель 3D</div>
-								</div>
-								</div>
-							</div>
-							<div class="col-md-6">
-								<div class="position-relative">
-								<label for="formFileLg6" class="form-label visually-hidden-focusable">Пример большого ввода файла</label>
-								<input class="form-control form-control-lg opacity-0 position-absolute" id="formFileLg6" type="file">
-								<div class="mrk-download d-flex p-2">
-									<div class="fw-medium">Revit модель 3D</div>
-								</div>
-								</div>
-							</div>
-							<div class="col-md-6">
-								<div class="position-relative">
-								<label for="formFileLg7" class="form-label visually-hidden-focusable">Пример большого ввода файла</label>
-								<input class="form-control form-control-lg opacity-0 position-absolute" id="formFileLg7" type="file">
-								<div class="mrk-download d-flex p-2">
-									<div class="fw-medium">PDF чертежи</div>
-								</div>
-								</div>
-							</div>
-							<div class="col-md-6">
-								<div class="position-relative">
-								<label for="formFileLg8" class="form-label visually-hidden-focusable">Пример большого ввода файла</label>
-								<input class="form-control form-control-lg opacity-0 position-absolute" id="formFileLg8" type="file">
-								<div class="mrk-download d-flex p-2">
-									<div class="fw-medium">Протокол испытаний</div>
-								</div>
-								</div>
-							</div>
-							<div class="col-md-6">
-								<div class="position-relative">
-								<label for="formFileLg9" class="form-label visually-hidden-focusable">Пример большого ввода файла</label>
-								<input class="form-control form-control-lg opacity-0 position-absolute" id="formFileLg9" type="file">
-								<div class="mrk-download d-flex p-2">
-									<div class="fw-medium">Сертификаты</div>
-								</div>
-								</div>
-							</div>
-						</form> -->
+								<div class="col-md-6">
+									<div class="position-relative">
+									<label for="formFileLg9" class="form-label visually-hidden-focusable">Пример большого ввода файла</label>
+									<input class="form-control form-control-lg opacity-0 position-absolute" id="formFileLg9" type="file">
+									<div class="mrk-download d-flex p-2">
+										<div class="fw-medium">Сертификаты</div>
+									</div>
+									</div>
+								</div> -->
+							</form>
+						<?php endif; ?>
 					</div>
 					<!-- слайдер с табами изображениями -  КОНЕЦ -->
 				</div>
