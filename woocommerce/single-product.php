@@ -323,14 +323,14 @@ $total_count = count( $gallery_attachment_ids );
 							<form class="row g-2">
 						
 								<?php while( have_rows('drawing') ): the_row(); 
-									$title_drawing = the_sub_field('title_drawing');
-									$file_drawing = the_sub_field('file_drawing');
+									// $title_drawing = the_sub_field('title_drawing');
+									// $file_drawing = the_sub_field('file_drawing');
 									?>
 									<div class="col-md-6">
 										<div class="position-relative">
-											<a href="<?= $file_drawing['url']; ?>" class="d-block" target="_blank">
+											<a href="<?php the_sub_field('file_drawing'); ?>" class="d-block" target="_blank">
 												<span class="mrk-download d-flex p-2">
-													<span class="fw-medium"><?= $title_drawing; ?></span>
+													<span class="fw-medium"><?php the_sub_field('title_drawing'); ?></span>
 												</span>
 											</a>
 										</div>
