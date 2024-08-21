@@ -37,7 +37,7 @@ $social_menu = me_render_social();
                     <div class="mrk-gallery position-relative">
                       <div class="mrk-gallery-top mx-auto ">
                         <img class="mrk-gallery-image mx-auto h-100 w-100" src="<?= esc_url(get_stylesheet_directory_uri()); ?>/img/gallery/baner-home-thumb.jpeg" alt="image">
-                        <ul class="mrk-gallery-list position-absolute start-0 top-0 d-none text-primary mt-4">
+                        <ul class="mrk-gallery-list position-absolute start-0 top-0 d-none text-primary mt-4 ms-xl-3 ms-md-1">
                         </ul>
                         <div class="mrk-gallery-blur mrk-bg-blur position-absolute start-0 bottom-0">
                           <h1 class="mrk-gallery-blur-title d-inline-block text-uppercase text-primary fw-bold">все для стеклянных козырьков</h1>

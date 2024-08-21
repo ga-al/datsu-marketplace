@@ -9,8 +9,6 @@ function me_arhive_sort_product() {
     $term_id = $_POST['term_id'];
 
 
-
-
     echo '';
     wp_die();
 }

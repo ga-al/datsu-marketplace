@@ -262,6 +262,9 @@ a.btn:hover {
 .mrk-gallery-list li {
   margin-bottom: 1rem;
 }
+.mrk-gallery-list {
+  font-size: 1rem; 
+}
 .components-button {
   border-radius: 12px 0 12px 0;
   border: 1px solid var(--bs-primary);
@@ -748,7 +751,9 @@ body .modal-body .carousel-item img {
 .mrk-gallery-thumbs {
   overflow: auto;
 }
-
+.woosb-products.woosb-products-layout-grid-3 .woosb-product {
+  width: calc(100% / 4 - 20px);
+}
 
 
 
@@ -1725,6 +1730,9 @@ body .modal .carousel-control-next, body .modal  .carousel-control-prev {
   }
   .mrk-gallery-blur {
     bottom: 120px !important;
+  }
+  .mrk-gallery-list {
+    font-size: .8rem;
   }
 }
 

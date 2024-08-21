@@ -247,6 +247,14 @@ $total_count = count( $gallery_attachment_ids );
 										<!-- <div class="mrk-card-heart no-active ms-auto"></div> -->
 									</div>
 								</div>
+
+								<?php 
+									$product = $_product;
+									if($_product->is_type( 'woosb' )) {
+										echo do_shortcode("[woosb_bundled]");
+									}
+								
+								?>
 								<!-- <div class="col-12">
 									<div class="mrk-box-bonus d-flex align-items-center justify-content-between px-3 py-2 rounded" style="min-height: 0;">
 										<div>За этот заказ вы получите:
