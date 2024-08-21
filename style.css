@@ -751,8 +751,17 @@ body .modal-body .carousel-item img {
 .mrk-gallery-thumbs {
   overflow: auto;
 }
-.woosb-products.woosb-products-layout-grid-3 .woosb-product {
+/* .woosb-products.woosb-products-layout-grid-3 .woosb-product {
   width: calc(100% / 4 - 20px);
+} */
+.product-quantity {
+  width:  150px;
+}
+.woocommerce-Price-amount.amount {
+  white-space: nowrap;
+}
+.woosb-thumb {
+  max-width: 60px;
 }
 
 
