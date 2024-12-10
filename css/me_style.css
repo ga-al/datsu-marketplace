@@ -50,3 +50,17 @@ input[name='update_cart'] {
 .wpcss-area .wpcss-popup {
     width:  auto !important;
 }
+
+/* доп стили для карточек с документами */
+.doc-rounded-card {
+    border-radius: 20px;
+}
+.doc-rounded-card .doc-inner-element+.doc-inner-element {
+    border-top: solid 1px gray;
+} 
+
+.doc-rounded-card .btn svg {
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+}

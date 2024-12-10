@@ -246,7 +246,10 @@ function rudr_save_field( $id ){
 	update_post_meta( $id, 'product_link_video', $super );
 
 }
-
+// WEBIQUE FUNCTIONS
+// CPT/TAX
+// pdfs
+require_once('inc/custom-post-types.php');
 
 // ME FUNCTIONS
 // Walker Categoris Sidebar
