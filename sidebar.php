@@ -25,29 +25,27 @@ if (!is_active_sidebar('sidebar-1')) {
 
   <?php
 
-  $taxonomy     = 'product_cat';
-  $orderby      = 'name';
-  $show_count   = 0;      // 1 for yes, 0 for no
-  $pad_counts   = 0;      // 1 for yes, 0 for no
-  $hierarchical = 0;      // 1 for yes, 0 for no
-  $title        = '';
-  $empty        = 0;
+add_filter('get_terms', 'filter_hidden_categories', 10, 3);
 
-//   $args = array(
-//         'taxonomy'     => $taxonomy,
-//         'orderby'      => $orderby,
-//         'show_count'   => $show_count,
-//         'pad_counts'   => $pad_counts,
-//         'hierarchical' => $hierarchical,
-//         'title_li'     => $title,
-//         'parent' => 0,
-//         'hide_empty'   => $empty
-//   );
-//  $parent_categories = get_categories( $args );
+function filter_hidden_categories($terms, $taxonomies, $args) {
+    // Check if this is the desired taxonomy
+    if (in_array('product_cat', (array) $taxonomies)) {
+        // Filter terms where the ACF field 'hidden' is set to true
+        $terms = array_filter($terms, function ($term) {
+            $hidden = get_field('hide_cat', "product_cat_{$term->term_id}");
+            return $hidden == 0; // Exclude terms where 'hide_cat' is true
+        });
+    }
+    return $terms;
+}
+
 
  $list_categories = array(
-	'orderby'            => 'name',
-	'order'              => 'ASC',
+
+  'orderby'            => 'meta_value_num',
+  'meta_key'           => 'order',
+  'order'              => 'ASC',
+
 	'style'              => 'list',
 	'show_count'         => 0,
 	'hide_empty'         => 0,
@@ -68,7 +66,7 @@ if (!is_active_sidebar('sidebar-1')) {
 	'pad_counts'         => 0,
 	'taxonomy'           => 'product_cat',
 	'walker'             => new Custom_Walker_Category(),
-	'hide_title_if_empty' => false,
+	'hide_title_if_empty'=> false,
 	'separator'          => '<br />',
 );
 
@@ -88,6 +86,7 @@ if (!is_active_sidebar('sidebar-1')) {
         <!-- <?php dynamic_sidebar('sidebar-1'); ?> -->
         <?php
           wp_list_categories( $list_categories );
+          remove_filter('get_terms', 'filter_hidden_categories');
         ?>
       </div>
     </div>

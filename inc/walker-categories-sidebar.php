@@ -33,7 +33,7 @@ class Custom_Walker_Category extends Walker_Category {
         if ( $depth === 0 ) {
             $output .= "$indent<ul class='list ps-0'>\n";
         } else {
-            $output .= "$indent<div class='collapse show' id='$cat_slug-collapse' $depth ><ul class='list ps-0 '>\n";
+            $output .= "$indent<div class='collapse' id='$cat_slug-collapse' $depth ><ul class='list ps-0 '>\n";
         }
 
 	}
@@ -99,7 +99,7 @@ class Custom_Walker_Category extends Walker_Category {
         if ( $depth === 0 ) {
             $link = sprintf('<h3 class="text-uppercase d-none">%s</h3>',$cat_name);
         } else if ( $depth === 1 ) {
-            $link = '<button class="btn btn-toggle d-inline-flex align-items-center border-0 text-uppercase text-start ps-0 fs-6" data-bs-toggle="collapse" data-bs-target="#'.$category->slug.'-collapse" aria-expanded="true">'.$cat_name.'</button>';
+            $link = '<button class="btn btn-toggle d-inline-flex align-items-center border-0 text-uppercase text-start ps-0 fs-6 collapsed" data-bs-toggle="collapse" data-bs-target="#'.$category->slug.'-collapse" aria-expanded="false">'.$cat_name.'</button>';
         } else {
             $link = sprintf(
                 '<a%s>%s</a>',

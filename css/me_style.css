@@ -51,6 +51,14 @@ input[name='update_cart'] {
     width:  auto !important;
 }
 
+/* фиксы для стандартных стилей фильтр-плагина */
+.wcpf-field-price-slider.wcpf-display-min-max-inputs .wcpf-min-input {
+    text-align: left;
+}
+.wcpf-field-price-slider.wcpf-display-price-label .priceLabel {
+    text-align: center;
+}
+
 /* доп стили для карточек с документами */
 .doc-rounded-card {
     border-radius: 20px;
