@@ -50,3 +50,25 @@ input[name='update_cart'] {
 .wpcss-area .wpcss-popup {
     width:  auto !important;
 }
+
+/* фиксы для стандартных стилей фильтр-плагина */
+.wcpf-field-price-slider.wcpf-display-min-max-inputs .wcpf-min-input {
+    text-align: left;
+}
+.wcpf-field-price-slider.wcpf-display-price-label .priceLabel {
+    text-align: center;
+}
+
+/* доп стили для карточек с документами */
+.doc-rounded-card {
+    border-radius: 20px;
+}
+.doc-rounded-card .doc-inner-element+.doc-inner-element {
+    border-top: solid 1px gray;
+} 
+
+.doc-rounded-card .btn svg {
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+}

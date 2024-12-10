@@ -323,14 +323,43 @@ $total_count = count( $gallery_attachment_ids );
 								</div>
 							</span>
 						</div>
+						<?php if( have_rows('drawing') || have_rows('manual_item') ): ?>
 						<p class="fw-bold fs-5 mt-3 mb-2">Скачать документацию: </p>
+						<?php endif; ?>
 
+						<?php if( have_rows('manual_item') ):
+							$manual_posts = get_field('manual_item');
+							?>
+							<form class="row g-2">
+						
+								<?php
+									foreach( $manual_posts as $manual_post ):
+
+										$post_status = get_post_status( $manual_post->ID );
+										if( $post_status !== 'publish' ) continue;
+
+										foreach(get_field('file', $manual_post->ID) as $file_manual):
+										?>
+											<div class="col-md-6">
+												<div class="position-relative">
+													<a href="<?= $file_manual['file_src']['url']; ?>" class="d-block" target="_blank">
+														<span class="mrk-download d-flex p-2">
+															<span class="fw-medium"><?= $file_manual['title']; ?></span>
+														</span>
+													</a>
+												</div>
+											</div>
+										<?php
+										endforeach;
+									endforeach;
+									?>
+							</form>
+						<?php endif; ?>
 						<?php if( have_rows('drawing') ): ?>
 							<form class="row g-2">
 						
 								<?php while( have_rows('drawing') ): the_row(); 
-									// $title_drawing = the_sub_field('title_drawing');
-									// $file_drawing = the_sub_field('file_drawing');
+									if(get_sub_field('title_drawing') == '') continue;
 									?>
 									<div class="col-md-6">
 										<div class="position-relative">
@@ -556,7 +585,7 @@ $total_count = count( $gallery_attachment_ids );
 
 													<?php if ( $together_product_sale_price ) { ?>
 														<h3 class="text-danger text-nowrap d-inline-block mb-0" style="font-size: 1.5rem;font-weight: 800;"><?php echo $together_product_sale_price . ' ' . get_woocommerce_currency_symbol(); ?></h3>
-														<span class="text-decoration-line-through text-secondary fs-5 fw-medium ps-2"><?php echo $together_product_regular_price . ' ' . get_woocommerce_currency_symbol(); ?></span>
+														<span class="text-decoration-line-through text-secondary fs-4 fw-medium ps-2"><?php echo $together_product_regular_price . ' ' . get_woocommerce_currency_symbol(); ?></span>
 														<!-- <span class="text-danger fw-bold pb-1 ps-2" style="font-size: 1rem;">
 															<?php
 																echo round(100 - ($together_product_sale_price / $together_product_regular_price * 100));
