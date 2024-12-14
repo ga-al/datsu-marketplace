@@ -585,7 +585,7 @@ $total_count = count( $gallery_attachment_ids );
 
 													<?php if ( $together_product_sale_price ) { ?>
 														<h3 class="text-danger text-nowrap d-inline-block mb-0" style="font-size: 1.5rem;font-weight: 800;"><?php echo $together_product_sale_price . ' ' . get_woocommerce_currency_symbol(); ?></h3>
-														<span class="text-decoration-line-through text-secondary fs-4 fw-medium ps-2"><?php echo $together_product_regular_price . ' ' . get_woocommerce_currency_symbol(); ?></span>
+														<span class="text-decoration-line-through text-secondary fs-5 fw-medium ps-2"><?php echo $together_product_regular_price . ' ' . get_woocommerce_currency_symbol(); ?></span>
 														<!-- <span class="text-danger fw-bold pb-1 ps-2" style="font-size: 1rem;">
 															<?php
 																echo round(100 - ($together_product_sale_price / $together_product_regular_price * 100));
