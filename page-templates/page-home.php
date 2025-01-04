@@ -251,6 +251,7 @@ $social_menu = me_render_social();
                             'orderby' => 'rand',
                             'return' => 'objects',
                             'hide_empty' => 1,
+                            'status' => 'publish'
                           ) );
                           $random_products = $random_query->get_products();
 
