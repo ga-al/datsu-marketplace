@@ -8,18 +8,19 @@ jQuery(function ($) {
     const descriptionOne = $('.mrk-gallery-thumbs').find('p:first').text();
     const dataLinkTextOne = $('.mrk-gallery-thumbs').find('span:first').attr('data-link-text');
     const dataTitleOne = $('.mrk-gallery-thumbs').find('h1:first').attr('data-title');
+    const dataLinkHref = $('.mrk-gallery-thumbs').find('span:first').attr('data-href');
 
     // выводим данные для первого изображения
     galleryTop.attr('src', dataPathOne);
     galleryBlurTitle.text(dataTitleOne);
     galleryBlurLink.text(dataLinkTextOne);
     showDescription(descriptionOne);
-    galleryBlurLink.attr('href', '/shop/');
-    if(galleryBlurTitle.text() != "Все для стеклянных козырьков") {
-        galleryBlurLink.attr('href', '#!');
-        galleryBlurLink.removeClass('btn-outline-primary');
-        galleryBlurLink.addClass('btn-outline-secondary');
-    }
+    galleryBlurLink.attr('href', dataLinkHref);
+    // if(galleryBlurTitle.text() != "Все для стеклянных козырьков") {
+    //     galleryBlurLink.attr('href', '#!');
+    //     galleryBlurLink.removeClass('btn-outline-primary');
+    //     galleryBlurLink.addClass('btn-outline-secondary');
+    // }
     
  
     // добавляем возможность смены контента на слайдере при событии клике
@@ -28,6 +29,7 @@ jQuery(function ($) {
 
         let dataPath = $(this).attr('data-path');
         let dataLinkText = $(this).children('span').attr('data-link-text');
+        let dataLinkHref = $(this).children('span').attr('data-href');
         let dataTitle = $(this).children('h1').attr('data-title');
         let description = $(this).children('p').text();
         
@@ -45,17 +47,18 @@ jQuery(function ($) {
             galleryList.addClass('d-none');
             showDescription(description);
 
-            let blurUrl = galleryBlurLink.attr('href', '/shop/');
-
-            if(galleryBlurTitle.text() != "Все для стеклянных козырьков") {
-                galleryBlurLink.attr('href', '#!');
-                galleryBlurLink.removeClass('btn-outline-primary');
-                galleryBlurLink.addClass('btn-outline-secondary');
-            } else {
-                blurUrl;
-                galleryBlurLink.addClass('btn-outline-primary');
-                galleryBlurLink.removeClass('btn-outline-secondary');
-            }
+            // let blurUrl = galleryBlurLink.attr('href', '/shop/');
+            
+            // if(galleryBlurTitle.text() != "Все для стеклянных козырьков") {
+                //     galleryBlurLink.attr('href', '#!');
+                //     galleryBlurLink.removeClass('btn-outline-primary');
+                //     galleryBlurLink.addClass('btn-outline-secondary');
+                // } else {
+                    //     blurUrl;
+                    //     galleryBlurLink.addClass('btn-outline-primary');
+                    //     galleryBlurLink.removeClass('btn-outline-secondary');
+                    // }
+            let blurUrl = galleryBlurLink.attr('href', dataLinkHref);
         
             $('.mrk-gallery-thumbs a.active').removeClass('active');
             $(this).addClass('active');

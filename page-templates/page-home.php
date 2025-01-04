@@ -50,30 +50,18 @@ $social_menu = me_render_social();
 
 
                           <?php echo $social_menu; ?>
-                          <!-- <div class="d-flex gap-4">
-                            <a class="mrk-social-item" href="#" role="button">
-                              <img src="<?= esc_url(get_stylesheet_directory_uri()); ?>/img/svg/skype-outline.svg" alt="">
-                            </a>
-                            <a class="mrk-social-item" href="#" role="button">
-                              <img src="<?= esc_url(get_stylesheet_directory_uri()); ?>/img/svg/whatsapp.svg" alt="">
-                            </a>
-                            <a class="mrk-social-item" href="#" role="button">
-                              <img src="<?= esc_url(get_stylesheet_directory_uri()); ?>/img/svg/discord.svg" alt="">
-                            </a>
-                            <a class="mrk-social-item" href="#" role="button">
-                              <img src="<?= esc_url(get_stylesheet_directory_uri()); ?>/img/svg/telegram.svg" alt="">
-                            </a>
-                          </div> -->
                         </div>
                       </div>
                       <div class="thumbs">
                         <div class="row mrk-gallery-thumbs flex-md-column flex-nowrap mx-0 mx-md-auto gap-2">
                           <?php
-                            $images = get_field('main-banner-slider');
+                            $images = get_field('main_banner_slider');
                             
                             if( $images ): ?>
-                              <?php foreach( $images as $image ):
+                              <?php foreach( $images as $_image ):
 
+                                $image = $_image['gallery_item'];
+                                if($_image['gallery_item_hidden'] == 1) continue;
                                 $size_thumbnail = wp_get_attachment_url( $image['ID'],'thumbnail'); // (thumbnail, medium, large, full or custom size)
                                 $size_medium = wp_get_attachment_url( $image['ID'],'medium'); // (thumbnail, medium, large, full or custom size)
                                 $size_large = wp_get_attachment_url( $image['ID'],'large'); // (thumbnail, medium, large, full or custom size)
@@ -83,9 +71,9 @@ $social_menu = me_render_social();
                                 <div class="col-4 col-md-12 thumbnail">
                                   <a class="active" href="#" data-path="<?= $size_thumbnail ?>">
                                     <img class="img-thumbnail border-0 p-0" src="<?= $size_full ?>" alt="vidio-thumb">
-                                    <p class="mrk-gallery-thumbs-description visually-hidden"><?= $image['description'] ?></p>
-                                    <h1 class="mrk-gallery-thumbs-title d-inline-block text-uppercase text-primary fw-bold visually-hidden" data-title="<?= $image['title'] ?>">все для стеклянных козырьков</h1>
-                                    <span class="mrk-gallery-thumbs-link visually-hidden" data-link-text="<?= $image['caption']; ?>">Смотреть готовые решения</span>
+                                    <p class="mrk-gallery-thumbs-description visually-hidden"><?= $_image['gallery_item_description'] ?></p>
+                                    <h1 class="mrk-gallery-thumbs-title d-inline-block text-uppercase text-primary fw-bold visually-hidden" data-title="<?= $_image['gallery_item_title'] ?>">все для стеклянных козырьков</h1>
+                                    <span data-href="<?= $_image['gallery_item_link'] != '' ? $_image['gallery_item_link'] : '/shop/' ;?>" class="mrk-gallery-thumbs-link visually-hidden" data-link-text="<?= $_image['gallery_item_btn']; ?>">Смотреть готовые решения</span>
                                   </a>
                                 </div>
                                 
@@ -99,128 +87,6 @@ $social_menu = me_render_social();
               </div>
             </div>
             <div class="<?= bootscore_container_class(); ?> pe-xxl-2 pe-lg-3 px-2">
-              <!-- <section>
-                <h2 class="text-primary text-uppercase fw-bold">Все для профессионалов</h2>
-                <form class="row g-3 mt-3">
-                  <div class="col-md-4">
-                    <div class="position-relative">
-                      <label for="formFileLg1" class="form-label visually-hidden-focusable">Пример большого ввода файла</label>
-                      <input class="form-control form-control-lg opacity-0 position-absolute" id="formFileLg1" type="file">
-                      <div class="mrk-download d-flex p-2">
-                        <div class="fw-medium">3D модель</div>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="col-md-4">
-                    <div class="position-relative">
-                      <label for="formFileLg2" class="form-label visually-hidden-focusable">Пример большого ввода файла</label>
-                      <input class="form-control form-control-lg opacity-0 position-absolute" id="formFileLg2" type="file">
-                      <div class="mrk-download d-flex p-2">
-                        <div class="fw-medium">Инструкция</div>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="col-md-4">
-                    <div class="position-relative">
-                      <label for="formFileLg3" class="form-label visually-hidden-focusable">Пример большого ввода файла</label>
-                      <input class="form-control form-control-lg opacity-0 position-absolute" id="formFileLg3" type="file">
-                      <div class="mrk-download d-flex p-2">
-                        <div class="fw-medium">PDF чертежи</div>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="col-md-4">
-                    <div class="position-relative">
-                      <label for="formFileLg4" class="form-label visually-hidden-focusable">Пример большого ввода файла</label>
-                      <input class="form-control form-control-lg opacity-0 position-absolute" id="formFileLg4" type="file">
-                      <div class="mrk-download d-flex p-2">
-                        <div class="fw-medium">Протокол испытаний</div>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="col-md-4">
-                    <div class="position-relative">
-                      <label for="formFileLg5" class="form-label visually-hidden-focusable">Пример большого ввода файла</label>
-                      <input class="form-control form-control-lg opacity-0 position-absolute" id="formFileLg5" type="file">
-                      <div class="mrk-download d-flex p-2">
-                        <div class="fw-medium">Сертификаты</div>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="col-md-4">
-                    <div class="position-relative">
-                      <label for="formFileLg6" class="form-label visually-hidden-focusable">Пример большого ввода файла</label>
-                      <input class="form-control form-control-lg opacity-0 position-absolute" id="formFileLg6" type="file">
-                      <div class="mrk-download d-flex p-2">
-                        <div class="fw-medium">Полный каталог</div>
-                      </div>
-                    </div>
-                  </div>
-                </form>
-                <div class="mrk-cards-info">
-                  <div class="row">
-                    <div class="col-6 col-md-4 mb-4">
-                      <div class="card border-0 pt-4">
-                        <div class="card-header border-0 bg-white px-0">
-                          <h5 class="card-title text-center mb-0">3D модель</р>
-                        </div>
-                        <div class="card-body pt-0 px-0">
-                          <img class="bd-placeholder-img card-img-top w-100 rounded-0" src="<?= esc_url(get_stylesheet_directory_uri()); ?>/img/cards-info/1.jpg" alt="">
-                        </div>
-                      </div>
-                    </div>
-                    <div class="col-6 col-md-4 mb-4">
-                      <div class="card border-0 pt-4">
-                        <div class="card-header border-0 bg-white px-0">
-                          <h5 class="card-title text-center mb-0">Инструкция</р>
-                        </div>
-                        <div class="card-body pt-0 px-0">
-                          <img class="bd-placeholder-img card-img-top w-100 rounded-0" src="<?= esc_url(get_stylesheet_directory_uri()); ?>/img/cards-info/2.jpg" alt="">
-                        </div>
-                      </div>
-                    </div>
-                    <div class="col-6 col-md-4 mb-4">
-                      <div class="card border-0 pt-4">
-                        <div class="card-header border-0 bg-white px-0">
-                          <h5 class="card-title text-center mb-0">PDF чертежи</р>
-                        </div>
-                        <div class="card-body pt-0 px-0">
-                          <img class="bd-placeholder-img card-img-top w-100 rounded-0" src="<?= esc_url(get_stylesheet_directory_uri()); ?>/img/cards-info/3.jpg" alt="">
-                        </div>
-                      </div>
-                    </div>
-                    <div class="col-6 col-md-4 mb-4">
-                      <div class="card border-0 pt-4">
-                        <div class="card-header border-0 bg-white px-0">
-                          <h5 class="card-title text-center mb-0">Протокол испытаний</р>
-                        </div>
-                        <div class="card-body pt-0 px-0">
-                          <img class="bd-placeholder-img card-img-top w-100 rounded-0" src="<?= esc_url(get_stylesheet_directory_uri()); ?>/img/cards-info/4.jpg" alt="">
-                        </div>
-                      </div>
-                    </div>
-                    <div class="col-6 col-md-4 mb-4">
-                      <div class="card border-0 pt-4">
-                        <div class="card-header border-0 bg-white px-0">
-                          <h5 class="card-title text-center mb-0">Сертификаты</р>
-                        </div>
-                        <div class="card-body pt-0 px-0">
-                          <img class="bd-placeholder-img card-img-top w-100 rounded-0" src="<?= esc_url(get_stylesheet_directory_uri()); ?>/img/cards-info/5.jpg" alt="">
-                        </div>
-                      </div>
-                    </div>
-                    <div class="col-6 col-md-4 mb-4">
-                      <div class="card border-0 pt-4">
-                        <div class="card-header border-0 bg-white px-0">
-                          <h5 class="card-title text-center mb-0">Полный каталог</р>
-                        </div>
-                        <div class="card-body pt-0 px-0">
-                          <img class="bd-placeholder-img card-img-top w-100 rounded-0" src="<?= esc_url(get_stylesheet_directory_uri()); ?>/img/cards-info/6.jpg" alt="">
-                        </div>
-                      </div>
-                    </div>
-                </div>
-              </section> -->
               <?php
               $arr = me_rendom_category();
               $randomKey = array_rand( $arr, 3) ;
@@ -249,6 +115,7 @@ $social_menu = me_render_social();
                             'orderby' => 'rand',
                             'return' => 'objects',
                             'hide_empty' => 1,
+                            'status' => 'publish'
                           ) );
                           $random_products = $random_query->get_products();
 
