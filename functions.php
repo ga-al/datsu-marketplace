@@ -250,6 +250,7 @@ function rudr_save_field( $id ){
 // CPT/TAX
 // pdfs
 require_once('inc/custom-post-types.php');
+require_once('inc/taxonomies.php');
 
 // ME FUNCTIONS
 // Walker Categoris Sidebar
