@@ -72,3 +72,10 @@ input[name='update_cart'] {
     height: 20px;
     margin-right: 10px;
 }
+
+/* фиксы для исправления ошибки после обновления вишлист-плагина */
+.yith-wcwl-add-button .add_to_wishlist svg.yith-wcwl-icon-svg {
+    position:absolute;
+    top:0;
+    right:-5px;
+}
