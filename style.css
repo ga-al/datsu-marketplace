@@ -225,11 +225,13 @@ a:hover {
   height: 100%;
   margin-top: 8px;
   position: absolute;
-  bottom: 50%;
+  bottom: 0;
+  justify-content: center;
+  /* bottom: 50%;
   margin-bottom: -150px;
+  justify-content: flex-end; */
   right: 0;
   width: 82px;
-  justify-content: flex-end;
 }
 .mrk-gallery-thumbs img {
   width: 100%;
