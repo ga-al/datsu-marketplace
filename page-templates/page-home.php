@@ -52,16 +52,21 @@ $social_menu = me_render_social();
                           <?php echo $social_menu; ?>
                         </div>
                       </div>
-                      <div class="thumbs">
-                        <div class="row mrk-gallery-thumbs flex-md-column flex-nowrap mx-0 mx-md-auto gap-2">
                           <?php
-                            $images = get_field('main_banner_slider');
-                            
-                            if( $images ): ?>
-                              <?php foreach( $images as $_image ):
+                            $image_items = get_field('main_banner_slider');
+                            $images = [];
+                            if( $image_items ):
+                            foreach( $image_items as $image_item ):
+                              if($image_item['gallery_item_hidden'] == 1) continue;
+                              $images[] = $image_item;
+                            endforeach;
+                            ?>
+                            <div class="thumbs <?= count($images); ?> <?= count($images) > 1 ?:'d-none';?>">
+                              <div class="row mrk-gallery-thumbs flex-md-column flex-nowrap mx-0 mx-md-auto gap-2">
+                            <?php
+                            foreach( $images as $_image ):
+                              $image = $_image['gallery_item'];
 
-                                $image = $_image['gallery_item'];
-                                if($_image['gallery_item_hidden'] == 1) continue;
                                 $size_thumbnail = wp_get_attachment_url( $image['ID'],'thumbnail'); // (thumbnail, medium, large, full or custom size)
                                 $size_medium = wp_get_attachment_url( $image['ID'],'medium'); // (thumbnail, medium, large, full or custom size)
                                 $size_large = wp_get_attachment_url( $image['ID'],'large'); // (thumbnail, medium, large, full or custom size)
@@ -77,7 +82,7 @@ $social_menu = me_render_social();
                                   </a>
                                 </div>
                                 
-                              <?php endforeach; ?>
+                            <?php endforeach; ?>
                           <?php endif; ?>
                         </div>
                       </div>
