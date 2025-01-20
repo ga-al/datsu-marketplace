@@ -2,6 +2,7 @@ jQuery(function ($) {
 
     $(document).ready(function () {
         me_sortProductArchive();
+        wbq_show_current_cat_parent();
 
 
         $(document).on('submit', "#page_home_form", function(e) {
@@ -78,4 +79,19 @@ jQuery(function ($) {
 
 
     }
+
+
+
+    function wbq_show_current_cat_parent(){
+        let cur_cat_el = document.querySelector('.current-cat');
+        let cur_pat_el = cur_cat_el.closest('.current-cat-parent');
+
+        if(cur_pat_el){
+            cur_pat_el.querySelector('.collapse').classList.add('show');
+            cur_pat_el.querySelector('.btn-toggle').classList.remove('collapsed');
+            cur_pat_el.querySelector('.btn-toggle').setAttribute('aria-expanded',true);
+        }
+    }
 });
+
+
