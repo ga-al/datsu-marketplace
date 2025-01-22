@@ -38,12 +38,7 @@
 <div id="page" class="site">
 
   <header id="masthead" class="site-header">
-  <?php if(is_front_page()){?>
-    <div class="fixed-top bg-white">
-    <?php } else { ?>
-      <div class="fixed-top bg-white pt-0 pt-lg-3"> 
-    <?php }?>
-      <?php if(is_front_page()){?>
+      <div class="fixed-top bg-white">
         <nav class="navbar navbar-expand-lg d-lg-flex d-none py-2 py-lg-0">
           <div class="<?= bootscore_container_class(); ?> ps-xl-1 pe-md-2">
             <a class="fs-6 " href="#">
@@ -74,7 +69,6 @@
                 ?>
           </div>
         </nav>
-      <?php } ?>
 
       <nav id="nav-main" class="navbar navbar-expand-lg py-0">
 
