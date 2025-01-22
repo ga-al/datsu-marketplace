@@ -91,3 +91,7 @@ input[name='update_cart'] {
 .cart-subtotal+.order-total td {
     border-top: none!important;
 }
+/* фиксы лк */
+.woocommerce-MyAccount-content p a {
+    text-decoration: underline;
+}
