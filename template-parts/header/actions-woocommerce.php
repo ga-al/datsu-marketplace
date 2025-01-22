@@ -74,7 +74,7 @@ if ( is_cart() ) {
  // Do nothing
 } elseif ( is_checkout() ) { ?>
   <!-- Add a back-to-cart button -->
-  <a class="btn btn-outline-secondary ms-1 ms-md-2" href="<?= wc_get_cart_url() ?>">
+  <a class="btn btn-outline-secondary ms-1 ms-md-2 d-flex align-items-center" href="<?= wc_get_cart_url() ?>">
     <i class="fa-solid fa-arrow-left d-none d-md-inline me-2"></i><i class="fa-solid fa-bag-shopping"></i><span class="visually-hidden-focusable">Вернуться в корзину</span>
   </a>
   <?php
