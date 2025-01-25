@@ -79,3 +79,19 @@ input[name='update_cart'] {
     top:0;
     right:-5px;
 }
+
+/* фиксы корзины и оформления */
+#coupon_code+button {
+    width: min-content;
+}
+.cart-subtotal {
+    display: none;
+}
+.cart-subtotal+.order-total th,
+.cart-subtotal+.order-total td {
+    border-top: none!important;
+}
+/* фиксы лк */
+.woocommerce-MyAccount-content p a {
+    text-decoration: underline;
+}

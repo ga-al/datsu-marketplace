@@ -453,11 +453,11 @@ $total_count = count( $gallery_attachment_ids );
 				<div class="col-12 ">
 					<div class="mrk-description card card-body border-0 px-md-0 pt-lg-0 pt-5 mt-5">
 						<div class="row px-md-3">
-							<div class="col-md-6 pe-md-3 px-0">
+							<div class="col-xxl-7 col-xl-6 col-lg-7 pe-md-3 px-0">
 								<h2 class="mrk-block-title text-nowrap fw-medium pb-2">Описание</h2>
 								<?php the_content() ?>
 							</div>
-							<div class="col-md-6 ps-md-3 px-0">
+							<div class="col-xxl-5 col-xl-6 col-lg-5 ps-md-3 px-0">
 								<h2 class="mrk-block-title text-nowrap fw-medium pb-2">Характеристики</h2>
 								<ul class="mrk-list-group list-group-flush mb-4 ps-0">
 

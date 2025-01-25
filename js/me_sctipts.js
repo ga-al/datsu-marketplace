@@ -2,8 +2,21 @@ jQuery(function ($) {
 
     $(document).ready(function () {
         me_sortProductArchive();
-        wbq_show_current_cat_parent();
 
+        if(
+            document.querySelector('body').classList.contains('post-type-archive-product')
+            || document.querySelector('body').classList.contains('tax-product_cat')
+        ){
+            wbq_show_current_cat_parent();
+        }
+
+        $(document).on('click', '.quantity > .minus, .quantity > .plus', function() {
+            // Debounce the click event to prevent multiple rapid clicks
+            clearTimeout($(this).data('lastClick'));
+            $(this).data('lastClick', setTimeout(function() {
+                autoUpdateCart();
+            }, 300)); // Adjust the debounce delay as needed
+        });
 
         $(document).on('submit', "#page_home_form", function(e) {
             e.preventDefault();
@@ -84,13 +97,24 @@ jQuery(function ($) {
 
     function wbq_show_current_cat_parent(){
         let cur_cat_el = document.querySelector('.current-cat');
-        let cur_pat_el = cur_cat_el.closest('.current-cat-parent');
+        let cur_pat_el;
+
+        if(cur_cat_el.parentElement.classList.contains('top-cat')){
+            cur_pat_el = cur_cat_el;
+            console.log(132);
+        } else {
+            cur_pat_el = cur_cat_el.closest('.current-cat-parent');
+        }
 
         if(cur_pat_el){
             cur_pat_el.querySelector('.collapse').classList.add('show');
             cur_pat_el.querySelector('.btn-toggle').classList.remove('collapsed');
             cur_pat_el.querySelector('.btn-toggle').setAttribute('aria-expanded',true);
         }
+    }
+
+    function autoUpdateCart() {
+        document.querySelector('button[name="update_cart"]').click();
     }
 });
 

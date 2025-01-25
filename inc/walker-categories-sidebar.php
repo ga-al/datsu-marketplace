@@ -35,7 +35,7 @@ class Custom_Walker_Category extends Walker_Category {
 		$indent  = str_repeat( "\t", $depth );
 
         if ( $depth === 0 ) {
-            $output .= "$indent<ul class='list ps-0'>\n";
+            $output .= "$indent<ul class='list ps-0 top-cat'>\n";
         } else {
             $output .= "$indent<div class='collapse ".$this->collapsed[2]."' id='$cat_slug-collapse'><ul class='list ps-0 '>\n";
         }
